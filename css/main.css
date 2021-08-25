@@ -28,3 +28,11 @@
     outline: none;
     box-shadow: none;
 }
+.pr-3{
+    color: black;
+    font-weight:500;
+}
+.pr-3:hover{
+    text-decoration: none;
+    color: rgb(15, 172, 235);
+}
