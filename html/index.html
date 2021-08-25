@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/Group-3/css/main.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    $(document).ready(function(){
+      $(".btn").click(function(){
+        $(".search-query").toggle(200);
+      });
+      
+    });
+    </script>
+</head>
+<body>  
+  <nav class="container navbar navbar-expand-sm navbar-inverse  navbar-light">
+    <!-- Brand -->
+    <a class="navbar-brand" href="#"><img src="/Group-3/images/Z-green-leaf.svg" width="45" height="45" alt="Logo"> ZTech</a>
+
+    <form id="custom-search-form" class="form-search form-horizontal pull-right">
+      <div class="input-append span12">
+          <input type="text" class="search-query" placeholder="Type something...">
+          <button type="submit" class="btn btn-circle"><i class="fa fa-search"></i></button>
+      </div>
+    </form>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+   </button>
+   
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav mr-auto">
+     
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 2</a>
+      </li>
+    </ul>
+      <li class="nav-item li-dangnhap">
+        <a class="ml-auto text-dark "  href="#">Đăng nhập</a>
+      </li>
+    </div>
+
+    
+    
+  </nav>
+  <hr class="hr-shadow">
+  
+
+</body>
+</html>

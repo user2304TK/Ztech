@@ -1,0 +1,30 @@
+.btn-circle { 
+    width: 30px; 
+    height: 30px; 
+    padding: 6px 0px; 
+    border-radius: 15px; 
+    font-size: 12px; 
+    background-color: rgb(228, 228, 228);
+    text-align: center;
+} 
+.hr-shadow{
+    border:none;
+    height: 20px;
+	height: 50px;
+	margin-top: 0;
+	border-bottom: 1px solid #b8b7b7;
+	box-shadow: 0 20px 20px -20px rgb(126, 125, 125);
+    margin: -50px auto 10px;
+}
+.li-dangnhap{
+    list-style-type: none;
+}
+.search-query{
+    border-radius: 20px;
+    border: 0.5px solid gray;
+}
+.search-query:focus{
+    
+    outline: none;
+    box-shadow: none;
+}
