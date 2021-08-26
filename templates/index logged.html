@@ -13,25 +13,47 @@
   <title>Document</title>
   <script>
     $(document).ready(function(){
+      if ($(window).width() > 750){
+          $(".viet").hide();   
+        }
+        else
+        {
+          $(".viet").show();
+        }
+
       $(".search-query").hide();
-      $(".btn").click(function(){
+
+      $(".form-group .btn").click(function(){
         $(".search-query").toggle(200);
+      }); 
+
+      $(window).resize(function(){
+        if ($(window).width() > 750){
+          $(".viet").hide();   
+        }
+        else
+        {
+          $(".viet").show();
+        }  
       });
-      
     });
-    </script>
+
+  </script>
 </head>
 <body>  
   <nav class="container navbar navbar-expand-md navbar-inverse  navbar-light pb-0">
+    <!-- Brand -->
     <div class="form-group pt-2">
-      <a class="navbar-brand" href="#"><img src="../static/img/Z-green-leaf.svg" width="45" height="45" alt="Logo"> ZTech</a>
-      <!-- search -->
-            <input type="text" class="search-query" placeholder="Type something...">
-            <button type="submit" class="btn btn-circle"><i class="fa fa-search"></i></button>
-      </div>
+    <a class="navbar-brand" href="#"><img src="../static/img/Z-green-leaf.svg" width="45" height="45" alt="Logo"> ZTech</a>
+    <!-- search -->
+          <input type="text" class="search-query" placeholder="Type something...">
+          <button type="submit" class="btn btn-circle"><i class="fa fa-search"></i></button>
+    </div>
+    
+    
 
     <!-- toggle icon -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <button class="navbar-toggler mb-3" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
    </button>
    
@@ -45,8 +67,30 @@
         <a class="nav-link" href="#">Link 2</a>
       </li>
     </ul>
+      <li class="nav-item li-dangnhap pr-3 pb-2">
+        <i class="fas fa-feather btn-circle" style="padding-top: 10px; background-color: rgb(4, 229, 245);" data-toggle="tooltip" data-placement="top" title="Viết bài"></i>
+        <span class="viet">Viết bài</span>
+      </li>
+      <li class="nav-item li-dangnhap pr-3 pb-2">
+        <i class="fas fa-bell btn-circle" style="padding-top: 10px; background-color: rgb(4, 229, 245);" data-toggle="tooltip" data-placement="top" title="Thông báo"></i>
+        <span class="viet">Thông báo</span>
+      </li>
+      <li class="nav-item li-dangnhap pr-3 pb-2">
+        <img class="rounded-circle" width="33" height="33" src="../static/img/khoa.jpg" alt="khoamod" data-toggle="tooltip" data-placement="top" title="Trang cá nhân">
+        <span class="viet">Trang cá nhân</span>
+      </li>
+      
       <li class="nav-item li-dangnhap pb-2">
-        <a class="ml-auto text-dark "  href="#">Đăng nhập</a>
+        
+        <div class="dropdown" data-toggle="dropdown" aria-haspopup="true" data-placement="top" title="Cài đặt" aria-expanded="false" >
+          <i id="dropdownMenuButton" class="fas fa-cog btn-circle" style="padding-top: 10px; "></i>
+          <span class="viet">Cài đặt</span>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
       </li>
     </div>
   </nav>
@@ -282,7 +326,4 @@
   </div>
 </footer>
 <!-- Footer -->
-  
-
-
 </html>

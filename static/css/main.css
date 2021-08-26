@@ -1,8 +1,8 @@
 .btn-circle { 
-    width: 27px; 
-    height: 27px; 
+    width: 33px; 
+    height: 33px; 
     padding: 3px 0px; 
-    border-radius: 15px; 
+    border-radius: 17px; 
     font-size: 12px; 
     background-color: rgb(228, 228, 228);
     text-align: center;
@@ -28,11 +28,20 @@
     outline: none;
     box-shadow: none;
 }
-.pr-3{
+.me-5 .pr-3{
     color: black;
     font-weight:500;
 }
-.pr-3:hover{
+.me-5 .pr-3:hover{
     text-decoration: none;
     color: rgb(15, 172, 235);
 }
+.nav-item:hover{
+    cursor: pointer;
+    color: rgb(133, 136, 135);
+}
+.viet {
+    font-weight: 500;
+    margin-left: 10px;
+}
+
