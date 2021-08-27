@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+  
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -7,6 +8,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <meta charset="UTF-8">
+  <script src="../static/bootstrap-5.1.0-dist/js/popup.js"></script>
   <link rel="stylesheet" href="../static/css/main.css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,12 +37,33 @@
         {
           $(".viet").show();
         }  
+        if ($(window).width() > 1200){
+          $(".info-box").show();   
+        }
+        else
+        {
+          $(".info-box").hide();
+        }
+      });
+
+      $(".showpopup").click(function(){
+        $(".full-screen").removeClass("hidden");
+        $("body").addClass("unscroll");
+      });
+      
+      $(".closepopup").click(function(){
+        $(".full-screen").addClass("hidden");
+        $("body").removeClass("unscroll");
       });
     });
 
   </script>
 </head>
+
 <body>  
+
+  
+
   <nav class="container navbar navbar-expand-md navbar-inverse  navbar-light pb-0">
     <!-- Brand -->
     <div class="form-group pt-2">
@@ -97,7 +120,7 @@
   <hr class="hr-shadow">
   <section class="container">
     <!-- foru -->
-    <div class="container home-foru form-inline pb-3">
+    <div class=" home-foru form-inline pb-3">
       
       <div class="pr-3" style="font-weight: 500; font-size: x-large;">
         Home
@@ -110,18 +133,17 @@
       </div>
   </div>
   <!-- facts -->
-  <div class="container mb-5 pb-5">
-    <div class="form-inline" style=" width: 700px; height: 100px; background-size: contain;">
+  <div class="mb-5 pb-5">
+    
+    <div class="form-inline" style=" height: 100px; background-size: contain;">
        
-      <div class="scrollmenu" style=" overflow: auto; white-space: nowrap; width: 650px; height: 170px;">
-        
+      <div class="scrollmenu rounded " style=" overflow: auto; white-space: nowrap; width: 840px; height: 170px;">       
         <span class="ml-2">
-          <img class="mr-2 rounded" style=" opacity: 100%; height: 150px; width:85px; background-color: aqua;"  alt="">
-        </span>
-        
-        <span>
+          <img class="mr-2 rounded" style=" opacity: 100%; height: 150px; width:85px; " src="../static/img/khoa.jpg"  alt="">
+        </span>  
+        <span class="showpopup">
           <span style="margin-left: -70px; margin-right: 30px;"><i style="font-size: xx-large;"; class="fa fa-plus-circle" aria-hidden="true"></i></span>
-          <img class="mr-2 rounded" style=" opacity: 100%; height: 150px; width: 85px;" src="../static/img/error-wait.gif" alt=""></span>
+          <img  class="mr-2 rounded" style=" opacity: 100%; height: 150px; width: 85px;" src="../static/img/error-wait.gif" alt=""></span>
         <span>
           <span style="margin-left: -90px; margin-right: 20px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Khoaminion</span>
           <img class="mr-2 rounded" style="  height: 150px; width: 85px;" src="../static/img/dark-dark-netflix.gif" alt=""></span>
@@ -140,23 +162,39 @@
         <span>
           <span style="margin-left: -94px; margin-right: 10px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Nekowimade</span>
           <img class="mr-2 rounded" style="  height: 150px; width: 85px;" src="../static/img/gabriel-dropout-gabriel-temna.gif" alt=""></span>
+          <span>
+            <span style="margin-left: -90px; margin-right: 20px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Tomblobla</span>
+            <img class="mr-2 rounded" style="  height: 150px; width: 85px;" src="../static/img/cat-funny-cat.gif" alt=""></span>
+          <span>
         <span>
           <span style="margin-left: -67px; margin-right: 30px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Jerry</span>
           <img class="rounded" style="  height: 150px; width: 85px;" src="../static/img/mikey-tokyo-revengers.gif" alt=""></span>
           <span style="margin-left: -70px; margin-right: 33px; color: rgb(255, 255, 255); font-weight: 500;font-size: small;">Datoc</span>
       </div>
+        <!-- box-->
+      <div class="ml-3 info-box" style=" border: 1px solid rgb(202, 202, 202); border-radius: 5px; padding: 20px; ">
+        <img class="rounded-circle" src="../static/img/khoa.jpg" width="40px" height="40px" alt="">
+        <span style="font-weight: 500;"  >Xin chào Khoaminion ! <br> <br><span style="background-color: gainsboro; padding: 5px;" class="rounded" >Số giờ hoạt động: 283</span> <br>  <br><span style="background-color: gainsboro; padding: 5px;" class="rounded" > Số bài viết: 25</span></span>
+      </div>  
+
+      
+      <!--end box-->
     </div>
     
   </div>
+  <!--end facts -->
+
+  
+
     <div class="row">
       <button class="col-sm-9 borderactive"  type="button" class="btn btn-primary btn-block">+VIẾT BÀI CHIA SẺ,ĐẶT CÂU HỎI,SHARE LINK</button>
       <div class="col-sm-3" style="background-color:lavenderblush;">@@@@@</div>
     </div>
     <br>
-    <div class="row">
-      <img class="col-6" src="../static/img/maybay.jpg">  
+    <div class="row rounded">
+      <img class="col-6 rounded" src="../static/img/maybay.jpg">  
       <div class="card col-3" style="width: 100%;background-color:#a2acc6;">
-        <img class="card-img-top" src="../static/img/daidich.jpg" alt="Card image" style="width:100%">
+        <img class="card-img-top rounded" src="../static/img/daidich.jpg" alt="Card image" style="width:100%">
         <div class="card-body">
           <p class="card-text">Hassler - 35 phút</p>
           <a href="#">Đại dịch diễn biến 2021</a>
@@ -168,7 +206,7 @@
     </div>
     <div class="row">
       <div class="card col-3" style="width:100%;">
-        <img class="card-img-top" src="../static/img/youtube.jpg" alt="Card image" style="width:100%">
+        <img class="card-img-top rounded" src="../static/img/youtube.jpg" alt="Card image" style="width:100%">
         <div class="card-body">
           <p class="card-text">TuyenTEX - 1 giờ</p>
           <a href="#">Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người...</a>
@@ -176,7 +214,7 @@
       </div>
       <br>
       <div class="card col-3" style="width:100%;">
-        <img class="card-img-top" src="../static/img/dt.jpg" alt="Card image" style="width:100%">
+        <img class="card-img-top rounded" src="../static/img/dt.jpg" alt="Card image" style="width:100%">
         <div class="card-body">
           <p class="card-text">cuhiep - 2 giờ</p>
           <a href="#">Dùng thun quần để làm kẹp giữ Spen vào Fold3
@@ -185,7 +223,7 @@
       </div>
       <br>
       <div class="card col-3" style="width:100%;">
-        <img class="card-img-top" src="../static/img/wc.jpg" alt="Card image" style="width:100%">
+        <img class="card-img-top rounded" src="../static/img/wc.jpg" alt="Card image" style="width:100%">
         <div class="card-body">
           <p class="card-text">cuhiep - 2 giờ</p>
           <a href="#">Trên tay DJI Mini SE: nhỏ, nhẹ dễ bay, khả năng quay 2.7K 30p, phù hợp cho người mới</a>
@@ -228,7 +266,10 @@
       <div class="col-1"></div><img class="col-1 rounded-circle"  src ="../static/img/khoa.jpg"><a  class="col-4"href="" style="font-size: small;">Tester</a>
     </div>
  
- 
+    <div class="full-screen hidden flex-container-center">
+      <h2 >Let me tell you about this thing!!</h2>
+      <button class="closepopup">Close Popup!</button>
+    </div>
   </section>
 </body>
 
