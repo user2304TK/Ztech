@@ -55,6 +55,11 @@
         $(".full-screen").addClass("hidden");
         $("body").removeClass("unscroll");
       });
+
+      $(".like").click(function(){
+        $(".like").toggleClass("like1");
+      });
+
     });
 
   </script>
@@ -263,9 +268,42 @@
       <div class="col-1"></div><img class="col-1 rounded-circle"  src ="../static/img/khoa.jpg"><a  class="col-4"href="" style="font-size: small;">Tester</a>
     </div>
  
-    <div class="full-screen hidden flex-container-center">
-      <h2 >Let me tell you about this thing!!</h2>
+    <div class="full-screen hidden flex-container-center ">
       <button class="closepopup">Close Popup!</button>
+      <div class="row form-inline" style="width: auto;" >
+        
+        <div class="mr-3" style="text-align: center;" ><iframe width="560" height="315" src="https://www.youtube.com/embed/rYhEhTlVpQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="rounded" style="width: 500px; background-color: azure; padding: 20px;">
+          <img class="rounded-circle" src="../static/img/khoa.jpg" width="40px" height="40px" alt="">
+          <span style="font-weight: 500;"  >Khoaminion <span style="font-weight: 100;">2h</span> <br><span style="" class="rounded" >Mời anh em cùng chiêm ngưỡng khả năng "bắn sữa" của anh chàng Ấn Độ hết sức điêu luyện và chính xác, khá là giải trí cho anh em trong mùa dịch này :))</span>
+          <hr>
+          <div class="row" style="text-align: center;">
+            <div class="col-sm-4 point like"><i class="fas fa-thumbs-up"></i> Thích</div>
+            <div class="col-sm-4 point"><i class="fas fa-comments"></i> Bình luận</div>
+            <div class="col-sm-4 point"><i class="fas fa-share"></i> Chia sẻ</div>
+          </div>
+          <hr>
+
+          <div style=" border: 1px solid rgb(202, 202, 202); border-radius: 5px; padding: 5px; background-color: rgb(226, 226, 226); ">
+            <img class="rounded-circle" src="../static/img/mikey-tokyo-revengers.gif" width="20px" height="20px" alt="">
+            <span style="font-weight: 500;"  >KhuongPT <span style="font-weight: 100;">2h</span> <br><span style="" class="rounded" >Thanh niên có vẻ thông thạo 7 môn vật lý đại cương.</span>
+          </div>
+
+          <div class="mb-2 mt-2" style=" border: 1px solid rgb(202, 202, 202); border-radius: 5px; padding: 5px; background-color: rgb(226, 226, 226); ">
+            <img class="rounded-circle" src="../static/img/cat-funny-cat.gif" width="20px" height="20px" alt="">
+            <span style="font-weight: 500;"  >KhuongPT <span style="font-weight: 100;">2h</span> <br><span style="" class="rounded" >Hết dịch phải làm một chuyến Ấn Độ mới được</span>
+          </div>
+
+          <div style=" border: 1px solid rgb(202, 202, 202); border-radius: 5px; padding: 5px; background-color: rgb(226, 226, 226); ">
+            <img class="rounded-circle" src="../static/img/doge-samar.gif" width="20px" height="20px" alt="">
+            <span style="font-weight: 500;"  >Tomblobla <span style="font-weight: 100;">2h</span> <br><span style="" class="rounded" >Quả đỉnh rồi :))</span>
+          </div>
+        </div>
+        
+        
+      </div>
+      
+      
     </div>
   </section>
 </body>
