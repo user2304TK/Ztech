@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-  
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -8,7 +7,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <meta charset="UTF-8">
-  <script src="../static/bootstrap-5.1.0-dist/js/popup.js"></script>
   <link rel="stylesheet" href="../static/css/main.css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,33 +35,12 @@
         {
           $(".viet").show();
         }  
-        if ($(window).width() > 1200){
-          $(".info-box").show();   
-        }
-        else
-        {
-          $(".info-box").hide();
-        }
-      });
-
-      $(".showpopup").click(function(){
-        $(".full-screen").removeClass("hidden");
-        $("body").addClass("unscroll");
-      });
-      
-      $(".closepopup").click(function(){
-        $(".full-screen").addClass("hidden");
-        $("body").removeClass("unscroll");
       });
     });
 
   </script>
 </head>
-
 <body>  
-
-  
-
   <nav class="container navbar navbar-expand-md navbar-inverse  navbar-light pb-0">
     <!-- Brand -->
     <div class="form-group pt-2">
@@ -120,7 +97,7 @@
   <hr class="hr-shadow">
   <section class="container">
     <!-- foru -->
-    <div class=" home-foru form-inline pb-3">
+    <div class="container home-foru form-inline pb-3">
       
       <div class="pr-3" style="font-weight: 500; font-size: x-large;">
         Home
@@ -133,17 +110,18 @@
       </div>
   </div>
   <!-- facts -->
-  <div class="mb-5 pb-5">
-    
-    <div class="form-inline" style=" height: 100px; background-size: contain;">
+  <div class="container mb-5 pb-5">
+    <div class="form-inline" style=" width: 700px; height: 100px; background-size: contain;">
        
-      <div class="scrollmenu rounded " style=" overflow: auto; white-space: nowrap; width: 840px; height: 170px;">       
+      <div class="scrollmenu" style=" overflow: auto; white-space: nowrap; width: 650px; height: 170px;">
+        
         <span class="ml-2">
-          <img class="mr-2 rounded" style=" opacity: 100%; height: 150px; width:85px; " src="../static/img/khoa.jpg"  alt="">
-        </span>  
-        <span class="showpopup">
+          <img class="mr-2 rounded" style=" opacity: 100%; height: 150px; width:85px; background-color: aqua;"  alt="">
+        </span>
+        
+        <span>
           <span style="margin-left: -70px; margin-right: 30px;"><i style="font-size: xx-large;"; class="fa fa-plus-circle" aria-hidden="true"></i></span>
-          <img  class="mr-2 rounded" style=" opacity: 100%; height: 150px; width: 85px;" src="../static/img/error-wait.gif" alt=""></span>
+          <img class="mr-2 rounded" style=" opacity: 100%; height: 150px; width: 85px;" src="../static/img/error-wait.gif" alt=""></span>
         <span>
           <span style="margin-left: -90px; margin-right: 20px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Khoaminion</span>
           <img class="mr-2 rounded" style="  height: 150px; width: 85px;" src="../static/img/dark-dark-netflix.gif" alt=""></span>
@@ -162,40 +140,20 @@
         <span>
           <span style="margin-left: -94px; margin-right: 10px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Nekowimade</span>
           <img class="mr-2 rounded" style="  height: 150px; width: 85px;" src="../static/img/gabriel-dropout-gabriel-temna.gif" alt=""></span>
-          <span>
-            <span style="margin-left: -90px; margin-right: 20px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Tomblobla</span>
-            <img class="mr-2 rounded" style="  height: 150px; width: 85px;" src="../static/img/cat-funny-cat.gif" alt=""></span>
-          <span>
         <span>
           <span style="margin-left: -67px; margin-right: 30px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Jerry</span>
           <img class="rounded" style="  height: 150px; width: 85px;" src="../static/img/mikey-tokyo-revengers.gif" alt=""></span>
           <span style="margin-left: -70px; margin-right: 33px; color: rgb(255, 255, 255); font-weight: 500;font-size: small;">Datoc</span>
       </div>
-        <!-- box-->
-      <div class="ml-3 info-box" style=" border: 1px solid rgb(202, 202, 202); border-radius: 5px; padding: 20px; ">
-        <img class="rounded-circle" src="../static/img/khoa.jpg" width="40px" height="40px" alt="">
-        <span style="font-weight: 500;"  >Xin chào Khoaminion ! <br> <br><span style="background-color: gainsboro; padding: 5px;" class="rounded" >Số giờ hoạt động: 283</span> <br>  <br><span style="background-color: gainsboro; padding: 5px;" class="rounded" > Số bài viết: 25</span></span>
-      </div>  
-
-      
-      <!--end box-->
     </div>
     
   </div>
-<<<<<<< HEAD
-  <!--end facts -->
-
-  
-=======
->>>>>>> 94e97b0016d4174a05e8a7350111a82a6cc535c0
 
     <div class="row">
       <button class="col-sm-9 borderactive"  type="button" class="btn btn-primary btn-block">+VIẾT BÀI CHIA SẺ,ĐẶT CÂU HỎI,SHARE LINK</button>
       <div class="col-sm-3"></div>
     </div>
     <br>
-
-    
     <div class="row ">
       <div class="row col-9">
         <img class="col-9" src="../static/img/maybay.jpg">  
@@ -214,14 +172,13 @@
       <div class="col-3">
         <h1 style="font-size: 25px;font-weight: bolder;">Cộng đồng nổi bật</h1>
         <div class="row">
-          <img class= "row col-6 " style="padding-left: 10%;"height=150% width="100%" src="../static/img/banphim.jpg"> <p class=" col-6">Phím cơ </p>
-          <img class= "row col-6 " style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/skmd.jpg"> <p class=" col-6">Sống Khỏe mùa dịch</p>
-          <img class= "row col-6 " style="padding-left: 10%;padding-top: 3%;"height=150% width="100%" src="../static/img/glx.jpg"> <p class=" col-6">SamsungGalaxy </p>
-          <img class= "row col-6 " style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/macbok.jpg"> <p class=" col-6">MacBook</p>
-          <img class= "row col-6 " style="padding-left: 10%; padding-top: 3%;padding-bottom: 3%;"height=150% width="100%" src="../static/img/ip.jpg"> <p class=" col-6">iPhone</p>
+          <img class= "row col-6 rounded" style="padding-left: 10%;"height=150% width="100%" src="../static/img/banphim.jpg"> <p class=" col-6">Phím cơ </p>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/skmd.jpg"> <p class=" col-6">Sống Khỏe mùa dịch</p>
+          <img class= "row col-6 rounded" style="padding-left: 10%;padding-top: 3%;"height=150% width="100%" src="../static/img/glx.jpg"> <p class=" col-6">SamsungGalaxy </p>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/macbok.jpg"> <p class=" col-6">MacBook</p>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;padding-bottom: 3%;"height=150% width="100%" src="../static/img/ip.jpg"> <p class=" col-6">iPhone</p>
           <div class= "row col-lg-3"></div>
           <button style="padding-left: 25px;padding-top: 3%;" type="button" class="col-9 btn btn-outline-primary">Xem thêm</button>
->>>>>>> 94e97b0016d4174a05e8a7350111a82a6cc535c0
         </div>
       </div>
     </div>
@@ -230,7 +187,7 @@
    
     <div class="row">
       <div class="card col-3" style="width:100%;">
-        <img class="card-img-top rounded" src="../static/img/youtube.jpg" alt="Card image" style="width:100%">
+        <img class="card-img-top" src="../static/img/youtube.jpg" alt="Card image" style="width:100%">
         <div class="card-body">
           <p class="card-text">TuyenTEX - 1 giờ</p>
           <a href="#">Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người...</a>
@@ -238,7 +195,7 @@
       </div>
       <br>
       <div class="card col-3" style="width:100%;">
-        <img class="card-img-top rounded" src="../static/img/dt.jpg" alt="Card image" style="width:100%">
+        <img class="card-img-top" src="../static/img/dt.jpg" alt="Card image" style="width:100%">
         <div class="card-body">
           <p class="card-text">cuhiep - 2 giờ</p>
           <a href="#">Dùng thun quần để làm kẹp giữ Spen vào Fold3
@@ -247,7 +204,7 @@
       </div>
       <br>
       <div class="card col-3" style="width:100%;">
-        <img class="card-img-top rounded" src="../static/img/wc.jpg" alt="Card image" style="width:100%">
+        <img class="card-img-top" src="../static/img/wc.jpg" alt="Card image" style="width:100%">
         <div class="card-body">
           <p class="card-text">cuhiep - 2 giờ</p>
           <a href="#">Trên tay DJI Mini SE: nhỏ, nhẹ dễ bay, khả năng quay 2.7K 30p, phù hợp cho người mới</a>
@@ -326,18 +283,20 @@
         </div>
       </div>
     </div>
-<<<<<<< HEAD
- 
-    <div class="full-screen hidden flex-container-center">
-      <h2 >Let me tell you about this thing!!</h2>
-      <button class="closepopup">Close Popup!</button>
-    </div>
-=======
     <br>
     <hr>
     <br>
+    <div class="row" >
+      <div class="row col-9">
+          <img style="border-radius: 15%; padding-bottom: 1%;" class="col-4" src="../static/img/dtduoi.jpg"><p class="col-8"><a style="font-size: large;" href="">Hướng dẫn thiết lập khôi phục iCloud thông qua liên hệ tin cậy trên iOS 15</a> <br>Việc khôi phục dữ liệu iCloud trên iOS 15 đã trở nên dễ dàng hơn khi người dùng quên mật khẩu tài khoản hoặc mật mã thiết bị.<br><img  class="col-1 rounded-circle"  src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p>
+          <img style="border-radius: 15%; padding-bottom: 1%;" class="col-4" src="../static/img/phimmaxxtri.jpg"><p class="col-8"><a style="font-size: large;" href="">Phim Matrix phần 4 có tên gọi chính thức, ra rạp ngày 22/12</a> <br>Tại sự kiện CinemaCon vừa diễn ra, Warner Bros dù không công bố rộng rãi trailer của bộ phim sắp công chiếu nhưng đã tiết lộ tên gọi chính thức sẽ là Matrix: Resurrections. <br><img  class="col-1 rounded-circle"  src="../static/img/khoa.jpg"> <a href="">Didu</a>- 4h-Cà phê tinh tế</p>
+          <img style="border-radius: 15%; padding-bottom: 1%;" class="col-4" src="../static/img/mayruachen.jpg"><p class="col-8"><a style="font-size: large;" href="">Review Máy rửa bát Electrolux loại 8 SET</a> <br>Đây là review về Máy rửa bát Electrolux loại 8 SET của mình.Mình mua nó với giá 11,000,000 (mua đã được 4 năm nên giá khá cao hơn hiện tại). Hi vọng phần review sẽ hữu ích cho bạn nào muốn mua nhé, nếu bạn có câu hỏi gì thì hãy comment vô bài này nha.<br><img  class="col-1 rounded-circle"  src="../static/img/khoa.jpg"> <a href="">kaoquanjb</a>- 5h-Điện tử-Tiêu dùng</p>
+          <img style="border-radius: 15%; padding-bottom: 1%;" class="col-4" src="../static/img/dh.jpeg"><p class="col-8"><a style="font-size: large;" href="">Fitbit Charge 5 chính thức: màn hình OLED Always-on Display, cảm biến ECG, giá 179 USD</a> <br>Vậy là FItbit Charge 5 đã chính thức được Fitbit ra mắt và sẽ là thế hệ fitness tracker cao cấp tiếp theo, kế nhiệm Fitbit Charge 4 ra mắt cách đây 1 năm<br><img  class="col-1 rounded-circle"  src="../static/img/khoa.jpg"> <a href="">bngHuy</a>- 5h-Đồng Hồ - Trang Sức</p>
+      </div>
+
+    </div>
+    
  
->>>>>>> 94e97b0016d4174a05e8a7350111a82a6cc535c0
   </section>
 </body>
 
