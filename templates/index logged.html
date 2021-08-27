@@ -35,6 +35,23 @@
         {
           $(".viet").show();
         }  
+        if ($(window).width() > 1200){
+          $(".info-box").show();   
+        }
+        else
+        {
+          $(".info-box").hide();
+        }
+      });
+
+      $(".showpopup").click(function(){
+        $(".full-screen").removeClass("hidden");
+        $("body").addClass("unscroll");
+      });
+      
+      $(".closepopup").click(function(){
+        $(".full-screen").addClass("hidden");
+        $("body").removeClass("unscroll");
       });
 
       $(".like").click(function(){
