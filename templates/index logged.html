@@ -35,23 +35,6 @@
         {
           $(".viet").show();
         }  
-        if ($(window).width() > 1200){
-          $(".info-box").show();   
-        }
-        else
-        {
-          $(".info-box").hide();
-        }
-      });
-
-      $(".showpopup").click(function(){
-        $(".full-screen").removeClass("hidden");
-        $("body").addClass("unscroll");
-      });
-      
-      $(".closepopup").click(function(){
-        $(".full-screen").addClass("hidden");
-        $("body").removeClass("unscroll");
       });
 
       $(".like").click(function(){
@@ -132,18 +115,17 @@
       </div>
   </div>
   <!-- facts -->
-  <div class="container mb-5 pb-5">
-    <div class="form-inline" style=" width: 700px; height: 100px; background-size: contain;">
+  <div class="mb-5 pb-5">
+    
+    <div class="form-inline" style=" height: 100px; background-size: contain;">
        
-      <div class="scrollmenu" style=" overflow: auto; white-space: nowrap; width: 650px; height: 170px;">
-        
+      <div class="scrollmenu rounded " style=" overflow: auto; white-space: nowrap; width: 840px; height: 170px;">       
         <span class="ml-2">
-          <img class="mr-2 rounded" style=" opacity: 100%; height: 150px; width:85px; background-color: aqua;"  alt="">
-        </span>
-        
-        <span>
+          <img class="mr-2 rounded" style=" opacity: 100%; height: 150px; width:85px; " src="../static/img/khoa.jpg"  alt="">
+        </span>  
+        <span class="showpopup">
           <span style="margin-left: -70px; margin-right: 30px;"><i style="font-size: xx-large;"; class="fa fa-plus-circle" aria-hidden="true"></i></span>
-          <img class="mr-2 rounded" style=" opacity: 100%; height: 150px; width: 85px;" src="../static/img/error-wait.gif" alt=""></span>
+          <img  class="mr-2 rounded" style=" opacity: 100%; height: 150px; width: 85px;" src="../static/img/error-wait.gif" alt=""></span>
         <span>
           <span style="margin-left: -90px; margin-right: 20px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Khoaminion</span>
           <img class="mr-2 rounded" style="  height: 150px; width: 85px;" src="../static/img/dark-dark-netflix.gif" alt=""></span>
@@ -162,14 +144,26 @@
         <span>
           <span style="margin-left: -94px; margin-right: 10px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Nekowimade</span>
           <img class="mr-2 rounded" style="  height: 150px; width: 85px;" src="../static/img/gabriel-dropout-gabriel-temna.gif" alt=""></span>
+          <span>
+            <span style="margin-left: -90px; margin-right: 20px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Tomblobla</span>
+            <img class="mr-2 rounded" style="  height: 150px; width: 85px;" src="../static/img/cat-funny-cat.gif" alt=""></span>
+          <span>
         <span>
           <span style="margin-left: -67px; margin-right: 30px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Jerry</span>
           <img class="rounded" style="  height: 150px; width: 85px;" src="../static/img/mikey-tokyo-revengers.gif" alt=""></span>
           <span style="margin-left: -70px; margin-right: 33px; color: rgb(255, 255, 255); font-weight: 500;font-size: small;">Datoc</span>
       </div>
+        <!-- box-->
+      <div class="ml-3 info-box" style=" border: 1px solid rgb(202, 202, 202); border-radius: 5px; padding: 20px; ">
+        <img class="rounded-circle" src="../static/img/khoa.jpg" width="40px" height="40px" alt="">
+        <span style="font-weight: 500;"  >Xin chào Khoaminion ! <br> <br><span style="background-color: gainsboro; padding: 5px;" class="rounded" >Số giờ hoạt động: 283</span> <br>  <br><span style="background-color: gainsboro; padding: 5px;" class="rounded" > Số bài viết: 25</span></span>
+      </div>  
+      <!--end box-->
     </div>
     
   </div>
+  <!--end facts -->
+
  <!-- nút viết bài -->
     <div class="row">
       <button class="col-sm-9 borderactive"  type="button" class="btn btn-primary btn-block">+VIẾT BÀI CHIA SẺ,ĐẶT CÂU HỎI,SHARE LINK</button>
