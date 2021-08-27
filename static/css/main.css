@@ -77,10 +77,7 @@
     justify-content: center;
     align-items:center;
 }
-  
-.full-screen{
-    color: white
-}
+
   
 .hidden {
       display: none;
@@ -97,4 +94,11 @@ a:hover{
    
     text-decoration: none;
 }
+.point:hover{
+    cursor: pointer;
+}
+.like1{
+    color: blue;
+}
+
 
