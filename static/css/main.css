@@ -7,6 +7,12 @@
     background-color: rgb(228, 228, 228);
     text-align: center;
 } 
+.bdr{
+   
+    border-radius: 15%;
+    padding-bottom: 1%;
+
+}
 .borderactive{
     background-color:#0768ea ; 
     color: aliceblue;font-weight:
