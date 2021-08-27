@@ -44,6 +44,15 @@
           $(".info-box").hide();
         }
       });
+      $(".showpopup").click(function(){
+        $(".full-screen").removeClass("hidden");
+        $("body").addClass("unscroll");
+      });
+      
+      $(".closepopup").click(function(){
+        $(".full-screen").addClass("hidden");
+        $("body").removeClass("unscroll");
+      });
 
       $(".like").click(function(){
         $(".like").toggleClass("like1");
