@@ -35,6 +35,14 @@
         {
           $(".viet").show();
         }  
+
+        if ($(window).width() > 1200){
+          $(".info-box").show();   
+        }
+        else
+        {
+          $(".info-box").hide();
+        }
       });
 
       $(".like").click(function(){
