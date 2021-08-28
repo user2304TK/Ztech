@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../static/css/main.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    $(document).ready(function(){
+      if ($(window).width() > 750){
+          $(".viet").hide();   
+        }
+        else
+        {
+          $(".viet").show();
+        }
+
+      $(".search-query").hide();
+
+      $(".form-group .btn").click(function(){
+        $(".search-query").toggle(200);
+      }); 
+
+      $(window).resize(function(){
+        if ($(window).width() > 750){
+          $(".viet").hide();   
+        }
+        else
+        {
+          $(".viet").show();
+        }  
+        if ($(window).width() > 1200){
+          $(".info-box").show();   
+        }
+        else
+        {
+          $(".info-box").hide();
+        }
+      });
+
+      $(".showpopup").click(function(){
+        $(".full-screen").removeClass("hidden");
+        $("body").addClass("unscroll");
+        $(".pop2").addClass("hidden");
+      });
+      
+      $(".closepopup").click(function(){
+        $(".full-screen").addClass("hidden");
+        $("body").removeClass("unscroll");
+        $('iframe').attr('src', $('iframe').attr('src'));
+      });
+
+      $(".like").click(function(){
+        $(".like").toggleClass("like1");
+        if ($(".like-text").text() ==" Thích"){
+          $(".like-text").text(" Đã thích");
+
+        }
+        else{
+          $(".like-text").text(" Thích");
+        };
+      });
+
+      $(".like2").click(function(){
+        $(".like2").toggleClass("like1");
+        if ($(".like-text1").text() ==" Thích"){
+          $(".like-text1").text(" Đã thích");
+
+        }
+        else{
+          $(".like-text1").text(" Thích");
+        };
+      });
+
+      $(".fa-chevron-right").click(function(){
+        $(".pop1").addClass("hidden");       
+        $(".pop2").removeClass("hidden");
+        $('.frame1').attr('src', $('.frame1').attr('src'));
+      });
+
+      $(".fa-chevron-left").click(function(){             
+        $(".pop2").addClass("hidden");
+        $(".pop1").removeClass("hidden");
+        $('.frame2').attr('src', $('.frame2').attr('src'));
+        
+      });
+
+      
+    });
+
+  </script>
+</head>
+<body>  
+  <nav class="container navbar navbar-expand-md navbar-inverse  navbar-light pb-0">
+    <!-- Brand -->
+    <div class="form-group pt-2">
+    <a class="navbar-brand" href="#"><img src="../static/img/Z-green-leaf.svg" width="45" height="45" alt="Logo"> ZTech</a>
+    <!-- search -->
+          <input type="text" class="search-query" placeholder="Type something...">
+          <button type="submit" class="btn btn-circle"><i class="fa fa-search"></i></button>
+    </div>
+    
+    
+
+    <!-- toggle icon -->
+    <button class="navbar-toggler mb-3" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+   </button>
+   
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav mr-auto pb-2">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 1</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 2</a>
+      </li>
+    </ul>
+      <li class="nav-item li-dangnhap pr-3 pb-2">
+        <i class="fas fa-feather btn-circle" style="padding-top: 10px; background-color: rgb(4, 229, 245);" data-toggle="tooltip" data-placement="top" title="Viết bài"></i>
+        <span class="viet">Viết bài</span>
+      </li>
+      <li class="nav-item li-dangnhap pr-3 pb-2">
+        <i class="fas fa-bell btn-circle" style="padding-top: 10px; background-color: rgb(4, 229, 245);" data-toggle="tooltip" data-placement="top" title="Thông báo"></i>
+        <span class="viet">Thông báo</span>
+      </li>
+      <li class="nav-item li-dangnhap pr-3 pb-2">
+        <img class="rounded-circle" width="33" height="33" src="../static/img/khoa.jpg" alt="khoamod" data-toggle="tooltip" data-placement="top" title="Trang cá nhân">
+        <span class="viet">Trang cá nhân</span>
+      </li>
+      
+      <li class="nav-item li-dangnhap pb-2">
+        
+        <div class="dropdown" data-toggle="dropdown" aria-haspopup="true" data-placement="top" title="Cài đặt" aria-expanded="false" >
+          <i id="dropdownMenuButton" class="fas fa-cog btn-circle" style="padding-top: 10px; "></i>
+          <span class="viet">Cài đặt</span>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </div>
+      </li>
+    </div>
+  </nav>
+  <hr class="hr-shadow">
+  <br>
+  <br>
+  <section class="container">
+    <!-- foru -->
+  <!-- facts -->
+  <!--end facts -->
+  
+ <!-- nút viết bài -->
+ <div class="row ">
+    <div class="row col-9">
+        <p class="point" style="font-size: medium;" >Camera ►<span style="font-size: medium;font-weight: bolder;"> Điện Ảnh</span></p> 
+        <h1>Giới thiệu sách và phim "Suối nguồn" của tác giả Ayn Rand</h1>
+        <img class="col-1 rounded-circle" src="../static/img/khoa.jpg"><a style="color: blue;" href="">blueJune  <i class="fas fa-check-circle"></i> <br> <span style="color: black;">1 ngày • Bình luận 5</span></a><div class="col-11"></div>
+    </div>
+    <div class="col-3">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img  src="../static/img/khoa.jpg" class="img-fluid rounded-start rounded-circle" alt="...">
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">Hi Khoaminion</h5>
+                  <p class="card-text"><small class="text-muted">Hoạt động:268 ngày</small></p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+ </div>
+  </div>
+  <br><br>
+     <!-- khung 1 -->
+    <div class="row ">
+        <div class="row col-9">
+            <img class="col-12" src="../static/img/sach.jpg" style="padding-bottom: 3%;" >
+    
+            <div class="col-12">Trong đợt dịch giãn cách ở nhà này, mình đã dành thời gian đọc hết cuốn sách <a href="" style="font-style: italic;">Suối nguồn</a> của tác giả <a href="" style="font-style: italic;">Ayn Rand</a> dày hơn 1200 trang mà mình đã mua cách đây… 10 năm. Mình cũng tìm phim được chuyển thể từ truyện để xem luôn. Có lẽ nhiều anh em cũng đọc tiểu thuyết nổi tiếng này rồi, còn ai chưa đọc có thể xếp vào danh sách và dành thời gian cho nó nhé. Cuốn sách có nhiều triết lý sống theo mình nghĩ là đúng với mọi thời đại dù nó được chấp bút vào năm 1943.
+                <br><br>Ayn Rand đã bị 12 nhà xuất bản từ chối bản thảo trước khi được chấp nhận. Suối nguồn đã bán được hơn 6,5 triệu bản và được dịch ra hơn 20 ngôn ngữ trên khắp thế giới.
+                <br><br>Suối nguồn xoay quanh những tư tưởng chính: sự độc lập, sáng tạo, người sống thứ cấp, sự ích kỷ tốt đẹp và mục đích trọng tâm. Các nhân vật trong truyện đa phần là những người cực đoan, theo đuổi những niềm tin tự mình đặt ra và sống chết theo đuổi niềm tin ấy. Vì thế, những cuộc hội thoại giữa họ khá là đau não, nhiều khi giống một bản thuyết trình với đầy đủ luận điểm, luận cứ và minh chứng. Cuốn tiểu thuyết này không hề dễ đọc nếu bạn không phải người thích phân tích sâu các vấn đề và suy nghĩ về các triết lý.
+                <br><br>Suối nguồn - tên sách cũng chính là lý tưởng mà Ayn Rand tôn vinh và ca ngợi, lấy lĩnh vực kiến trúc làm nền tảng để kể chuyện về các nhân vật và tư tưởng của họ. Howard Roark, nhân vật chính, một kiến trúc sư luôn độc lập và sáng tạo trên con đường sự nghiệp của mình. Từ quan điểm về kiến trúc, kế hoạch về sự nghiệp cho tới sự lựa chọn bạn bè, anh luôn tự bản thân đánh giá và suy nghĩ. Anh đề cao sự sáng tạo tự thân, kịch liệt phản đối những thiết kế chắp ghép, dựa vào cấu trúc của những công trình đi trước - cách mà những kiến trúc sư cùng thời anh đang làm. Roark không bao giờ chấp nhận những can thiệp, sửa đổi vào thiết kế mà anh làm ra, kể cả khi anh lâm vào hoàn cảnh khó khăn và bị cả cộng đồng chỉ trích cho rằng anh trái khoáy, thích đi ngược lại đám đông. Chúng đi ngược lại tôn chỉ anh đặt ra cho công việc của mình. Đối với anh, nhưng người suy nghĩ, những nhà khoa học, nghệ sĩ và những nhà sáng chế luôn là những người cô độc chống lại phần đông loài người trong thời kì của họ. Trong bài diễn thuyết nhằm bảo vệ bản thân trước phiên tòa xét xử buộc tội anh ở cuối truyện, Roark đã đưa ra những dẫn chứng hùng hồn trong quá khứ về quan điểm này, rằng những thành tựu vĩ đại của con người đều đến từ sự khai phá con đường mới, những khao khát bị từ chối và khinh bỉ: chiếc động cơ đầu tiên bị coi là ngu ngốc; người ta từng coi máy bay là điều bất khả; gây mê là điều tội lỗi.
+                <br><br>Điều thúc đẩy Howard Roark không phải là của cải, sự giàu sang hay sự công nhận của xã hội mà là những thách thức trí tuệ trong việc giải quyết các vấn đề về kiến trúc và mong muốn kiến tạo ra cái đẹp. Suối nguồn coi sự ích kỷ của Roark ở đây là tốt đẹp. Nó không phải sự ích kỷ thô lậu, lấy người khác ra làm vật hi sinh cho những lợi ích của bản thân mình. Chủ nghĩa cá nhân ở đây đề cao những sáng tạo và ý tưởng tiên phong, biết bảo vệ tư tưởng độc lập trước sự cáo buộc và bác bỏ của đám đông. Trái ngược với Howard Roark, nhân vật Peter Keating được xây dựng là một người sống thứ cấp hèn hạ, đáng khinh bỉ. Anh ta không bao giờ có suy nghĩ độc lập, luôn chạy theo xu hướng và dựa vào người khác để kiếm lợi cho bản thân. Tiền tài, cơ đồ và sự nhìn vào của người khác là tiêu chí hàng đầu trong cuộc đời, trong khi yếu tố cốt lõi trong công việc của anh ta đáng nhẽ là kiến trúc. Keating sẵn sàng bỏ qua lòng tự trọng và chữ tín để đạt được những thứ bề mặt hào nhoáng. Đương nhiên, anh ta rất thành công, được nhiều người biết đến và ngưỡng mộ. Nhưng thẳm sâu bên trong, chính anh ta luôn lo sợ và ý thức được sự hèn hạ của bản thân. Anh ta gồng mình khoác lên chiếc áo rộng mà không dám gỡ bỏ. Được coi là kiến trúc sư ngôi sao, tiền tài và danh vọng sớm đạt được khi còn trẻ nhưng bên trong, anh ta cảm thấy trống rỗng và bất lực.
+                <br><br>Tiểu thuyết cũng xây dựng những tính cách nhân vật lạ lùng, đơn cử như Dominique Francon. Cô là người theo chủ nghĩa lý tưởng, tôn thờ sự vĩ đại của con người và sáng tạo của những thiên tài. Tuy nhiên, cô tin rằng những sự vĩ đại ấy sẽ bị đánh bại trong một thế giới được cai trị bởi những kẻ tầm thường. Vì thế, cô luôn tránh ràng buộc mình vào những giá trị hay những đối tượng mà sớm muộn cô phải chứng kiến sự lụi tàn. Thay vì bồi đắp để xây dựng những giá trị mình tôn kính, cô làm ngược lại, bằng cách tự mình phá hủy chúng để tránh khỏi nỗi đau khổ khi tận mắt nhìn những lý tưởng bị đạp đổ.
+                <br><br>Về bộ phim chuyển thể cùng tên, do chỉ gói gọn trong gần hai tiếng đồng hồ với nội dung đồ sộ của cuốn sách, rất nhiều chi tiết bị lược bỏ. Tiêu biểu nhất là những đoạn hội thoại dài giữa các nhân vật đã giản lược xuống thành những câu nói ngắn gọn. Chỉ xem phim không thì không thấy được những lý tưởng mà Ayn Rand đề cao trong cuốn sách. Có một điểm mình không thích nữa là khi đọc sách, hình dung về nhân vật Howard Roark của mình là một chàng trai trẻ thì trong phim, diễn viên Gary Cooper đã khá đứng tuổi và đậm người. Mình khi ôm sách tưởng tượng nhân vật này do anh chàng người Anh Eddie Redmayne thủ vai, với dáng người cao ráo, mảnh khảnh cùng mái tóc rối bù. Nói chung không nên xem phim trước khi đọc sách.
+                <br><br>Trailer phim <span style="font-style: italic;">Suối nguồn</span><br>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/wC0WeTjvq4k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br><br>Hi vọng với chút giới thiệu ngắn ngủi trên, anh em sẽ dành thời gian cho cuốn tiểu thuyết tuyệt vời này 😁<br><br>
+            </div>
+            <div class="col-5" style="color: cornflowerblue;"><i style="color: palevioletred;" class="fab fa-gratipay"></i> 5 <span style="color: black;">• 5 bình luận</span> </div> <div class="col-5"></div> <button type="button"  class="btn btn-outline-light col-2"><sup style="color: black;font-size: x-large;">...</sup></button>
+            <hr class="col-12" style="background-color: rgb(230, 212, 212);">
+            <button type="button" class="btn btn-light col-2"><i class="far fa-heart"></i> Thích</button>  <button type="button" class="btn btn-light col-2"><i class="far fa-comment-alt"></i> Bình Luận</button><div class="col-3"></div>
+            <button type="button" class="btn btn-primary col-3"> <img src="../static/img/Z-green-leaf.svg" width="25" height="25" alt="Logo"> <span style="color:white;"> Chia sẽ lên fact</span></button><div class="col-1"></div> 
+            <button type="button" style="background-color: blue;" class="btn btn-primary col-1"><i class="fas fa-share"></i>28</button>
+            <hr class="col-12">  
+            <div class="row">
+                <div class="card col-3" style="width: 25%;border-radius: 5%;">
+                    <img style="border-radius: 5%;" src="../static/img/soi.jpg" class="card-img-top" alt="...">
+                    <a href="">blueJunet</a>
+                    <p class="card-text">Xem anime Beastars (2019): Một phản chiếu về tâm lý con người qua thế giới động vật</p>
+                  </div>
+                  <div class="card col-3 " style="width: 25%; border-radius: 5%;">
+                    <img src="../static/img/tho.jpg"style="border-radius: 5%;"  class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <a href="">blueJunet</a>
+                      <p class="card-text">Xem anime Beastars (2019): Một phản chiếu về tâm lý con người qua thế giới động vật</p>
+                    </div>
+                  </div>
+                  <div class="card col-3 " style="width: 25%; border-radius: 5%;">
+                    <img src="../static/img/car.jpg"style="border-radius: 5%;"  class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <a href="">blueJunet</a>
+                      <p class="card-text">Xem anime Beastars (2019): Một phản chiếu về tâm lý con người qua thế giới động vật</p>
+                    </div>
+                  </div>
+                  <div class="card col-3 " style="width: 25%; border-radius: 5%;">
+                    <img src="../static/img/phimmaxxtri.jpg"style="border-radius: 5%;" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <a href="">blueJunet</a>
+                      <p class="card-text">[Tóm tắt phim] Công Chúa Mononoke - Princess Mononoke 1997</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="col-12">
+            <button type="button" style="background-color: black; color: white;" class="btn btn-lg btn-primary" disabled>Bình Luận</button>
+        </div>
+     
+       
+      <div class="col-3">
+        <h1 style="font-size: 25px;font-weight: bolder;">Cộng đồng nổi bật</h1>
+        <div class="row">
+          <img class= "row col-6 rounded" style="padding-left: 10%;"height=150% width="100%" src="../static/img/banphim.jpg"> <a href="" class=" col-6">Phím cơ </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/skmd.jpg"> <a href="" class=" col-6">Sống Khỏe mùa dịch</a>
+          <img class= "row col-6 rounded" style="padding-left: 10%;padding-top: 3%;"height=150% width="100%" src="../static/img/glx.jpg"> <a href="" class=" col-6">SamsungGalaxy </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/macbok.jpg"> <a href="" class=" col-6">MacBook</a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;padding-bottom: 3%;"height=150% width="100%" src="../static/img/ip.jpg"> <a href="" class=" col-6">iPhone</a>
+          <img class= "row col-6 rounded" style="padding-left: 10%;"height=150% width="100%" src="../static/img/nghiengame.jpg"> <a href="" class=" col-6">Những thông tin cơ bản về Nintendo Switch </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/crenn.jpg"> <a href="" class=" col-6">Các lưu ý khi mua màn hình USB-C </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%;padding-top: 3%;"height=150% width="100%" src="../static/img/galaxyZ.jpg"> <a href="" class=" col-6">Cách xem Instagram full màn hình  </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/mh.jpg"> <a href="" class=" col-6">Những điều chú ý khi dùng máy cá nhân </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;padding-bottom: 3%;"height=150% width="100%" src="../static/img/laptopcty.jpg"> <a href="" class=" col-6">Những lưu ý khi dùng laptop, desktop </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/dtip.jpg"> <a href="" class=" col-6">iOS 15 cho phép tắt hoàn toàn Night Mode </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;padding-bottom: 3%;"height=150% width="100%" src="../static/img/lol.jpg"> <a href="" class=" col-6">Chơi League of Legends trên Mac M1 ok</a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; border-radius: 10%;"height=150% width="100%" src="../static/img/nghiengame.jpg"> <a href="" class=" col-6">Thông tin về Nintendo Switch </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;border-radius: 10%;"height=150% width="100%" src="../static/img/crenn.jpg"> <a href="" class=" col-6">Lưu ý mua màn hình</a>
+          <img class= "row col-6 rounded" style="padding-left: 10%;padding-top: 3%;border-radius: 10%;"height=150% width="100%" src="../static/img/galaxyZ.jpg"> <a href="" class=" col-6">Cách xem Instagram  </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;border-radius: 10%;"height=150% width="100%" src="../static/img/mh.jpg"> <a href="" class=" col-6">Dùng máy cá nhân </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;padding-bottom: 3%;border-radius: 10%;"height=150% width="100%" src="../static/img/laptopcty.jpg"> <a href="" class=" col-6">Dùng laptop, desktop </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;border-radius: 10%;padding-bottom: 3%;"height=150% width="100%" src="../static/img/dtip.jpg"> <a href="" class=" col-6">iOS 15  </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%;"height=150% width="100%" src="../static/img/nghiengame.jpg"> <a href="" class=" col-6">Những thông tin cơ bản về Nintendo Switch </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/crenn.jpg"> <a href="" class=" col-6">Các lưu ý khi mua màn hình USB-C </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%;padding-top: 3%;"height=150% width="100%" src="../static/img/galaxyZ.jpg"> <a href="" class=" col-6">Cách xem Instagram full màn hình  </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/mh.jpg"> <a href="" class=" col-6">Những điều chú ý khi dùng máy cá nhân </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;padding-bottom: 3%;"height=150% width="100%" src="../static/img/laptopcty.jpg"> <a href="" class=" col-6">Những lưu ý khi dùng laptop, desktop </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/dtip.jpg"> <a href="" class=" col-6">iOS 15 cho phép tắt hoàn toàn Night Mode </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;padding-bottom: 3%;"height=150% width="100%" src="../static/img/lol.jpg"> <a href="" class=" col-6">Chơi League of Legends trên Mac M1 ok</a>
+        
+          <div class= "row col-lg-3"></div>
+          
+          <button style="padding-left: 25px;padding-top: 3%;" type="button" class="col-9 btn btn-outline-primary">Xem thêm</button>
+          
+          <div class="col-12" style="padding-bottom: 5%;"></div>
+        </div>
+      </div>
+    </div>
+
+   
+    <!-- khung 2 -->
+   
+     <!-- xem nhanh -->
+   
+    <div class="row">  
+       <div class="row col-9" >
+      
+      </div>
+      <div class="col-3">
+        <div class="row">
+          </div>
+      </div>
+      <br>
+    </div>
+   
+
+    <br>
+    <br>
+    <br>
+    <!--Các câu hỏi bạn giúp-->
+    <div class="row">
+      <div class=" row col-9">
+        <a class="col-12" style="font-weight: bold;padding-bottom: 3%;" href=""></a><br>
+        <img  class="col-1 rounded-circle" height="6%" width="1%" src="../static/img/khoa.jpg">
+        <div style="background-color: lightgrey;" class="card col 11">
+          <div class="card-body">
+            <a href="" style="color:blue;">Nguyễn Đăng Khoa</a> <span style="padding-right: 420px;">-20 phút</span><button type="button"  class="btn btn-outline-light "><sup style="color: black;font-size: x-large;">...</sup></button>
+            
+            <div>Buồn quá không ai giúp em, 100 bác vào xem rồi lại đi ra hic~</div>
+          </div>
+        </div>
+        <hr class="col-12">
+        <div class="col-1" style="padding-right: 2%;"></div>
+        <button type="button" class="btn btn-light ">thích</button><button type="button" class="btn btn-light ">trả lời</button>
+        <a class="col-12" style="font-weight: bold;padding-bottom: 3%;" href=""></a><br>
+        <img  class="col-1 rounded-circle" height="6%" width="1%" src="../static/img/bagia.jpg">
+        <div style="background-color: lightgrey;" class="card col 11">
+          <div class="card-body">
+            <a href="" style="color:blue;">Hasales</a> <span style="padding-right: 510px;">-20 phút</span><button type="button"  class="btn btn-outline-light "><sup style="color: black;font-size: x-large;">...</sup></button>
+            <div>trc đây samsung a7 2017 của mình không cần mật khẩu mỗi khi tắt nguồn
+              hnay mình quên mật khẩu muốn tắt nguồn để reset thì quên mk mới cay , ai giúp mình với hu =((</div>
+          </div>
+        </div>
+        <hr class="col-12">
+        <div class="col-1" style="padding-right: 2%;"></div>
+        <button type="button" class="btn btn-light ">thích</button><button type="button" class="btn btn-light ">trả lời</button>
+        <a class="col-12" style="font-weight: bold;padding-bottom: 3%;" href=""></a><br>
+        <img  class="col-1 rounded-circle" height="6%" width="1%" src="../static/img/ongia.jpg">
+        <div style="background-color: lightgrey;" class="card col 11">
+          <div class="card-body">
+            <a href="" style="color:blue;">Peter</a><span style="padding-right: 530px;">-20 phút</span><button type="button"  class="btn btn-outline-light "><sup style="color: black;font-size: x-large;">...</sup></button>
+            
+            <div>Buồn quá không ai giúp em, 100 bác vào xem rồi lại đi ra hic~</div>
+          </div>
+        </div>
+        <hr class="col-12">
+        <div class="col-1" style="padding-right: 2%;"></div>
+        <button type="button" class="btn btn-light ">thích</button><button type="button" class="btn btn-light ">trả lời</button>
+        <a class="col-12" style="font-weight: bold;padding-bottom: 3%;" href=""></a><br>
+        <img  class="col-1 rounded-circle" height="6%" width="1%" src="../static/img/ongiga2.jpg">
+        <div style="background-color: lightgrey;" class="card col 11">
+          <div class="card-body">
+            <a href="" style="color:blue;">Thomson</a> <span style="padding-right: 73%;">-20 phút</span><button type="button"  class="btn btn-outline-light "><sup style="color: black;font-size: x-large;">...</sup></button>
+            
+            <div>trc đây samsung a7 2017 của mình không cần mật khẩu mỗi khi tắt nguồn
+              hnay mình quên mật khẩu muốn tắt nguồn để reset thì quên mk mới cay , ai giúp mình với hu =((</div>
+          </div>
+        </div>
+        <hr class="col-12">
+        <div class="col-1" style="padding-right: 2%;"></div>
+        <button type="button" class="btn btn-light ">thích</button><button type="button" class="btn btn-light ">trả lời</button>
+        <a class="col-12" style="font-weight: bold;padding-bottom: 3%;" href=""></a><br>
+        <img  class="col-1 rounded-circle" height="6%" width="1%" src="../static/img/cheems.jpg">
+        <div style="background-color: lightgrey;" class="card col 11">
+          <div class="card-body">
+            <a href="" style="color:blue;">Phạm Trọng Khương</a><span style="padding-right: 430px;">-20 phút</span><button type="button"  class="btn btn-outline-light "><sup style="color: black;font-size: x-large;">...</sup></button>
+            
+            <div>Mọi người chỉ mình cách làm thịt con cún nhà mình với nó tên CHEEMS</div>
+          </div>
+        </div>
+        <hr class="col-12">
+        <div class="col-1" style="padding-right: 2%;"></div>
+        <button type="button" class="btn btn-light ">thích</button><button type="button" class="btn btn-light ">trả lời</button>
+      </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <!--khung 7-->
+    <div class="row">
+      <div class="col-9">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+          </ul>
+        
+          <!-- The slideshow -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="../static/img/nghiengame.jpg" class="d-block w-100" >
+            </div>
+            <div class="carousel-item">
+              <img src="../static/img/car.jpg" class="d-block w-100" >
+            </div>
+            <div class="carousel-item">
+              <img src="../static/img/macc.jpg"  class="d-block w-100">
+            </div>
+          </div>
+        
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        
+        </div>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <!--Tag-->
+    <div class="row">
+      <div class="row col-9 " style="background-color: #222b45;color: white;border-radius: 2%;">
+        <div class="col-12">Bài Viết Đang Hot <br>Anh Em nhớ follow để nhận được thông báo mới nhé</div>
+        <div  class="card col-3" style="width: 50%; background-color: #242424" >
+          <img style="border-radius: 3%;" src="../static/img/android.png" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">#Android</p>
+          </div>
+        </div>
+        <div  class="card col-3" style="width: 50%; background-color: #242424" >
+          <img style="border-radius: 3%;" src="../static/img/corona.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">#Corona</p>
+          </div>
+        </div>
+        <div  class="card col-3" style="width: 50%; background-color: #242424" >
+          <img style="border-radius: 3%;" src="../static/img/khuyenmai.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">#Khuyen mai</p>
+          </div>
+        </div>
+        <div  class="card col-3" style="width: 50%; background-color: #242424" >
+          <img style="border-radius: 3%;" src="../static/img/car.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">#Car</p>
+          </div>
+        </div>
+        <div  class="card col-3" style="width: 50%; background-color: #242424" >
+          <img style="border-radius: 3%;" src="../static/img/ongiga2.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">#Tim Cook</p>
+          </div>
+        </div>
+        <div  class="card col-3" style="width: 50%; background-color: #242424" >
+          <img style="border-radius: 3%;" src="../static/img/banphim.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">#Ban Phim</p>
+          </div>
+        </div>
+        <div  class="card col-3" style="width: 50%; background-color: #242424" >
+          <img style="border-radius: 3%;" src="../static/img/surface.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">#Cong Nghe</p>
+          </div>
+        </div>
+        <div  class="card col-3" style="width: 50%; background-color: #242424" >
+          <img style="border-radius: 3%;" src="../static/img/youtube.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">#Youtube</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <hr>
+  </section>
+</body>
+
+  
+  <!-- Footer -->
+<footer class="text-center  text-lg-start bg-light text-muted">
+  <section class=" p-4 border-bottom " style="background-color: rgba(165, 162, 162, 0.05);">
+    <!-- Left -->
+    <div class="me-5 pl-30">
+      <a href="" class="pr-3">
+        TIN MỚI
+      </a>
+      <a href="" class="pr-3">
+        SỰ KIỆN
+      </a>
+      <a href="" class="pr-3">
+        VIDEO
+      </a>
+      <a href="" class="pr-3">
+        GIẢI TRÍ
+      </a>
+      <a href="" class="pr-3">
+        KHUYẾN MÃI
+      </a>
+    </div>
+  </section>
+
+
+  <!-- Section: Links  -->
+  <section class="mb-3">
+    <div class="container text-center text-sm-start mt-4">
+      <!-- Grid row -->
+      <div class="row mt-3 mb-3">
+        <!-- Grid column -->
+        <div class="col-sm-3 col-lg-3 col-xl-3 mx-auto mb-1">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            ZTECH
+          </h6>
+          <p><a class="text-reset" href="#!">Nội quy</a></p>
+          <p><a class="text-reset" href="#!">Thỏa thuận</a></p>
+          <p><a class="text-reset" href="#!">Góp ý</a></p>
+          <p><a class="text-reset" href="#!">Liên hệ quảng cáo</a></p>           
+          
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-sm-3 col-lg-3 col-xl-3 mx-auto mb-1">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Đối tác
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Vinamilk</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Thegioididong</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">FPT Shop</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">ConCung</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-sm-3 col-lg-3 col-xl-3 mx-auto mb-1">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Mua bán
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Điện thoại</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Máy ảnh</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Máy tính</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Xe cộ</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-sm-3 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-1">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Các kênh khác
+          </h6>
+          <p><a class="text-reset" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i> Facebook</a></p>
+          <p><a class="text-reset" href="https://www.youtube.com/"><i class="fab fa-youtube"></i> Youtube</a></p>
+          <p><a class="text-reset" href="https://www.pinterest.com/"><i class="fab fa-pinterest"></i> Pinterest</a></p>
+          <p><a class="text-reset" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></i> Instagram</a></p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+  <hr>
+  <!-- Copyright -->
+  <div class="text-center p-3 "  style=" font-size: small;">
+    <span class="pr-4"> © 2021 Team Ztech </span> <span class="pr-4"> Địa chỉ: 69 Hạ Long, Phường
+       4, TP.Vũng tàu </span><span class="pr-4"> Số điện thoại: 0283282719 </span> <span class="pr-4"> Chịu trách nhiệm nội dung: Hồ Trọng Vinh </span>
+  </div>
+</footer>
+<!-- Footer -->
+</html>
