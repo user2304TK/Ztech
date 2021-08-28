@@ -35,7 +35,6 @@
         {
           $(".viet").show();
         }  
-
         if ($(window).width() > 1200){
           $(".info-box").show();   
         }
@@ -44,20 +43,55 @@
           $(".info-box").hide();
         }
       });
+
       $(".showpopup").click(function(){
         $(".full-screen").removeClass("hidden");
         $("body").addClass("unscroll");
+        $(".pop2").addClass("hidden");
       });
       
       $(".closepopup").click(function(){
         $(".full-screen").addClass("hidden");
         $("body").removeClass("unscroll");
+        $('iframe').attr('src', $('iframe').attr('src'));
       });
 
       $(".like").click(function(){
         $(".like").toggleClass("like1");
+        if ($(".like-text").text() ==" Thích"){
+          $(".like-text").text(" Đã thích");
+
+        }
+        else{
+          $(".like-text").text(" Thích");
+        };
       });
 
+      $(".like2").click(function(){
+        $(".like2").toggleClass("like1");
+        if ($(".like-text1").text() ==" Thích"){
+          $(".like-text1").text(" Đã thích");
+
+        }
+        else{
+          $(".like-text1").text(" Thích");
+        };
+      });
+
+      $(".fa-chevron-right").click(function(){
+        $(".pop1").addClass("hidden");       
+        $(".pop2").removeClass("hidden");
+        $('.frame1').attr('src', $('.frame1').attr('src'));
+      });
+
+      $(".fa-chevron-left").click(function(){             
+        $(".pop2").addClass("hidden");
+        $(".pop1").removeClass("hidden");
+        $('.frame2').attr('src', $('.frame2').attr('src'));
+        
+      });
+
+      
     });
 
   </script>
@@ -589,17 +623,18 @@
     <br>
     <hr>
 
-    <div class="full-screen hidden flex-container-center ">
-      <button class="closepopup">Close Popup!</button>
-      <div class="row form-inline" style="width: auto;" >
+    <!-- popup1-->
+    <div class="full-screen pop1 hidden flex-container-center">
+      <div class="row form-inline " style="width: auto;" >
+        <i class="fas fa-chevron-left mr-4 point"  style="color: white; font-size: 40px;"></i>
+        <div class="mr-3" style="text-align: center;" ><iframe class="frame1" width="600" height="400" src="https://www.youtube.com/embed/pp5FyuLbjwM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
         
-        <div class="mr-3" style="text-align: center;" ><iframe width="560" height="315" src="https://www.youtube.com/embed/rYhEhTlVpQE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
         <div class="rounded" style="width: 500px; background-color: azure; padding: 20px;">
           <img class="rounded-circle" src="../static/img/khoa.jpg" width="40px" height="40px" alt="">
-          <span style="font-weight: 500;"  >Khoaminion <span style="font-weight: 100;">2h</span> <br><span style="" class="rounded" >Mời anh em cùng chiêm ngưỡng khả năng "bắn sữa" của anh chàng Ấn Độ hết sức điêu luyện và chính xác, khá là giải trí cho anh em trong mùa dịch này :))</span>
+          <span style="font-weight: 500;"   > <span class="point">Khoaminion</span> <span style="font-weight: 100;">2h<span style="float:right" class="closepopup"><span class="point"><i class="fas fa-times"></i></span></span></span> <br><span class="rounded" >Mời anh em cùng chiêm ngưỡng khả năng "bắn sữa" của anh chàng Ấn Độ hết sức điêu luyện và chính xác, khá là giải trí cho anh em trong mùa dịch này :))</span>
           <hr>
           <div class="row" style="text-align: center;">
-            <div class="col-sm-4 point like"><i class="fas fa-thumbs-up"></i> Thích</div>
+            <div class="col-sm-4 point like"><i class="fas fa-thumbs-up"></i><span class="like-text"> Thích</span></div>
             <div class="col-sm-4 point"><i class="fas fa-comments"></i> Bình luận</div>
             <div class="col-sm-4 point"><i class="fas fa-share"></i> Chia sẻ</div>
           </div>
@@ -607,25 +642,60 @@
 
           <div style=" border: 1px solid rgb(202, 202, 202); border-radius: 5px; padding: 5px; background-color: rgb(226, 226, 226); ">
             <img class="rounded-circle" src="../static/img/mikey-tokyo-revengers.gif" width="20px" height="20px" alt="">
-            <span style="font-weight: 500;"  >KhuongPT <span style="font-weight: 100;">2h</span> <br><span style="" class="rounded" >Thanh niên có vẻ thông thạo 7 môn vật lý đại cương.</span>
+            <span style="font-weight: 500;"  > <span class="point"> KhuongPT</span><span style="font-weight: 100;"> 15m</span> <br><span  class="rounded" >Thanh niên có vẻ thông thạo 7 môn vật lý đại cương.</span>
           </div>
 
           <div class="mb-2 mt-2" style=" border: 1px solid rgb(202, 202, 202); border-radius: 5px; padding: 5px; background-color: rgb(226, 226, 226); ">
             <img class="rounded-circle" src="../static/img/cat-funny-cat.gif" width="20px" height="20px" alt="">
-            <span style="font-weight: 500;"  >KhuongPT <span style="font-weight: 100;">2h</span> <br><span style="" class="rounded" >Hết dịch phải làm một chuyến Ấn Độ mới được</span>
+            <span style="font-weight: 500;"  ><span class="point">KietITK</span><span style="font-weight: 100;"> 36m</span> <br><span  class="rounded" >Hết dịch phải làm một chuyến Ấn Độ mới được</span>
           </div>
 
           <div style=" border: 1px solid rgb(202, 202, 202); border-radius: 5px; padding: 5px; background-color: rgb(226, 226, 226); ">
             <img class="rounded-circle" src="../static/img/doge-samar.gif" width="20px" height="20px" alt="">
-            <span style="font-weight: 500;"  >Tomblobla <span style="font-weight: 100;">2h</span> <br><span style="" class="rounded" >Quả đỉnh rồi :))</span>
+            <span style="font-weight: 500;" ><span class="point">Tomblobla</span> <span style="font-weight: 100;"> 1h</span> <br><span  class="rounded" >Quả đỉnh rồi :))</span>
           </div>
         </div>
-        
-        
+        <i class="fas fa-chevron-right ml-4 point" style="color: white; font-size: 40px;"></i>
       </div>
-      
-      
-    </div>
+      </div>
+      <!-- endpopup1 -->
+
+      <!-- popup2-->
+    <div class="pop2 full-screen hidden flex-container-center">
+      <div class="row form-inline " style="width: auto;" >
+        <i class="fas fa-chevron-left mr-4 point"  style="color: white; font-size: 40px;"></i>
+        <div class="mr-3" style="text-align: center;" ><iframe class="frame2" width="600" height="400" src="https://www.youtube.com/embed/tXh6Ev3oTqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        
+        <div class="rounded" style="width: 500px; background-color: azure; padding: 20px;">
+          <img class="rounded-circle" src="../static/img/doge-samar.gif" width="40px" height="40px" alt="">
+          <span style="font-weight: 500;"   > <span class="point">KhuongPT</span> <span style="font-weight: 100;">10h<span style="float:right" class="closepopup"><span class="point"><i class="fas fa-times"></i></span></span></span> <br><span class="rounded" >Now you see me 2, Cảnh phim được yêu thích nhất!</span>
+          <hr>
+          <div class="row" style="text-align: center;">
+            <div class="col-sm-4 point like2"><i class="fas fa-thumbs-up"></i><span class="like-text1"> Thích</span></div>
+            <div class="col-sm-4 point"><i class="fas fa-comments"></i> Bình luận</div>
+            <div class="col-sm-4 point"><i class="fas fa-share"></i> Chia sẻ</div>
+          </div>
+          <hr>
+
+          <div style=" border: 1px solid rgb(202, 202, 202); border-radius: 5px; padding: 5px; background-color: rgb(226, 226, 226); ">
+            <img class="rounded-circle" src="../static/img/khoa.jpg" width="20px" height="20px" alt="">
+            <span style="font-weight: 500;"  > <span class="point"> Khoaminion</span><span style="font-weight: 100;"> 2h</span> <br><span  class="rounded" >Nghe bảo xem phim này hơi lú :((</span>
+          </div>
+
+          <div class="mb-2 mt-2" style=" border: 1px solid rgb(202, 202, 202); border-radius: 5px; padding: 5px; background-color: rgb(226, 226, 226); ">
+            <img class="rounded-circle" src="../static/img/cat-funny-cat.gif" width="20px" height="20px" alt="">
+            <span style="font-weight: 500;"  ><span class="point">KietITK</span><span style="font-weight: 100;"> 30m</span> <br><span  class="rounded" >Pha lia bài quá đỉnh</span>
+          </div>
+
+          <div style=" border: 1px solid rgb(202, 202, 202); border-radius: 5px; padding: 5px; background-color: rgb(226, 226, 226); ">
+            <img class="rounded-circle" src="../static/img/apw.jpg" width="20px" height="20px" alt="">
+            <span style="font-weight: 500;" ><span class="point">Tomblobla</span> <span style="font-weight: 100;"> 8h</span> <br><span  class="rounded" >Ông kia nhìn như Hitler</span>
+          </div>
+        </div>
+        <i class="fas fa-chevron-right ml-4 point" style="color: white; font-size: 40px;"></i>
+      </div>
+      </div>
+      <!-- endpopup2 -->
  
   </section>
 </body>
