@@ -161,9 +161,14 @@
         }
     
         $('.chk-xoa').attr('checked', false)
-      });
-      
+
+        if (($(".list1").length == false)&&($(".list2").length == false)&&($(".list3").length == false)&&($(".list4").length == false)&&($(".list5").length == false)&&($(".list6").length == false)&&($(".list7").length == false)&&($(".list8").length == false))
+        {
+            $('.dstrong').removeClass('hidden');
+        }
     });
+      
+   });
 
   </script>
 </head>
@@ -322,6 +327,9 @@
             <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
             <small class="text-muted">Donec id elit non mi porta.</small>
           </a>         
+      </div>
+      <div class="dstrong hidden" style="text-align: center; padding: 300px; font-weight: 500; font-size: x-large; color: rgb(4, 229, 245);">
+        Danh sách trống !
       </div>
 
     <!-- viet bai -->
