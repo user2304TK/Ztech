@@ -25,6 +25,7 @@
 
       $(".form-group .btn").click(function(){
         $(".search-query").toggle(200);
+        
       }); 
 
       $(window).resize(function(){
@@ -45,9 +46,10 @@
       });
 
       $(".showpopup").click(function(){
-        $(".full-screen").removeClass("hidden");
+        $(".pop1").removeClass("hidden");
         $("body").addClass("unscroll");
         $(".pop2").addClass("hidden");
+        $("html, body").animate({ scrollTop: 0 }, "slow");
       });
       
       $(".closepopup").click(function(){
@@ -88,10 +90,29 @@
         $(".pop2").addClass("hidden");
         $(".pop1").removeClass("hidden");
         $('.frame2').attr('src', $('.frame2').attr('src'));
-        
       });
 
-      
+      $(".ico-vietbai").click(function(){             
+        $(".viet-bai").removeClass("hidden"); 
+        $("body").addClass("unscroll");
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+      });
+
+      $(".dang-bai").click(function(){      
+        if ( $(".tieudeviet").val() =="" ||  $(".noidungviet").val() =="" ){
+          alert("Vui lòng điền đầy đủ nội dung !!!");
+        }
+        else{
+          alert("Đã đăng bài !!!");
+          $(".viet-bai").addClass("hidden");
+          $(".tieudeviet").val("");
+          $(".noidungviet").val("");
+        };
+      });
+
+      $(".search-query").focus(function(){             
+        $(".search-query").val(""); 
+      });
     });
 
   </script>
@@ -117,34 +138,54 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav mr-auto pb-2">
       <li class="nav-item">
-        <a class="nav-link" href="#">Link 1</a>
+        <a class="nav-link" href="#">Tin Hot</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Link 2</a>
+        <a class="nav-link" href="#">Video</a>
       </li>
     </ul>
-      <li class="nav-item li-dangnhap pr-3 pb-2">
+      <li class="nav-item li-dangnhap pr-3 pb-2 ico-vietbai">
         <i class="fas fa-feather btn-circle" style="padding-top: 10px; background-color: rgb(4, 229, 245);" data-toggle="tooltip" data-placement="top" title="Viết bài"></i>
         <span class="viet">Viết bài</span>
       </li>
       <li class="nav-item li-dangnhap pr-3 pb-2">
-        <i class="fas fa-bell btn-circle" style="padding-top: 10px; background-color: rgb(4, 229, 245);" data-toggle="tooltip" data-placement="top" title="Thông báo"></i>
+        <div class="dropdown" data-toggle="dropdown" aria-haspopup="true" data-placement="top" title="Cài đặt" aria-expanded="false" >
+          <i class="fas fa-bell btn-circle" style="padding-top: 10px; background-color: rgb(4, 229, 245);" data-toggle="tooltip" data-placement="top" title="Thông báo"></i>
         <span class="viet">Thông báo</span>
+          <div class="dropdown-menu dropdown-menu-right" style="text-align: left;" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#" > 
+              <span style="color: blue; font-weight: 400;">KhuongPT</span> <br>
+              <span style="font-size: small;">Bài viết của bạn đã bị xóa bởi đăng tải nội dung không lành mạnh !!</span>
+            </a>
+            <hr>
+            <a class="dropdown-item" href="#" >
+                <span style="color: blue; font-weight: 400;">Nekowimade</span> <br>
+                <span style="font-size: small;">Đã bình luận bài đăng của bạn</span>
+            </a>
+            <hr>
+            <a class="dropdown-item" href="#" >
+                <span style="color: blue; font-weight: 400;">Tomblobla</span> <br>
+                <span style="font-size: small;">Đã thích bài đăng của bạn</span>
+            </a>
+          </div>
+        </div>
       </li>
       <li class="nav-item li-dangnhap pr-3 pb-2">
         <img class="rounded-circle" width="33" height="33" src="../static/img/khoa.jpg" alt="khoamod" data-toggle="tooltip" data-placement="top" title="Trang cá nhân">
         <span class="viet">Trang cá nhân</span>
       </li>
       
-      <li class="nav-item li-dangnhap pb-2">
-        
+      <li class="nav-item li-dangnhap pb-2">       
         <div class="dropdown" data-toggle="dropdown" aria-haspopup="true" data-placement="top" title="Cài đặt" aria-expanded="false" >
           <i id="dropdownMenuButton" class="fas fa-cog btn-circle" style="padding-top: 10px; "></i>
           <span class="viet">Cài đặt</span>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+          <div class="dropdown-menu dropdown-menu-right" style="text-align: left;" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Trang cá nhân</a>
+            <a class="dropdown-item" href="#"><i class="fas fa-info"></i> Thông tin cá nhân</a>
+            <a class="dropdown-item" href="#"><i class="fas fa-user-tag"></i> Quản lý user</a>
+            <a class="dropdown-item" href="#"><i class="fas fa-paperclip"></i> Quản lý bài viết</a>
+            <a class="dropdown-item" href="#"><i class="fas fa-lock"></i> Đổi mật khẩu</a>
+            <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
           </div>
         </div>
       </li>
@@ -164,7 +205,7 @@
       <div class="pr-3" style="font-weight: 500; font-size: x-large;">
         Tin Hot
       </div>
-  </div>
+    </div>
   <!-- facts -->
   <div class="mb-5 pb-5">
     
@@ -195,10 +236,9 @@
         <span>
           <span style="margin-left: -94px; margin-right: 10px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Nekowimade</span>
           <img class="mr-2 rounded" style="  height: 150px; width: 85px;" src="../static/img/gabriel-dropout-gabriel-temna.gif" alt=""></span>
-          <span>
-            <span style="margin-left: -90px; margin-right: 20px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Tomblobla</span>
-            <img class="mr-2 rounded" style="  height: 150px; width: 85px;" src="../static/img/cat-funny-cat.gif" alt=""></span>
-          <span>
+        <span>
+          <span style="margin-left: -90px; margin-right: 20px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Tomblobla</span>
+          <img class="mr-2 rounded" style="  height: 150px; width: 85px;" src="../static/img/cat-funny-cat.gif" alt=""></span>         
         <span>
           <span style="margin-left: -67px; margin-right: 30px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Jerry</span>
           <img class="rounded" style="  height: 150px; width: 85px;" src="../static/img/mikey-tokyo-revengers.gif" alt=""></span>
@@ -217,7 +257,7 @@
 
  <!-- nút viết bài -->
     <div class="row">
-      <button class="col-sm-9 borderactive"  type="button" class="btn btn-primary btn-block">+VIẾT BÀI CHIA SẺ,ĐẶT CÂU HỎI,SHARE LINK</button>
+      <button class="col-sm-9 borderactive ico-vietbai btn btn-primary btn-block rounded"  type="button" >+VIẾT BÀI CHIA SẺ, ĐẶT CÂU HỎI, SHARE LINK</button>
       <div class="col-sm-3"></div>
     </div>
     <br>
@@ -392,7 +432,6 @@
           <div class="col-1"></div><button  type="button" class="btn btn-outline-info col-4">Xem thông tin xe</button>
           <div class="col-2"></div><button  type="button" class="btn btn-outline-info col-4">Xem thông tin Audio</button>
       </div>
-
     <br>
     <hr>
     <br>
@@ -659,6 +698,29 @@
       </div>
       </div>
       <!-- endpopup2 -->
+
+      <!--viet bai-->
+    <div class="viet-bai full-screen hidden flex-container-center">
+      <div class="row form-inline " style="width: auto;" >
+        <div class="rounded" style="width: 500px; background-color: azure; padding: 20px;">
+          <img class="rounded-circle" src="../static/img/khoa.jpg" width="40px" height="40px" alt="">
+          <span style="font-weight: 500;"   > <span class="point">Khoaminion</span><span style="float:right" class="closepopup"><span class="point"><i class="fas fa-times"></i></span></span></span> <br>
+          <input type="text" class="mt-3 mb-3 tieudeviet" size="24" placeholder="Nhập tiêu đề !" style="font-size: xx-large; font-weight: 500;">
+          <textarea id="w3review" name="w3review" rows="20" class="noidungviet" cols="62" placeholder="nhập nội dung nè !" style="resize: none;"></textarea>
+          <hr>
+          <div style="text-align: center;" class="form-inline">
+            <div class="col-sm-4 point "><i class="fas fa-images"></i><span> Thêm ảnh: </span></div>
+            <input type="file" id="myfile" name="myfile" multiple>
+          </div>
+          
+          <hr>
+          
+          <button class="rounded dang-bai" style="margin-left: 190px; background-color: rgb(4, 229, 245); color: rgb(0, 0, 0);">Đăng</button>
+        </div>
+        
+      </div>
+      </div>
+      <!-- end viet bai -->
  
   </section>
 </body>
