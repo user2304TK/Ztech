@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/Login_Register.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../static/js/date.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">    
+    <title>Đăng ký | ZTech</title>    
+</head>
+<body style="background-color: #E5E5E5;">
+    <div class="mt-4">
+        <form action="" class="Login_form">
+            <h2 class="textHeading">
+                <a href="." class="text-dark">
+                    <i class="fas fa-angle-left"></i>
+                </a>
+                <span style="font-size: 20px;">Đăng ký tài khoản</span>
+                <a href="." class="text-secondary">
+                    <i class="far fa-times-circle"></i>
+                </a>
+            </h2>
+            <div class="text-center p-4 ">
+                <a href=".">
+                    <img src="../static/img/Z-green-leaf.svg" width="60" height="66" alt="Logo"><br>
+                    <a style="font-size: 20px;">Welcome to Z Tech.</a>
+                </a>
+            </div>
+            <form>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="InputName" placeholder="Tên tài khoản">
+                    <small id="NameHelp" class="form-text text-muted ml-4 mr-4">Đây là tên sẽ xuất hiện trong các bài viết của bạn.Bạn có thể sử dụng tên thật hoặc Nick name.</small>
+                </div>
+                <div class="form-group">
+                  <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Email">
+                  <small id="emailHelp" class="form-text text-muted ml-4">Example: khuongpt108@gmail.com</small>
+                </div>  
+                <div class="form-group birtday_input">
+                    <input class="form-control bg-white" id="birthday" type="text" placeholder="Sinh nhật">
+                    <img src="https://tinhte.vn/styles/tinhte2018/calendar.png">
+                </div>              
+                <div class="form-group">
+                  <input type="password" class="form-control" id="InputPassword" aria-describedby="passwordHelp" placeholder="Mật khẩu">
+                  <small id="passwordHelp" class="form-text text-muted ml-4">Sử dụng 8 ký tự trở lên bao gồm chữ cái, chữ số và biểu tượng</small>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="ReinputPassword" placeholder="Nhập lại mật khẩu">
+                </div>
+                <div class="mb-4 mt-4">
+                    <div class="d-flex justify-content-center">
+                        <input type="submit" id="" class="" value="Đăng ký">
+                    </div> 
+                </div>                                                                
+            </form>                                                        
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/vn.js"></script>
+    <script>
+        flatpickr("#birthday", {
+            altInput: true,
+            altFormat: "j F, Y",
+            dateFormat: "d-m-Y",
+            "locale": "vn",
+        });
+    </script>    
+</body>
