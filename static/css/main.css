@@ -10,7 +10,9 @@
 .bdr{
    
     border-radius: 15%;
-    padding-bottom: 1%;
+    width: 120px;
+    height: 100px;
+
 
 }
 .borderactive{
@@ -108,4 +110,33 @@ body,html{
     min-height: 100%;
     margin-bottom: -10px;
 }
+textarea:focus
+{
+    outline: cornflowerblue;
+}
+.aimg
+{
+    width: 25px;
+    height: 25px;
 
+}
+.text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    height: fit-content;
+ }
+ .nothv:hover
+ {
+    color: black;
+ }
+ .text4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    height: fit-content;
+ }

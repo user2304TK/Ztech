@@ -36,12 +36,21 @@
         {
           $(".viet").show();
         }  
+
         if ($(window).width() > 1200){
           $(".info-box").show();   
         }
         else
         {
           $(".info-box").hide();
+        }
+
+        if ($(window).width() > 1000){
+          $(".last-tag").addClass("col-9");   
+        }
+        else
+        {
+          $(".last-tag").removeClass("col-9");
         }
       });
 
@@ -113,6 +122,8 @@
       $(".search-query").focus(function(){             
         $(".search-query").val(""); 
       });
+
+      
     });
 
   </script>
@@ -273,9 +284,9 @@
           </div>
         </div>
         <br>
-        <div class="col-9">rubi lee - 16 phút </div> 
-        <div class="col-3"></div>
-        <a class="col-9" href="" >Chuyến bay samsung...</a>
+        <div class="col-9" style="padding: 2%;">rubi lee - 16 phút <br> Chuyến bay samsung... </div> 
+  
+        
        </div>
       <div class="col-3 info-box ml-4">
         <h1 style="font-size: 25px;font-weight: bolder;">Cộng đồng nổi bật</h1>
@@ -332,31 +343,27 @@
     <hr>
      <!-- xem nhanh -->
     <h1 style="font-size:large; padding-left: 15px " >Xem nhanh</h1>
-    <div class="row">  
-       <div class="row col-9" >
-        <a class="col-3" href=""><img class="col-12 bdr "  src="../static/img/xebay.gif"></a> <a class="col-2 "href="">Bị phạt 1,2 tỷ vì lái xe bán tải "bay qua lạch nước ở Mỹ"</a>
-        <a class="col-3" href=""><img class="col-12 bdr "  src="../static/img/apw.jpg"></a> <a class="col-4 "href="">Thêm bằng chứng cho thấy Apple Watch Series 7 sẽ có kích thước 41mm và 45mm</a>
-
-        <a class="col-3" href=""><img class="col-12 bdr"  src="../static/img/ip13.jpg"></a> <a class="col-2 "href="">Rò rỉ tem trên hộp iPhone 13</a>
-        <a class="col-3" href=""><img class="col-12 bdr " src="../static/img/foxconn.jpg"></a> <a class="col-4 "href="">Foxcom đang tuyển gấp 200.000 nhân công để lắp ráp iPhone 13</a>
-  
-        <a class="col-3" href=""><img class="col-12 bdr"  src="../static/img/car.jpg"> </a><a class="col-2 "href="">Range Rover Sport SVR Ultimate: chiếc SUV mạnh nhất</a>
-        <a class="col-3" href=""><img class="col-12 bdr " src="../static/img/gai.jpg"> </a><a class="col-4 "href="">Chức năng chỉnh sửa hình ảnh trên Google Photos</a>
-      
-        <a class="col-3" href=""><img class="col-12 bdr"  src="../static/img/macc.jpg"></a><a class="col-2 "href="">Doanh số máy Mac M1 tăng mạnh, nhưng iPad lại ảm đảm</a>
-        <a class="col-3" href=""><img class="col-12 bdr " src="../static/img/surface.jpg"></a><a class="col-4"href="">Mời anh em xem hình ảnh render của Surface Book Studio: khi laptop kết hợp máy tính AIO</a>
+     <div class="row">
+       <div class="row col-9" style="height: fit-content;" >
+        <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 "><img class="bdr"  src="../static/img/xebay.gif"><a class="col-md-6 text" href="">Bị phạt 1,2 tỷ vì lái xe bán tải "bay qua lạch nước ở Mỹ"</a> </div>
+        <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 "><img class="bdr" src="../static/img/apw.jpg"><a class="col-md-6 text" href="">Thêm bằng chứng cho thấy Apple Watch Series 7 sẽ có kích thước 41mm và 45mm </a></div>
+        <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6" ><img class="bdr "  src="../static/img/ip13.jpg"><a class="col-md-6 text "href="">Rò rỉ tem trên hộp iPhone 13</a></div> 
+        <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6" ><img class="bdr " src="../static/img/foxconn.jpg"><a class="col-md-6 text "href="">Foxcom đang tuyển gấp 200.000 nhân công để lắp ráp iPhone 13</a></div>  
+        <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6"><img class=" bdr"  src="../static/img/car.jpg"><a class="col-md-6 text"href="">Range Rover Sport SVR Ultimate: chiếc SUV mạnh nhất</a> </div>
+        <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6" ><img class=" bdr " src="../static/img/gai.jpg"><a class="col-md-6 text"href="">Chức năng chỉnh sửa hình ảnh trên Google Photos</a> </div>   
+        <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6" ><img class="bdr"  src="../static/img/macc.jpg"><a class="col-md-6 text "href="">Doanh số máy Mac M1 tăng mạnh, nhưng iPad lại ảm đảm</a></div>
+        <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6" ><img class="bdr " src="../static/img/surface.jpg"><a class="col-md-6 text "href="">Mời anh em xem hình ảnh render của Surface Book Studio: khi laptop kết hợp máy tính AIO</a></div>
 
       </div>
       <div class="col-3 info-box">
-        <h1 style="font-size: 25px;font-weight: bolder;">Cộng đồng nổi bật</h1>
         <div class="row">
-          <img class= "row col-6 rounded" style="padding-left: 10%;"height=150% width="100%" src="../static/img/nghiengame.jpg"> <a href="" class=" col-6">Những thông tin cơ bản về Nintendo Switch </a>
-          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/crenn.jpg"> <a href="" class=" col-6">Các lưu ý khi mua màn hình USB-C </a>
-          <img class= "row col-6 rounded" style="padding-left: 10%;padding-top: 3%;"height=150% width="100%" src="../static/img/galaxyZ.jpg"> <a href="" class=" col-6">Cách xem Instagram full màn hình  </a>
-          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/mh.jpg"> <a href="" class=" col-6">Những điều chú ý khi dùng máy cá nhân </a>
-          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;padding-bottom: 3%;"height=150% width="100%" src="../static/img/laptopcty.jpg"> <a href="" class=" col-6">Những lưu ý khi dùng laptop, desktop </a>
-          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/dtip.jpg"> <a href="" class=" col-6">iOS 15 cho phép tắt hoàn toàn Night Mode </a>
-          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;padding-bottom: 3%;"height=150% width="100%" src="../static/img/lol.jpg"> <a href="" class=" col-6">Chơi League of Legends trên Mac M1 ok</a>
+          <img class= "row col-6 " style="padding-bottom: 5px;"  src="../static/img/nghiengame.jpg"> <a href="" class=" col-6 text">Những thông tin cơ bản về Nintendo Switch </a>
+          <img class= "row col-6 " style="padding-bottom: 5px;"src="../static/img/crenn.jpg"> <a href="" class=" col-6 text">Các lưu ý khi mua màn hình USB-C </a>
+          <img class= "row col-6 " style="padding-bottom: 5px;" src="../static/img/galaxyZ.jpg"> <a href="" class=" col-6 text">Cách xem Instagram full màn hình  </a>
+          <img class= "row col-6 " style="padding-bottom: 5px;"src="../static/img/mh.jpg"> <a href="" class=" col-6 text">Những điều chú ý khi dùng máy cá nhân </a>
+          <img class= "row col-6 " style="padding-bottom: 5px;" src="../static/img/laptopcty.jpg"> <a href="" class=" col-6 text">Những lưu ý khi dùng laptop, desktop </a>
+          <img class= "row col-6 " style="padding-bottom: 5px;" src="../static/img/laptopcty.jpg"> <a href="" class=" col-6 text">Những lưu ý khi dùng laptop, desktop </a>
+        
         </div>
       </div>
       <br>
@@ -365,22 +372,20 @@
     <hr>
      <!-- xu hướng -->
     <h1 style="font-size: large;padding-right: 100px; "><i class="fas fa-chart-line"></i> Xu Hướng</h1>
+
     <div class="row">
-      <div class=" row col-sm-9 col-lg-9 col-xl-9 ">
-        <div class="col-1" style="font-size: xx-large;color: #8f9bb3;font-weight: bolder;">#1</div> <p class="col-5">Vì sao máy ifan nghĩ app trên IOS ngon hơn trên Android nhỉ?</p>
-        <div class="col-1" style="font-size: xx-large;color: #8f9bb3;font-weight: bolder;">#2</div> <p class="col-5">Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người...</p>
-        <div class="col-1"></div><img class="col-1 rounded-circle" height="8%" width="1%" src ="../static/img/khoa.jpg"><a class="col-4"href="" style="font-size: small;">Đoàn văn Khoa</a>
-        <div class="col-1"></div><img class="col-1 rounded-circle" height="8%" width="1%" src ="../static/img/khoa.jpg"><a class="col-4"href="" style="font-size: small;">Tester</a>
-        <div class="col-1" style="font-size: xx-large;color: #8f9bb3;font-weight: bolder;">#3</div> <p class="col-5">Vì sao máy ifan nghĩ app trên IOS ngon hơn trên Android nhỉ?</p>
-        <div class="col-1" style="font-size: xx-large;color: #8f9bb3;font-weight: bolder;">#4</div> <p class="col-5">Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người...</p>
-        <div class="col-1"></div><img class="col-1 rounded-circle" height="8%" width="1%" src ="../static/img/khoa.jpg"><a class="col-4" href="" style="font-size: small;">Đoàn văn Khoa</a>
-        <div class="col-1"></div><img class="col-1 rounded-circle" height="8%" width="1%" src ="../static/img/khoa.jpg"><a class="col-4" href="" style="font-size: small;">Tester</a>
-        <div class="col-1" style="font-size: xx-large;color: #8f9bb3;font-weight: bolder;">#5</div> <p class="col-5">Vì sao máy ifan nghĩ app trên IOS ngon hơn trên Android nhỉ?</p>
-        <div class="col-1" style="font-size: xx-large;color: #8f9bb3;font-weight: bolder;">#6</div> <p class="col-5">Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người...</p>
-        <div class="col-1"></div><img class="col-1 rounded-circle" height="8%" width="1%" src ="../static/img/khoa.jpg"><a  class="col-4" href="" style="font-size: small;">Đoàn văn Khoa</a>
-        <div class="col-1"></div><img class="col-1 rounded-circle" height="8%" width="1%" src ="../static/img/khoa.jpg"><a  class="col-4"href="" style="font-size: small;">Tester</a>
-      </div>
-      <div class="col-3">
+      <span class="row col-9"> 
+         <div class="col-6 " style="font-size: xx-large;color: #8f9bb3;font-weight: bolder;">#1 <br><p style="font-size:medium;font-weight: unset;color: #242424;" class="text mb-0" >Vì sao máy ifan nghĩ app trên IOS ngon hơn trên Android nhỉ? Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người</p><div><img class="rounded-circle aimg" src ="../static/img/khoa.jpg"><a href="" style="font-size: small; padding-left: 10px;">Đoàn văn Khoa</a></div></div> 
+         <div class="col-6 " style="font-size: xx-large;color: #8f9bb3;font-weight: bolder;">#2 <br><p style="font-size:medium;font-weight: unset;color: #242424;" class="text mb-0" >Vì sao máy ifan nghĩ app trên IOS ngon hơn trên Android nhỉ? Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người</p><div><img class="rounded-circle aimg" src ="../static/img/ongia.jpg"><a href="" style="font-size: small; padding-left: 10px;">hammer</a></div></div>
+         <div class="col-6 " style="font-size: xx-large;color: #8f9bb3;font-weight: bolder;">#3 <br><p style="font-size:medium;font-weight: unset;color: #242424;" class="text mb-0" >Vì sao máy ifan nghĩ app trên IOS ngon hơn trên Android nhỉ? Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người</p><div><img class="rounded-circle aimg" src ="../static/img/ongiga2.jpg"><a href="" style="font-size: small; padding-left: 10px;">haless</a></div></div> 
+         <div class="col-6 " style="font-size: xx-large;color: #8f9bb3;font-weight: bolder;">#4 <br><p style="font-size:medium;font-weight: unset;color: #242424;" class="text mb-0" >Vì sao máy ifan nghĩ app trên IOS ngon hơn trên Android nhỉ? Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người</p><div><img class="rounded-circle aimg" src ="../static/img/bagia.jpg"><a href="" style="font-size: small; padding-left: 10px;">thomsom</a></div></div>
+         <div class="col-6 " style="font-size: xx-large;color: #8f9bb3;font-weight: bolder;">#5 <br><p style="font-size:medium;font-weight: unset;color: #242424;" class="text mb-0" >Vì sao máy ifan nghĩ app trên IOS ngon hơn trên Android nhỉ? Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người</p><div><img class="rounded-circle aimg" src ="../static/img/kiet.jpg"><a href="" style="font-size: small; padding-left: 10px;">RPK skel</a></div></div> 
+         <div class="col-6 " style="font-size: xx-large;color: #8f9bb3;font-weight: bolder;">#6 <br><p style="font-size:medium;font-weight: unset;color: #242424;" class="text mb-0" >Vì sao máy ifan nghĩ app trên IOS ngon hơn trên Android nhỉ? Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người</p><div><img class="rounded-circle aimg" src ="../static/img/xe.png"><a href="" style="font-size: small; padding-left: 10px;">Teki</a></div></div>
+      
+
+      </span> 
+
+      <div class="col-3 info-box">
         <div class="row">
           <img class= "row col-6 rounded" style="padding-left: 10%; border-radius: 10%;"height=150% width="100%" src="../static/img/nghiengame.jpg"> <a href="" class=" col-6">Thông tin về Nintendo Switch </a>
           <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;border-radius: 10%;"height=150% width="100%" src="../static/img/crenn.jpg"> <a href="" class=" col-6">Lưu ý mua màn hình</a>
@@ -399,10 +404,10 @@
      <!-- khung 3 -->
     <div class="row" >
       <div class="row col-9">
-          <a class="col-4" href=""><img style="border-radius: 15%; padding-bottom: 1%;" class="col-12" src="../static/img/dtduoi.jpg"></a><p class="col-8"><a style="font-size: large;font-weight: bolder;" href="">Hướng dẫn thiết lập khôi phục iCloud thông qua liên hệ tin cậy trên iOS 15</a> <br>Việc khôi phục dữ liệu iCloud trên iOS 15 đã trở nên dễ dàng hơn khi người dùng quên mật khẩu tài khoản hoặc mật mã thiết bị.<br><img  class="col-1 rounded-circle"  src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p>
-          <a class="col-4" href=""><img style="border-radius: 15%; padding-bottom: 1%;" class="col-12" src="../static/img/phimmaxxtri.jpg"></a><p class="col-8"><a style="font-size: large;font-weight: bolder;" href="">Phim Matrix phần 4 có tên gọi chính thức, ra rạp ngày 22/12</a> <br>Tại sự kiện CinemaCon vừa diễn ra, Warner Bros dù không công bố rộng rãi trailer của bộ phim sắp công chiếu nhưng đã tiết lộ tên gọi chính thức sẽ là Matrix: Resurrections. <br><img  class="col-1 rounded-circle"  src="../static/img/khoa.jpg"> <a href="">Didu</a>- 4h-Cà phê tinh tế</p>
-          <a class="col-4" href=""><img style="border-radius: 15%; padding-bottom: 1%;" class="col-12" src="../static/img/dt.jpg"></a><p class="col-8"><a style="font-size: large;font-weight: bolder;" href="">Fitbit Charge 5 chính thức: màn hình OLED </a> <br>Vậy là FItbit Charge 5 đã chính thức được Fitbit ra mắt và sẽ là thế hệ fitness tracker cao cấp tiếp theo, kế nhiệm Fitbit Charge 4 ra mắt cách đây 1 năm<br><img  class="col-1 rounded-circle"  src="../static/img/khoa.jpg"> <a href="">bngHuy</a>- 5h-Đồng Hồ - Trang Sức</p>
-          <a class="col-4" href=""><img style="border-radius: 15%; padding-bottom: 1%;" class="col-12" src="../static/img/mayruachen.jpg"></a><p class="col-8"><a style="font-size: large;font-weight: bolder;" href="">Review Máy rửa bát Electrolux loại 8 SET</a> <br>Đây là review về Máy rửa bát Electrolux loại 8 SET của mình.Mình mua nó với giá 11,000,000 (mua đã được 4 năm nên giá khá cao hơn hiện tại). Hi vọng phần review sẽ hữu ích cho bạn nào muốn mua nhé, nếu bạn có câu hỏi gì thì hãy comment vô bài này nha.<br><img  class="col-1 rounded-circle"  src="../static/img/khoa.jpg"> <a href="">kaoquanjb</a>- 5h-Điện tử-Tiêu dùng</p>
+          <a  href="" style="padding-bottom: 5px;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/dtduoi.jpg"></a> <p class="col-md-7" ><a style="font-size: large;font-weight: bolder;" href="">Hướng dẫn thiết lập khôi phục iCloud thông qua liên hệ tin cậy trên iOS 15<br><span style="font-weight:lighter;font-size: medium;" class="nothv" >việc khôi phục dữ liệu iCloud trên iOS 15 đã trở nên dễ dàng hơn khi người dùng quên mật khẩu tài khoản hoặc mật mã thiết bị.<br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
+          <a  href="" style="padding-bottom: 5px;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/phimmaxxtri.jpg"></a><p class="col-md-7"><a style="font-size: large;font-weight: bolder;" href="">Phim Matrix phần 4 có tên gọi chính thức, ra rạp ngày 22/12 <br><span style="font-weight: lighter;font-size: medium;" class="nothv">Tại sự kiện CinemaCon vừa diễn ra, Warner Bros dù không công bố rộng rãi trailer của bộ phim sắp công chiếu nhưng đã tiết lộ tên gọi chính thức sẽ là Matrix: Resurrections. <br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Didu</a>- 4h-Cà phê tinh tế</p></span>
+          <a  href="" style="padding-bottom: 5px;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/dt.jpg"></a><p class="col-md-7"><a style="font-size: large;font-weight: bolder;" href="">Fitbit Charge 5 chính thức: màn hình OLED  <br><span style="font-weight: lighter;font-size: medium;" class="nothv">Vậy là FItbit Charge 5 đã chính thức được Fitbit ra mắt và sẽ là thế hệ fitness tracker cao cấp tiếp theo, kế nhiệm Fitbit Charge 4 ra mắt cách đây 1 năm<br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">bngHuy</a>- 5h-Đồng Hồ - Trang Sức</p></span>
+          <a  href="" style="padding-bottom: 5px;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/mayruachen.jpg"></a><p class="col-md-7 "><a style="font-size: large;font-weight: bolder;" href="">Review Máy rửa bát Electrolux loại 8 SET <br><span style="font-weight:lighter;font-size: medium;" class="nothv"> Đây là review về Máy rửa bát Electrolux loại 8 SET của mình.Mình mua nó với giá 11,000,000 (mua đã được 4 năm nên giá khá cao hơn hiện tại). Hi vọng phần review sẽ hữu ích cho bạn nào muốn mua nhé, nếu bạn có câu hỏi gì thì hãy comment vô bài này nha.<br><img  class=" rounded-circle" width="30px" height="30px"  src="../static/img/khoa.jpg"> <a href="">kaoquanjb</a>- 5h-Điện tử-Tiêu dùng</p></span>
       </div>
     </div>
     <br>
@@ -413,21 +418,21 @@
       <div class="row col-9">
         <img class="col-6" style="border-radius: 5%;" src="../static/img/xe.png">
         <img class="col-6" style="border-radius: 5%;" src="../static/img/matho.jpg">
-        <a class="col-6" style="font-size: large;font-weight: bolder;padding-bottom: 3%;" href="">[Infographic] Top 20 hãng sản xuất xe điện hàng đầu thế giới</a>
-        <a class="col-6" style="font-size: large;font-weight: bolder;padding-bottom: 3%;" href="">Playlist các ca khúc kỷ niệm 105 năm Công Viên Quốc Gia Mỹ. Nhân dịp này Apple cũng sẽ dành ra...</a>
+        <a class="col-6 text4" style="font-size: large;font-weight: bolder;padding-bottom: 3%;" href="">[Infographic] Top 20 hãng sản xuất xe điện hàng đầu thế giới</a>
+        <a class="col-6 text4" style="font-size: large;font-weight: bolder;padding-bottom: 3%;" href="">Playlist các ca khúc kỷ niệm 105 năm Công Viên Quốc Gia Mỹ. Nhân dịp này Apple cũng sẽ dành ra...</a>
         <ul class="col-6" >
-          <li><a style="font-size:small;font-weight: bolder;" href="">CDC Mỹ khuyến cáo du khách lớn tuổi, nhóm nguy cơ cao không nên đi du thuyền, kể cả đã tiêm vaccine</a></li>
+          <li><a style="font-size:small;font-weight: bolder;" href="" class="text4">CDC Mỹ khuyến cáo du khách lớn tuổi, nhóm nguy cơ cao không nên đi du thuyền, kể cả đã tiêm vaccine</a></li>
           <hr>
-          <li><a style="font-size:small;font-weight: bolder;" href="">MQ-25 Stingray - UAV đầu tiên tiếp nhiên liệu thành công cho máy bay khác trên không</a></li>
+          <li><a style="font-size:small;font-weight: bolder;" href=""class="text4">MQ-25 Stingray - UAV đầu tiên tiếp nhiên liệu thành công cho máy bay khác trên không</a></li>
           <hr>
-          <li><a style="font-size:small;font-weight: bolder;" href="">VinFast hợp tác với Gotion High-Tech để phát triển pin LFP cho xe điện</a></li>
+          <li><a style="font-size:small;font-weight: bolder;" href=""class="text4">VinFast hợp tác với Gotion High-Tech để phát triển pin LFP cho xe điện</a></li>
           </ul>
           <ul class="col-6" >
-            <li><a style="font-size:small;font-weight: bolder;" href="">Chàng trai trong hình bìa album Nevermind của Nirvana khởi kiện nhóm tội khiêu dâm trẻ em</a></li>
+            <li><a style="font-size:small;font-weight: bolder;" href=""class="text4">Chàng trai trong hình bìa album Nevermind của Nirvana khởi kiện nhóm tội khiêu dâm trẻ em</a></li>
             <hr>
-            <li><a style="font-size:small;font-weight: bolder;" href="">Wear OS đã chính thức được cung cấp tính năng chơi nhạc offline từ hôm nay</a></li>
+            <li><a style="font-size:small;font-weight: bolder;" href=""class="text4">Wear OS đã chính thức được cung cấp tính năng chơi nhạc offline từ hôm nay</a></li>
             <hr>
-            <li><a style="font-size:small;font-weight: bolder;" href="">Fyne Audio mở rộng dòng sản phẩm Special Production với mẫu loa F500SP</a></li>
+            <li><a style="font-size:small;font-weight: bolder;" href=""class="text4">Fyne Audio mở rộng dòng sản phẩm Special Production với mẫu loa F500SP</a></li>
             </ul>
           <div class="col-1"></div><button  type="button" class="btn btn-outline-info col-4">Xem thông tin xe</button>
           <div class="col-2"></div><button  type="button" class="btn btn-outline-info col-4">Xem thông tin Audio</button>
@@ -438,15 +443,16 @@
     <hr>
     <!--khung 5-->
     <div class="row" style="padding-top: 5%;">
-      <div class="row col-9">
-          <a class="col-4" href=""><img style="border-radius: 15%; padding-bottom: 1%;" class="col-12" src="../static/img/window.jpg"></a><p class="col-8"><a style="font-size: large;font-weight: bolder;" href="">Google và Microsoft sẽ đầu tư 30 tỷ USD để cải thiện các vấn đề an ninh mạng tại Mỹ trong 5 năm tới</a> <br>Sau cuộc gặp với Tổng thống Joe Biden, Google và Microsoft cam kết sẽ đầu tư tổng cộng 30 tỷ USD để nâng cấp và cải thiện các vấn đề liên quan đến an ninh mạng trong vòng 5 năm tới.<br><img  class="col-1 rounded-circle"  src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p>
-          <a class="col-4" href=""><img style="border-radius: 15%; padding-bottom: 1%;" class="col-12" src="../static/img/banphim.jpg"></a><p class="col-8"><a style="font-size: large;font-weight: bolder;" href="">Review RK G68, 1 chiếc bàn phím cơ có chất lượng chỉ bằng 1/3 Keychrone ?</a> <br>Đây là review về Review RK G68, 1 chiếc bàn phím cơ có chất lượng chỉ bằng 1/3 Keychrone của mình. Mình mua nó với giá 680,000.  <br><img  class="col-1 rounded-circle"  src="../static/img/khoa.jpg"> <a href="">Didu</a>- 4h-Cà phê tinh tế</p>
-          <a class="col-4" href=""><img style="border-radius: 15%; padding-bottom: 1%;" class="col-12" src="../static/img/nhatban.jpg"></a><p class="col-8"><a style="font-size: large;font-weight: bolder;" href="">Nhật Bản sẽ xây đường hầm dưới biển để xả 1,27 triệu tấn nước nhiễm phóng xạ xuống đại dương</a> <br>Nhà điều hành nhà máy hạt nhân Fukushima của Nhật Bản đã công bố kế hoạch xây dựng một đường hầm dưới biển để thải hơn một triệu tấn nước nhiễm phóng xạ đã qua xử lý từ khu vực này vào đại dương.<br><img  class="col-1 rounded-circle"  src="../static/img/khoa.jpg"> <a href="">kaoquanjb</a>- 5h-Điện tử-Tiêu dùng</p>
-          <a class="col-4" href=""><img style="border-radius: 15%; padding-bottom: 1%;" class="col-12" src="../static/img/Ai.jpg"></a><p class="col-8"><a style="font-size: large;font-weight: bolder;" href="">VinAI giới thiệu công nghệ tự hành có thể sẽ ứng dụng trên xe VinFast trong tương lai</a> <br>Tại Sự kiện “AI Day 2021 - Tiếp lửa đổi mới sáng tạo” do Công ty Nghiên cứu và Ứng dụng Trí tuệ Nhân tạo VinAI (thuộc tập đoàn Vingroup) tổ chức, <br><img  class="col-1 rounded-circle"  src="../static/img/khoa.jpg"> <a href="">bngHuy</a>- 5h-Đồng Hồ - Trang Sức</p>
-          <a class="col-4" href=""><img style="border-radius: 15%; padding-bottom: 1%;" class="col-12" src="../static/img/robot.jpg"></a><p class="col-8"><a style="font-size: large;font-weight: bolder;" href="">Roborock G10: con robot tự giặt giẻ, tự châm nước sau khi hoạt động xong</a> <br>Roborock vừa ra mắt con robot hút bụi G10 mới, nó có chức năng tự giặt giẻ sau khi đã hoàn thành công việc.<br><img  class="col-1 rounded-circle"  src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p>
-          <a class="col-4" href=""><img style="border-radius: 15%; padding-bottom: 1%;" class="col-12" src="../static/img/ongia.jpg"></a><p class="col-8"><a style="font-size: large;font-weight: bolder;" href="">Học được gì về chiến lược công ty qua email của Steve Jobs,Haless Tony...</a> <br>24/10/2010, Steve Jobs gửi một email cho các lãnh đạo cấp cao của Apple, trong đó có một phần ông nói về “Chiến lược 2011” rất đáng chú ý. <br><img  class="col-1 rounded-circle"  src="../static/img/khoa.jpg"> <a href="">Didu</a>- 4h-Cà phê tinh tế</p>
-          <a class="col-4" href=""><img style="border-radius: 15%; padding-bottom: 1%;" class="col-12" src="../static/img/black.png"></a><p class="col-8"><a style="font-size: large;font-weight: bolder;" href="">WD và Kioxia đang đàm phán sáp nhập nhằm đối đầu Samsung trên thị trường chip nhớ</a> <br>Western Digital đang đàm phán về khả năng sáp nhập cổ phiếu trị giá 20 tỉ đô với nhà sản xuất chip kiêm đối tác lâu nay của WD là Kioxia.<br><img  class="col-1 rounded-circle"  src="../static/img/khoa.jpg"> <a href="">kaoquanjb</a>- 5h-Điện tử-Tiêu dùng</p>
-          <a class="col-4" href=""><img style="border-radius: 15%; padding-bottom: 1%;" class="col-12" src="../static/img/ongiga2.jpg"></a><p class="col-8"><a style="font-size: large;font-weight: bolder;" href="">Tim Cook đã bán gần hết cổ phiếu thưởng của Apple, thu về gần 750 triệu USD</a> <br>Theo báo cáo được Apple gửi lên Uỷ ban Chứng khoán và Sàn giao dịch Mỹ SEC, CEO Tim Cook vừa nhận được hơn 5 triệu cổ phiếu thưởng trong tuần qua và ông đã bán hầu hết trong số đó, thu về gần 750 triệu đô la Mỹ.<br><img  class="col-1 rounded-circle"  src="../static/img/khoa.jpg"> <a href="">bngHuy</a>- 5h-Đồng Hồ - Trang Sức</p>
+      <div class="row col-9 pr-0" style="height: fit-content; width:fit-content;">
+          <a class="" href="" style="padding-bottom: 5px;width: fit-content;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/window.jpg"></a><p class="col-md-7" ><a  style="font-size: large;font-weight: bolder;" href="">Google và Microsoft sẽ đầu tư 30 tỷ USD để cải thiện các vấn đề an ninh mạng tại Mỹ trong 5 năm tới<br><span style="font-weight: lighter;font-size: medium;" class="nothv" > Sau cuộc gặp với Tổng thống Joe Biden, Google và Microsoft cam kết sẽ đầu tư tổng cộng 30 tỷ USD để nâng cấp và cải thiện các vấn đề liên quan đến an ninh mạng trong vòng 5 năm tới. <br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
+          <a class="" href="" style="padding-bottom: 5px;width: fit-content;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/banphim.jpg"></a><p class="col-md-7" ><a  style="font-size: large;font-weight: bolder;" href="">Review RK G68, 1 chiếc bàn phím cơ có chất lượng chỉ bằng 1/3 Keychrone ?<br><span style="font-weight: lighter;font-size: medium;" class="nothv" > Đây là review về Review RK G68, 1 chiếc bàn phím cơ có chất lượng chỉ bằng 1/3 Keychrone của mình. Mình mua nó với giá 680,000. <br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
+          <a class="" href="" style="padding-bottom: 5px;width: fit-content;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/nhatban.jpg"></a><p class="col-md-7" ><a  style="font-size: large;font-weight: bolder;" href="">Nhật Bản sẽ xây đường hầm dưới biển để xả 1,27 triệu tấn nước nhiễm phóng xạ xuống đại dương<br><span style="font-weight: lighter;font-size: medium;" class="nothv" > Nhà điều hành nhà máy hạt nhân Fukushima của Nhật Bản đã công bố kế hoạch xây dựng một đường hầm dưới biển để thải hơn một triệu tấn nước nhiễm phóng xạ đã qua xử lý từ khu vực này vào đại dương. <br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
+          <a class="" href="" style="padding-bottom: 5px;width: fit-content;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/Ai.jpg"></a><p class="col-md-7" ><a  style="font-size: large;font-weight: bolder;" href="">VinAI giới thiệu công nghệ tự hành có thể sẽ ứng dụng trên xe VinFast trong tương lai<br><span style="font-weight: lighter;font-size: medium;" class="nothv" > Tại Sự kiện “AI Day 2021 - Tiếp lửa đổi mới sáng tạo” do Công ty Nghiên cứu và Ứng dụng Trí tuệ Nhân tạo VinAI (thuộc tập đoàn Vingroup) tổ chức. <br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
+          <a class="" href="" style="padding-bottom: 5px;width: fit-content;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/robot.jpg"></a><p class="col-md-7" ><a  style="font-size: large;font-weight: bolder;" href="">Roborock G10: con robot tự giặt giẻ, tự châm nước sau khi hoạt động xong<br><span style="font-weight: lighter;;font-size: medium;" class="nothv" > Roborock vừa ra mắt con robot hút bụi G10 mới, nó có chức năng tự giặt giẻ sau khi đã hoàn thành công việc.<br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
+          <a class="" href="" style="padding-bottom: 5px;width: fit-content;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/ongia.jpg"></a><p class="col-md-7" ><a  style="font-size: large;font-weight: bolder;" href="">Học được gì về chiến lược công ty qua email của Steve Jobs,Haless Tony...<br><span style="font-weight: lighter;font-size: medium;" class="nothv" > 24/10/2010, Steve Jobs gửi một email cho các lãnh đạo cấp cao của Apple, trong đó có một phần ông nói về “Chiến lược 2011” rất đáng chú ý.<br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
+          <a class="" href="" style="padding-bottom: 5px;width: fit-content;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/black.png"></a><p class="col-md-7" ><a  style="font-size: large;font-weight: bolder;" href="">WD và Kioxia đang đàm phán sáp nhập nhằm đối đầu Samsung trên thị trường chip nhớ<br><span style="font-weight: lighter;font-size: medium;" class="nothv" > Western Digital đang đàm phán về khả năng sáp nhập cổ phiếu trị giá 20 tỉ đô với nhà sản xuất chip kiêm đối tác lâu nay của WD là Kioxia.<br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
+          <a class="" href="" style="padding-bottom: 5px;width: fit-content;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/ongiga2.jpg"></a><p class="col-md-7" ><a  style="font-size: large;font-weight: bolder;" href="">Tim Cook đã bán gần hết cổ phiếu thưởng của Apple, thu về gần 750 triệu USD<br><span style="font-weight: lighter;font-size: medium;" class="nothv" > Theo báo cáo được Apple gửi lên Uỷ ban Chứng khoán và Sàn giao dịch Mỹ SEC, CEO Tim Cook vừa nhận được hơn 5 triệu cổ phiếu thưởng trong tuần qua và ông đã bán hầu hết trong số đó, thu về gần 750 triệu đô la Mỹ.<br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
+          
           <button  type="button" class="btn btn-outline-primary col-12">XEM BÀI VIẾT MỚI</button>
         </div>
     </div>
@@ -454,8 +460,8 @@
     <hr>
     <br>
     <!--Khung 6-->
-    <div class="row">
-      <div class="row col-9">
+    <div class="row container">
+      <div class="row col-9 last-tag">
         <div class="card col 6" style="width: 15%;">
           <img style="border-radius: 2%;" src="../static/img/window2.png" class="card-img-top" alt="...">
           <button type="button" class="btn btn-success">Windows</button>
@@ -493,10 +499,10 @@
     <hr>
     <br>
     <!--Các câu hỏi bạn giúp-->
-    <div class="row">
-      <div class=" row col-9">
+    <div class="row container pb-3 pt-3">
+      <div class=" row col-9 last-tag">
         <a class="col-12" style="font-weight: bold;padding-bottom: 3%;" href="">Tư vấn mua PC phục vụ công việc</a><br>
-        <img  class="col-1 rounded-circle" height="8%" width="1%" src="../static/img/khoa.jpg">
+        <img  class="mr-2 rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg">
         <div style="background-color: lightgrey;" class="card col 11">
           <div class="card-body">
             <a href="" style="color:blue;">Nguyễn Đăng Khoa</a> -20 phút
@@ -504,7 +510,7 @@
           </div>
         </div>
         <a class="col-12" style="font-weight: bold;padding-bottom: 3%;" href="">Góc cần giúp đỡ</a><br>
-        <img  class="col-1 rounded-circle" height="8%" width="1%" src="../static/img/bagia.jpg">
+        <img  class="mr-2 rounded-circle" height="30px" width="30px" src="../static/img/bagia.jpg">
         <div style="background-color: lightgrey;" class="card col 11">
           <div class="card-body">
             <a href="" style="color:blue;">Hasales</a> -20 phút
@@ -512,24 +518,20 @@
               hnay mình quên mật khẩu muốn tắt nguồn để reset thì quên mk mới cay , ai giúp mình với hu =((</div>
           </div>
         </div>
-        <a class="col-12" style="font-weight: bold;padding-bottom: 3%;" href="">Kẻ thù của cheems</a><br>
-        <img  class="col-1 rounded-circle" height="8%" width="1%" src="../static/img/cheems.jpg">
-        <div style="background-color: lightgrey;" class="card col 11">
+        <a class=" col-12 " style="font-weight: bold;padding-bottom: 3%;" href="">Kẻ thù của cheems</a><br>
+        <img  class="mr-2 rounded-circle" height="30px" width="30px" src="../static/img/cheems.jpg">
+        <div style="background-color: lightgrey;" class="card col 11 mb-3">
           <div class="card-body">
             <a href="" style="color:blue;">Phạm Trọng Khương</a> -20 phút
             <div>Mọi người chỉ mình cách làm thịt con cún nhà mình với nó tên CHEEMS</div>
           </div>
         </div>
-        <div class="col-12" style="padding-bottom: 3%;"></div>
-        <button  type="button" class="btn btn-outline-primary col-12">XEM BÀI VIẾT MỚI</button>
-      </div>
+        
     </div>
-    <br>
-    <hr>
-    <br>
+    
     <!--khung 7-->
-    <div class="row">
-      <div class="col-9">
+    <div class="row mb-3 ">
+      <div class="col-9 last-tag">
         <div id="demo" class="carousel slide" data-ride="carousel">
 
           <!-- Indicators -->
@@ -540,7 +542,7 @@
           </ul>
         
           <!-- The slideshow -->
-          <div class="carousel-inner">
+          <div class="carousel-inner rounded">
             <div class="carousel-item active">
               <img src="../static/img/nghiengame.jpg" class="d-block w-100" >
             </div>
@@ -564,66 +566,49 @@
         </div>
     </div>
     <br>
-    <hr>
+    
     <br>
+
     <!--Tag-->
-    <div class="row">
-      <div class="row col-9 " style="background-color: #222b45;color: white;border-radius: 2%;">
-        <div class="col-12">#Tag đang hot <br>Anh Em nhớ follow để nhận được thông báo mới nhé</div>
-        <div  class="card col-3" style="width: 50%; background-color: #242424" >
-          <img style="border-radius: 3%;" src="../static/img/android.png" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">#Android</p>
-          </div>
+    
+      <div class="row col-9 mb-3 last-tag  rounded" style="background-color: #222b45;color: white;">
+        <div class="col-12 mt-2 mb-2">#Tag đang hot <br>Anh Em nhớ follow để nhận được thông báo mới nhé</div>
+        <div  class="card col-3 " style="width: 100%; background-color: #242424" >
+          <img style="border-radius: 3%;" src="../static/img/android.png" class="card-img-top mt-3" alt="...">
+          #Android
         </div>
-        <div  class="card col-3" style="width: 50%; background-color: #242424" >
-          <img style="border-radius: 3%;" src="../static/img/corona.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">#Corona</p>
-          </div>
+        <div  class="card col-3" style="width: 100%; background-color: #242424" >
+          <img style="border-radius: 3%;" src="../static/img/corona.jpg" class="card-img-top mt-3" alt="...">
+          #Corona
         </div>
-        <div  class="card col-3" style="width: 50%; background-color: #242424" >
-          <img style="border-radius: 3%;" src="../static/img/khuyenmai.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">#Khuyen mai</p>
-          </div>
+        <div  class="card col-3" style="width: 100%; background-color: #242424" >
+          <img style="border-radius: 3%;" src="../static/img/khuyenmai.jpg" class="card-img-top mt-3" alt="...">
+          #Khuyen mai
         </div>
-        <div  class="card col-3" style="width: 50%; background-color: #242424" >
-          <img style="border-radius: 3%;" src="../static/img/car.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">#Car</p>
-          </div>
+        <div  class="card col-3" style="width: 100%; background-color: #242424" >
+          <img style="border-radius: 3%;" src="../static/img/car.jpg" class="card-img-top mt-3" alt="...">
+          #Car
         </div>
-        <div  class="card col-3" style="width: 50%; background-color: #242424" >
-          <img style="border-radius: 3%;" src="../static/img/ongiga2.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">#Tim Cook</p>
-          </div>
+        <div  class="card col-3" style="width: 100%; background-color: #242424" >
+          <img style="border-radius: 3%;" src="../static/img/ongiga2.jpg" class="card-img-top mt-3" alt="...">
+          #Tim Cook
         </div>
-        <div  class="card col-3" style="width: 50%; background-color: #242424" >
-          <img style="border-radius: 3%;" src="../static/img/banphim.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">#Ban Phim</p>
-          </div>
+        <div  class="card col-3" style="width: 100%; background-color: #242424" >
+          <img style="border-radius: 3%;" src="../static/img/banphim.jpg" class="card-img-top mt-3" alt="...">
+          #Ban Phim
         </div>
-        <div  class="card col-3" style="width: 50%; background-color: #242424" >
-          <img style="border-radius: 3%;" src="../static/img/surface.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">#Cong Nghe</p>
-          </div>
+        <div  class="card col-3" style="width: 100%; background-color: #242424" >
+          <img style="border-radius: 3%;" src="../static/img/surface.jpg" class="card-img-top mt-3" alt="...">
+          #Cong Nghe
         </div>
-        <div  class="card col-3" style="width: 50%; background-color: #242424" >
-          <img style="border-radius: 3%;" src="../static/img/youtube.jpg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">#Youtube</p>
-          </div>
+        <div  class="card col-3" style="width: 100%; background-color: #242424" >
+          <img style="border-radius: 3%;" src="../static/img/youtube.jpg" class="card-img-top mt-3" alt="...">
+          #Youtube
         </div>
-      </div>
+  
     </div>
-    <br>
-    <hr>
-    <br>
-    <hr>
+    
+
 
     <!-- popup1-->
     <div class="full-screen pop1 hidden flex-container-center">
@@ -632,7 +617,7 @@
         <div class="mr-3" style="text-align: center;" ><iframe class="frame1" width="600" height="400" src="https://www.youtube.com/embed/pp5FyuLbjwM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
         
         <div class="rounded" style="width: 500px; background-color: azure; padding: 20px;">
-          <img class="rounded-circle" src="../static/img/khoa.jpg" width="40px" height="40px" alt="">
+          <img class="rounded-circle " src="../static/img/khoa.jpg" width="40px" height="40px" alt="">
           <span style="font-weight: 500;"   > <span class="point">Khoaminion</span> <span style="font-weight: 100;">2h<span style="float:right" class="closepopup"><span class="point"><i class="fas fa-times"></i></span></span></span> <br><span class="rounded" >Mời anh em cùng chiêm ngưỡng khả năng "bắn sữa" của anh chàng Ấn Độ hết sức điêu luyện và chính xác, khá là giải trí cho anh em trong mùa dịch này :))</span>
           <hr>
           <div class="row" style="text-align: center;">
