@@ -12,7 +12,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-   <script>
+  <script>
     $(document).ready(function(){
       if ($(window).width() > 750){
           $(".viet").hide();   
@@ -37,12 +37,29 @@
         {
           $(".viet").show();
         }  
+
         if ($(window).width() > 1200){
           $(".info-box").show();   
         }
         else
         {
           $(".info-box").hide();
+        }
+
+        if ($(window).width() > 1000){
+          $(".last-tag").addClass("col-9");   
+        }
+        else
+        {
+          $(".last-tag").removeClass("col-9");
+        }
+
+        if ($(window).width() > 1000){
+          $(".third").addClass("col-3");   
+        }
+        else
+        {
+          $(".third").removeClass("col-3");
         }
       });
 
@@ -81,13 +98,13 @@
         };
       });
 
-      $(".fa-chevron-right").click(function(){
+      $(".chevron-right").click(function(){
         $(".pop1").addClass("hidden");       
         $(".pop2").removeClass("hidden");
         $('.frame1').attr('src', $('.frame1').attr('src'));
       });
 
-      $(".fa-chevron-left").click(function(){             
+      $(".chevron-left").click(function(){             
         $(".pop2").addClass("hidden");
         $(".pop1").removeClass("hidden");
         $('.frame2').attr('src', $('.frame2').attr('src'));
@@ -114,6 +131,8 @@
       $(".search-query").focus(function(){             
         $(".search-query").val(""); 
       });
+
+      
     });
 
   </script>
@@ -259,34 +278,40 @@
             <button type="button" class="btn btn-primary flex-3 info-box"> <img src="../static/img/Z-green-leaf.svg" width="25" height="25" alt="Logo"> <span style="color:white;"> Chia sẽ lên fact</span></button>
             <button type="button" style="background-color: blue;" class="btn btn-primary flex-1 info-box"><i class="fas fa-share"></i>28</button>
             <hr class="col-12">  
-            <div class="row">
-                <div class="card col-3" style="width: 25%;border-radius: 5%;">
-                    <img style="border-radius: 5%;" src="../static/img/soi.jpg" class="card-img-top" alt="...">
-                    <a href="">blueJunet</a>
-                    <p class="card-text">Xem anime Beastars (2019): Một phản chiếu về tâm lý con người qua thế giới động vật</p>
-                  </div>
-                  <div class="card col-3 " style="width: 25%; border-radius: 5%;">
-                    <img src="../static/img/tho.jpg"style="border-radius: 5%;"  class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <a href="">blueJunet</a>
-                      <p class="card-text">Xem anime Beastars (2019): Một phản chiếu về tâm lý con người qua thế giới động vật</p>
-                    </div>
-                  </div>
-                  <div class="card col-3 " style="width: 25%; border-radius: 5%;">
-                    <img src="../static/img/car.jpg"style="border-radius: 5%;"  class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <a href="">blueJunet</a>
-                      <p class="card-text">Xem anime Beastars (2019): Một phản chiếu về tâm lý con người qua thế giới động vật</p>
-                    </div>
-                  </div>
-                  <div class="card col-3 " style="width: 25%; border-radius: 5%;">
-                    <img src="../static/img/phimmaxxtri.jpg"style="border-radius: 5%;" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <a href="">blueJunet</a>
-                      <p class="card-text">[Tóm tắt phim] Công Chúa Mononoke - Princess Mononoke 1997</p>
-                    </div>
+
+            <div class="row container">
+              <div class="card col-3 third mb-3" style="width:100%; ">
+                <a href=""> <img class="card-img-top p-3" src="../static/img/soi.jpg" alt="Card image" style="width:100%"></a>
+                <div class="card-body">
+                  <p class="card-text">blueJunet - 1 giờ</p>
+                  <a href="#">Xem anime Beastars (2019): Một phản chiếu về tâm lý con người qua thế giới động vật</a>
                 </div>
+              </div>
+              <br>
+              <div class="card col-3 third mb-3" style="width:100%; ">
+                <a href=""><img class="card-img-top p-3" src="../static/img/tho.jpg" alt="Card image" style="width:100%"></a>
+                <div class="card-body">
+                  <p class="card-text">blueJunet - 2 giờ</p>
+                  <a href="#">Xem anime Beastars (2019): Một phản chiếu về tâm lý con người qua thế giới động vật</a>
+                </div>
+              </div>
+              <br>
+              <div class="card col-3 third mb-3" style="width:100%;">
+                <a href=""><img class="card-img-top p-3" src="../static/img/car.jpg" alt="Card image" style="width:100%"></a>
+                <div class="card-body">
+                  <p class="card-text">blueJunet - 2 giờ</p>
+                  <a href="#">Xem anime Beastars (2019): Một phản chiếu về tâm lý con người qua thế giới động vật</a>
+                </div>
+              </div>
+              <div class="card col-3 third mb-3" style="width:100%;">
+                <a href=""><img class="card-img-top p-3" src="../static/img/phimmaxxtri.jpg" alt="Card image" style="width:100%"></a>
+                <div class="card-body">
+                  <p class="card-text">blueJunet - 2 giờ</p>
+                  <a href="#">[Tóm tắt phim] Công Chúa Mononoke - Princess Mononoke 1997</a>
+                </div>
+              </div>
             </div>
+
             <hr class="col-12">
             <button type="button" style="background-color: black; color: white;" class="btn btn-lg btn-primary" disabled>Bình Luận</button>
         </div>
@@ -433,8 +458,8 @@
     <hr>
     <br>
     <!--khung 7-->
-    <div class="row" style="padding-top: 5px;">
-      <div class="col-9">
+    <div class="row mb-3 ">
+      <div class="col-9 last-tag">
         <div id="demo" class="carousel slide" data-ride="carousel">
 
           <!-- Indicators -->
@@ -445,7 +470,7 @@
           </ul>
         
           <!-- The slideshow -->
-          <div class="carousel-inner">
+          <div class="carousel-inner rounded">
             <div class="carousel-item active">
               <img src="../static/img/nghiengame.jpg" class="d-block w-100" >
             </div>
@@ -469,10 +494,12 @@
         </div>
     </div>
     <br>
-    <hr>
+    
     <br>
+
     <!--Tag-->
-<div class="row col-9 mb-3 last-tag  rounded" style="background-color: #222b45;color: white;">
+    
+      <div class="row col-9 mb-3 last-tag  rounded" style="background-color: #222b45;color: white;">
         <div class="col-12 mt-2 mb-2">#Tag đang hot <br>Anh Em nhớ follow để nhận được thông báo mới nhé</div>
         <div  class="card col-3 " style="width: 100%; background-color: #242424" >
           <img style="border-radius: 3%;" src="../static/img/android.png" class="card-img-top mt-3" alt="...">
@@ -508,10 +535,6 @@
         </div>
   
     </div>
-    <br>
-    <hr>
-    <br>
-    <hr>
     <div class="viet-bai full-screen hidden flex-container-center">
       <div class="row form-inline " style="width: auto;" >
         <div class="rounded" style="width: 500px; background-color: azure; padding: 20px;">
