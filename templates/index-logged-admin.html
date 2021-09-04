@@ -20,6 +20,7 @@
         {
           $(".viet").show();
         }
+        
 
       $(".search-query").hide();
 
@@ -51,6 +52,14 @@
         else
         {
           $(".last-tag").removeClass("col-9");
+        }
+
+        if ($(window).width() > 800){
+          $(".third").addClass("col-3");   
+        }
+        else
+        {
+          $(".third").removeClass("col-3");
         }
       });
 
@@ -123,23 +132,41 @@
         $(".search-query").val(""); 
       });
 
+      if ($(window).width() > 1000){
+          $(".last-tag").addClass("col-9");   
+        }
+        else
+        {
+          $(".last-tag").removeClass("col-9");
+        }
+
+        if ($(window).width() > 800){
+          $(".third").addClass("col-3");   
+        }
+        else
+        {
+          $(".third").removeClass("col-3");
+        }
+
       
     });
 
   </script>
 </head>
 <body>  
-  
   <nav class="container navbar navbar-expand-md navbar-inverse  navbar-light pb-0">
+    <!-- Brand -->
     <div class="form-group pt-2">
-      <a class="navbar-brand" href="#"><img src="../static/img/Z-green-leaf.svg" width="45" height="45" alt="Logo"> ZTech</a>
-      <!-- search -->
-            <input type="text" class="search-query" placeholder="Type something...">
-            <button type="submit" class="btn btn-circle"><i class="fa fa-search"></i></button>
-      </div>
+    <a class="navbar-brand" href="#"><img src="../static/img/Z-green-leaf.svg" width="45" height="45" alt="Logo"> ZTech</a>
+    <!-- search -->
+          <input type="text" class="search-query" placeholder="Type something...">
+          <button type="submit" class="btn btn-circle"><i class="fa fa-search"></i></button>
+    </div>
+    
+    
 
     <!-- toggle icon -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <button class="navbar-toggler mb-3" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
    </button>
    
@@ -153,13 +180,55 @@
         <a class="nav-link" href="#">Video</a>
       </li>
     </ul>
-      <li class="nav-item li-dangnhap pb-2">
-        <a class="ml-auto text-dark "  href=".">Đăng nhập</a>
+      <li class="nav-item li-dangnhap pr-3 pb-2 ico-vietbai">
+        <i class="fas fa-feather btn-circle" style="padding-top: 10px; background-color: rgb(4, 229, 245);" data-toggle="tooltip" data-placement="top" title="Viết bài"></i>
+        <span class="viet">Viết bài</span>
+      </li>
+      <li class="nav-item li-dangnhap pr-3 pb-2">
+        <div class="dropdown" data-toggle="dropdown" aria-haspopup="true" data-placement="top" title="Cài đặt" aria-expanded="false" >
+          <i class="fas fa-bell btn-circle" style="padding-top: 10px; background-color: rgb(4, 229, 245);" data-toggle="tooltip" data-placement="top" title="Thông báo"></i>
+        <span class="viet">Thông báo</span>
+          <div class="dropdown-menu dropdown-menu-right" style="text-align: left;" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#" > 
+              <span style="color: blue; font-weight: 400;">KhuongPT</span> <br>
+              <span style="font-size: small;">Bài viết của bạn đã bị xóa bởi đăng tải nội dung không lành mạnh !!</span>
+            </a>
+            <hr>
+            <a class="dropdown-item" href="#" >
+                <span style="color: blue; font-weight: 400;">Nekowimade</span> <br>
+                <span style="font-size: small;">Đã bình luận bài đăng của bạn</span>
+            </a>
+            <hr>
+            <a class="dropdown-item" href="#" >
+                <span style="color: blue; font-weight: 400;">Tomblobla</span> <br>
+                <span style="font-size: small;">Đã thích bài đăng của bạn</span>
+            </a>
+          </div>
+        </div>
+      </li>
+      <li class="nav-item li-dangnhap pr-3 pb-2">
+        <img class="rounded-circle" width="33" height="33" src="../static/img/surface.jpg" alt="khoamod" data-toggle="tooltip" data-placement="top" title="Trang cá nhân">
+        <span class="viet">Trang cá nhân</span>
+      </li>
+      
+      <li class="nav-item li-dangnhap pb-2">       
+        <div class="dropdown" data-toggle="dropdown" aria-haspopup="true" data-placement="top" title="Cài đặt" aria-expanded="false" >
+          <i id="dropdownMenuButton" class="fas fa-cog btn-circle" style="padding-top: 10px; "></i>
+          <span class="viet">Cài đặt</span>
+          <div class="dropdown-menu dropdown-menu-right" style="text-align: left;" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Trang cá nhân</a>
+            <a class="dropdown-item" href="#"><i class="fas fa-info"></i> Thông tin cá nhân</a>
+            <a class="dropdown-item" href="#"><i class="far fa-list-alt"></i> Bảng điều khiển</a>
+            <a class="dropdown-item" href="#"><i class="fas fa-user-tag"></i> Quản lý user</a>
+            <a class="dropdown-item" href="post-manager.html"><i class="fas fa-paperclip"></i> Quản lý bài viết</a>
+            <a class="dropdown-item" href="#"><i class="fas fa-lock"></i> Đổi mật khẩu</a>
+            <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+          </div>
+        </div>
       </li>
     </div>
   </nav>
   <hr class="hr-shadow">
-  <!-- end of nav bar -->
   <section class="container">
     <!-- foru -->
     <div class="container home-foru form-inline pb-3">
@@ -173,15 +242,15 @@
       <div class="pr-3" style="font-weight: 500; font-size: x-large;">
         Tin Hot
       </div>
-  </div>
+    </div>
   <!-- facts -->
   <div class="mb-5 pb-5">
     
     <div class="form-inline" style=" height: 100px; background-size: contain;">
        
-      <div class="scrollmenu rounded " style=" overflow: auto; white-space: nowrap; height: 170px;">       
+      <div class="scrollmenu rounded " style=" overflow: auto; white-space: nowrap; width: 840px; height: 170px;">       
         <span class="ml-2">
-          <img class="mr-2 rounded" style=" opacity: 100%; height: 150px; width:85px; " src="../static/img/khoa.jpg"  alt="">
+          <img class="mr-2 rounded" style=" opacity: 100%; height: 150px; width:85px; " src="../static/img/surface.jpg"  alt="">
         </span>  
         <span class="showpopup">
           <span style="margin-left: -70px; margin-right: 30px;"><i style="font-size: xx-large;"; class="fa fa-plus-circle" aria-hidden="true"></i></span>
@@ -192,15 +261,6 @@
         <span>
           <span style="margin-left: -75px; margin-right: 25px; color: rgb(255, 255, 255); font-weight: 500;font-size: small; ">KietITK</span>
           <img class="mr-2 rounded" style="  height: 150px; width: 85px;" src="../static/img/error-computer.gif" alt=""></span>
-         <span>
-          <span style="margin-left: -80px; margin-right: 23px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Bigbang</span>
-          <img class="mr-2 rounded" style="  height: 150px; width: 85px;" src="../static/img/doge-samar.gif" alt=""></span>
-        <span>
-          <span style="margin-left: -94px; margin-right: 10px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Nekowimade</span>
-          <img class="mr-2 rounded" style="  height: 150px; width: 85px;" src="../static/img/gabriel-dropout-gabriel-temna.gif" alt=""></span>
-        <span>
-          <span style="margin-left: -90px; margin-right: 20px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Tomblobla</span>
-          <img class="mr-2 rounded" style="  height: 150px; width: 85px;" src="../static/img/cat-funny-cat.gif" alt=""></span>
         <span>
           <span style="margin-left: -90px; margin-right: 20px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Tomblobla</span>
           <img class="mr-2 rounded" style="  height: 150px; width: 85px;" src="../static/img/cat-funny-cat.gif" alt=""></span>
@@ -211,15 +271,6 @@
           <span style="margin-left: -80px; margin-right: 23px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Bigbang</span>
           <img class="mr-2 rounded" style="  height: 150px; width: 85px;" src="../static/img/doge-samar.gif" alt=""></span>
         <span>
-          <span style="margin-left: -80px; margin-right: 23px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Bigbang</span>
-          <img class="mr-2 rounded" style="  height: 150px; width: 85px;" src="../static/img/doge-samar.gif" alt=""></span>
-        <span>
-          <span style="margin-left: -94px; margin-right: 10px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Nekowimade</span>
-          <img class="mr-2 rounded" style="  height: 150px; width: 85px;" src="../static/img/gabriel-dropout-gabriel-temna.gif" alt=""></span>
-        <span>
-          <span style="margin-left: -90px; margin-right: 20px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Tomblobla</span>
-          <img class="mr-2 rounded" style="  height: 150px; width: 85px;" src="../static/img/cat-funny-cat.gif" alt=""></span>
-        <span>
           <span style="margin-left: -94px; margin-right: 10px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Nekowimade</span>
           <img class="mr-2 rounded" style="  height: 150px; width: 85px;" src="../static/img/gabriel-dropout-gabriel-temna.gif" alt=""></span>
         <span>
@@ -229,7 +280,13 @@
           <span style="margin-left: -67px; margin-right: 30px; color: rgb(255, 255, 255); font-weight: 500; font-size: small;">Jerry</span>
           <img class="rounded" style="  height: 150px; width: 85px;" src="../static/img/mikey-tokyo-revengers.gif" alt=""></span>
           <span style="margin-left: -70px; margin-right: 33px; color: rgb(255, 255, 255); font-weight: 500;font-size: small;">Datoc</span>
-      </div>      
+      </div>
+        <!-- box-->
+      <div class="ml-3 info-box" style=" border: 1px solid rgb(202, 202, 202); border-radius: 5px; padding: 20px; ">
+        <img class="rounded-circle mr-2" src="../static/img/surface.jpg" width="40px" height="40px" alt="">
+        <span style="font-weight: 500;"  >Xin chào Tomblobla ! <br> <br><span style="background-color: gainsboro; padding: 5px;" class="rounded" >Số giờ hoạt động: 283</span> <br>  <br><span style="background-color: gainsboro; padding: 5px;" class="rounded" > Số bài viết: 25</span></span>
+      </div>  
+      <!--end box-->
     </div>
     
   </div>
@@ -242,22 +299,27 @@
     </div>
     <br>
      <!-- khung 1 -->
-    <div class="row ">
-      <div class="row col-9">
-        <a class="col-9" href=""><img class="col-12" src="../static/img/maybay.jpg" ></a>  
-        <div class="card col-3" style="width: 100%;background-color:#a2acc6;">
-          <a href=""><img class="card-img-top" src="../static/img/daidich.jpg" alt="Card image" style="width:100%"></a>
+    <div class="row mb-2 container">
+      <div class="row col-9 last-tag">
+        <div class="card col-8 " style="width: 100%;background-color:rgb(240, 240, 240);">
+          <a href=""><img class="card-img-top mt-3  rounded" src="../static/img/maybay.jpg" alt="Card image" style="width:100%"></a>
+          <div class="card-body">
+            <p class="card-text">Hassler - 35 phút</p>
+            <a href="#">Chuyến bay SamSung...</a>
+          </div>
+        </div>
+        <div class="card col-4 " style="width: 100%;background-color:rgb(240, 240, 240);">
+          <a href=""><img class="card-img-top mt-3 rounded " src="../static/img/daidich.jpg" alt="Card image" style="width:100%"></a>
           <div class="card-body">
             <p class="card-text">Hassler - 35 phút</p>
             <a href="#">Đại dịch diễn biến 2021</a>
           </div>
         </div>
-        <br>
-        <div class="col-9">rubi lee - 16 phút </div> 
-        <div class="col-3"></div>
-        <a class="col-9" href="" >Chuyến bay samsung...</a>
+       
+         
        </div>
-      <div class="col-3">
+
+      <div class="col-3 info-box ml-4">
         <h1 style="font-size: 25px;font-weight: bolder;">Cộng đồng nổi bật</h1>
         <div class="row">
           <img class= "row col-6 rounded" style="padding-left: 10%;"height=150% width="100%" src="../static/img/banphim.jpg"> <a href="" class=" col-6">Phím cơ </a>
@@ -273,32 +335,32 @@
 
    
     <!-- khung 2 -->
-    <div class="row">
-      <div class="card col-3" style="width:100%;">
-        <a href=""> <img class="card-img-top" src="../static/img/youtube.jpg" alt="Card image" style="width:100%"></a>
+    <div class="row container">
+      <div class="card col-3 third mb-3" style="width:100%; ">
+        <a href=""> <img class="card-img-top p-3" src="../static/img/youtube.jpg" alt="Card image" style="width:100%"></a>
         <div class="card-body">
           <p class="card-text">TuyenTEX - 1 giờ</p>
           <a href="#">Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người...</a>
         </div>
       </div>
       <br>
-      <div class="card col-3" style="width:100%;">
-        <a href=""><img class="card-img-top" src="../static/img/dt.jpg" alt="Card image" style="width:100%"></a>
+      <div class="card col-3 third mb-3" style="width:100%; ">
+        <a href=""><img class="card-img-top p-3" src="../static/img/dt.jpg" alt="Card image" style="width:100%"></a>
         <div class="card-body">
-          <p class="card-text">cuhiep - 2 giờ</p>
-          <a href="#">Dùng thun quần để làm kẹp giữ Spen vào Fold3
-          </a>
+          <p class="card-text">Khoaminion - 2 giờ</p>
+          <a href="#">Dùng thun quần để làm kẹp giữ Spen và Fold3</a>
         </div>
       </div>
       <br>
-      <div class="card col-3" style="width:100%;">
-        <a href=""><img class="card-img-top" src="../static/img/wc.jpg" alt="Card image" style="width:100%"></a>
+      <div class="card col-3 third mb-3" style="width:100%;">
+        <a href=""><img class="card-img-top p-3" src="../static/img/wc.jpg" alt="Card image" style="width:100%"></a>
         <div class="card-body">
           <p class="card-text">cuhiep - 2 giờ</p>
           <a href="#">Trên tay DJI Mini SE: nhỏ, nhẹ dễ bay, khả năng quay 2.7K 30p, phù hợp cho người mới</a>
         </div>
       </div>
-      <div class="col-3">
+      
+      <div class="col-3 info-box">
         <h1 style="font-size: 25px;font-weight: bolder;">Thảo luận trong ngày</h1>
         <div class="row">
          <a href=""><img class="col-12" style="padding-right: 5px; border-radius: 10%;" src="../static/img/bagia.jpg"></a> 
@@ -311,7 +373,7 @@
     <br>
     <hr>
      <!-- xem nhanh -->
-     <h1 style="font-size:large; padding-left: 15px " >Xem nhanh</h1>
+    <h1 style="font-size:large; padding-left: 15px " >Xem nhanh</h1>
      <div class="row">
        <div class="row col-9" style="height: fit-content;" >
         <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 "><img class="bdr"  src="../static/img/xebay.gif"><a class="col-md-6 text" href="">Bị phạt 1,2 tỷ vì lái xe bán tải "bay qua lạch nước ở Mỹ"</a> </div>
@@ -373,10 +435,10 @@
      <!-- khung 3 -->
     <div class="row" >
       <div class="row col-9">
-          <a  href="" style="padding-bottom: 5px;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/dtduoi.jpg"></a> <p class="col-md-7" ><a style="font-size: large;font-weight: bolder;" href="" class="text-justify">Hướng dẫn thiết lập khôi phục iCloud thông qua liên hệ tin cậy trên iOS 15<br><span style="font-weight: unset;font-size: medium;" class="nothv text-justify" >việc khôi phục dữ liệu iCloud trên iOS 15 đã trở nên dễ dàng hơn khi người dùng quên mật khẩu tài khoản hoặc mật mã thiết bị.<br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
-          <a  href="" style="padding-bottom: 5px;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/phimmaxxtri.jpg"></a><p class="col-md-7"><a style="font-size: large;font-weight: bolder;" href="">Phim Matrix phần 4 có tên gọi chính thức, ra rạp ngày 22/12 <br><span style="font-weight: unset;font-size: medium;" class="nothv">Tại sự kiện CinemaCon vừa diễn ra, Warner Bros dù không công bố rộng rãi trailer của bộ phim sắp công chiếu nhưng đã tiết lộ tên gọi chính thức sẽ là Matrix: Resurrections. <br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Didu</a>- 4h-Cà phê tinh tế</p></span>
-          <a  href="" style="padding-bottom: 5px;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/dt.jpg"></a><p class="col-md-7"><a style="font-size: large;font-weight: bolder;" href="">Fitbit Charge 5 chính thức: màn hình OLED  <br><span style="font-weight: unset;font-size: medium;" class="nothv">Vậy là FItbit Charge 5 đã chính thức được Fitbit ra mắt và sẽ là thế hệ fitness tracker cao cấp tiếp theo, kế nhiệm Fitbit Charge 4 ra mắt cách đây 1 năm<br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">bngHuy</a>- 5h-Đồng Hồ - Trang Sức</p></span>
-          <a  href="" style="padding-bottom: 5px;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/mayruachen.jpg"></a><p class="col-md-7 "><a style="font-size: large;font-weight: bolder;" href="">Review Máy rửa bát Electrolux loại 8 SET <br><span style="font-weight: unset;font-size: medium;" class="nothv"> Đây là review về Máy rửa bát Electrolux loại 8 SET của mình.Mình mua nó với giá 11,000,000 (mua đã được 4 năm nên giá khá cao hơn hiện tại). Hi vọng phần review sẽ hữu ích cho bạn nào muốn mua nhé, nếu bạn có câu hỏi gì thì hãy comment vô bài này nha.<br><img  class=" rounded-circle" width="30px" height="30px"  src="../static/img/khoa.jpg"> <a href="">kaoquanjb</a>- 5h-Điện tử-Tiêu dùng</p></span>
+          <a  href="" style="padding-bottom: 5px;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/dtduoi.jpg"></a> <p class="col-md-7" ><a style="font-size: large;font-weight: bolder;" href="">Hướng dẫn thiết lập khôi phục iCloud thông qua liên hệ tin cậy trên iOS 15<br><span style="font-weight:lighter;font-size: medium;" class="nothv" >việc khôi phục dữ liệu iCloud trên iOS 15 đã trở nên dễ dàng hơn khi người dùng quên mật khẩu tài khoản hoặc mật mã thiết bị.<br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
+          <a  href="" style="padding-bottom: 5px;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/phimmaxxtri.jpg"></a><p class="col-md-7"><a style="font-size: large;font-weight: bolder;" href="">Phim Matrix phần 4 có tên gọi chính thức, ra rạp ngày 22/12 <br><span style="font-weight: lighter;font-size: medium;" class="nothv">Tại sự kiện CinemaCon vừa diễn ra, Warner Bros dù không công bố rộng rãi trailer của bộ phim sắp công chiếu nhưng đã tiết lộ tên gọi chính thức sẽ là Matrix: Resurrections. <br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Didu</a>- 4h-Cà phê tinh tế</p></span>
+          <a  href="" style="padding-bottom: 5px;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/dt.jpg"></a><p class="col-md-7"><a style="font-size: large;font-weight: bolder;" href="">Fitbit Charge 5 chính thức: màn hình OLED  <br><span style="font-weight: lighter;font-size: medium;" class="nothv">Vậy là FItbit Charge 5 đã chính thức được Fitbit ra mắt và sẽ là thế hệ fitness tracker cao cấp tiếp theo, kế nhiệm Fitbit Charge 4 ra mắt cách đây 1 năm<br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">bngHuy</a>- 5h-Đồng Hồ - Trang Sức</p></span>
+          <a  href="" style="padding-bottom: 5px;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/mayruachen.jpg"></a><p class="col-md-7 "><a style="font-size: large;font-weight: bolder;" href="">Review Máy rửa bát Electrolux loại 8 SET <br><span style="font-weight:lighter;font-size: medium;" class="nothv"> Đây là review về Máy rửa bát Electrolux loại 8 SET của mình.Mình mua nó với giá 11,000,000 (mua đã được 4 năm nên giá khá cao hơn hiện tại). Hi vọng phần review sẽ hữu ích cho bạn nào muốn mua nhé, nếu bạn có câu hỏi gì thì hãy comment vô bài này nha.<br><img  class=" rounded-circle" width="30px" height="30px"  src="../static/img/khoa.jpg"> <a href="">kaoquanjb</a>- 5h-Điện tử-Tiêu dùng</p></span>
       </div>
     </div>
     <br>
@@ -411,29 +473,23 @@
     <br>
     <hr>
     <!--khung 5-->
-    <div class="row container" style="padding-top: 5%;">
-      <div class="row col-9 last-tag pr-0" style="height: fit-content; width:fit-content;">
-        <p>
-          <img class="rounded pr-3" src="../static/img/window.jpg" alt="Smiley face" style="float:left;max-width: 100%;height:auto;">
-          Google và Microsoft sẽ đầu tư 30 tỷ USD để cải thiện các vấn đề an ninh mạng tại Mỹ trong 5 năm tớiSau cuộc gặp với Tổng thống Joe Biden, Google và Microsoft cam kết sẽ đầu tư tổng cộng 30 tỷ USD để nâng cấp và cải thiện các vấn đề liên quan đến an ninh mạng trong vòng 5 năm tới. 
-          </p>
-        
-          <a class="" href="" style="padding-bottom: 5px;width: fit-content;"><img style="border-radius: 5%;" width="300px" height="185px" src="../static/img/banphim.jpg"></a><p class="col-md-7" ><a  style="font-size: large;font-weight: bolder;" href="">Review RK G68, 1 chiếc bàn phím cơ có chất lượng chỉ bằng 1/3 Keychrone ?<br><span style="font-weight: unset;font-size: medium;" class="nothv" > Đây là review về Review RK G68, 1 chiếc bàn phím cơ có chất lượng chỉ bằng 1/3 Keychrone của mình. Mình mua nó với giá 680,000. <br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
-          <a class="" href="" style="padding-bottom: 5px;width: fit-content;"><img style="border-radius: 5%;" width="300px" height="185px" src="../static/img/nhatban.jpg"></a><p class="col-md-7" ><a  style="font-size: large;font-weight: bolder;" href="">Nhật Bản sẽ xây đường hầm dưới biển để xả 1,27 triệu tấn nước nhiễm phóng xạ xuống đại dương<br><span style="font-weight: unset;font-size: medium;" class="nothv" > Nhà điều hành nhà máy hạt nhân Fukushima của Nhật Bản đã công bố kế hoạch xây dựng một đường hầm dưới biển để thải hơn một triệu tấn nước nhiễm phóng xạ đã qua xử lý từ khu vực này vào đại dương. <br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
-          <a class="" href="" style="padding-bottom: 5px;width: fit-content;"><img style="border-radius: 5%;" width="300px" height="185px" src="../static/img/Ai.jpg"></a><p class="col-md-7" ><a  style="font-size: large;font-weight: bolder;" href="">VinAI giới thiệu công nghệ tự hành có thể sẽ ứng dụng trên xe VinFast trong tương lai<br><span style="font-weight: unset;font-size: medium;" class="nothv" > Tại Sự kiện “AI Day 2021 - Tiếp lửa đổi mới sáng tạo” do Công ty Nghiên cứu và Ứng dụng Trí tuệ Nhân tạo VinAI (thuộc tập đoàn Vingroup) tổ chức. <br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
-          <a class="" href="" style="padding-bottom: 5px;width: fit-content;"><img style="border-radius: 5%;" width="300px" height="185px" src="../static/img/robot.jpg"></a><p class="col-md-7" ><a  style="font-size: large;font-weight: bolder;" href="">Roborock G10: con robot tự giặt giẻ, tự châm nước sau khi hoạt động xong<br><span style="font-weight: unset;font-size: medium;" class="nothv" > Roborock vừa ra mắt con robot hút bụi G10 mới, nó có chức năng tự giặt giẻ sau khi đã hoàn thành công việc.<br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
-          <a class="" href="" style="padding-bottom: 5px;width: fit-content;"><img style="border-radius: 5%;" width="300px" height="185px" src="../static/img/ongia.jpg"></a><p class="col-md-7" ><a  style="font-size: large;font-weight: bolder;" href="">Học được gì về chiến lược công ty qua email của Steve Jobs,Haless Tony...<br><span style="font-weight: unset;font-size: medium;" class="nothv" > 24/10/2010, Steve Jobs gửi một email cho các lãnh đạo cấp cao của Apple, trong đó có một phần ông nói về “Chiến lược 2011” rất đáng chú ý.<br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
-          <a class="" href="" style="padding-bottom: 5px;width: fit-content;"><img style="border-radius: 5%;" width="300px" height="185px" src="../static/img/black.png"></a><p class="col-md-7" ><a  style="font-size: large;font-weight: bolder;" href="">WD và Kioxia đang đàm phán sáp nhập nhằm đối đầu Samsung trên thị trường chip nhớ<br><span style="font-weight: unset;font-size: medium;" class="nothv" > Western Digital đang đàm phán về khả năng sáp nhập cổ phiếu trị giá 20 tỉ đô với nhà sản xuất chip kiêm đối tác lâu nay của WD là Kioxia.<br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
-          <a class="" href="" style="padding-bottom: 5px;width: fit-content;"><img style="border-radius: 5%;" width="300px" height="185px" src="../static/img/ongiga2.jpg"></a><p class="col-md-7" ><a  style="font-size: large;font-weight: bolder;" href="">Tim Cook đã bán gần hết cổ phiếu thưởng của Apple, thu về gần 750 triệu USD<br><span style="font-weight: unset;font-size: medium;" class="nothv" > Theo báo cáo được Apple gửi lên Uỷ ban Chứng khoán và Sàn giao dịch Mỹ SEC, CEO Tim Cook vừa nhận được hơn 5 triệu cổ phiếu thưởng trong tuần qua và ông đã bán hầu hết trong số đó, thu về gần 750 triệu đô la Mỹ.<br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
+    <div class="row mb-3" style="padding-top: 5%;">
+      <div class="row col-9 pr-0" style="height: fit-content; width:fit-content;">
+          <a class="" href="" style="padding-bottom: 5px;width: fit-content;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/window.jpg"></a><p class="col-md-7" ><a  style="font-size: large;font-weight: bolder;" href="">Google và Microsoft sẽ đầu tư 30 tỷ USD để cải thiện các vấn đề an ninh mạng tại Mỹ trong 5 năm tới<br><span style="font-weight: lighter;font-size: medium;" class="nothv" > Sau cuộc gặp với Tổng thống Joe Biden, Google và Microsoft cam kết sẽ đầu tư tổng cộng 30 tỷ USD để nâng cấp và cải thiện các vấn đề liên quan đến an ninh mạng trong vòng 5 năm tới. <br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
+          <a class="" href="" style="padding-bottom: 5px;width: fit-content;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/banphim.jpg"></a><p class="col-md-7" ><a  style="font-size: large;font-weight: bolder;" href="">Review RK G68, 1 chiếc bàn phím cơ có chất lượng chỉ bằng 1/3 Keychrone ?<br><span style="font-weight: lighter;font-size: medium;" class="nothv" > Đây là review về Review RK G68, 1 chiếc bàn phím cơ có chất lượng chỉ bằng 1/3 Keychrone của mình. Mình mua nó với giá 680,000. <br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
+          <a class="" href="" style="padding-bottom: 5px;width: fit-content;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/nhatban.jpg"></a><p class="col-md-7" ><a  style="font-size: large;font-weight: bolder;" href="">Nhật Bản sẽ xây đường hầm dưới biển để xả 1,27 triệu tấn nước nhiễm phóng xạ xuống đại dương<br><span style="font-weight: lighter;font-size: medium;" class="nothv" > Nhà điều hành nhà máy hạt nhân Fukushima của Nhật Bản đã công bố kế hoạch xây dựng một đường hầm dưới biển để thải hơn một triệu tấn nước nhiễm phóng xạ đã qua xử lý từ khu vực này vào đại dương. <br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
+          <a class="" href="" style="padding-bottom: 5px;width: fit-content;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/Ai.jpg"></a><p class="col-md-7" ><a  style="font-size: large;font-weight: bolder;" href="">VinAI giới thiệu công nghệ tự hành có thể sẽ ứng dụng trên xe VinFast trong tương lai<br><span style="font-weight: lighter;font-size: medium;" class="nothv" > Tại Sự kiện “AI Day 2021 - Tiếp lửa đổi mới sáng tạo” do Công ty Nghiên cứu và Ứng dụng Trí tuệ Nhân tạo VinAI (thuộc tập đoàn Vingroup) tổ chức. <br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
+          <a class="" href="" style="padding-bottom: 5px;width: fit-content;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/robot.jpg"></a><p class="col-md-7" ><a  style="font-size: large;font-weight: bolder;" href="">Roborock G10: con robot tự giặt giẻ, tự châm nước sau khi hoạt động xong<br><span style="font-weight: lighter;;font-size: medium;" class="nothv" > Roborock vừa ra mắt con robot hút bụi G10 mới, nó có chức năng tự giặt giẻ sau khi đã hoàn thành công việc.<br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
+          <a class="" href="" style="padding-bottom: 5px;width: fit-content;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/ongia.jpg"></a><p class="col-md-7" ><a  style="font-size: large;font-weight: bolder;" href="">Học được gì về chiến lược công ty qua email của Steve Jobs,Haless Tony...<br><span style="font-weight: lighter;font-size: medium;" class="nothv" > 24/10/2010, Steve Jobs gửi một email cho các lãnh đạo cấp cao của Apple, trong đó có một phần ông nói về “Chiến lược 2011” rất đáng chú ý.<br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
+          <a class="" href="" style="padding-bottom: 5px;width: fit-content;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/black.png"></a><p class="col-md-7" ><a  style="font-size: large;font-weight: bolder;" href="">WD và Kioxia đang đàm phán sáp nhập nhằm đối đầu Samsung trên thị trường chip nhớ<br><span style="font-weight: lighter;font-size: medium;" class="nothv" > Western Digital đang đàm phán về khả năng sáp nhập cổ phiếu trị giá 20 tỉ đô với nhà sản xuất chip kiêm đối tác lâu nay của WD là Kioxia.<br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
+          <a class="" href="" style="padding-bottom: 5px;width: fit-content;"><img style="border-radius: 5%;" width=300px height="185px" src="../static/img/ongiga2.jpg"></a><p class="col-md-7" ><a  style="font-size: large;font-weight: bolder;" href="">Tim Cook đã bán gần hết cổ phiếu thưởng của Apple, thu về gần 750 triệu USD<br><span style="font-weight: lighter;font-size: medium;" class="nothv" > Theo báo cáo được Apple gửi lên Uỷ ban Chứng khoán và Sàn giao dịch Mỹ SEC, CEO Tim Cook vừa nhận được hơn 5 triệu cổ phiếu thưởng trong tuần qua và ông đã bán hầu hết trong số đó, thu về gần 750 triệu đô la Mỹ.<br><img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
           
           <button  type="button" class="btn btn-outline-primary col-12">XEM BÀI VIẾT MỚI</button>
         </div>
     </div>
-    <br>
-    <hr>
-    <br>
+    
     <!--Khung 6-->
-    <div class="row container">
+    <div class="row container ml-2">
       <div class="row col-9 last-tag">
         <div class="card col 6" style="width: 15%;">
           <img style="border-radius: 2%;" src="../static/img/window2.png" class="card-img-top" alt="...">
@@ -472,7 +528,7 @@
     <hr>
     <br>
     <!--Các câu hỏi bạn giúp-->
-    <div class="row container pb-3 pt-3">
+    <div class="row pb-3 container pt-3 ml-2">
       <div class=" row col-9 container last-tag">
         <a class="col-12" style="font-weight: bold;padding-bottom: 3%;" href="">Tư vấn mua PC phục vụ công việc</a><br>
         <img  class="mr-2 rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg">
@@ -503,8 +559,8 @@
     </div>
     
     <!--khung 7-->
-    <div class="row mb-3 ">
-      <div class="col-9 last-tag">
+    <div class="row ml-1 mb-3 ">
+      <div class="col-9  last-tag">
         <div id="demo" class="carousel slide" data-ride="carousel">
 
           <!-- Indicators -->
@@ -544,7 +600,7 @@
 
     <!--Tag-->
     
-      <div class="row col-9 mb-3 last-tag  rounded" style="background-color: #222b45;color: white;">
+      <div class="row col-9 mb-3 last-tag ml-2  rounded" style="background-color: #222b45;color: white;">
         <div class="col-12 mt-2 mb-2">#Tag đang hot <br>Anh Em nhớ follow để nhận được thông báo mới nhé</div>
         <div  class="card col-3 " style="width: 100%; background-color: #242424" >
           <img style="border-radius: 3%;" src="../static/img/android.png" class="card-img-top mt-3" alt="...">
@@ -582,15 +638,18 @@
     </div>
     
 
+
     <!-- popup1-->
-    <div class="full-screen pop1 hidden flex-container-center">
+    <div class="full-screen pop1 hidden flex-container-center ">
       <div class="row form-inline " style="width: auto;" >
-        <div class="mr-3" style="text-align: center;" ><iframe class="frame1" width="600" height="400" src="https://www.youtube.com/embed/pp5FyuLbjwM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
         
-        <div class="rounded" style="width: 500px; background-color: azure; padding: 20px;">
-          <img class="rounded-circle" src="../static/img/khoa.jpg" width="40px" height="40px" alt="">
+        <div class="mr-3" style="text-align: center;" ><iframe class="frame1" width="550" height="400" src="https://www.youtube.com/embed/pp5FyuLbjwM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        
+        <div class="rounded ml-4" style="width: 500px; background-color: azure; padding: 20px;">
+          <img class="rounded-circle " src="../static/img/khoa.jpg" width="40px" height="40px" alt="">
           <span style="font-weight: 500;"   > <span class="point">Khoaminion</span> <span style="font-weight: 100;">2h<span style="float:right" class="closepopup"><span class="point"><i class="fas fa-times"></i></span></span></span> <br><span class="rounded" >Mời anh em cùng chiêm ngưỡng khả năng "bắn sữa" của anh chàng Ấn Độ hết sức điêu luyện và chính xác, khá là giải trí cho anh em trong mùa dịch này :))</span>
           <hr>
+          
           <div class="container"  style="text-align: center;">  
             <div class="row">
               <div class="col-sm-4 point like"><i class="fas fa-thumbs-up"></i><span class="like-text"> Thích</span></div>
@@ -622,16 +681,19 @@
             <span style="font-weight: 500;" ><span class="point">Tomblobla</span> <span style="font-weight: 100;"> 1h</span> <br><span  class="rounded" >Quả đỉnh rồi :))</span>
           </div>
         </div>
+        
       </div>
+      
       </div>
       <!-- endpopup1 -->
 
       <!-- popup2-->
     <div class="pop2 full-screen hidden flex-container-center">
       <div class="row form-inline " style="width: auto;" >
-        <div class="mr-3" style="text-align: center;" ><iframe width="600" height="400" class="frame2" src="https://www.youtube.com/embed/VMYqjAfFiMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
         
-        <div class="rounded" style="width: 500px; background-color: azure; padding: 20px;">
+        <div class="mr-3" style="text-align: center;" ><iframe width="550" height="400" class="frame2" src="https://www.youtube.com/embed/VMYqjAfFiMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        
+        <div class="rounded ml-4" style="width: 500px; background-color: azure; padding: 20px;">
           <img class="rounded-circle" src="../static/img/doge-samar.gif" width="40px" height="40px" alt="">
           <span style="font-weight: 500;"   > <span class="point">KhuongPT</span> <span style="font-weight: 100;">10h<span style="float:right" class="closepopup"><span class="point"><i class="fas fa-times"></i></span></span></span> <br><span class="rounded" >Now you see me 2, Cảnh phim được yêu thích nhất!</span>
           <hr>
@@ -665,7 +727,8 @@
             <img class="rounded-circle" src="../static/img/apw.jpg" width="20px" height="20px" alt="">
             <span style="font-weight: 500;" ><span class="point">Tomblobla</span> <span style="font-weight: 100;"> 8h</span> <br><span  class="rounded" >Ông kia nhìn như Hitler</span>
           </div>
-        </div>       
+        </div>
+        
       </div>
       </div>
       <!-- endpopup2 -->
@@ -697,10 +760,8 @@
 </body>
 
   
-  
-
   <!-- Footer -->
-<footer class="text-center text-lg-start bg-light text-muted">
+<footer class="text-center  text-lg-start bg-light text-muted">
   <section class=" p-4 border-bottom " style="background-color: rgba(165, 162, 162, 0.05);">
     <!-- Left -->
     <div class="me-5 pl-30">
@@ -809,7 +870,4 @@
   </div>
 </footer>
 <!-- Footer -->
-  
-
-
 </html>
