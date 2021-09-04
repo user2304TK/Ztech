@@ -2,6 +2,7 @@
 
 body{
   font-family: 'Barlow', sans-serif;
+  background-color: aliceblue;
 }
 
 a:hover{
@@ -12,6 +13,22 @@ a:hover{
   border-left: 2px solid var(--primary) !important;
 }
 
+.logo-img{
+  width: 55px
+}
+
+.logo-name{
+  font-size: 30px;
+  color: #222b45;
+}
+
+.avatar-img{
+  width: 35px;
+}
+
+.nav-bgcl{
+  background-image: linear-gradient(90deg, #0033cf, #00beef, #39f9b3);
+}
 
 .sidebar{
   top: 0;
@@ -38,4 +55,24 @@ a:hover{
     transform : translateX(0);
   }
   
+}
+
+.active-page, .active-page:focus{
+  background-image: linear-gradient(90deg, #0033cf, #00beef, #39f9b3);
+  color: #fff;
+}
+
+.active-page:hover{
+  color: #fff;
+  opacity: 0.95;
+}
+
+select, select:focus{
+  border-radius: 5px;
+  padding: 5px 10px;
+  outline: none;
+}
+
+select:focus{
+  border-radius: 10px;
 }
