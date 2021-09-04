@@ -89,13 +89,13 @@
         };
       });
 
-      $(".fa-chevron-right").click(function(){
+      $(".chevron-right").click(function(){
         $(".pop1").addClass("hidden");       
         $(".pop2").removeClass("hidden");
         $('.frame1').attr('src', $('.frame1').attr('src'));
       });
 
-      $(".fa-chevron-left").click(function(){             
+      $(".chevron-left").click(function(){             
         $(".pop2").addClass("hidden");
         $(".pop1").removeClass("hidden");
         $('.frame2').attr('src', $('.frame2').attr('src'));
@@ -581,17 +581,25 @@
     <!-- popup1-->
     <div class="full-screen pop1 hidden flex-container-center">
       <div class="row form-inline " style="width: auto;" >
-        <i class="fas fa-chevron-left mr-4 point"  style="color: white; font-size: 40px;"></i>
         <div class="mr-3" style="text-align: center;" ><iframe class="frame1" width="600" height="400" src="https://www.youtube.com/embed/pp5FyuLbjwM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
         
         <div class="rounded" style="width: 500px; background-color: azure; padding: 20px;">
           <img class="rounded-circle" src="../static/img/khoa.jpg" width="40px" height="40px" alt="">
           <span style="font-weight: 500;"   > <span class="point">Khoaminion</span> <span style="font-weight: 100;">2h<span style="float:right" class="closepopup"><span class="point"><i class="fas fa-times"></i></span></span></span> <br><span class="rounded" >Mời anh em cùng chiêm ngưỡng khả năng "bắn sữa" của anh chàng Ấn Độ hết sức điêu luyện và chính xác, khá là giải trí cho anh em trong mùa dịch này :))</span>
           <hr>
-          <div class="row" style="text-align: center;">
-            <div class="col-sm-4 point like"><i class="fas fa-thumbs-up"></i><span class="like-text"> Thích</span></div>
-            <div class="col-sm-4 point"><i class="fas fa-comments"></i> Bình luận</div>
-            <div class="col-sm-4 point"><i class="fas fa-share"></i> Chia sẻ</div>
+          <div class="container"  style="text-align: center;">  
+            <div class="row">
+              <div class="col-sm-4 point like"><i class="fas fa-thumbs-up"></i><span class="like-text"> Thích</span></div>
+              <div class="col-sm-4 point"><i class="fas fa-comments"></i> Bình luận</div>
+              <div class="col-sm-4 point"><i class="fas fa-share"></i> Chia sẻ</div>             
+            </div>
+            <hr>
+            
+            <div class="row">
+              <div class="col-sm-4 point chevron-left"><i class="fas fa-chevron-left mr-1 point"  style=" font-size: 20px; text-align: center;" ></i>Quay lại</div>
+              <div class="col-sm-4 point"></div>
+              <div class="col-sm-4 point chevron-right">Tiếp theo <i class="fas fa-chevron-right mr-4 point"  style=" font-size: 20px; text-align: center;" ></i> </div>
+            </div>
           </div>
           <hr>
 
@@ -610,7 +618,6 @@
             <span style="font-weight: 500;" ><span class="point">Tomblobla</span> <span style="font-weight: 100;"> 1h</span> <br><span  class="rounded" >Quả đỉnh rồi :))</span>
           </div>
         </div>
-        <i class="fas fa-chevron-right ml-4 point" style="color: white; font-size: 40px;"></i>
       </div>
       </div>
       <!-- endpopup1 -->
@@ -618,17 +625,25 @@
       <!-- popup2-->
     <div class="pop2 full-screen hidden flex-container-center">
       <div class="row form-inline " style="width: auto;" >
-        <i class="fas fa-chevron-left mr-4 point"  style="color: white; font-size: 40px;"></i>
         <div class="mr-3" style="text-align: center;" ><iframe width="600" height="400" class="frame2" src="https://www.youtube.com/embed/VMYqjAfFiMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
         
         <div class="rounded" style="width: 500px; background-color: azure; padding: 20px;">
           <img class="rounded-circle" src="../static/img/doge-samar.gif" width="40px" height="40px" alt="">
           <span style="font-weight: 500;"   > <span class="point">KhuongPT</span> <span style="font-weight: 100;">10h<span style="float:right" class="closepopup"><span class="point"><i class="fas fa-times"></i></span></span></span> <br><span class="rounded" >Now you see me 2, Cảnh phim được yêu thích nhất!</span>
           <hr>
-          <div class="row" style="text-align: center;">
-            <div class="col-sm-4 point like2"><i class="fas fa-thumbs-up"></i><span class="like-text1"> Thích</span></div>
-            <div class="col-sm-4 point"><i class="fas fa-comments"></i> Bình luận</div>
-            <div class="col-sm-4 point"><i class="fas fa-share"></i> Chia sẻ</div>
+          <div class="container "  style="text-align: center;">  
+            <div class="row">
+              <div class="col-4 point like2"><i class="fas fa-thumbs-up"></i><span class="like-text1"> Thích</span></div>
+              <div class="col-4 point"><i class="fas fa-comments"></i> Bình luận</div>
+              <div class="col-4 point"><i class="fas fa-share"></i> Chia sẻ</div>             
+            </div>
+            <hr>
+            
+            <div class="row">
+              <div class="col-4 point chevron-left"><i class="fas fa-chevron-left mr-1 point"  style=" font-size: 20px; text-align: center;" ></i>Quay lại</div>
+              <div class="col-4 point"></div>
+              <div class="col-4 point chevron-right">Tiếp theo <i class="fas fa-chevron-right mr-4 point"  style=" font-size: 20px; text-align: center;" ></i> </div>
+            </div>
           </div>
           <hr>
 
@@ -646,8 +661,7 @@
             <img class="rounded-circle" src="../static/img/apw.jpg" width="20px" height="20px" alt="">
             <span style="font-weight: 500;" ><span class="point">Tomblobla</span> <span style="font-weight: 100;"> 8h</span> <br><span  class="rounded" >Ông kia nhìn như Hitler</span>
           </div>
-        </div>
-        <i class="fas fa-chevron-right ml-4 point" style="color: white; font-size: 40px;"></i>
+        </div>       
       </div>
       </div>
       <!-- endpopup2 -->
