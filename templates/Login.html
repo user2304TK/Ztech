@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/css/Login_Register.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập | ZTech</title>
+</head>
+<body style="background-color: #E5E5E5;">
+    <div class="mt-4">
+        <form action="" class="Login_form">
+            <h2 class="textHeading">
+                <span style="font-size: 20px;">Đăng nhập tài khoản</span>
+                <a href="." class="text-secondary">
+                    <i class="far fa-times-circle"></i>
+                </a>
+            </h2>
+            <div class="text-center p-4">
+                <a href=".">
+                    <img src="../static/img/Z-green-leaf.svg" width="60" height="66" alt="Logo"><br>
+                    <a style="font-size: 20px;">Welcome to Z Tech.</a>
+                </a>
+            </div>
+            <div>
+                <div>
+                    <input type="text" name="login" id="" class="input_area" placeholder="Tên tài khoản hoặc Email">
+                </div>
+                <div>                    
+                    <input type="text" name="password" id="" class="input_area" placeholder="Mật khẩu">
+                </div>     
+                <div class="form-group form-check" style="margin: 0px 20px 15px 20px;">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" name="remember"> Ghi nhớ đăng nhập
+                    </label>
+                    <a onclick="document.getElementById('ForgotPW').style.display='block';" class="float-right text-dark btn btn-link"> Quên mật khẩu?</a>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <input type="submit" id="" class="" value="Đăng nhập">
+                </div> 
+                <div class="form-Divider">
+                    <span>Hoặc</span>
+                </div>
+                <div class="Social_login d-flex justify-content-center mb-3">
+                    <a class="Social_login_items text-decoration-none" href=".">
+                        <img src="https://tinhte.vn/styles/tinhte2018/google.png" alt="">
+                        <span> Đăng nhập bằng Gmail</span>
+                    </a>
+                </div>
+                <div class="Social_login d-flex justify-content-center mb-3 ">
+                    <a class="Social_login_items text-decoration-none" href=".">
+                        <img src="https://tinhte.vn/styles/tinhte2018/facebook.png" alt="">
+                        <span> Đăng nhập bằng Facebook</span>
+                    </a>
+                </div>      
+                <div class="text-center pb-3 ">
+                    <span>Chưa có tài khoản?</span>
+                    <a href=".">Đăng ký ngay</a>
+                </div>                 
+            </div>
+        </form>
+    </div>    
+</body>
+<div class="modal" id="ForgotPW">
+    <div class="modal__overlay">
+        <form action="" class="Login_form mt-5">
+            <h2 class="textHeading mb-3">
+                <span style="font-size: 20px;">Quên mật khẩu</span>
+                <a onclick="document.getElementById('ForgotPW').style.display='none';" style="cursor: pointer;" class="text-secondary">
+                    <i class="far fa-times-circle"></i>
+                </a>
+            </h2>
+            <p class="ml-4 mr-4">Sử dụng biểu mẩu bên dưới để lấy lại mật khẩu. Bạn sẽ nhận được email với nội dung hướng dẫn đặt lại mật khẩu</p>
+            <div class="form-group mb-4">
+                <input type="text" class="form-control" id="Forgotpassword" placeholder="Tên hoặc Email">
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+                <input type="submit" id="" class="" value="Đặt lại mật khẩu">
+            </div> 
+        </form>
+    </div>
+</div>
