@@ -133,6 +133,22 @@ textarea:focus
     -webkit-box-orient: vertical;
     height: fit-content;
 }
+.text3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    height: fit-content;
+}
+.text-4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* number of lines to show */
+    -webkit-box-orient: vertical;
+    height: fit-content;
+}
 .nothv:hover{
     color: black;
 }
