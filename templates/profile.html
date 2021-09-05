@@ -46,85 +46,81 @@
           $(".info-box").hide();
         }
       });
-
-      $(".showpopup").click(function(){
-        $(".pop1").removeClass("hidden");
-        $("body").addClass("unscroll");
-        $(".pop2").addClass("hidden");
-        $("html, body").animate({ scrollTop: 0 }, "slow");
-      });
       $(".home-page").click(function(){
         $(".album").removeClass("list-group-item-dark");
         $(".page-home").removeClass("hidden");
         $(".page-album").addClass("hidden"); 
-        $(".home-page").addClass("list-group-item-dark");        
+        $(".home-page").addClass("list-group-item-dark");
+        $(".album").removeClass("font-weight-bold");
+        $(".home-page").addClass("font-weight-bold"); 
+
       });
       $(".album").click(function(){
         $(".home-page").removeClass("list-group-item-dark");
         $(".page-album").removeClass("hidden");
         $(".page-home").addClass("hidden");   
         $(".album").addClass("list-group-item-dark");    
-            
+        $(".home-page").removeClass("font-weight-bold");
+        $(".album").addClass("font-weight-bold"); 
       });
-      
-      $(".closepopup").click(function(){
-        $(".full-screen").addClass("hidden");
+      $(".btn-vietbai").click(function(){             
+        $(".modal").addClass("d-flex"); 
+        $("body").addClass("unscroll");
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+      });
+      $(".close").click(function(){
+        $(".modal").removeClass("d-flex");
         $("body").removeClass("unscroll");
         $('iframe').attr('src', $('iframe').attr('src'));
       });
 
+      $(".link-btn").click(function(){           
+        $(".link-input").removeClass("d-none"); 
+        $("body").addClass("unscroll");
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+      });
+      $("#customSwitch1").click(function(){           
+          $(".link-input").addClass("d-none"); 
+          $(".link-btn").addClass("d-none"); 
+          $(".span-1").text("Viết Fact");
+          $("#customeSwitch1").prop('checked', true)
+      });
       $(".like").click(function(){
         $(".like").toggleClass("like1");
         if ($(".like-text").text() ==" Thích"){
           $(".like-text").text(" Đã thích");
-
         }
         else{
           $(".like-text").text(" Thích");
         };
       });
-
       $(".like2").click(function(){
         $(".like2").toggleClass("like1");
         if ($(".like-text1").text() ==" Thích"){
           $(".like-text1").text(" Đã thích");
-
         }
         else{
           $(".like-text1").text(" Thích");
         };
-      });
-
-      $(".fa-chevron-right").click(function(){
-        $(".pop1").addClass("hidden");       
-        $(".pop2").removeClass("hidden");
-        $('.frame1').attr('src', $('.frame1').attr('src'));
-      });
-
-      $(".fa-chevron-left").click(function(){             
-        $(".pop2").addClass("hidden");
-        $(".pop1").removeClass("hidden");
-        $('.frame2').attr('src', $('.frame2').attr('src'));
-      });
-
-      $(".ico-vietbai").click(function(){             
-        $(".viet-bai").removeClass("hidden"); 
-        $("body").addClass("unscroll");
-        $("html, body").animate({ scrollTop: 0 }, "slow");
-      });
-
-      $(".dang-bai").click(function(){      
-        if ( $(".tieudeviet").val() =="" ||  $(".noidungviet").val() =="" ){
-          alert("Vui lòng điền đầy đủ nội dung !!!");
+      }); 
+      $(".like3").click(function(){
+        $(".like3").toggleClass("like1");
+        if ($(".like-text2").text() ==" Thích"){
+          $(".like-text2").text(" Đã thích");
         }
         else{
-          alert("Đã đăng bài !!!");
-          $(".viet-bai").addClass("hidden");
-          $(".tieudeviet").val("");
-          $(".noidungviet").val("");
+          $(".like-text2").text(" Thích");
         };
       });
-
+      $(".like4").click(function(){
+        $(".like4").toggleClass("like1");
+        if ($(".like-text3").text() ==" Thích"){
+          $(".like-text3").text(" Đã thích");
+        }
+        else{
+          $(".like-text3").text(" Thích");
+        };
+      });      
       $(".search-query").focus(function(){             
         $(".search-query").val(""); 
       });
@@ -204,7 +200,7 @@
         </div>
       </li>
     </div>
-    </nav>
+  </nav>
     <section>
       <hr class="hr-shadow"> 
       <div class="container">
@@ -253,25 +249,25 @@
                 </form>
             </div>
         </div>   
-      <hr>
+        <hr>
         <div style="margin: 15px;">
           <div >        
-            <div style="cursor: pointer;" class="d-inline p-2 list-group-item-dark rounded home-page">Tường nhà</div>
+            <div style="cursor: pointer;" class="d-inline p-2 list-group-item-dark rounded font-weight-bold home-page">Tường nhà</div>
             <div style="cursor: pointer;" class="d-inline p-2 rounded album">Album và ảnh</div>
           </div>
           <hr>
         </div>
-        <div class="container page-album hidden">
-          <div class="text-center">
-            <p>Bạn chưa có ảnh hoặc album nào</p>
+        <div class="container page-album hidden" >
+          <div class="text-center mt-4">
+            <p class="font-weight-bold">Bạn chưa có ảnh hoặc album nào</p>
           </div>
         </div>
-        <div class="page-home container" align="center">
+        <div class="page-home container" align="center" >
           <div style="max-width: 700px;" >
-            <button  class=" mt-2 font-weight-bold  btn btn-primary btn-block rounded"  type="button" >+VIẾT BÀI CHIA SẺ, ĐẶT CÂU HỎI, SHARE LINK</button> 
+            <button  class="btn-vietbai mt-2 font-weight-bold  btn btn-primary btn-block rounded"  type="button" >+VIẾT BÀI CHIA SẺ, ĐẶT CÂU HỎI, SHARE LINK</button> 
             <div>
               <div style="margin-top:10px;">          
-                  <div class="rounded" align="left" style=" background-color: rgb(220, 224, 224); padding: 20px;">
+                  <div class="rounded" align="left" style=" background-color: #f0f2f5; padding: 15px;">
                     <img class="rounded-circle" src="../static/img/khoa.jpg" width="40px" height="40px" alt="">
                     <span style="font-weight: 500;"><span class="point">Khoaminion</span><span style="font-weight: 100;"> 2h<span class="more float-right"><span class="point"><i class="fas fa-ellipsis-h"></i></span></span></span> <br><span class="rounded" >Mời mọi người nghe tí nhạc thư giãn ạ :DD</span>
                     <div class="embed-responsive embed-responsive-16by9" style="margin: 5px;">
@@ -283,20 +279,42 @@
                       <div class="point"><i class="fas fa-comments"></i> Bình luận</div>
                       <div class="point"><i class="fas fa-share"></i> Chia sẻ</div>
                     </div>
-                    <hr>          
-                    <div style=" border: 1px solid rgb(202, 202, 202); border-radius: 5px; padding: 5px; background-color: rgb(226, 226, 226); ">
-                      <img class="rounded-circle" src="../static/img/mikey-tokyo-revengers.gif" width="20px" height="20px" alt="">
-                      <span style="font-weight: 500;"><span class="point"> KhuongPT</span><span style="font-weight: 100;"> 15m</span> <br><span  class="rounded" >Nice nice nice.</span>
+                    <hr> 
+                    <div style="display: flex;" class="mb-3">
+                      <img class="rounded-circle m-2" src="../static/img/khoa.jpg" width="32px" height="32px" alt="">
+                      <div style="border: 1px solid rgb(202,202,202); border-radius: 10px; background-color: #FFF;" class="w-100 p-2">
+                        <input type="text" placeholder="Viết bình luận của bạn vào đây" style="outline: none;" class="w-100 border-0">
+                      </div> 
+                    </div>         
+                    <div style="display: flex;" class="my-1">
+                      <img class="rounded-circle m-2" src="../static/img/mikey-tokyo-revengers.gif" width="32px" height="32px" alt="">
+                      <div style="border: 1px solid rgb(202,202,202); border-radius: 10px; background-color: #FFF;" class="w-100 p-2">
+                        <span style="font-weight: 500;"><span class="point"> KhuongPT</span><span style="font-weight: 100;"> 15m</span> <br><span  class="rounded" >Nice nice nice.</span>
+                      </div> 
                     </div>
-          
-                    <div class="mb-2 mt-2" style=" border: 1px solid rgb(202, 202, 202); border-radius: 5px; padding: 5px; background-color: rgb(226, 226, 226); ">
-                      <img class="rounded-circle" src="../static/img/cat-funny-cat.gif" width="20px" height="20px" alt="">
-                      <span style="font-weight: 500;"  ><span class="point">KietITK</span><span style="font-weight: 100;"> 36m</span> <br><span  class="rounded" >Good!</span>
+                    <div class="d-flex ml-5">
+                      <div class="point like2 m-1"><i class="fas fa-thumbs-up"></i><span class="like-text1"> Thích</span></div>
+                      <div class="point m-1"><i class="fas fa-comments"></i> Phản hồi</div>   
                     </div>
-          
-                    <div style=" border: 1px solid rgb(202, 202, 202); border-radius: 5px; padding: 5px; background-color: rgb(226, 226, 226); ">
-                      <img class="rounded-circle" src="../static/img/doge-samar.gif" width="20px" height="20px" alt="">
-                      <span style="font-weight: 500;" ><span class="point">Tomblobla</span> <span style="font-weight: 100;"> 1h</span> <br><span  class="rounded" >Nhạc hay quaaa :))</span>
+                    <div style="display: flex;" class="my-1">
+                      <img class="rounded-circle m-2" src="../static/img/cat-funny-cat.gif" width="32px" height="32px" alt="">
+                      <div style="border: 1px solid rgb(202,202,202); border-radius: 10px; background-color: #FFF;" class="w-100 p-2">
+                        <span style="font-weight: 500;"  ><span class="point">KietITK</span><span style="font-weight: 100;"> 36m</span> <br><span  class="rounded" >Good!</span>
+                      </div>                      
+                    </div>
+                    <div class="d-flex ml-5">
+                      <div class="point like3 m-1"><i class="fas fa-thumbs-up"></i><span class="like-text2"> Thích</span></div>
+                      <div class="point m-1"><i class="fas fa-comments"></i> Phản hồi</div>   
+                    </div>
+                    <div style="display: flex;" class="my-1">
+                      <img class="rounded-circle m-2" src="../static/img/doge-samar.gif" width="32px" height="32px" alt="">
+                      <div style="border: 1px solid rgb(202,202,202); border-radius: 10px; background-color: #FFF;" class="w-100 p-2">
+                        <span style="font-weight: 500;" ><span class="point">Tomblobla</span> <span style="font-weight: 100;"> 1h</span> <br><span  class="rounded" >Nhạc hay quaaa :))</span>
+                      </div>                      
+                    </div>
+                    <div class="d-flex ml-5">
+                      <div class="point like4 m-1"><i class="fas fa-thumbs-up"></i><span class="like-text3"> Thích</span></div>
+                      <div class="point m-1"><i class="fas fa-comments"></i> Phản hồi</div>   
                     </div>
                   </div>                  
               </div>              
@@ -304,7 +322,7 @@
           </div>
         </div>
         <br>
-    </section>    
+    </section>   
   <!-- Footer -->
 <footer class="text-center  text-lg-start bg-light text-muted">
   <section class=" p-4 border-bottom " style="background-color: rgba(165, 162, 162, 0.05);">
@@ -413,4 +431,71 @@
   </div>
 </footer>
 <!-- Footer -->
+<div class="modal">
+  <div class="modal__overlay overflow-auto">
+    <div class="viet-bai p-0">
+      <!-- top -->
+      <div class="d-flex justify-content-between head" style="background-color: #f2f3f5; border-radius: 10px 10px 0 0 ;">
+        <div>
+          <span class="span-1">Viết bài đăng</span>
+          <div>
+            <span>Chuyển chế độ đăng:</span>
+            <div class="custom-control custom-switch d-inline">
+              <input type="checkbox" class="custom-control-input" id="customSwitch1" name="customSwitch1">
+              <label class="custom-control-label" for="customSwitch1"></label>
+            </div>
+          </div>
+        </div>
+        <div class="text-center m-2 close">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <!--middle-->
+      <div class="p-4">
+        <div>
+          <img class="rounded-circle" src="../static/img/khoa.jpg" width="40px" height="40px" alt="">
+          <span style="font-weight: 500;"><span class="point"> Khoaminion</span>
+        </div>
+        <div class="mt-3">
+          <div class="d-block">
+            <input type="text" placeholder="Dán link vào đây nè" class="link-input w-100 mb-2 d-none" style="outline: none; border: none;">
+            <textarea spellcheck="false" style="height: 250px; border:none; border-bottom: 1px solid #a2a2a2;" class="w-100" placeholder="Viết nội dung của bạn vào đây."></textarea>
+            <button class="link-btn btn-circle" style="border: 1px solid #a2a2a2; outline: none;"><i class="fas fa-link"></i></button>
+          </div>
+        </div>
+        <div>
+          <img id="thumbnil" style="width:20%;" class="m-2"/>
+        <br>
+          <input type="file" accept="image/*"  onchange="showMyImage(this)" />
+        </div>
+      </div>
+      <div class="rounded" style="border: 10px solid #f3f3f3;">
+        <button class="font-weight-bold  btn btn-primary btn-block rounded"  type="button" >Đăng bài</button> 
+      </div>
+    </div> 
+  </div>
+</div>
+
+<script>
+  /*Hien thi anh*/
+  function showMyImage(fileInput) {
+        var files = fileInput.files;
+        for (var i = 0; i < files.length; i++) {           
+            var file = files[i];
+            var imageType = /image.*/;     
+            if (!file.type.match(imageType)) {
+                continue;
+            }           
+            var img=document.getElementById("thumbnil");            
+            img.file = file;    
+            var reader = new FileReader();
+            reader.onload = (function(aImg) { 
+                return function(e) { 
+                    aImg.src = e.target.result; 
+                }; 
+            })(img);
+            reader.readAsDataURL(file);
+        }    
+    }
+</script>
 </html>
