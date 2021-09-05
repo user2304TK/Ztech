@@ -22,6 +22,22 @@
           $(".viet").show();
         }
 
+        if ($(window).width() > 1200){
+          $(".info-box").show();   
+        }
+        else
+        {
+          $(".info-box").hide();
+        }
+
+        if ($(window).width() > 1000){
+          $(".last-tag").addClass("col-9");   
+        }
+        else
+        {
+          $(".last-tag").removeClass("col-9");
+        }
+
       $(".search-query").hide();
 
       $(".form-group .btn").click(function(){
