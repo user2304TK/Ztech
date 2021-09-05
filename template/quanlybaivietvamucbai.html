@@ -7,7 +7,7 @@
   <link rel="icon" href="../static/img/Z-green-leaf.png">
   <link rel="stylesheet" href="../static/bootstrap-4.6.0-dist/css/bootstrap.css">
   <link rel="stylesheet" href="../static/bootstrap-icons-1.4.0/bootstrap-icons.css">
-  <link rel="stylesheet" href="../static/css/dashboard.css">
+  <link rel="stylesheet" href="../static/css/admin.css">
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -29,6 +29,10 @@
         <a href="#" class="list-group-item list-group-item-action border-0 align-items-center active-page">
           <span class="bi bi-newspaper"></span>
           <span class="ml-2">Quản lý bài viết và các mục</span>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action border-0 align-items-center">
+          <span class="bi bi-newspaper"></span>
+          <span class="ml-2">Quản lý facts</span>
         </a>
 
         <button class="list-group-item list-group-item-action border-0 d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#sale-collapse">
@@ -72,48 +76,65 @@
       <!-- main content -->
       <main class="container-fluid">
         <section class="row">
-          <div class="col-md-4">
+          <div class="col-lg-4">
             <!-- card -->
-            <article class="p-3 rounded shadow-sm mb-3 bg-light" style="border-left: #0033cf solid 2px">
+            <article class="p-3 rounded shadow-sm mb-3 bg-light">
               <div class="align-items-center">
-                <h5 class="mb-4 font-weight-bold" style="color: #0033cf">Tổng bài đăng</h5>
+                <h5 class="mb-4 font-weight-bold admin-color">Hashtag phổ biến</h5>
               </div>
-              <div class="d-flex justify-content-between">
-                <div id="sparklinedash-topic">
-                  <span class="bar"></span>
+              <div class="d-block row ml-1" style="line-height: 40px;">
+                <span class="admin-btn-round">#cheems</span>
+                <span class="admin-btn-round">#shiba</span>
+                <span class="admin-btn-round">#shiba</span>
+                <span class="admin-btn-round">#shibainu</span>
+                <span class="admin-btn-round">#rickroll</span>
+                <span class="admin-btn-round">#eicute</span>
+                <span class="admin-btn-round">#baalcute</span>
+                <span class="admin-btn-round">#yaecutetoo</span>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="p-3 rounded shadow-sm mb-3 bg-light">
+              <div class="align-items-center">
+                <h5 class="mb-4 font-weight-bold admin-color">Số bài đăng</h5>
+              </div>
+              <div class="d-block">
+                <div class="d-flex justify-content-between">
+                  <div>Số bài hôm nay:</div>
+                  <div>69</div>
                 </div>
-                <div>
-                  <span class=" font-weight-bold" style="font-size: 43px; color: #0033cf">6969</span>
+                <div class="d-flex justify-content-between">
+                  <div>Số bài hôm qua:</div>
+                  <div>96</div>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div>Tổng số:</div>
+                  <div>6969</div>
                 </div>
               </div>
             </article>
           </div>
-          <div class="col-md-4">
-            <article class="p-3 rounded shadow-sm mb-3 bg-light" style="border-left: #00beef solid 2px">
+          <div class="col-lg-4">
+            <article class="p-3 rounded shadow-sm mb-3 bg-light">
               <div class="align-items-center">
-                <h5 class="mb-4 font-weight-bold" style="color: #00beef">Tổng facts đăng</h5>
+                <h5 class="mb-4 font-weight-bold admin-color">Thành viên nổi bật</h5>
               </div>
-              <div class="d-flex justify-content-between">
-                <div id="sparklinedash-fact">
-                  <span class="bar"></span>
+              <div class="d-flex justify-content-around row">
+                <div class="text-center p-2">
+                  <img src="../static/img/avatar.jpg" class="avatar-img-lg rounded-circle">
+                  <div class="font-weight-bold">cat</div>
+                  <div class="font-weight-lighter font-italic">696 bài viết</div>
                 </div>
-                <div>
-                  <span class=" font-weight-bold" style="font-size: 43px; color: #00beef">6969</span>
+                <div class="text-center p-2">
+                  <img src="../static/img/avatar.jpg" class="avatar-img-lg rounded-circle">
+                  <div class="font-weight-bold">cat2</div>
+                  <div class="font-weight-lighter font-italic">96 bài viết</div>
                 </div>
-              </div>
-            </article>
-          </div>
-          <div class="col-md-4">
-            <article class="p-3 rounded shadow-sm mb-3 bg-light" style="border-left: #39f9b3 solid 2px">
-              <div class="align-items-center">
-                <h5 class="mb-4 font-weight-bold" style="color: #39f9b3">Tổng lượt truy cập</h5>
-              </div>
-              <div class="d-flex justify-content-between">
-                <div id="sparklinedash-visit">
-                  <span class="bar"></span>
-                </div>
-                <div>
-                  <span class=" font-weight-bold" style="font-size: 43px; color: #39f9b3">6969</span>
+                <div class="text-center p-2">
+                  <img src="../static/img/avatar.jpg" class="avatar-img-lg rounded-circle">
+                  <div class="font-weight-bold">cat3</div>
+                  <div class="font-weight-lighter font-italic">69 bài viết</div>
                 </div>
               </div>
             </article>
@@ -132,7 +153,8 @@
               </select>
             </div>
             <div style="height: 400px">
-            <canvas id="myChart"></canvas></div>
+              <canvas id="myChart"></canvas>
+            </div>
           </div>
         </div> 
         

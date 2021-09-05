@@ -44,9 +44,17 @@ var config = {
  var data = [0, 5, 6, 10, 9, 12, 4, 9]
  $('#sparklinedash-visit').sparkline(data, config)
   
+    
+ var data1 = [];
+ for (let i = 0; i < 12; i++) {
+    data1.push(randomIntInRange(20, 50));
+ }
 
+ var data2 = [];
+ for (let i = 0; i < 12; i++) {
+    data2.push(randomIntInRange(data1[i] + 10, data1[i] + 20));
+ }
 
- 
  var ctx = $('#myChart');
  var myChart = new Chart(ctx, {
      type: 'line',
@@ -57,14 +65,14 @@ var config = {
                   'Tháng 10', 'Tháng 11', 'Tháng 12'],
          datasets: [{
              label: 'Thành viên',
-             data: [12, 19, 3, 5, 2, 3, 5, 23, 25, 5, 23, 32],
+             data: data1,
              backgroundColor: '#00beef',
              borderColor: '#00beef',
              borderWidth: 1
          },
          {
              label: 'Khách',
-             data: [15, 20, 15, 18, 15, 18, 17, 25, 45, 14, 30, 40],
+             data: data2,
              backgroundColor: '#39f9b3',
              borderColor: '#39f9b3',
              borderWidth: 1
@@ -80,4 +88,19 @@ var config = {
      }
  });
 
- 
+ $('#year-chart').on('change', function() {
+
+    var data1 = [];
+    for (let i = 0; i < 12; i++) {
+       data1.push(randomIntInRange(20, 50));
+    }
+   
+    var data2 = [];
+    for (let i = 0; i < 12; i++) {
+       data2.push(randomIntInRange(data1[i] + 10, data1[i] + 20));
+    }
+
+    myChart.data.datasets[0].data = data1;
+    myChart.data.datasets[1].data = data2;
+    myChart.update();
+  });

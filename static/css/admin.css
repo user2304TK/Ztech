@@ -26,6 +26,16 @@ a:hover{
   width: 35px;
 }
 
+.avatar-img-lg{
+  width: 80px;
+  transition: 0.2s;
+  border: #00beef solid 1px;
+}
+
+.avatar-img-lg:hover{
+  border: #00beef solid 3px;
+}
+
 .nav-bgcl{
   background-image: linear-gradient(90deg, #0033cf, #00beef, #39f9b3);
 }
@@ -60,11 +70,12 @@ a:hover{
 .active-page, .active-page:focus{
   background-image: linear-gradient(90deg, #0033cf, #00beef, #39f9b3);
   color: #fff;
+  transition: 0.3s;
 }
 
 .active-page:hover{
   color: #fff;
-  opacity: 0.95;
+  opacity: 0.9;
 }
 
 select, select:focus{
@@ -75,4 +86,23 @@ select, select:focus{
 
 select:focus{
   border-radius: 10px;
+}
+
+.admin-btn-round{
+  border-radius: 50px;
+  transition: 0.3s;
+  border: #00beef solid 2px;
+  padding: 5px 10px;
+  margin-right: 5px;
+  color: #00beef;
+}
+
+.admin-btn-round:hover{
+  cursor: pointer;
+  background-color: #00beef;
+  color: #fff;
+}
+
+.admin-color{
+  color: #00beef;
 }
