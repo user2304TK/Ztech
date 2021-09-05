@@ -38,6 +38,14 @@
           $(".last-tag").removeClass("col-9");
         }
 
+        if ($(window).width() > 1000){
+          $(".third").addClass("col-3");   
+        }
+        else
+        {
+          $(".third").removeClass("col-3");
+        }
+
       $(".search-query").hide();
 
       $(".form-group .btn").click(function(){
