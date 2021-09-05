@@ -20,7 +20,15 @@
         {
           $(".viet").show();
         }
-        
+
+        if ($(window).width() > 1200){
+          $(".info-box").show();   
+        }
+        else
+        {
+          $(".info-box").hide();
+        }  
+      
 
       $(".search-query").hide();
 
@@ -48,12 +56,12 @@
 
         if ($(window).width() > 1000){
           $(".last-tag").addClass("col-9");   
-          $(".story").addClass("eighty");
+         
         }
         else
         {
           $(".last-tag").removeClass("col-9");
-          $(".story").removeClass("eighty");
+          
         }
 
         if ($(window).width() > 800){
@@ -148,11 +156,8 @@
         else
         {
           $(".third").removeClass("col-3");
-        }
-
-      
+        }  
     });
-
   </script>
 </head>
   <body>  
@@ -230,7 +235,7 @@
     </div>
   </nav>
   <hr class="hr-shadow">
-  <section class="container ">
+  <section class="container pl-0">
     <!-- foru -->
     <div class="container home-foru form-inline pb-3">
       
@@ -301,23 +306,55 @@
     <br>
      <!-- khung 1 -->
     <div class="row mb-2 container ml-1">
-      <div class="row col-9 last-tag">
-        <div class="card col-8 " style="width: 100%;background-color:rgb(240, 240, 240);">
-          <a href=""><img class="card-img-top mt-3  rounded" src="../static/img/maybay.jpg" alt="Card image" style="width:100%"></a>
-          <div class="card-body">
+      <div class="row col-9 last-tag p-0 " >
+        <div class="card col-md-8 p-0 " style="width: 100%;background-color:rgb(240, 240, 240);">
+          <a href=""><img class="card-img-top p-0   rounded" src="../static/img/maybay.jpg" alt="Card image" style="width:100%"></a>
+          <div class="card-body overflow-hidden">
+            
+            <a class="font-weight-bold" href="#">Máy Bay Sam Sung</a>
             <p class="card-text">Hassler - 35 phút</p>
-            <a href="#">Chuyến bay SamSung...</a>
+
           </div>
         </div>
-        <div class="card col-4 " style="width: 100%;background-color:rgb(240, 240, 240);">
-          <a href=""><img class="card-img-top mt-3 rounded " src="../static/img/daidich.jpg" alt="Card image" style="width:100%"></a>
-          <div class="card-body">
+        <div class="card col-md-4 p-0 " style="width: 100%;background-color:rgb(240, 240, 240);">
+          <a href=""><img class="card-img-top rounded p-0" src="../static/img/daidich.jpg" alt="Card image" style="width:100%"></a>
+          <div class="card-body overflow-hidden ">
+            <a class="font-weight-bold" href="#">Đại dịch diễn biến 2021</a>
             <p class="card-text">Hassler - 35 phút</p>
-            <a href="#">Đại dịch diễn biến 2021</a>
+            <a class="" href="#">Đại dịch diễn biến 2021 Inventore illum quod nesciunt eos ut, tempore reprehenderit numquam corrupti? Laboriosam ratione odio eius porro voluptates perferendis nostrum.</a>
           </div>
         </div>
+        <div class="card col-md-4 third mb-3 p-0" style="width:100%; ">
+          <a href=""> <img class="card-img-top p-0" src="../static/img/youtube.jpg" alt="Card image" style="width:100%"></a>
+          <div class="card-body">
+            <a class="font-weight-bold" href="#">Đại dịch diễn biến 2021</a>
+            <p class="card-text">TuyenTEX - 1 giờ</p>
+            <a href="#">Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người...</a>
+          </div>
+        </div>
+        <br>
+        <div class="card col-md-4 third mb-3 p-0" style="width:100%; ">
+          <a href=""><img class="card-img-top p-0" src="../static/img/dt.jpg" alt="Card image" style="width:100%"></a>
+          <div class="card-body">
+            <a class="font-weight-bold" href="#">Đại dịch diễn biến 2021</a>
+            <p class="card-text">Khoaminion - 2 giờ</p>
+            <a href="#">Dùng thun quần để làm kẹp giữ Spen và Fold3</a>
+          </div>
+        </div>
+        <br>
+        <div class="card col-md-4 third mb-3 p-0" style="width:100%;">
+          <a href=""><img class="card-img-top p-0" src="../static/img/wc.jpg" alt="Card image" style="width:100%"></a>
+          <div class="card-body">
+            <a class="font-weight-bold" href="#">Đại dịch diễn biến 2021</a>
+            <p class="card-text">cuhiep - 2 giờ</p>
+            <a href="#">Trên tay DJI Mini SE: nhỏ, nhẹ dễ bay, khả năng quay 2.7K 30p, phù hợp cho người mới</a>
+          </div>
+        </div>
+        
+        <div class="col-3 info-box">
        
-         
+        </div>
+        <br> 
        </div>
 
       <div class="col-3 info-box ml-4">
@@ -330,61 +367,29 @@
           <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;padding-bottom: 3%;"height=150% width="100%" src="../static/img/ip.jpg"> <a href="" class=" col-6">iPhone</a>
           <div class= "row col-lg-3"></div>
           <button style="padding-left: 25px;padding-top: 3%;" type="button" class="col-9 btn btn-outline-primary">Xem thêm</button>
+          
+          <h1 style="font-size: 25px;font-weight: bolder;padding-top: 50px;">Thảo luận trong ngày</h1>
+          <div class="row">
+           <a href=""><img class="col-12" style="padding-right: 5px; border-radius: 10%;" src="../static/img/bagia.jpg"></a> 
+            <a class="col-12" href=""> Đây là người tạo ra vaccine AstraZeneca: chúng tôi đua với virus, không phải với các hãng khác</a>
+          </div>
         </div>
       </div>
     </div>
 
    
-    <!-- khung 2 -->
-    <div class="row container ml-1">
-      <div class="card col-3 third mb-3" style="width:100%; ">
-        <a href=""> <img class="card-img-top p-3" src="../static/img/youtube.jpg" alt="Card image" style="width:100%"></a>
-        <div class="card-body">
-          <p class="card-text">TuyenTEX - 1 giờ</p>
-          <a href="#">Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người...</a>
-        </div>
-      </div>
-      <br>
-      <div class="card col-3 third mb-3" style="width:100%; ">
-        <a href=""><img class="card-img-top p-3" src="../static/img/dt.jpg" alt="Card image" style="width:100%"></a>
-        <div class="card-body">
-          <p class="card-text">Khoaminion - 2 giờ</p>
-          <a href="#">Dùng thun quần để làm kẹp giữ Spen và Fold3</a>
-        </div>
-      </div>
-      <br>
-      <div class="card col-3 third mb-3" style="width:100%;">
-        <a href=""><img class="card-img-top p-3" src="../static/img/wc.jpg" alt="Card image" style="width:100%"></a>
-        <div class="card-body">
-          <p class="card-text">cuhiep - 2 giờ</p>
-          <a href="#">Trên tay DJI Mini SE: nhỏ, nhẹ dễ bay, khả năng quay 2.7K 30p, phù hợp cho người mới</a>
-        </div>
-      </div>
-      
-      <div class="col-3 info-box">
-        <h1 style="font-size: 25px;font-weight: bolder;">Thảo luận trong ngày</h1>
-        <div class="row">
-         <a href=""><img class="col-12" style="padding-right: 5px; border-radius: 10%;" src="../static/img/bagia.jpg"></a> 
-          <a class="col-12" href=""> Đây là người tạo ra vaccine AstraZeneca: chúng tôi đua với virus, không phải với các hãng khác</a>
-        </div>
-    
-      </div>
-      <br>
-    </div>
-    <br>
-    <hr>
      <!-- xem nhanh -->
-    <h1 style="font-size:large; padding-left: 15px " >Xem nhanh</h1>
-     <div class="row ml-1">
+    <h1 style="font-size:large;" >Xem nhanh</h1>
+     <div class="row mx-1">
        <div class="row col-9 last-tag" style="height: fit-content;" >
-        <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 "><img class="bdr"  src="../static/img/xebay.gif"><a class="col-md-6 text" href="">Bị phạt 1,2 tỷ vì lái xe bán tải "bay qua lạch nước ở Mỹ"</a> </div>
-        <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 "><img class="bdr" src="../static/img/apw.jpg"><a class="col-md-6 text" href="">Thêm bằng chứng cho thấy Apple Watch Series 7 sẽ có kích thước 41mm và 45mm </a></div>
-        <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6" ><img class="bdr "  src="../static/img/ip13.jpg"><a class="col-md-6 text "href="">Rò rỉ tem trên hộp iPhone 13</a></div> 
-        <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6" ><img class="bdr " src="../static/img/foxconn.jpg"><a class="col-md-6 text "href="">Foxcom đang tuyển gấp 200.000 nhân công để lắp ráp iPhone 13</a></div>  
-        <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6"><img class=" bdr"  src="../static/img/car.jpg"><a class="col-md-6 text"href="">Range Rover Sport SVR Ultimate: chiếc SUV mạnh nhất</a> </div>
-        <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6" ><img class=" bdr " src="../static/img/gai.jpg"><a class="col-md-6 text"href="">Chức năng chỉnh sửa hình ảnh trên Google Photos</a> </div>   
-        <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6" ><img class="bdr"  src="../static/img/macc.jpg"><a class="col-md-6 text "href="">Doanh số máy Mac M1 tăng mạnh, nhưng iPad lại ảm đảm</a></div>
-        <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6" ><img class="bdr " src="../static/img/surface.jpg"><a class="col-md-6 text "href="">Mời anh em xem hình ảnh render của Surface Book Studio: khi laptop kết hợp máy tính AIO</a></div>
+        <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 flex-grow-0 pr-0"><img class="bdr"  src="../static/img/xebay.gif"><a class="text3 pl-1" href="">Bị phạt 1,2 tỷ vì lái xe bán tải "bay qua lạch nước ở Mỹ"</a> </div>
+        <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 flex-grow-0 pr-0"><img class="bdr" src="../static/img/apw.jpg"><a class="text3 pl-1" href="">Thêm bằng chứng cho thấy Apple Watch Series 7 sẽ có kích thước 41mm và 45mm </a></div>
+        <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 flex-grow-0 pr-0" ><img class="bdr "  src="../static/img/ip13.jpg"><a class="text3 pl-1 "href="">Rò rỉ tem trên hộp iPhone 13</a></div> 
+        <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 flex-grow-0 pr-0" ><img class="bdr " src="../static/img/foxconn.jpg"><a class="text3 pl-1"href="">Foxcom đang tuyển gấp 200.000 nhân công để lắp ráp iPhone 13</a></div>  
+        <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 flex-grow-0 pr-0"><img class=" bdr"  src="../static/img/car.jpg"><a class="text3 pl-1"href="">Range Rover Sport SVR Ultimate: chiếc SUV mạnh nhất</a> </div>
+        <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 flex-grow-0 pr-0" ><img class=" bdr " src="../static/img/gai.jpg"><a class="text3 pl-1"href="">Chức năng chỉnh sửa hình ảnh trên Google Photos</a> </div>   
+        <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 flex-grow-0 pr-0" ><img class="bdr"  src="../static/img/macc.jpg"><a class="text3 pl-1 "href="">Doanh số máy Mac M1 tăng mạnh, nhưng iPad lại ảm đảm</a></div>
+        <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 flex-grow-0 pr-0" ><img class="bdr " src="../static/img/surface.jpg"><a class="text3 pl-1"href="">Mời anh em xem hình ảnh render của Surface Book Studio: khi laptop kết hợp máy tính AIO</a></div>
 
       </div>
       <div class="col-3 info-box">
@@ -407,12 +412,12 @@
 
     <div class="row ml-1">
       <span class="row col-9 last-tag"> 
-         <div class="col-6 " style="font-size: xx-large;color: #8f9bb3;font-weight: bolder;">#1 <br><p style="font-size:medium;font-weight: unset;color: #242424;" class="text mb-0" >Vì sao máy ifan nghĩ app trên IOS ngon hơn trên Android nhỉ? Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người</p><div><img class="rounded-circle aimg" src ="../static/img/khoa.jpg"><a href="" style="font-size: small; padding-left: 10px;">Đoàn văn Khoa</a></div></div> 
-         <div class="col-6 " style="font-size: xx-large;color: #8f9bb3;font-weight: bolder;">#2 <br><p style="font-size:medium;font-weight: unset;color: #242424;" class="text mb-0" >Vì sao máy ifan nghĩ app trên IOS ngon hơn trên Android nhỉ? Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người</p><div><img class="rounded-circle aimg" src ="../static/img/ongia.jpg"><a href="" style="font-size: small; padding-left: 10px;">hammer</a></div></div>
-         <div class="col-6 " style="font-size: xx-large;color: #8f9bb3;font-weight: bolder;">#3 <br><p style="font-size:medium;font-weight: unset;color: #242424;" class="text mb-0" >Vì sao máy ifan nghĩ app trên IOS ngon hơn trên Android nhỉ? Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người</p><div><img class="rounded-circle aimg" src ="../static/img/ongiga2.jpg"><a href="" style="font-size: small; padding-left: 10px;">haless</a></div></div> 
-         <div class="col-6 " style="font-size: xx-large;color: #8f9bb3;font-weight: bolder;">#4 <br><p style="font-size:medium;font-weight: unset;color: #242424;" class="text mb-0" >Vì sao máy ifan nghĩ app trên IOS ngon hơn trên Android nhỉ? Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người</p><div><img class="rounded-circle aimg" src ="../static/img/bagia.jpg"><a href="" style="font-size: small; padding-left: 10px;">thomsom</a></div></div>
-         <div class="col-6 " style="font-size: xx-large;color: #8f9bb3;font-weight: bolder;">#5 <br><p style="font-size:medium;font-weight: unset;color: #242424;" class="text mb-0" >Vì sao máy ifan nghĩ app trên IOS ngon hơn trên Android nhỉ? Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người</p><div><img class="rounded-circle aimg" src ="../static/img/kiet.jpg"><a href="" style="font-size: small; padding-left: 10px;">RPK skel</a></div></div> 
-         <div class="col-6 " style="font-size: xx-large;color: #8f9bb3;font-weight: bolder;">#6 <br><p style="font-size:medium;font-weight: unset;color: #242424;" class="text mb-0" >Vì sao máy ifan nghĩ app trên IOS ngon hơn trên Android nhỉ? Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người</p><div><img class="rounded-circle aimg" src ="../static/img/xe.png"><a href="" style="font-size: small; padding-left: 10px;">Teki</a></div></div>
+         <div class="col-6 " style="font-size: xx-large;color: #8f9bb3;font-weight: bolder;">#1 <br><p style="font-size:medium;font-weight: unset;color: #242424;" class="text-4 mb-0" >Vì sao máy ifan nghĩ app trên IOS ngon hơn trên Android nhỉ? Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người</p><div><img class="rounded-circle aimg" src ="../static/img/khoa.jpg"><a href="" style="font-size: small; padding-left: 10px;">Đoàn văn Khoa</a></div></div> 
+         <div class="col-6 " style="font-size: xx-large;color: #8f9bb3;font-weight: bolder;">#2 <br><p style="font-size:medium;font-weight: unset;color: #242424;" class="text-4 mb-0" >Vì sao máy ifan nghĩ app trên IOS ngon hơn trên Android nhỉ? Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người</p><div><img class="rounded-circle aimg" src ="../static/img/ongia.jpg"><a href="" style="font-size: small; padding-left: 10px;">hammer</a></div></div>
+         <div class="col-6 " style="font-size: xx-large;color: #8f9bb3;font-weight: bolder;">#3 <br><p style="font-size:medium;font-weight: unset;color: #242424;" class="text-4 mb-0" >Vì sao máy ifan nghĩ app trên IOS ngon hơn trên Android nhỉ? Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người</p><div><img class="rounded-circle aimg" src ="../static/img/ongiga2.jpg"><a href="" style="font-size: small; padding-left: 10px;">haless</a></div></div> 
+         <div class="col-6 " style="font-size: xx-large;color: #8f9bb3;font-weight: bolder;">#4 <br><p style="font-size:medium;font-weight: unset;color: #242424;" class="text-4 mb-0" >Vì sao máy ifan nghĩ app trên IOS ngon hơn trên Android nhỉ? Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người</p><div><img class="rounded-circle aimg" src ="../static/img/bagia.jpg"><a href="" style="font-size: small; padding-left: 10px;">thomsom</a></div></div>
+         <div class="col-6 " style="font-size: xx-large;color: #8f9bb3;font-weight: bolder;">#5 <br><p style="font-size:medium;font-weight: unset;color: #242424;" class="text-4 mb-0" >Vì sao máy ifan nghĩ app trên IOS ngon hơn trên Android nhỉ? Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người</p><div><img class="rounded-circle aimg" src ="../static/img/kiet.jpg"><a href="" style="font-size: small; padding-left: 10px;">RPK skel</a></div></div> 
+         <div class="col-6 " style="font-size: xx-large;color: #8f9bb3;font-weight: bolder;">#6 <br><p style="font-size:medium;font-weight: unset;color: #242424;" class="text-4 mb-0" >Vì sao máy ifan nghĩ app trên IOS ngon hơn trên Android nhỉ? Đã gần 1 năm mình sử dụng youtube premium, vài chia sẻ cho mọi người</p><div><img class="rounded-circle aimg" src ="../static/img/xe.png"><a href="" style="font-size: small; padding-left: 10px;">Teki</a></div></div>
       
 
       </span> 
@@ -444,21 +449,21 @@
             <tr valign="top">
           <td width="10%" valign="top">
             <a href="">
-              <img class="pb-3" src="../static/img/dtduoi.jpg" width="200"  style="display:block;width: 250px;height:auto;max-width:200px;vertical-align:top;">
+              <img class="rounded mb-3" src="../static/img/dtduoi.jpg" width="200"  style="display:block;width: 250px;height:auto;max-width:200px;vertical-align:top;">
             </a>
           </td>
           <td width="68%" style="padding:0 0 0 10px;font-family:arial,helvetica,sans-serif;font-size:12px;color:#666666;line-height:15px;">
             <p style="margin:0 0 0.5em 0;font-size:16px;line-height:20px;">
-              <a  href="" style="color:#375d81;font-family:tahoma,arial,helvetica,sans-serif;font-weight:bold;text-decoration:none;text-align:justify;" target="_blank">
+              <a  href="" class="text" style="color:#375d81;font-family:tahoma,arial,helvetica,sans-serif;font-weight:bold;text-decoration:none;" target="_blank">
                 Hướng dẫn thiết lập khôi phục iCloud thông qua liên hệ tin cậy trên iOS 15
               </a>
             </p>
-            <p  style="margin:0 0 10px 0;line-height:15px;text-align:justify;" class="storydesc text">
+            <p  style="margin:0 0 10px 0;line-height:15px;text-align:justify;" class="storydesc text4">
               việc khôi phục dữ liệu iCloud trên iOS 15 đã trở nên dễ dàng hơn khi người dùng quên mật khẩu tài khoản hoặc mật mã thiết bị.
             </p>
             <img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> 
 
-            <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
+            <a href="">Lê Huyền văn</a>- 4h
           </td>
           </tr>
           </table>
@@ -466,24 +471,24 @@
                                                                                 
           <tr>
           <td style="background-color:#fff;padding:10px 20px 15px 24px;">
-          <table cellpadding="0" cellspacing="0" border="0" class="mr-0 eighty story">
+          <table cellpadding="0" cellspacing="0" border="0" class="mr-0  story">
           <tr valign="top">
           <td width="10%" valign="top">
           <a href="">
-          <img class="pb-3" src="../static/img/phimmaxxtri.jpg" width="200"  style="display:block;width: 250px;;height:auto;max-width:200px;vertical-align:top;">
+          <img class="rounded mb-3" src="../static/img/phimmaxxtri.jpg" width="200"  style="display:block;width: 250px;;height:auto;max-width:200px;vertical-align:top;">
           </a>
           </td>
           <td width="68%" style="padding:0 0 0 10px;font-family:arial,helvetica,sans-serif;font-size:12px;color:#666666;line-height:15px;">
           <p style="margin:0 0 0.5em 0;font-size:16px;line-height:20px;">
-          <a href="" style="color:#375d81;font-family:tahoma,arial,helvetica,sans-serif;font-weight:bold;text-decoration:none;text-align:justify;" target="_blank">
+          <a href="" class="text" style="color:#375d81;font-family:tahoma,arial,helvetica,sans-serif;font-weight:bold;text-decoration:none;" target="_blank">
             Phim Matrix phần 4 có tên gọi chính thức, ra rạp ngày 22/12 
           </a>
           </p>
-          <p style="margin:0 0 10px 0;line-height:15px;text-align:justify;" class="storydesc">
+          <p style="margin:0 0 10px 0;line-height:15px;text-align:justify;" class="storydesc text4">
             Tại sự kiện CinemaCon vừa diễn ra, Warner Bros dù không công bố rộng rãi trailer của bộ phim sắp công chiếu nhưng đã tiết lộ tên gọi chính thức sẽ là Matrix: Resurrections. 
           </p>
           <img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> 
-              <a href="">Didu</a>- 4h-Cà phê tinh tế</p></span>
+              <a href="">Didu</a>- 4h
           </td>
           </tr>
           </table>                                                                                                   
@@ -493,87 +498,89 @@
                                                                                 
           <tr>
           <td style="background-color:#fff;padding:10px 20px 15px 24px;">
-          <table cellpadding="0" cellspacing="0" border="0" class="mr-0 eighty story">
+          <table cellpadding="0" cellspacing="0" border="0" class="mr-0 ">
           <tr valign="top">
           <td width="10%" valign="top">
           <a href="">
-          <img class="pb-3" src="../static/img/dt.jpg" width="200"  style="display:block;width: 250px;;height:auto;max-width:200px;vertical-align:top;">
+          <img class="rounded mb-3" src="../static/img/dt.jpg" width="200"  style="display:block;width: 250px;;height:auto;max-width:200px;vertical-align:top;">
           </a>
           </td>
           <td width="68%" style="padding:0 0 0 10px;font-family:arial,helvetica,sans-serif;font-size:12px;color:#666666;line-height:15px;">
           <p style="margin:0 0 0.5em 0;font-size:16px;line-height:20px;">
-          <a href="" style="color:#375d81;font-family:tahoma,arial,helvetica,sans-serif;font-weight:bold;text-decoration:none;text-align:justify;" target="_blank">
+          <a href="" class="text" style="color:#375d81;font-family:tahoma,arial,helvetica,sans-serif;font-weight:bold;text-decoration:none;" target="_blank">
             Fitbit Charge 5 chính thức: màn hình OLED           </a>
           </p>
-          <p style="margin:0 0 10px 0;line-height:15px;text-align:justify;" class="storydesc">
+          <p style="margin:0 0 10px 0;line-height:15px;text-align:justify;" class="storydesc text4">
             Vậy là FItbit Charge 5 đã chính thức được Fitbit ra mắt và sẽ là thế hệ fitness tracker cao cấp tiếp theo, kế nhiệm Fitbit Charge 4 ra mắt cách đây 1 năm
           </p>
           <img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> 
-          <a href="">bngHuy</a>- 5h-Đồng Hồ - Trang Sức</p></span>
+          <a href="">bngHuy</a>- 5h
           </td>
           </tr>
           </table> 
           <tr>
             <td style="background-color:#fff;padding:10px 20px 15px 24px;">
-            <table cellpadding="0" cellspacing="0" border="0" class="mr-0 eighty story">
+            <table cellpadding="0" cellspacing="0" border="0" class="mr-0">
             <tr valign="top">
             <td width="10%" valign="top">
             <a href="">
-            <img  src="../static/img/mayruachen.jpg" width="200"  style="display:block;width: 250px;;height:auto;max-width:200px;vertical-align:top;">
+            <img class="rounded"  src="../static/img/mayruachen.jpg" width="200"  style="display:block;width: 250px;;height:auto;max-width:200px;vertical-align:top;">
             </a>
             </td>
             <td width="68%" style="padding:0 0 0 10px;font-family:arial,helvetica,sans-serif;font-size:12px;color:#666666;line-height:15px;">
             <p style="margin:0 0 0.5em 0;font-size:16px;line-height:20px;">
-            <a href="" style="color:#375d81;font-family:tahoma,arial,helvetica,sans-serif;font-weight:bold;text-decoration:none;text-align:justify;" target="_blank">
+            <a href="" class="text" style="color:#375d81;font-family:tahoma,arial,helvetica,sans-serif;font-weight:bold;text-decoration:none;" target="_blank">
               Review Máy rửa bát Electrolux loại 8 SET            </a>
             </p>
-            <p style="margin:0 0 10px 0;line-height:15px;text-align:justify;" class="storydesc">
+            <p style="margin:0 0 10px 0;line-height:15px;text-align:justify;" class="storydesc text4">
               Đây là review về Máy rửa bát Electrolux loại 8 SET của mình.Mình mua nó với giá 11,000,000 (mua đã được 4 năm nên giá khá cao hơn hiện tại). Hi vọng phần review sẽ hữu ích cho bạn nào muốn mua nhé, nếu bạn có câu hỏi gì thì hãy comment vô bài này nha.
             </p>
          
             <img  class=" rounded-circle" width="30px" height="30px"  src="../static/img/khoa.jpg"> 
-             <a href="">kaoquanjb</a>- 5h-Điện tử-Tiêu dùng</p></span>
+             <a href="">kaoquanjb</a>- 5h
             </td>
             </tr>
             </table>           
          
       </div>
     </div>
-    <br>
+
     <hr>
-    <br>
  
     <!--Khung 4-->
-    <div class="row ml-1 ">
-      <div class="row col-9 container last-tag">
-        <img class="col-6" style="border-radius: 5%;" src="../static/img/xe.png">
-        <img class="col-6" style="border-radius: 5%;" src="../static/img/matho.jpg">
-        <a class="col-6 text4" style="font-size: large;font-weight: bolder;padding-bottom: 3%;" href="">[Infographic] Top 20 hãng sản xuất xe điện hàng đầu thế giới</a>
-        <a class="col-6 text4" style="font-size: large;font-weight: bolder;padding-bottom: 3%;" href="">Playlist các ca khúc kỷ niệm 105 năm Công Viên Quốc Gia Mỹ. Nhân dịp này Apple cũng sẽ dành ra...</a>
-        <ul class="col-6" >
-          <li><a style="font-size:small;font-weight: bolder;" href="" class="text4">CDC Mỹ khuyến cáo du khách lớn tuổi, nhóm nguy cơ cao không nên đi du thuyền, kể cả đã tiêm vaccine</a></li>
-          <hr>
-          <li><a style="font-size:small;font-weight: bolder;" href=""class="text4">MQ-25 Stingray - UAV đầu tiên tiếp nhiên liệu thành công cho máy bay khác trên không</a></li>
-          <hr>
-          <li><a style="font-size:small;font-weight: bolder;" href=""class="text4">VinFast hợp tác với Gotion High-Tech để phát triển pin LFP cho xe điện</a></li>
-          </ul>
-          <ul class="col-6" >
-            <li><a style="font-size:small;font-weight: bolder;" href=""class="text4">Chàng trai trong hình bìa album Nevermind của Nirvana khởi kiện nhóm tội khiêu dâm trẻ em</a></li>
+    <div class="row flex-grow-0 ml-1">
+      <div class="row container last-tag px-0">
+        <div class="col-md-6 px-0">
+          <div class="col-lg-12">
+            <img class="col-12 px-0" style="border-radius: 5%;" src="../static/img/xe.png">
+            <a class="px-0 text4" style="font-size: large;font-weight: bolder;padding-bottom: 3%;" href="">[Infographic] Top 20 hãng sản xuất xe điện hàng đầu thế giới</a>
+            <ul  >
+            <li><a style="font-size:small;font-weight: bolder;" href="" class="text4 px-0">CDC Mỹ khuyến cáo du khách lớn tuổi, nhóm nguy cơ cao không nên đi du thuyền, kể cả đã tiêm vaccine</a></li>
             <hr>
-            <li><a style="font-size:small;font-weight: bolder;" href=""class="text4">Wear OS đã chính thức được cung cấp tính năng chơi nhạc offline từ hôm nay</a></li>
+            <li><a style="font-size:small;font-weight: bolder;" href=""class="text4 px-0">MQ-25 Stingray - UAV đầu tiên tiếp nhiên liệu thành công cho máy bay khác trên không</a></li>
             <hr>
-            <li><a style="font-size:small;font-weight: bolder;" href=""class="text4">Fyne Audio mở rộng dòng sản phẩm Special Production với mẫu loa F500SP</a></li>
+            <li><a style="font-size:small;font-weight: bolder;" href=""class="text4 px-0">VinFast hợp tác với Gotion High-Tech để phát triển pin LFP cho xe điện</a></li>
             </ul>
-          <div class="col-1"></div><button  type="button" class="btn btn-outline-info col-4">Xem thông tin xe</button>
-          <div class="col-2"></div><button  type="button" class="btn btn-outline-info col-4">Xem thông tin Audio</button>
-      </div>
-      </div>
-    <br>
-    <hr>
-    <br>
+          </div>
+        </div>
+      <div class="col-md-6 px-0">
+        <div class="col-lg-12">
+        <img class="col-12 px-0" style="border-radius: 5%;" src="../static/img/xe.png">
+        <a class="text4 px-0" style="font-size: large;font-weight: bolder;padding-bottom: 3%;" href="">Playlist các ca khúc kỷ niệm 105 năm Công Viên Quốc Gia Mỹ. Nhân dịp này Apple cũng sẽ dành ra...</a>
+       
+          <ul class="" >
+            <li><a style="font-size:small;font-weight: bolder;" href=""class="text4 px-0">Chàng trai trong hình bìa album Nevermind của Nirvana khởi kiện nhóm tội khiêu dâm trẻ em</a></li>
+            <hr>
+            <li><a style="font-size:small;font-weight: bolder;" href=""class="text4 px-0">Wear OS đã chính thức được cung cấp tính năng chơi nhạc offline từ hôm nay</a></li>
+            <hr>
+            <li><a style="font-size:small;font-weight: bolder;" href=""class="text4 px-0">Fyne Audio mở rộng dòng sản phẩm Special Production với mẫu loa F500SP</a></li>
+            </ul>
+          </div>  
+        </div>  
+    </div>
     <hr>
     <!--khung 5-->
-    <div class="row container ml-1" style="padding-top: 5%;">
+    <div class="row container ml-1" >
       <div class="row col-9 last-tag">       
           <!-- Content Title over --> 
            
@@ -585,21 +592,21 @@
             <tr valign="top">
           <td width="10%" valign="top">
             <a href="">
-              <img class="pb-3" src="../static/img/dtduoi.jpg" width="200"  style="display:block;width: 250px;height:auto;max-width:200px;vertical-align:top;">
+              <img class="rounded mb-3" src="../static/img/dtduoi.jpg" width="200"  style="display:block;width: 250px;height:auto;max-width:200px;vertical-align:top;">
             </a>
           </td>
           <td width="68%" style="padding:0 0 0 10px;font-family:arial,helvetica,sans-serif;font-size:12px;color:#666666;line-height:15px;">
             <p style="margin:0 0 0.5em 0;font-size:16px;line-height:20px;">
-              <a  href="" style="color:#375d81;font-family:tahoma,arial,helvetica,sans-serif;font-weight:bold;text-decoration:none;text-align:justify;" target="_blank">
+              <a  href="" class="text" style="color:#375d81;font-family:tahoma,arial,helvetica,sans-serif;font-weight:bold;text-decoration:none;" target="_blank">
                 Hướng dẫn thiết lập khôi phục iCloud thông qua liên hệ tin cậy trên iOS 15
               </a>
             </p>
-            <p  style="margin:0 0 10px 0;line-height:15px;text-align:justify;" class="storydesc text">
+            <p  style="margin:0 0 10px 0;line-height:15px;text-align:justify;" class="storydesc text4">
               việc khôi phục dữ liệu iCloud trên iOS 15 đã trở nên dễ dàng hơn khi người dùng quên mật khẩu tài khoản hoặc mật mã thiết bị.
             </p>
             <img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> 
 
-            <a href="">Lê Huyền văn</a>- 4h-iPhone,iPad,iOS</p></span> 
+            <a href="">Lê Huyền văn</a>- 4h
           </td>
           </tr>
           </table>
@@ -607,24 +614,24 @@
                                                                                 
           <tr>
           <td style="background-color:#fff;padding:10px 20px 15px 24px;">
-          <table cellpadding="0" cellspacing="0" border="0" class="mr-0 eighty story">
+          <table cellpadding="0" cellspacing="0" border="0" class="mr-0 ">
           <tr valign="top">
           <td width="10%" valign="top">
           <a href="">
-          <img class="pb-3" src="../static/img/banphim.jpg" width="200"  style="display:block;width: 250px;;height:auto;max-width:200px;vertical-align:top;">
+          <img class="rounded mb-3" src="../static/img/banphim.jpg" width="200"  style="display:block;width: 250px;;height:auto;max-width:200px;vertical-align:top;">
           </a>
           </td>
           <td width="68%" style="padding:0 0 0 10px;font-family:arial,helvetica,sans-serif;font-size:12px;color:#666666;line-height:15px;">
           <p style="margin:0 0 0.5em 0;font-size:16px;line-height:20px;">
-          <a href="" style="color:#375d81;font-family:tahoma,arial,helvetica,sans-serif;font-weight:bold;text-decoration:none;text-align:justify;" target="_blank">
+          <a href="" class="text" style="color:#375d81;font-family:tahoma,arial,helvetica,sans-serif;font-weight:bold;text-decoration:none;" target="_blank">
             Phim Matrix phần 4 có tên gọi chính thức, ra rạp ngày 22/12 
           </a>
           </p>
-          <p style="margin:0 0 10px 0;line-height:15px;text-align:justify;" class="storydesc">
+          <p style="margin:0 0 10px 0;line-height:15px;text-align:justify;" class="storydesc text4">
             Tại sự kiện CinemaCon vừa diễn ra, Warner Bros dù không công bố rộng rãi trailer của bộ phim sắp công chiếu nhưng đã tiết lộ tên gọi chính thức sẽ là Matrix: Resurrections. 
           </p>
           <img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> 
-              <a href="">Didu</a>- 4h-Cà phê tinh tế</p></span>
+              <a href="">Didu</a>- 4h
           </td>
           </tr>
           </table>                                                                                                   
@@ -634,152 +641,153 @@
                                                                                 
           <tr>
           <td style="background-color:#fff;padding:10px 20px 15px 24px;">
-          <table cellpadding="0" cellspacing="0" border="0" class="mr-0 eighty story">
+          <table cellpadding="0" cellspacing="0" border="0" class="mr-0 ">
           <tr valign="top">
           <td width="10%" valign="top">
           <a href="">
-          <img class="pb-3" src="../static/img/nhatban.jpg" width="200"  style="display:block;width: 250px;;height:auto;max-width:200px;vertical-align:top;">
+          <img class="rounded mb-3" src="../static/img/nhatban.jpg" width="200"  style="display:block;width: 250px;;height:auto;max-width:200px;vertical-align:top;">
           </a>
           </td>
           <td width="68%" style="padding:0 0 0 10px;font-family:arial,helvetica,sans-serif;font-size:12px;color:#666666;line-height:15px;">
           <p style="margin:0 0 0.5em 0;font-size:16px;line-height:20px;">
-          <a href="" style="color:#375d81;font-family:tahoma,arial,helvetica,sans-serif;font-weight:bold;text-decoration:none;text-align:justify;" target="_blank">
+          <a href="" class="text" style="color:#375d81;font-family:tahoma,arial,helvetica,sans-serif;font-weight:bold;text-decoration:none;" target="_blank">
             Fitbit Charge 5 chính thức: màn hình OLED           </a>
           </p>
-          <p style="margin:0 0 10px 0;line-height:15px;text-align:justify;" class="storydesc">
+          <p style="margin:0 0 10px 0;line-height:15px;text-align:justify;" class="storydesc text4">
             Vậy là FItbit Charge 5 đã chính thức được Fitbit ra mắt và sẽ là thế hệ fitness tracker cao cấp tiếp theo, kế nhiệm Fitbit Charge 4 ra mắt cách đây 1 năm
           </p>
           <img  class="rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg"> 
-          <a href="">bngHuy</a>- 5h-Đồng Hồ - Trang Sức</p></span>
+          <a href="">bngHuy</a>- 5h
           </td>
           </tr>
           </table> 
           <tr>
             <td style="background-color:#fff;padding:10px 20px 15px 24px;">
-            <table cellpadding="0" cellspacing="0" border="0" class="mr-0 eighty story">
+            <table cellpadding="0" cellspacing="0" border="0" class="mr-0 ">
             <tr valign="top">
             <td width="10%" valign="top">
             <a href="">
-            <img class="pb-3" src="../static/img/Ai.jpg" width="200"  style="display:block;width: 250px;;height:auto;max-width:200px;vertical-align:top;">
+            <img class="rounded mb-3" src="../static/img/Ai.jpg" width="200"  style="display:block;width: 250px;;height:auto;max-width:200px;vertical-align:top;">
             </a>
             </td>
             <td width="68%" style="padding:0 0 0 10px;font-family:arial,helvetica,sans-serif;font-size:12px;color:#666666;line-height:15px;">
             <p style="margin:0 0 0.5em 0;font-size:16px;line-height:20px;">
-            <a href="" style="color:#375d81;font-family:tahoma,arial,helvetica,sans-serif;font-weight:bold;text-decoration:none;text-align:justify;" target="_blank">
+            <a href="" class="text" style="color:#375d81;font-family:tahoma,arial,helvetica,sans-serif;font-weight:bold;text-decoration:none;" target="_blank">
               Review Máy rửa bát Electrolux loại 8 SET            </a>
             </p>
-            <p style="margin:0 0 10px 0;line-height:15px;text-align:justify;" class="storydesc">
+            <p style="margin:0 0 10px 0;line-height:15px;text-align:justify;" class="storydesc text4">
               Đây là review về Máy rửa bát Electrolux loại 8 SET của mình.Mình mua nó với giá 11,000,000 (mua đã được 4 năm nên giá khá cao hơn hiện tại). Hi vọng phần review sẽ hữu ích cho bạn nào muốn mua nhé, nếu bạn có câu hỏi gì thì hãy comment vô bài này nha.
             </p>
          
             <img  class=" rounded-circle" width="30px" height="30px"  src="../static/img/khoa.jpg"> 
-             <a href="">kaoquanjb</a>- 5h-Điện tử-Tiêu dùng</p></span>
+             <a href="">kaoquanjb</a>- 5h
             </td>
             </tr>
             </table>     
             <tr>
               <td style="background-color:#fff;padding:10px 20px 15px 24px;">
-              <table cellpadding="0" cellspacing="0" border="0" class="mr-0 eighty story">
+              <table cellpadding="0" cellspacing="0" border="0" class="mr-0">
               <tr valign="top">
               <td width="10%" valign="top">
               <a href="">
-              <img class="pb-3" src="../static/img/robot.jpg" width="200"  style="display:block;width: 250px;;height:auto;max-width:200px;vertical-align:top;">
+              <img class="rounded mb-3" src="../static/img/robot.jpg" width="200"  style="display:block;width: 250px;;height:auto;max-width:200px;vertical-align:top;">
               </a>
               </td>
               <td width="68%" style="padding:0 0 0 10px;font-family:arial,helvetica,sans-serif;font-size:12px;color:#666666;line-height:15px;">
               <p style="margin:0 0 0.5em 0;font-size:16px;line-height:20px;">
-              <a href="" style="color:#375d81;font-family:tahoma,arial,helvetica,sans-serif;font-weight:bold;text-decoration:none;text-align:justify;" target="_blank">
+              <a href="" class="text" style="color:#375d81;font-family:tahoma,arial,helvetica,sans-serif;font-weight:bold;text-decoration:none;" target="_blank">
                 Review Máy rửa bát Electrolux loại 8 SET            </a>
               </p>
-              <p style="margin:0 0 10px 0;line-height:15px;text-align:justify;" class="storydesc">
+              <p style="margin:0 0 10px 0;line-height:15px;text-align:justify;" class="storydesc text4">
                 Đây là review về Máy rửa bát Electrolux loại 8 SET của mình.Mình mua nó với giá 11,000,000 (mua đã được 4 năm nên giá khá cao hơn hiện tại). Hi vọng phần review sẽ hữu ích cho bạn nào muốn mua nhé, nếu bạn có câu hỏi gì thì hãy comment vô bài này nha.
               </p>
            
               <img  class=" rounded-circle" width="30px" height="30px"  src="../static/img/khoa.jpg"> 
-               <a href="">kaoquanjb</a>- 5h-Điện tử-Tiêu dùng</p></span>
+               <a href="">kaoquanjb</a>- 5h
               </td>
               </tr>
               </table>  
               <tr>
                 <td style="background-color:#fff;padding:10px 20px 15px 24px;">
-                <table cellpadding="0" cellspacing="0" border="0" class="mr-0 eighty story">
+                <table cellpadding="0" cellspacing="0" border="0" class="mr-0">
                 <tr valign="top">
                 <td width="10%" valign="top">
                 <a href="">
-                <img class="pb-3" src="../static/img/ongia.jpg" width="200"  style="display:block;width: 250px;;height:auto;max-width:200px;vertical-align:top;">
+                <img class="rounded mb-3" src="../static/img/ongia.jpg" width="200"  style="display:block;width: 250px;;height:auto;max-width:200px;vertical-align:top;">
                 </a>
                 </td>
                 <td width="68%" style="padding:0 0 0 10px;font-family:arial,helvetica,sans-serif;font-size:12px;color:#666666;line-height:15px;">
                 <p style="margin:0 0 0.5em 0;font-size:16px;line-height:20px;">
-                <a href="" style="color:#375d81;font-family:tahoma,arial,helvetica,sans-serif;font-weight:bold;text-decoration:none;text-align:justify;" target="_blank">
+                <a href="" class="text" style="color:#375d81;font-family:tahoma,arial,helvetica,sans-serif;font-weight:bold;text-decoration:none;" target="_blank">
                   Review Máy rửa bát Electrolux loại 8 SET            </a>
                 </p>
-                <p style="margin:0 0 10px 0;line-height:15px;text-align:justify;" class="storydesc">
+                <p style="margin:0 0 10px 0;line-height:15px;text-align:justify;" class="storydesc text4">
                   Đây là review về Máy rửa bát Electrolux loại 8 SET của mình.Mình mua nó với giá 11,000,000 (mua đã được 4 năm nên giá khá cao hơn hiện tại). Hi vọng phần review sẽ hữu ích cho bạn nào muốn mua nhé, nếu bạn có câu hỏi gì thì hãy comment vô bài này nha.
                 </p>
              
                 <img  class=" rounded-circle" width="30px" height="30px"  src="../static/img/khoa.jpg"> 
-                 <a href="">kaoquanjb</a>- 5h-Điện tử-Tiêu dùng</p></span>
+                 <a href="">kaoquanjb</a>- 5h
                 </td>
                 </tr>
                 </table>  
                 <tr>
                   <td style="background-color:#fff;padding:10px 20px 15px 24px;">
-                  <table cellpadding="0" cellspacing="0" border="0" class="mr-0 eighty story">
+                  <table cellpadding="0" cellspacing="0" border="0" class="mr-0 ">
                   <tr valign="top">
                   <td width="10%" valign="top">
                   <a href="">
-                  <img class="pb-3" src="../static/img/black.png" width="200"  style="display:block;width: 250px;;height:auto;max-width:200px;vertical-align:top;">
+                  <img class="rounded mb-3" src="../static/img/black.png" width="200"  style="display:block;width: 250px;;height:auto;max-width:200px;vertical-align:top;">
                   </a>
                   </td>
                   <td width="68%" style="padding:0 0 0 10px;font-family:arial,helvetica,sans-serif;font-size:12px;color:#666666;line-height:15px;">
                   <p style="margin:0 0 0.5em 0;font-size:16px;line-height:20px;">
-                  <a href="" style="color:#375d81;font-family:tahoma,arial,helvetica,sans-serif;font-weight:bold;text-decoration:none;text-align:justify;" target="_blank">
+                  <a href="" class="text" style="color:#375d81;font-family:tahoma,arial,helvetica,sans-serif;font-weight:bold;text-decoration:none;" target="_blank">
                     Review Máy rửa bát Electrolux loại 8 SET            </a>
                   </p>
-                  <p style="margin:0 0 10px 0;line-height:15px;text-align:justify;" class="storydesc">
+                  <p style="margin:0 0 10px 0;line-height:15px;text-align:justify;" class="storydesc text4">
                     Đây là review về Máy rửa bát Electrolux loại 8 SET của mình.Mình mua nó với giá 11,000,000 (mua đã được 4 năm nên giá khá cao hơn hiện tại). Hi vọng phần review sẽ hữu ích cho bạn nào muốn mua nhé, nếu bạn có câu hỏi gì thì hãy comment vô bài này nha.
                   </p>
                
                   <img  class=" rounded-circle" width="30px" height="30px"  src="../static/img/khoa.jpg"> 
-                   <a href="">kaoquanjb</a>- 5h-Điện tử-Tiêu dùng</p></span>
+                   <a href="">kaoquanjb</a>- 5h
                   </td>
                   </tr>
                   </table>  
                   <tr>
                     <td style="background-color:#fff;padding:10px 20px 15px 24px;">
-                    <table cellpadding="0" cellspacing="0" border="0" class="mr-0 eighty story">
+                    <table cellpadding="0" cellspacing="0" border="0" class="mr-0 ">
                     <tr valign="top">
                     <td width="10%" valign="top">
                     <a href="">
-                    <img src="../static/img/ongiga2.jpg" width="200"  style="display:block;width: 250px;;height:auto;max-width:200px;vertical-align:top;">
+                    <img class="rounded" src="../static/img/ongiga2.jpg" width="200"  style="display:block;width: 250px;;height:auto;max-width:200px;vertical-align:top;">
                     </a>
                     </td>
                     <td width="68%" style="padding:0 0 0 10px;font-family:arial,helvetica,sans-serif;font-size:12px;color:#666666;line-height:15px;">
                     <p style="margin:0 0 0.5em 0;font-size:16px;line-height:20px;">
-                    <a href="" style="color:#375d81;font-family:tahoma,arial,helvetica,sans-serif;font-weight:bold;text-decoration:none;text-align:justify;" target="_blank">
+                    <a href="" class="text" style="color:#375d81;font-family:tahoma,arial,helvetica,sans-serif;font-weight:bold;text-decoration:none;" target="_blank">
                       Review Máy rửa bát Electrolux loại 8 SET            </a>
                     </p>
-                    <p style="margin:0 0 10px 0;line-height:15px;text-align:justify;" class="storydesc">
+                    <p style="margin:0 0 10px 0;line-height:15px;text-align:justify;" class="storydesc text4">
                       Đây là review về Máy rửa bát Electrolux loại 8 SET của mình.Mình mua nó với giá 11,000,000 (mua đã được 4 năm nên giá khá cao hơn hiện tại). Hi vọng phần review sẽ hữu ích cho bạn nào muốn mua nhé, nếu bạn có câu hỏi gì thì hãy comment vô bài này nha.
                     </p>
                  
                     <img  class=" rounded-circle" width="30px" height="30px"  src="../static/img/khoa.jpg"> 
-                     <a href="">kaoquanjb</a>- 5h-Điện tử-Tiêu dùng</p></span>
+                     <a href="">kaoquanjb</a>- 5h
                     </td>
                     </tr>
                     </table>        
           
         </div>
     </div>
-    <br>
-    
+
+    <hr>
+
     <!--Khung 6-->
-    <div class="row container">
-      <div class="row col-9 last-tag ">
-        <div class="card col 6" style="width: 15%;">
-          <img style="border-radius: 2%;" src="../static/img/window2.png" class="card-img-top" alt="...">
-          <button type="button" class="btn btn-success">Windows</button>
+    <div class="row container ml-1 mt-3">
+      <div class="row col-9 last-tag">
+        <div class="card col-md-6 rounded px-0" >
+          <img src="../static/img/window2.png" class="card-img-top" alt="...">
+          <div class="bg-success text-center text-light py-1">Windows</div>
           <div class="card-body" style="background-color: #213243;">
             <a href="" class="card-text" style="font-size: medium;font-weight: bold;color: white;">Funny</a>
             <hr style="background-color:silver;">
@@ -792,9 +800,9 @@
             <a href="" class="card-text" style="font-size: medium;color: white;">Em mới CT 16 rồi các pro ạ</a>
           </div>
         </div>
-        <div class="card  col 6" style="width: 15%;">
-          <img style="border-radius: 2%;" src="../static/img/macos.jpg" class="card-img-top" alt="...">
-          <button  type="button" class="btn btn-primary ">IOS</button>
+        <div class="card  col-md-6 px-0" >
+          <img src="../static/img/macos.jpg" class="card-img-top" alt="...">
+          <div class="bg-primary text-center text-light py-1">IOS</div>
           <div class="card-body" style="background-color: #213243;">
             <a href="" class="card-text" style="font-size: medium;font-weight: bold;color: white;">Help...</a>
             <hr style="background-color:silver;">
@@ -814,38 +822,37 @@
     <hr>
     <br>
     <!--Các câu hỏi bạn giúp-->
-    <div class="row container pb-3 pt-3">
-      <div class=" row col-9 last-tag">
-        <a class="col-12" style="font-weight: bold;padding-bottom: 3%;" href="">Tư vấn mua PC phục vụ công việc</a><br>
-        <img  class="mr-2 rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg">
-        <div style="background-color: lightgrey;" class="card col 11">
-          <div class="card-body">
-            <a href="" style="color:blue;">Nguyễn Đăng Khoa</a> -20 phút
-            <div>Buồn quá không ai giúp em, 100 bác vào xem rồi lại đi ra hic~</div>
+    <div class="row container pb-3 ml-1 pt-3">
+      <div class=" row col-9 last-tag pb-3">
+        <a class="col-12 px-0 mb-1" style="font-weight: bold;" href="">Tư vấn mua PC phục vụ công việc</a><br>
+        
+        <div style="background-color: aliceblue;" class="card col px-0">
+          <div class="card-body p-3">
+            <a href="" class="font-weight-bold"><img class="mr-2 rounded-circle" height="30px" width="30px" src="../static/img/khoa.jpg">Nguyễn Đăng Khoa</a><small class="pl-4 font-italic">-20 phút</small>
+            <div class="mt-2">Buồn quá không ai giúp em, 100 bác vào xem rồi lại đi ra hic~</div>
           </div>
         </div>
-        <a class="col-12" style="font-weight: bold;padding-bottom: 3%;" href="">Góc cần giúp đỡ</a><br>
-        <img  class="mr-2 rounded-circle" height="30px" width="30px" src="../static/img/bagia.jpg">
-        <div style="background-color: lightgrey;" class="card col 11">
-          <div class="card-body">
-            <a href="" style="color:blue;">Hasales</a> -20 phút
-            <div>trc đây samsung a7 2017 của mình không cần mật khẩu mỗi khi tắt nguồn
+        <a class="col-12 px-0 mb-1" style="font-weight: bold;" href="">Góc cần giúp đỡ</a><br>
+        <div style="background-color: aliceblue;" class="card col px-0">
+          <div class="card-body p-3">
+            <a href="" class="font-weight-bold"><img class="mr-2 rounded-circle" height="30px" width="30px" src="../static/img/bagia.jpg">Hasales</a><small class="pl-4 font-italic">-20 phút</small>
+            <div class="mt-2">trc đây samsung a7 2017 của mình không cần mật khẩu mỗi khi tắt nguồn
               hnay mình quên mật khẩu muốn tắt nguồn để reset thì quên mk mới cay , ai giúp mình với hu =((</div>
           </div>
         </div>
-        <a class=" col-12 " style="font-weight: bold;padding-bottom: 3%;" href="">Kẻ thù của cheems</a><br>
-        <img  class="mr-2 rounded-circle" height="30px" width="30px" src="../static/img/cheems.jpg">
-        <div style="background-color: lightgrey;" class="card col 11 mb-3">
-          <div class="card-body">
-            <a href="" style="color:blue;">Phạm Trọng Khương</a> -20 phút
-            <div>Mọi người chỉ mình cách làm thịt con cún nhà mình với nó tên CHEEMS</div>
+        <a class=" col-12 pl-0 mb-1" style="font-weight: bold;" href="">Kẻ thù của cheems</a><br>
+        <div style="background-color: aliceblue;" class="card col px-0">
+          <div class="card-body p-3">
+            <a href="" class="font-weight-bold"><img class="mr-2 rounded-circle" height="30px" width="30px" src="../static/img/cheems.jpg">Phạm Trọng Khương</a><small class="pl-4 font-italic">-20 phút</small>
+            <div class="mt-2">
+              Mọi người chỉ mình cách làm thịt con cún nhà mình với nó tên CHEEMS
+            </div>
           </div>
         </div>
         
     </div>
-    
     <!--khung 7-->
-    <div class="row mb-3 ">
+    <div class="row mb-3">
       <div class="col-9 last-tag">
         <div id="demo" class="carousel slide" data-ride="carousel">
 
@@ -886,7 +893,7 @@
 
     <!--Tag-->
     
-      <div class="row col-9 mb-3 last-tag  rounded" style="background-color: #222b45;color: white;">
+      <div class="row col-9 mb-3 last-tag rounded" style="background-color: #222b45;color: white;">
         <div class="col-12 mt-2 mb-2">#Tag đang hot <br>Anh Em nhớ follow để nhận được thông báo mới nhé</div>
         <div  class="card col-3 " style="width: 100%; background-color: #242424" >
           <img style="border-radius: 3%;" src="../static/img/android.png" class="card-img-top mt-3" alt="...">
@@ -938,16 +945,16 @@
           
           <div class="container"  style="text-align: center;">  
             <div class="row">
-              <div class="col-sm-4 point like"><i class="fas fa-thumbs-up"></i><span class="like-text"> Thích</span></div>
-              <div class="col-sm-4 point"><i class="fas fa-comments"></i> Bình luận</div>
-              <div class="col-sm-4 point"><i class="fas fa-share"></i> Chia sẻ</div>             
+              <div class="col-4 point like"><i class="fas fa-thumbs-up"></i><span class="like-text"> Thích</span></div>
+              <div class="col-4 point"><i class="fas fa-comments"></i> Bình luận</div>
+              <div class="col-4 point"><i class="fas fa-share"></i> Chia sẻ</div>             
             </div>
             <hr>
             
             <div class="row">
-              <div class="col-sm-4 point chevron-left"><i class="fas fa-chevron-left mr-1 point"  style=" font-size: 20px; text-align: center;" ></i>Quay lại</div>
-              <div class="col-sm-4 point"></div>
-              <div class="col-sm-4 point chevron-right">Tiếp theo <i class="fas fa-chevron-right mr-4 point"  style=" font-size: 20px; text-align: center;" ></i> </div>
+              <div class="col-4 point chevron-left"><i class="fas fa-chevron-left mr-1 point"  style=" font-size: 20px; text-align: center;" ></i>Quay lại</div>
+              <div class="col-4 point"></div>
+              <div class="col-4 point chevron-right">Tiếp theo <i class="fas fa-chevron-right mr-4 point"  style=" font-size: 20px; text-align: center;" ></i> </div>
             </div>
           </div>
           <hr>
