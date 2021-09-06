@@ -48,11 +48,18 @@
 
         if ($(window).width() > 1200){
           $(".info-box").show();   
+          $(".blue-bar").addClass("col-9");
         }
         else
         {
           $(".info-box").hide();
+          
         }
+
+        if ($(window).width() < 986){         
+          $(".scrollmenu").css({"width":"1000px"});
+        }       
+        
 
         if ($(window).width() > 1000){
           $(".last-tag").addClass("col-9");   
@@ -61,9 +68,17 @@
         else
         {
           $(".last-tag").removeClass("col-9");
-          
+          $(".blue-bar").removeClass("col-9");
         }
 
+        if ($(window).width() > 800){
+          $(".third").addClass("col-3");   
+        }
+        else
+        {
+          $(".third").removeClass("col-3");
+        }
+        
         if ($(window).width() > 800){
           $(".third").addClass("col-3");   
         }
@@ -187,13 +202,13 @@
         <a class="nav-link" href="#">Video</a>
       </li>
     </ul>
-      <li class="nav-item li-dangnhap pr-3 pb-2 ico-vietbai">
-        <i class="fas fa-feather btn-circle" style="padding-top: 10px; background-color: rgb(4, 229, 245);" data-toggle="tooltip" data-placement="top" title="Viết bài"></i>
+      <li class="nav-item li-dangnhap pr-3 pb-2 ico-vietbai" style="color: white;">
+        <i class="fas fa-feather btn-circle" style="padding-top: 10px; background-color: #00beef;" data-toggle="tooltip" data-placement="top" title="Viết bài"></i>
         <span class="viet">Viết bài</span>
       </li>
-      <li class="nav-item li-dangnhap pr-3 pb-2">
+      <li class="nav-item li-dangnhap pr-3 pb-2" style="color: white;">
         <div class="dropdown" data-toggle="dropdown" aria-haspopup="true" data-placement="top" title="Cài đặt" aria-expanded="false" >
-          <i class="fas fa-bell btn-circle" style="padding-top: 10px; background-color: rgb(4, 229, 245);" data-toggle="tooltip" data-placement="top" title="Thông báo"></i>
+          <i class="fas fa-bell btn-circle" style="padding-top: 10px; background-color: #00beef;" data-toggle="tooltip" data-placement="top" title="Thông báo"></i>
         <span class="viet">Thông báo</span>
           <div class="dropdown-menu dropdown-menu-right" style="text-align: left;" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="#" > 
@@ -251,10 +266,9 @@
     </div>
   <!-- facts -->
   <div class="mb-5 pb-5">
-    
     <div class="form-inline" style=" height: 100px; background-size: contain;">
        
-      <div class="scrollmenu rounded " style=" overflow: auto; white-space: nowrap; width: 840px; height: 170px;">       
+      <div class="scrollmenu rounded col-9 last-tag" style=" overflow: auto; white-space: nowrap; width: 840px; height: 170px;">       
         <span class="ml-2">
           <img class="mr-2 rounded" style=" opacity: 100%; height: 150px; width:85px; " src="../static/img/khoa.jpg"  alt="">
         </span>  
@@ -300,23 +314,21 @@
 
  <!-- nút viết bài -->
     <div class="">
-      <button class="col borderactive ico-vietbai btn btn-primary btn-block rounded"  type="button" >+VIẾT BÀI CHIA SẺ, ĐẶT CÂU HỎI, SHARE LINK</button>
+      <button class="col borderactive ico-vietbai btn btn-primary btn-block rounded blue-bar"  type="button" >+ VIẾT BÀI CHIA SẺ, ĐẶT CÂU HỎI, SHARE LINK</button>
       <div class="col"></div>
     </div>
     <br>
      <!-- khung 1 -->
-    <div class="row mb-2 container ml-1">
+    <div class="row container ml-1">
       <div class="row col-9 last-tag p-0 " >
-        <div class="card col-md-8 p-0 " style="width: 100%;background-color:rgb(240, 240, 240);">
+        <div class="card col-md-8 p-0 mb-2" style="width: 100%;background-color:rgb(240, 240, 240);">
           <a href=""><img class="card-img-top p-0   rounded" src="../static/img/maybay.jpg" alt="Card image" style="width:100%"></a>
           <div class="card-body overflow-hidden">
-            
             <a class="font-weight-bold" href="#">Máy Bay Sam Sung</a>
             <p class="card-text">Hassler - 35 phút</p>
-
           </div>
         </div>
-        <div class="card col-md-4 p-0 " style="width: 100%;background-color:rgb(240, 240, 240);">
+        <div class="card col-md-4 p-0 mb-2" style="width: 100%;background-color:rgb(240, 240, 240);">
           <a href=""><img class="card-img-top rounded p-0" src="../static/img/daidich.jpg" alt="Card image" style="width:100%"></a>
           <div class="card-body overflow-hidden ">
             <a class="font-weight-bold" href="#">Đại dịch diễn biến 2021</a>
@@ -349,10 +361,6 @@
             <p class="card-text">cuhiep - 2 giờ</p>
             <a href="#">Trên tay DJI Mini SE: nhỏ, nhẹ dễ bay, khả năng quay 2.7K 30p, phù hợp cho người mới</a>
           </div>
-        </div>
-        
-        <div class="col-3 info-box">
-       
         </div>
         <br> 
        </div>
@@ -934,11 +942,11 @@
 
     <!-- popup1-->
     <div class="full-screen pop1 hidden flex-container-center ">
-      <div class="row form-inline " style="width: auto;" >
+      <div class="row form-inline justify-content-center" style="width: auto;" >
         
-        <div class="mr-3" style="text-align: center;" ><iframe class="frame1" width="550" height="400" src="https://www.youtube.com/embed/pp5FyuLbjwM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div style="text-align: center;" ><iframe class="frame1" width="500" height="400" src="https://www.youtube.com/embed/pp5FyuLbjwM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
         
-        <div class="rounded ml-4" style="width: 500px; background-color: azure; padding: 20px;">
+        <div class="rounded mx-2" style="width: 500px; background-color: azure; padding: 20px;">
           <img class="rounded-circle " src="../static/img/khoa.jpg" width="40px" height="40px" alt="">
           <span style="font-weight: 500;"   > <span class="point">Khoaminion</span> <span style="font-weight: 100;">2h<span style="float:right" class="closepopup"><span class="point"><i class="fas fa-times"></i></span></span></span> <br><span class="rounded" >Mời anh em cùng chiêm ngưỡng khả năng "bắn sữa" của anh chàng Ấn Độ hết sức điêu luyện và chính xác, khá là giải trí cho anh em trong mùa dịch này :))</span>
           <hr>
@@ -982,11 +990,11 @@
 
       <!-- popup2-->
     <div class="pop2 full-screen hidden flex-container-center">
-      <div class="row form-inline " style="width: auto;" >
+      <div class="row form-inline justify-content-center" style="width: auto;" >
         
-        <div class="mr-3" style="text-align: center;" ><iframe width="550" height="400" class="frame2" src="https://www.youtube.com/embed/VMYqjAfFiMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="" style="text-align: center;" ><iframe width="500" height="400" class="frame2" src="https://www.youtube.com/embed/VMYqjAfFiMU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
         
-        <div class="rounded ml-4" style="width: 500px; background-color: azure; padding: 20px;">
+        <div class="rounded mx-2" style="width: 500px; background-color: azure; padding: 20px;">
           <img class="rounded-circle" src="../static/img/doge-samar.gif" width="40px" height="40px" alt="">
           <span style="font-weight: 500;"   > <span class="point">KhuongPT</span> <span style="font-weight: 100;">10h<span style="float:right" class="closepopup"><span class="point"><i class="fas fa-times"></i></span></span></span> <br><span class="rounded" >Now you see me 2, Cảnh phim được yêu thích nhất!</span>
           <hr>
