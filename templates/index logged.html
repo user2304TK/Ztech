@@ -179,7 +179,7 @@
   <nav class="container navbar navbar-expand-md navbar-inverse  navbar-light pb-0">
     <!-- Brand -->
     <div class="form-group pt-2">
-    <a class="navbar-brand" href="#"><img src="../static/img/Z-green-leaf.svg" width="45" height="45" alt="Logo"> ZTech</a>
+    <a class="navbar-brand" href="../templates/index logged.html"><img src="../static/img/Z-green-leaf.svg" width="45" height="45" alt="Logo"> ZTech</a>
     <!-- search -->
           <input type="text" class="search-query" placeholder="Type something...">
           <button type="submit" class="btn btn-circle"><i class="fa fa-search"></i></button>
@@ -232,22 +232,25 @@
         <img class="rounded-circle" width="33" height="33" src="../static/img/khoa.jpg" alt="khoamod" data-toggle="tooltip" data-placement="top" title="Trang cá nhân">
         <span class="viet">Trang cá nhân</span>
       </li>
-      
-      <li class="nav-item li-dangnhap pb-2">       
-        <div class="dropdown" data-toggle="dropdown" aria-haspopup="true" data-placement="top" title="Cài đặt" aria-expanded="false" >
-          <i id="dropdownMenuButton" class="fas fa-cog btn-circle" style="padding-top: 10px; "></i>
-          <span class="viet">Cài đặt</span>
-          <div class="dropdown-menu dropdown-menu-right" style="text-align: left;" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="../templates/profile.html"><i class="fas fa-user"></i> Trang cá nhân</a>
-            <a class="dropdown-item" href="../templates/edit_profile.html"><i class="fas fa-info"></i> Thông tin cá nhân</a>
-            <a class="dropdown-item" href="../templates/quanlyuser.html"><i class="fas fa-user-tag"></i> Quản lý user</a>
-            <a class="dropdown-item" href="../templates/post-manager.html"><i class="fas fa-paperclip"></i> Quản lý bài viết</a>
-            <a class="dropdown-item" href="#"><i class="fas fa-lock"></i> Đổi mật khẩu</a>
-            <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+      <li class="nav-item li-dangnhap pb-2">
+        <div class="btn-group">
+          <a class=" dropdown"
+             id="dropdownMenuButton" data-toggle="dropdown">
+             <i id="dropdownMenuButton" class="fas fa-cog btn-circle" style="padding-top: 10px; "></i>
+          </a>
+          <div class="dropdown-menu">
+           <a class="dropdown-item" href="../templates/profile.html"><i class="fas fa-user"></i> Trang cá nhân</a>
+              <a class="dropdown-item" href="../templates/edit_profile.html"><i class="fas fa-info"></i> Thông tin cá nhân</a>
+              <a class="dropdown-item" href="../templates/quanlyuser.html"><i class="fas fa-user-tag"></i> Quản lý user</a>
+              <a class="dropdown-item" href="../templates/post-manager.html"><i class="fas fa-paperclip"></i> Quản lý bài viết</a>
+              <a class="dropdown-item" href="../templates/userhelpsent.html"><i class="fas fa-paperclip"></i> Yêu cầu hỗ trợ</a>
+              <a class="dropdown-item" href="../templates/Login.html"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
           </div>
-        </div>
+       </div>
       </li>
+      
     </div>
+    
   </nav>
   <hr class="hr-shadow">
   <section class="container pl-0">
@@ -322,9 +325,9 @@
     <div class="row container ml-1 ">
       <div class="row col-9 last-tag p-0 " >
         <div class="card col-md-8 p-0 mb-2" style="width: 100%;background-color:rgb(240, 240, 240);">
-          <a href=""><img class="card-img-top p-0   rounded" src="../static/img/maybay.jpg" alt="Card image" style="width:100%"></a>
+          <a href="../templates/baiviet.html"><img class="card-img-top p-0   rounded" src="../static/img/sach.jpg" alt="Card image" style="width:100%"></a>
           <div class="card-body overflow-hidden">
-            <a class="font-weight-bold" href="#">Máy Bay Sam Sung</a>
+            <a class="font-weight-bold" href="../templates/baiviet.html">Giới thiệu sách và phim "Suối nguồn" của tác giả Ayn Rand</a>
             <p class="card-text">Hassler - 35 phút</p>
           </div>
         </div>
