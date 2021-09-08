@@ -29,6 +29,14 @@
         
           $(".info-box").hide();
         }
+
+
+        if ($(window).width() > 1000){
+          $(".tag").addClass("ml-0");  
+        }else{
+        
+          $(".tag").removeClass("ml-0");
+        }
          
 
       $(".btn-vietbai").click(function(){             
@@ -80,11 +88,14 @@
         
 
         if ($(window).width() > 1000){
-          $(".last-tag").addClass("col-9");   
+          $(".last-tag").addClass("col-9"); 
+          $(".tag").addClass("ml-0");
+
          
         }
         else
         {
+          $(".tag").removeClass("ml-0");
           $(".last-tag").removeClass("col-9");
           $(".blue-bar").removeClass("col-9");
         }
@@ -288,8 +299,8 @@
   <div class="mb-5 pb-5">
     <div class="form-inline" style=" height: 100px; background-size: contain;">
        
-      <div class="scrollmenu rounded col-9 last-tag" style=" overflow: auto; white-space: nowrap; width: 840px; height: 170px;">       
-        <span class="ml-2">
+      <div class="scrollmenu rounded col-9 last-tag ml-1" style=" overflow: auto; white-space: nowrap; width: 840px; height: 170px;">       
+        <span class="">
           <img class="mr-2 rounded" style=" opacity: 100%; height: 150px; width:85px; " src="../static/img/khoa.jpg"  alt="">
         </span>  
         <span class="showpopup">
@@ -322,7 +333,7 @@
           <span style="margin-left: -70px; margin-right: 33px; color: rgb(255, 255, 255); font-weight: 500;font-size: small;">Datoc</span>
       </div>
         <!-- box-->
-      <div class="ml-4 info-box" style=" border: 1px solid rgb(202, 202, 202); border-radius: 5px; padding: 20px; ">
+      <div class="ml-3 info-box" style=" border: 1px solid rgb(202, 202, 202); border-radius: 5px; padding: 20px; ">
         <img class="rounded-circle" src="../static/img/khoa.jpg" width="40px" height="40px" alt="">
         <span style="font-weight: 500;"  >Xin chào Khoaminion ! <br> <br><span style="background-color: gainsboro; padding: 5px;" class="rounded" >Số giờ hoạt động: 283</span> <br>  <br><span style="background-color: gainsboro; padding: 5px;" class="rounded" > Số bài viết: 25</span></span>
       </div>  
@@ -333,7 +344,7 @@
   <!--end facts -->
 
  <!-- nút viết bài -->
-    <div class="col-9 last-tag ">
+    <div class="col-9 last-tag ml-1" style="padding: 0px;">
       <button  class="btn-vietbai font-weight-bold  btn btn-primary btn-block rounded"  type="button" >+ VIẾT BÀI CHIA SẺ, ĐẶT CÂU HỎI, SHARE LINK</button>
       <div class="col"></div>
     </div>
@@ -914,13 +925,10 @@
         </div>
         </div>
     </div>
-    <br>
-    
-    <br>
 
     <!--Tag-->
     
-      <div class="row col-9 mb-3 last-tag rounded" style="background-color: #222b45;color: white;">
+      <div class="row col-9 mb-3 last-tag rounded ml-0 tag" style="background-color: #222b45;color: white; padding: 0px; font-size: 15px;">
         <div class="col-12 mt-2 mb-2">#Tag đang hot <br>Anh Em nhớ follow để nhận được thông báo mới nhé</div>
         <div  class="card col-3 " style="width: 100%; background-color: #242424" >
           <img style="border-radius: 3%;" src="../static/img/android.png" class="card-img-top mt-3" alt="...">
