@@ -28,6 +28,14 @@
         {
           $(".info-box").hide();
         }  
+
+        if ($(window).width() > 1000){
+          $(".tag").addClass("ml-0");  
+        }else{
+        
+          $(".tag").removeClass("ml-0");
+        }
+         
       
 
       $(".search-query").hide();
@@ -67,12 +75,14 @@
 
         if ($(window).width() > 1000){
           $(".last-tag").addClass("col-9");   
+          $(".tag").addClass("ml-0");
          
         }
         else
         {
           $(".last-tag").removeClass("col-9");
           $(".blue-bar").removeClass("col-9");
+          $(".tag").removeClass("ml-0");
         }
 
         if ($(window).width() > 800){
@@ -293,12 +303,12 @@
 </div>
 <br>
  <!-- khung 1 -->
-<div class="row container ml-1">
+ <div class="row container ml-1 ">
   <div class="row col-9 last-tag p-0 " >
     <div class="card col-md-8 p-0 mb-2" style="width: 100%;background-color:rgb(240, 240, 240);">
-      <a href=""><img class="card-img-top p-0   rounded" src="../static/img/maybay.jpg" alt="Card image" style="width:100%"></a>
+      <a href="../templates/baiviet.html"><img class="card-img-top p-0   rounded" src="../static/img/sach.jpg" alt="Card image" style="width:100%"></a>
       <div class="card-body overflow-hidden">
-        <a class="font-weight-bold" href="#">Máy Bay Sam Sung</a>
+        <a class="font-weight-bold" href="../templates/baiviet.html">Giới thiệu sách và phim "Suối nguồn" của tác giả Ayn Rand</a>
         <p class="card-text">Hassler - 35 phút</p>
       </div>
     </div>
@@ -335,60 +345,59 @@
         <p class="card-text">cuhiep - 2 giờ</p>
         <a href="#">Trên tay DJI Mini SE: nhỏ, nhẹ dễ bay, khả năng quay 2.7K 30p, phù hợp cho người mới</a>
       </div>
-    </div>
+    </div>     
     <br> 
+        <!-- xem nhanh -->
+    <h1 class="col-12" style="font-size:large;" >Xem nhanh</h1>
+
+    <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 flex-grow-0 pr-0"><img class="bdr"  src="../static/img/xebay.gif"><a class="text3 pl-2" href="">Bị phạt 1,2 tỷ vì lái xe bán tải "bay qua lạch nước ở Mỹ"</a> </div>
+    <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 flex-grow-0 pr-0"><img class="bdr" src="../static/img/apw.jpg"><a class="text3 pl-2" href="">Thêm bằng chứng cho thấy Apple Watch Series 7 sẽ có kích thước 41mm và 45mm </a></div>
+    <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 flex-grow-0 pr-0" ><img class="bdr "  src="../static/img/ip13.jpg"><a class="text3 pl-2 "href="">Rò rỉ tem trên hộp iPhone 13</a></div> 
+    <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 flex-grow-0 pr-0" ><img class="bdr " src="../static/img/foxconn.jpg"><a class="text3 pl-2"href="">Foxcom đang tuyển gấp 200.000 nhân công để lắp ráp iPhone 13</a></div>  
+    <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 flex-grow-0 pr-0"><img class=" bdr"  src="../static/img/car.jpg"><a class="text3 pl-2"href="">Range Rover Sport SVR Ultimate: chiếc SUV mạnh nhất</a> </div>
+    <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 flex-grow-0 pr-0" ><img class=" bdr " src="../static/img/gai.jpg"><a class="text3 pl-2"href="">Chức năng chỉnh sửa hình ảnh trên Google Photos</a> </div>   
+    <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 flex-grow-0 pr-0" ><img class="bdr"  src="../static/img/macc.jpg"><a class="text3 pl-2 "href="">Doanh số máy Mac M1 tăng mạnh, nhưng iPad lại ảm đảm</a></div>
+    <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 flex-grow-0 pr-0" ><img class="bdr " src="../static/img/surface.jpg"><a class="text3 pl-2"href="">Mời anh em xem hình ảnh render của Surface Book Studio: khi laptop kết hợp máy tính AIO</a></div>
+
    </div>
 
-  <div class="col-3 info-box ml-4">
+  <div class="col-3 info-box ml-4 " style="float: left;">
     <h1 style="font-size: 25px;font-weight: bolder;">Cộng đồng nổi bật</h1>
     <div class="row">
-      <img class= "row col-6 rounded" style="padding-left: 10%;"height=150% width="100%" src="../static/img/banphim.jpg"> <a href="" class=" col-6">Phím cơ </a>
-      <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/skmd.jpg"> <a href="" class=" col-6">Sống Khỏe mùa dịch</a>
-      <img class= "row col-6 rounded" style="padding-left: 10%;padding-top: 3%;"height=150% width="100%" src="../static/img/glx.jpg"> <a href="" class=" col-6">SamsungGalaxy </a>
-      <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/macbok.jpg"> <a href="" class=" col-6">MacBook</a>
-      <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;padding-bottom: 3%;"height=150% width="100%" src="../static/img/ip.jpg"> <a href="" class=" col-6">iPhone</a>
-      <div class= "row col-lg-3"></div>
-      <button style="padding-left: 25px;padding-top: 3%;" type="button" class="col-9 btn btn-outline-primary">Xem thêm</button>
+      <img class= "row col-6 ml-1" style="padding-left: 10%;"height=150% width="100%" src="../static/img/banphim.jpg"> <a href="" class="mt-3 col-4"> Phím cơ </a>
+      <img class= "row col-6 ml-1" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/skmd.jpg"> <a href="" class="mt-2 col-6">Sống Khỏe mùa dịch</a>
+      <img class= "row col-6 ml-1" style="padding-left: 10%;padding-top: 3%;"height=150% width="100%" src="../static/img/glx.jpg"> <a href="" class="mt-3 col-6">SamsungGalaxy </a>
+      <img class= "row col-6 ml-1" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/macbok.jpg"> <a href="" class="mt-3 col-6">MacBook</a>
+      <img class= "row col-6 ml-1" style="padding-left: 10%; padding-top: 3%;padding-bottom: 3%;"height=150% width="100%" src="../static/img/ip.jpg"> <a href="" class="mt-3 col-6">iPhone</a>
+      
+      <a class="ml-4" href="" style="color: blue;padding-left: 12px;">Xem thêm</a>
       
       <h1 style="font-size: 25px;font-weight: bolder;padding-top: 50px;">Thảo luận trong ngày</h1>
       <div class="row">
        <a href=""><img class="col-12" style="padding-right: 5px; border-radius: 10%;" src="../static/img/bagia.jpg"></a> 
-        <a class="col-12" href=""> Đây là người tạo ra vaccine AstraZeneca: chúng tôi đua với virus, không phải với các hãng khác</a>
+        <a class="col-12 " style="padding-bottom:100px ;" href=""> Đây là người tạo ra vaccine AstraZeneca: chúng tôi đua với virus, không phải với các hãng khác</a>
       </div>
+     
+        <div class="d-flex"><img class= "row col-6  " style=" border-radius: 20px; padding-bottom: 5px;"src="../static/img/nghiengame.jpg">  <a class="ml-2" href="" >Những thông tin cơ bản về Nintendo Switch </a></div>
+        <div class="d-flex"><img class= "row col-6 " style=" border-radius: 20px; padding-bottom: 5px;" src="../static/img/crenn.jpg">  <a class="ml-2" href="" ></a>Các lưu ý khi mua màn hình USB-C </a></div>
+        <div class="d-flex"><img class= "row col-6 " style=" border-radius: 20px; padding-bottom: 5px;"src="../static/img/galaxyZ.jpg"> <a class="ml-2" href="" >Cách xem Instagram full màn hình  </a></div>
+        <div class="d-flex"><img class= "row col-6 " style=" border-radius: 20px; padding-bottom: 5px;" src="../static/img/mh.jpg"> <a class="ml-2" href="" >Những điều chú ý khi dùng máy cá nhân </a></div>
+        <div class="d-flex"><img class= "row col-6 " style=" border-radius: 20px; padding-bottom: 5px;" src="../static/img/laptopcty.jpg"><a class="ml-2" href="" >Những lưu ý khi dùng laptop, desktop </a></div>
+        <div class="d-flex"><img class= "row col-6 " style=" border-radius: 20px; padding-bottom: 5px;" src="../static/img/laptopcty.jpg"> <a class="ml-2" href="" >Những lưu ý khi dùng laptop, desktop </a></div>
+       
+  
+        
     </div>
   </div>
+
 </div>
 
 
- <!-- xem nhanh -->
-<h1 style="font-size:large;" >Xem nhanh</h1>
- <div class="row mx-1">
-   <div class="row col-9 last-tag" style="height: fit-content;" >
-    <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 flex-grow-0 pr-0"><img class="bdr"  src="../static/img/xebay.gif"><a class="text3 pl-1" href="">Bị phạt 1,2 tỷ vì lái xe bán tải "bay qua lạch nước ở Mỹ"</a> </div>
-    <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 flex-grow-0 pr-0"><img class="bdr" src="../static/img/apw.jpg"><a class="text3 pl-1" href="">Thêm bằng chứng cho thấy Apple Watch Series 7 sẽ có kích thước 41mm và 45mm </a></div>
-    <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 flex-grow-0 pr-0" ><img class="bdr "  src="../static/img/ip13.jpg"><a class="text3 pl-1 "href="">Rò rỉ tem trên hộp iPhone 13</a></div> 
-    <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 flex-grow-0 pr-0" ><img class="bdr " src="../static/img/foxconn.jpg"><a class="text3 pl-1"href="">Foxcom đang tuyển gấp 200.000 nhân công để lắp ráp iPhone 13</a></div>  
-    <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 flex-grow-0 pr-0"><img class=" bdr"  src="../static/img/car.jpg"><a class="text3 pl-1"href="">Range Rover Sport SVR Ultimate: chiếc SUV mạnh nhất</a> </div>
-    <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 flex-grow-0 pr-0" ><img class=" bdr " src="../static/img/gai.jpg"><a class="text3 pl-1"href="">Chức năng chỉnh sửa hình ảnh trên Google Photos</a> </div>   
-    <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 flex-grow-0 pr-0" ><img class="bdr"  src="../static/img/macc.jpg"><a class="text3 pl-1 "href="">Doanh số máy Mac M1 tăng mạnh, nhưng iPad lại ảm đảm</a></div>
-    <div style="height:fit-content; padding-bottom: 10px;" class="d-flex col-md-6 flex-grow-0 pr-0" ><img class="bdr " src="../static/img/surface.jpg"><a class="text3 pl-1"href="">Mời anh em xem hình ảnh render của Surface Book Studio: khi laptop kết hợp máy tính AIO</a></div>
 
-  </div>
-  <div class="col-3 info-box">
-    <div class="row">
-      <img class= "row col-6 " style="padding-bottom: 5px;"  src="../static/img/nghiengame.jpg"> <a href="" class=" col-6 text">Những thông tin cơ bản về Nintendo Switch </a>
-      <img class= "row col-6 " style="padding-bottom: 5px;"src="../static/img/crenn.jpg"> <a href="" class=" col-6 text">Các lưu ý khi mua màn hình USB-C </a>
-      <img class= "row col-6 " style="padding-bottom: 5px;" src="../static/img/galaxyZ.jpg"> <a href="" class=" col-6 text">Cách xem Instagram full màn hình  </a>
-      <img class= "row col-6 " style="padding-bottom: 5px;"src="../static/img/mh.jpg"> <a href="" class=" col-6 text">Những điều chú ý khi dùng máy cá nhân </a>
-      <img class= "row col-6 " style="padding-bottom: 5px;" src="../static/img/laptopcty.jpg"> <a href="" class=" col-6 text">Những lưu ý khi dùng laptop, desktop </a>
-      <img class= "row col-6 " style="padding-bottom: 5px;" src="../static/img/laptopcty.jpg"> <a href="" class=" col-6 text">Những lưu ý khi dùng laptop, desktop </a>
-    
-    </div>
-  </div>
-  <br>
-</div>
+
+
 <br>
-<hr>
+
  <!-- xu hướng -->
 <h1 style="font-size: large;padding-right: 100px; "><i class="fas fa-chart-line"></i> Xu Hướng</h1>
 
@@ -406,14 +415,13 @@
 
   <div class="col-3 info-box">
     <div class="row">
-      <img class= "row col-6 rounded" style="padding-left: 10%; border-radius: 10%;"height=150% width="100%" src="../static/img/nghiengame.jpg"> <a href="" class=" col-6">Thông tin về Nintendo Switch </a>
-      <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;border-radius: 10%;"height=150% width="100%" src="../static/img/crenn.jpg"> <a href="" class=" col-6">Lưu ý mua màn hình</a>
-      <img class= "row col-6 rounded" style="padding-left: 10%;padding-top: 3%;border-radius: 10%;"height=150% width="100%" src="../static/img/galaxyZ.jpg"> <a href="" class=" col-6">Cách xem Instagram  </a>
-      <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;border-radius: 10%;"height=150% width="100%" src="../static/img/mh.jpg"> <a href="" class=" col-6">Dùng máy cá nhân </a>
-      <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;padding-bottom: 3%;border-radius: 10%;"height=150% width="100%" src="../static/img/laptopcty.jpg"> <a href="" class=" col-6">Dùng laptop, desktop </a>
-      <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;border-radius: 10%;padding-bottom: 3%;"height=150% width="100%" src="../static/img/dtip.jpg"> <a href="" class=" col-6">iOS 15  </a>
-      <div class= "row col-3"></div>
-      <button style="padding-left: 25px;" type="button" class="col-9 btn btn-outline-primary">Xem thêm</button>
+     <div class="d-flex"><img class="row col-6 "  style=" border-radius: 20px; padding-bottom: 5px;"src="../static/img/nghiengame.jpg"> <a class="ml-2" href=""  >Thông tin về Nintendo Switch </a></div> 
+     <div class="d-flex"> <img class= "row col-6 " style=" border-radius: 20px; padding-bottom: 5px;" src="../static/img/crenn.jpg"> <a class="ml-2" href="">Lưu ý mua màn hình</a></div>
+     <div class="d-flex"><img class= "row col-6 " style=" border-radius: 20px; padding-bottom: 5px;"src="../static/img/galaxyZ.jpg"> <a class="ml-2" href="">Cách xem Instagram  </a></div> 
+     <div class="d-flex"><img class= "row col-6 " style=" border-radius: 20px; padding-bottom: 5px;" src="../static/img/mh.jpg"> <a class="ml-2" href="" >Dùng máy cá nhân </a></div> 
+     <div class="d-flex"><img class= "row col-6 " style=" border-radius: 20px; padding-bottom: 5px;" src="../static/img/laptopcty.jpg"> <a class="ml-2" href="" >Dùng laptop, desktop </a></div> 
+     <div class="d-flex"><img class= "row col-6 " style=" border-radius: 20px; padding-bottom: 5px;" src="../static/img/dtip.jpg"> <a class="ml-2" href="" >iOS 15  </a></div> 
+      <a href="" style="color: blue;padding-left: 12px;padding-top: 3%;">Xem thêm</a>
     </div>
   </div>
 </div>
@@ -533,9 +541,9 @@
 <div class="row flex-grow-0 ml-1">
   <div class="row container last-tag px-0">
     <div class="col-md-6 px-0">
-      <div class="col-lg-12">
+      <div class="col-lg-12 pr-0">
         <img class="col-12 px-0" style="border-radius: 5%;" src="../static/img/xe.png">
-        <a class="px-0 text4" style="font-size: large;font-weight: bolder;padding-bottom: 3%;" href="">[Infographic] Top 20 hãng sản xuất xe điện hàng đầu thế giới</a>
+        <a class="px-0 text" style="font-size: large;font-weight: bolder;padding-bottom: 3%;" href="">[Infographic] Top 20 hãng sản xuất xe điện hàng đầu thế giới</a>
         <ul  >
         <li><a style="font-size:small;font-weight: bolder;" href="" class="text4 px-0">CDC Mỹ khuyến cáo du khách lớn tuổi, nhóm nguy cơ cao không nên đi du thuyền, kể cả đã tiêm vaccine</a></li>
         <hr>
@@ -546,9 +554,9 @@
       </div>
     </div>
   <div class="col-md-6 px-0">
-    <div class="col-lg-12">
+    <div class="col-lg-12 pr-0">
     <img class="col-12 px-0" style="border-radius: 5%;" src="../static/img/xe.png">
-    <a class="text4 px-0" style="font-size: large;font-weight: bolder;padding-bottom: 3%;" href="">Playlist các ca khúc kỷ niệm 105 năm Công Viên Quốc Gia Mỹ. Nhân dịp này Apple cũng sẽ dành ra...</a>
+    <a class="text px-0" style="font-size: large;font-weight: bolder;padding-bottom: 3%;" href="">Playlist các ca khúc kỷ niệm 105 năm Công Viên Quốc Gia Mỹ.</a>
    
       <ul class="" >
         <li><a style="font-size:small;font-weight: bolder;" href=""class="text4 px-0">Chàng trai trong hình bìa album Nevermind của Nirvana khởi kiện nhóm tội khiêu dâm trẻ em</a></li>
@@ -560,9 +568,10 @@
       </div>  
     </div>  
 </div>
+</div>
 <hr>
 <!--khung 5-->
-<div class="row container ml-1" >
+<div class="row container ml-1 pt-1" >
   <div class="row col-9 last-tag">       
       <!-- Content Title over --> 
        
@@ -869,13 +878,10 @@
     </div>
     </div>
 </div>
-<br>
-
-<br>
 
 <!--Tag-->
 
-  <div class="row col-9 mb-3 last-tag rounded" style="background-color: #222b45;color: white;">
+  <div class="row col-9 mb-3 last-tag rounded ml-0 tag" style="background-color: #222b45;color: white; padding: 0px; font-size: 15px;">
     <div class="col-12 mt-2 mb-2">#Tag đang hot <br>Anh Em nhớ follow để nhận được thông báo mới nhé</div>
     <div  class="card col-3 " style="width: 100%; background-color: #242424" >
       <img style="border-radius: 3%;" src="../static/img/android.png" class="card-img-top mt-3" alt="...">
@@ -1006,30 +1012,7 @@
     
   </div>
   </div>
-  <!-- endpopup2 -->
-
-  <!--viet bai-->
-<div class="viet-bai full-screen hidden flex-container-center">
-  <div class="row form-inline " style="width: auto;" >
-    <div class="rounded" style="width: 500px; background-color: azure; padding: 20px;">
-      <img class="rounded-circle" src="../static/img/khoa.jpg" width="40px" height="40px" alt="">
-      <span style="font-weight: 500;"   > <span class="point">Khoaminion</span><span style="float:right" class="closepopup"><span class="point"><i class="fas fa-times"></i></span></span></span> <br>
-      <input type="text" class="mt-3 mb-3 tieudeviet" size="24" placeholder="Nhập tiêu đề !" style="font-size: xx-large; font-weight: 500;">
-      <textarea id="w3review" name="w3review" rows="20" class="noidungviet" cols="62" placeholder="nhập nội dung nè !" style="resize: none;"></textarea>
-      <hr>
-      <div style="text-align: center;" class="form-inline">
-        <div class="col-sm-4 point "><i class="fas fa-images"></i><span> Thêm ảnh: </span></div>
-        <input type="file" id="myfile" name="myfile" multiple>
-      </div>
-      
-      <hr>
-      
-      <button class="rounded dang-bai" style="margin-left: 190px; background-color: rgb(4, 229, 245); color: rgb(0, 0, 0);">Đăng</button>
-    </div>
-    
-  </div>
-  </div>
-  <!-- end viet bai -->
+  <!-- endpopup2 -->     
 </section>
 </body>
 
@@ -1143,4 +1126,5 @@
 </div>
 </footer>
 <!-- Footer -->
+
 </html>
