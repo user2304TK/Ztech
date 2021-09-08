@@ -28,12 +28,8 @@ a:hover{
 
 .avatar-img-lg{
   width: 80px;
-  transition: 0.2s;
+  transition: 0.1s;
   border: #00beef solid 1px;
-}
-
-.avatar-img-lg:hover{
-  border: #00beef solid 3px;
 }
 
 .nav-bgcl{
@@ -80,6 +76,9 @@ a:hover{
 
 select, select:focus{
   border-radius: 5px;
+  border: solid 1px #00beef;
+  color: #00beef;
+  transition: 0.3s;
   padding: 5px 10px;
   outline: none;
 }
@@ -103,6 +102,66 @@ select:focus{
   color: #fff;
 }
 
+.admin-btn-round-click{
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+  padding: 10px 15px;
+  margin-right: 5px;
+  background-color: #00beef;
+  color: #fff;
+}
+
+.admin-btn-round-click:hover{
+  cursor: pointer;
+  background-color: #00beef;
+  color: #fff;
+  opacity: 0.7;
+}
+
+.admin-btn-round-clickdg{
+  border-radius: 5px;
+  transition: 0.3s;
+  padding: 5px 10px;
+  margin-right: 5px;
+  background-color: crimson;
+  color: #fff;
+}
+
+.admin-btn-round-clickdg:hover{
+  cursor: pointer;
+  opacity: 0.7;
+  background-color: crimson;
+  color: #fff;
+}
+
 .admin-color{
   color: #00beef;
+}
+
+.admin-bgcl{
+  background-color: #00beef;
+}
+
+.page-link{
+  color: #00beef;
+}
+
+.active-tab{
+  color: #fff;
+  transition: 0.3s;
+  background-color: #00beef
+}
+
+.page-link .active-tab:hover{
+  opacity: 0.9s;
+}
+
+.p-line-5{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  height: fit-content;
 }
