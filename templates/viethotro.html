@@ -15,11 +15,43 @@
     $(document).ready(function(){
       if ($(window).width() > 750){
           $(".viet").hide();   
+          $(".dropdown-menu").addClass("dropdown-menu-right");
         }
-        else
-        {
+        else{
           $(".viet").show();
+          $(".dropdown-menu").removeClass("dropdown-menu-right"); 
         }
+
+        if ($(window).width() > 1200){
+          $(".info-box").show();   
+        }else{
+        
+          $(".info-box").hide();
+        }
+
+
+        if ($(window).width() > 1000){
+          $(".tag").addClass("ml-0");  
+        }else{
+        
+          $(".tag").removeClass("ml-0");
+        }
+         
+
+      $(".btn-vietbai").click(function(){             
+        $(".modal").addClass("d-flex"); 
+        $("body").addClass("unscroll");
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+      });
+      $(".close").click(function(){
+        $(".modal").removeClass("d-flex");
+        $("body").removeClass("unscroll");
+        
+      });
+      $(".link-btn").click(function(){           
+        $(".link-input").toggleClass("d-none");        
+      });
+      
 
       $(".search-query").hide();
 
@@ -31,17 +63,56 @@
       $(window).resize(function(){
         if ($(window).width() > 750){
           $(".viet").hide();   
+          $(".dropdown-menu").addClass("dropdown-menu-right");
         }
         else
         {
           $(".viet").show();
+          $(".dropdown-menu").removeClass("dropdown-menu-right"); 
         }  
+
         if ($(window).width() > 1200){
           $(".info-box").show();   
+          $(".blue-bar").removeClass("col-9");
         }
         else
         {
           $(".info-box").hide();
+          $(".blue-bar").addClass("col-9");
+        }
+
+        if ($(window).width() < 986){         
+          $(".scrollmenu").css({"width":"1000px"});
+        }       
+        
+
+        if ($(window).width() > 1000){
+          $(".last-tag").addClass("col-9"); 
+          $(".tag").addClass("ml-0");
+
+         
+        }
+        else
+        {
+          $(".tag").removeClass("ml-0");
+          $(".last-tag").removeClass("col-9");
+          $(".blue-bar").removeClass("col-9");
+        }
+
+        if ($(window).width() > 800){
+          $(".third").addClass("col-3");   
+        }
+        else
+        {
+          $(".third").removeClass("col-3");
+        }
+        
+        if ($(window).width() > 800){
+          $(".third").addClass("col-3");   
+        }
+        else
+        {
+          $(".third").removeClass("col-3");
         }
       });
 
@@ -80,18 +151,18 @@
         };
       });
 
-      $(".fa-chevron-right").click(function(){
+      $(".chevron-right").click(function(){
         $(".pop1").addClass("hidden");       
         $(".pop2").removeClass("hidden");
         $('.frame1').attr('src', $('.frame1').attr('src'));
       });
 
-      $(".fa-chevron-left").click(function(){             
+      $(".chevron-left").click(function(){             
         $(".pop2").addClass("hidden");
         $(".pop1").removeClass("hidden");
         $('.frame2').attr('src', $('.frame2').attr('src'));
       });
-
+     
       $(".dang-bai").click(function(){      
         if ( $(".tieudeviet").val() =="" ||  $(".noidungviet").val() =="" ){
           alert("Vui lòng điền đầy đủ nội dung !!!");
@@ -107,8 +178,76 @@
       $(".search-query").focus(function(){             
         $(".search-query").val(""); 
       });
-    });
 
+      if ($(window).width() > 1000){
+          $(".last-tag").addClass("col-9");   
+        }
+        else
+        {
+          $(".last-tag").removeClass("col-9");
+        }
+
+        if ($(window).width() > 800){
+          $(".third").addClass("col-3");   
+        }
+        else
+        {
+          $(".third").removeClass("col-3");
+        }  
+
+        $(".chk-all").click(function(){             
+        $(".chk-xoa").attr("checked",true); 
+      });
+
+      $(".xoa-ho-tro").click(function(){             
+        if($(".check-xoa1").is(":checked"))
+        {
+            $('.list1').remove();
+        }
+
+        if($(".check-xoa2").is(":checked"))
+        {
+            $('.list2').remove();
+        }
+
+        if($(".check-xoa3").is(":checked"))
+        {
+            $('.list3').remove();
+        }
+
+        if($(".check-xoa4").is(":checked"))
+        {
+            $('.list4').remove();
+        }
+
+        if($(".check-xoa5").is(":checked"))
+        {
+            $('.list5').remove();
+        }
+
+        if($(".check-xoa6").is(":checked"))
+        {
+            $('.list6').remove();
+        }
+
+        if($(".check-xoa7").is(":checked"))
+        {
+            $('.list7').remove();
+        }
+
+        if($(".check-xoa8").is(":checked"))
+        {
+            $('.list8').remove();
+        }
+    
+        $('.chk-xoa').attr('checked', false)
+
+        if (($(".list1").length == false)&&($(".list2").length == false)&&($(".list3").length == false)&&($(".list4").length == false)&&($(".list5").length == false)&&($(".list6").length == false)&&($(".list7").length == false)&&($(".list8").length == false))
+        {
+            $('.dstrong').removeClass('hidden');
+        }
+    });
+    });
   </script>
 </head>
 <body>  
@@ -138,15 +277,16 @@
         <a class="nav-link" href="#">Video</a>
       </li>
     </ul>
-    <li class="nav-item li-dangnhap pr-3 pb-2 ico-vietbai" style="color: white;">
+    <li class="nav-item li-dangnhap pr-3 pb-2" style="color: white;">
       <i class="fas fa-feather btn-circle" style="padding-top: 10px; background-color:#00beef;" data-toggle="tooltip" data-placement="top" title="Viết bài"></i>
-      <span class="viet">Viết bài</span>
+      <span class="viet"  style="color: black;">Viết bài</span>
     </li>
     <li class="nav-item li-dangnhap pr-3 pb-2" >
       <div class="btn-group">
         <a class=" dropdown"
            id="dropdownMenuButton" data-toggle="dropdown">
            <i id="dropdownMenuButton" class="fas fa-bell btn-circle" style="padding-top: 10px; color: white; background-color: #00beef;"></i>
+           <span class="viet"  style="color: black;">Thông báo</span>
         </a>
         <div class="dropdown-menu">
          <a class="dropdown-item" href="../templates/nhanphanhoi.html" > 
@@ -177,6 +317,7 @@
         <a class=" dropdown"
            id="dropdownMenuButton" data-toggle="dropdown">
            <i id="dropdownMenuButton" class="fas fa-cog btn-circle" style="padding-top: 10px; "></i>
+           <span class="viet">Cài đặt</span>
         </a>
         <div class="dropdown-menu">
          <a class="dropdown-item" href="../templates/profile.html"><i class="fas fa-user"></i> Trang cá nhân</a>

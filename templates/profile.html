@@ -17,10 +17,12 @@
     $(document).ready(function(){
       if ($(window).width() > 750){
           $(".viet").hide();   
+          $(".dropdown-menu").addClass("dropdown-menu-right");
         }
         else
         {
           $(".viet").show();
+          $(".dropdown-menu").removeClass("dropdown-menu-right");
         }
 
       $(".search-query").hide();
@@ -33,11 +35,14 @@
       $(window).resize(function(){
         if ($(window).width() > 750){
           $(".viet").hide();   
+          $(".dropdown-menu").addClass("dropdown-menu-right");
         }
         else
         {
           $(".viet").show();
+          $(".dropdown-menu").removeClass("dropdown-menu-right"); 
         }  
+
         if ($(window).width() > 1200){
           $(".info-box").show();   
         }
@@ -154,14 +159,14 @@
         <a class="nav-link" href="#">Video</a>
       </li>
     </ul>
-    <li class="nav-item li-dangnhap pr-3 pb-2 ico-vietbai" style="color: white;">
+    <li class="nav-item li-dangnhap pr-3 pb-2" style="color: white;">
       <i class="fas fa-feather btn-circle" style="padding-top: 10px; background-color: #00beef;" data-toggle="tooltip" data-placement="top" title="Viết bài"></i>
-      <span class="viet">Viết bài</span>
+      <span class="viet" style="color: black;">Viết bài</span>
     </li>
     <li class="nav-item li-dangnhap pr-3 pb-2" style="color: white;">
       <div class="dropdown" data-toggle="dropdown" aria-haspopup="true" data-placement="top" title="Cài đặt" aria-expanded="false" >
         <i class="fas fa-bell btn-circle" style="padding-top: 10px; background-color: #00beef;" data-toggle="tooltip" data-placement="top" title="Thông báo"></i>
-      <span class="viet">Thông báo</span>
+      <span class="viet" style="color: black;">Thông báo</span>
         <div class="dropdown-menu dropdown-menu-right" style="text-align: left;" aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item" href="#" > 
             <span style="color: blue; font-weight: 400;">KhuongPT</span> <br>
@@ -189,6 +194,7 @@
         <a class=" dropdown"
            id="dropdownMenuButton" data-toggle="dropdown">
            <i id="dropdownMenuButton" class="fas fa-cog btn-circle" style="padding-top: 10px; "></i>
+           <span class="viet">Cài đặt</span>
         </a>
         <div class="dropdown-menu">
          <a class="dropdown-item" href="../templates/profile.html"><i class="fas fa-user"></i> Trang cá nhân</a>

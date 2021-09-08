@@ -12,15 +12,47 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-   <script>
+  <script>
     $(document).ready(function(){
       if ($(window).width() > 750){
           $(".viet").hide();   
+          $(".dropdown-menu").addClass("dropdown-menu-right");
         }
-        else
-        {
+        else{
           $(".viet").show();
+          $(".dropdown-menu").removeClass("dropdown-menu-right"); 
         }
+
+        if ($(window).width() > 1200){
+          $(".info-box").show();   
+        }else{
+        
+          $(".info-box").hide();
+        }
+
+
+        if ($(window).width() > 1000){
+          $(".tag").addClass("ml-0");  
+        }else{
+        
+          $(".tag").removeClass("ml-0");
+        }
+         
+
+      $(".btn-vietbai").click(function(){             
+        $(".modal").addClass("d-flex"); 
+        $("body").addClass("unscroll");
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+      });
+      $(".close").click(function(){
+        $(".modal").removeClass("d-flex");
+        $("body").removeClass("unscroll");
+        
+      });
+      $(".link-btn").click(function(){           
+        $(".link-input").toggleClass("d-none");        
+      });
+      
 
       $(".search-query").hide();
 
@@ -32,17 +64,56 @@
       $(window).resize(function(){
         if ($(window).width() > 750){
           $(".viet").hide();   
+          $(".dropdown-menu").addClass("dropdown-menu-right");
         }
         else
         {
           $(".viet").show();
+          $(".dropdown-menu").removeClass("dropdown-menu-right"); 
         }  
+
         if ($(window).width() > 1200){
           $(".info-box").show();   
+          $(".blue-bar").removeClass("col-9");
         }
         else
         {
           $(".info-box").hide();
+          $(".blue-bar").addClass("col-9");
+        }
+
+        if ($(window).width() < 986){         
+          $(".scrollmenu").css({"width":"1000px"});
+        }       
+        
+
+        if ($(window).width() > 1000){
+          $(".last-tag").addClass("col-9"); 
+          $(".tag").addClass("ml-0");
+
+         
+        }
+        else
+        {
+          $(".tag").removeClass("ml-0");
+          $(".last-tag").removeClass("col-9");
+          $(".blue-bar").removeClass("col-9");
+        }
+
+        if ($(window).width() > 800){
+          $(".third").addClass("col-3");   
+        }
+        else
+        {
+          $(".third").removeClass("col-3");
+        }
+        
+        if ($(window).width() > 800){
+          $(".third").addClass("col-3");   
+        }
+        else
+        {
+          $(".third").removeClass("col-3");
         }
       });
 
@@ -81,24 +152,18 @@
         };
       });
 
-      $(".fa-chevron-right").click(function(){
+      $(".chevron-right").click(function(){
         $(".pop1").addClass("hidden");       
         $(".pop2").removeClass("hidden");
         $('.frame1').attr('src', $('.frame1').attr('src'));
       });
 
-      $(".fa-chevron-left").click(function(){             
+      $(".chevron-left").click(function(){             
         $(".pop2").addClass("hidden");
         $(".pop1").removeClass("hidden");
         $('.frame2').attr('src', $('.frame2').attr('src'));
       });
-
-      $(".ico-vietbai").click(function(){             
-        $(".viet-bai").removeClass("hidden"); 
-        $("body").addClass("unscroll");
-        $("html, body").animate({ scrollTop: 0 }, "slow");
-      });
-
+     
       $(".dang-bai").click(function(){      
         if ( $(".tieudeviet").val() =="" ||  $(".noidungviet").val() =="" ){
           alert("Vui lòng điền đầy đủ nội dung !!!");
@@ -115,7 +180,23 @@
         $(".search-query").val(""); 
       });
 
-      $(".chk-all").click(function(){             
+      if ($(window).width() > 1000){
+          $(".last-tag").addClass("col-9");   
+        }
+        else
+        {
+          $(".last-tag").removeClass("col-9");
+        }
+
+        if ($(window).width() > 800){
+          $(".third").addClass("col-3");   
+        }
+        else
+        {
+          $(".third").removeClass("col-3");
+        }  
+
+        $(".chk-all").click(function(){             
         $(".chk-xoa").attr("checked",true); 
       });
 
@@ -167,9 +248,7 @@
             $('.dstrong').removeClass('hidden');
         }
     });
-      
-   });
-
+    });
   </script>
 </head>
 <div id="fb-root"></div>
@@ -200,14 +279,14 @@
         <a class="nav-link" href="#">Video</a>
       </li>
     </ul>
-    <li class="nav-item li-dangnhap pr-3 pb-2 ico-vietbai" style="color: white;">
+    <li class="nav-item li-dangnhap pr-3 pb-2" style="color: white;">
       <i class="fas fa-feather btn-circle" style="padding-top: 10px; background-color: #00beef;" data-toggle="tooltip" data-placement="top" title="Viết bài"></i>
-      <span class="viet">Viết bài</span>
+      <span class="viet" style="color: black;">Viết bài</span>
     </li>
     <li class="nav-item li-dangnhap pr-3 pb-2" style="color: white;">
       <div class="dropdown" data-toggle="dropdown" aria-haspopup="true" data-placement="top" title="Cài đặt" aria-expanded="false" >
         <i class="fas fa-bell btn-circle" style="padding-top: 10px; background-color: #00beef;" data-toggle="tooltip" data-placement="top" title="Thông báo"></i>
-      <span class="viet">Thông báo</span>
+      <span class="viet" style="color: black;">Thông báo</span>
         <div class="dropdown-menu dropdown-menu-right" style="text-align: left;" aria-labelledby="dropdownMenuButton">
           <a class="dropdown-item" href="#" > 
             <span style="color: blue; font-weight: 400;">KhuongPT</span> <br>
@@ -235,6 +314,7 @@
         <a class=" dropdown"
            id="dropdownMenuButton" data-toggle="dropdown">
            <i id="dropdownMenuButton" class="fas fa-cog btn-circle" style="padding-top: 10px; "></i>
+           <span class="viet">Cài đặt</span>
         </a>
         <div class="dropdown-menu">
          <a class="dropdown-item" href="../templates/profile.html"><i class="fas fa-user"></i> Trang cá nhân</a>
@@ -344,30 +424,10 @@
             <small>Mơ thấy một giấc mơ đã từng có trước đó, hay còn gọi là giấc mơ lặp lại là một hiện tượng khá phổ biến.</small>
           </a>   
       </div>
-      <div class="dstrong hidden" style="text-align: center; padding: 300px; font-weight: 500; font-size: x-large; color: rgb(4, 229, 245);">
+      <div class="dstrong hidden" style="text-align: center; padding: 300px; font-weight: 500; font-size: x-large; color: #00beef;">
         Danh sách trống !
       </div>
 
-    <!-- viet bai -->
-    <div class="viet-bai full-screen hidden flex-container-center">
-      <div class="row form-inline " style="width: auto;" >
-        <div class="rounded" style="width: 500px; background-color: azure; padding: 20px;">
-          <img class="rounded-circle" src="../static/img/khoa.jpg" width="40px" height="40px" alt="">
-          <span style="font-weight: 500;"   > <span class="point">Khoaminion</span><span style="float:right" class="closepopup"><span class="point"><i class="fas fa-times"></i></span></span></span> <br>
-          <input type="text" class="mt-3 mb-3 tieudeviet" size="24" placeholder="Nhập tiêu đề !" style="font-size: xx-large; font-weight: 500;">
-          <textarea id="w3review" name="w3review" rows="20" class="noidungviet" cols="62" placeholder="nhập nội dung nè !" style="resize: none;"></textarea>
-          <hr>
-          <div style="text-align: center;" class="form-inline">
-            <div class="col-sm-4 point "><i class="fas fa-images"></i><span> Thêm ảnh: </span></div>
-            <input type="file" id="myfile" name="myfile" multiple>
-          </div>
-          
-          <hr>
-          
-          <button class="rounded dang-bai" style="margin-left: 190px; background-color: rgb(4, 229, 245); color: rgb(0, 0, 0);">Đăng</button>
-        </div>
-        
-      </div>
       </div>
   </section>
   
