@@ -5,6 +5,23 @@ body{
   background-color: aliceblue;
 }
 
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+tr td:first-child {
+  width: 1%;
+  white-space: nowrap;
+}
+
+tr td:last-child {
+  max-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 a:hover{
   text-decoration: none;
 }
@@ -139,6 +156,15 @@ select:focus{
   color: #00beef;
 }
 
+.underline-hover{
+  color: #00beef;
+  cursor: pointer;
+}
+
+.underline-hover:hover{
+  text-decoration: italic;
+}
+
 .admin-bgcl{
   background-color: #00beef;
 }
@@ -164,4 +190,19 @@ select:focus{
   -webkit-line-clamp: 5; /* number of lines to show */
   -webkit-box-orient: vertical;
   height: fit-content;
+}
+
+.p-line-1{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  height: fit-content;
+}
+
+.equal {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
 }

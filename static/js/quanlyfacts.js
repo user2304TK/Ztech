@@ -1,4 +1,9 @@
 
+
+// vẽ sparklinedash
+
+//total
+
  var data1 = [];
  for (let i = 0; i < 12; i++) {
     data1.push(randomIntInRange(20, 50));
@@ -61,53 +66,3 @@
   });
 
   
-$(document).ready(function(){
-    $("#tenBaiViet").on("keyup", function() {
-      var value = $(this).val().toLowerCase();
-      $("#dsBaiViet h4").filter(function() {
-        $(this).parent().parent().parent().toggle($(this).text().toLowerCase().indexOf(value) > -1)
-      });
-    });
-  });
-
-$(".btnDel").click(function(e) {
-    $(this).parent().parent().parent().parent().parent().parent().remove();
-    e.preventDefault();
- });
-
- $("#themMuc").click(function(e) {
-  if($("#tenMuc").val().trim() == "") return;
-  html = '<tr><td>' + $("#tenMuc").val() + '</td><td>0</td><td class="text-right"><a class="bi bi-trash-fill px-2 admin-btn-round-clickdg"></a></td></tr>'
-  $("#dsMuc").append(html);
-  $("#filterMuc").append('<option>' + $("#tenMuc").val() + '</option>');
-});
-
-$("#dsMuc a").click(function(e) {
-  $(this).parent().parent().remove();
-  e.preventDefault();
-});
-
-
-var a = $('#chartMuc');
-var config = {
-  type: 'pie',
-  data: {
-    labels: ['IOS', 'Android', 'Windows'],
-    datasets: [
-      {
-        label: 'Dataset 1',
-        data: [6969, 696, 69],
-        backgroundColor: ['#ff7f7f', '#39f9b3', '#00beef'],
-      }
-    ]
-  },
-  options: {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: 'top',
-      },
-    }
-  },
-};
-var chartMuc = new Chart(a, config);
