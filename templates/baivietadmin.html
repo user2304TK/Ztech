@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../static/css/">
+  <link rel="stylesheet" href="../static/css/Login_Register.css">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../static/css/main.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    $(document).ready(function(){
+      if ($(window).width() > 750){
+          $(".viet").hide();   
+          $(".dropdown-menu").addClass("dropdown-menu-right");
+        }
+        else{
+          $(".viet").show();
+          $(".dropdown-menu").removeClass("dropdown-menu-right"); 
+        }
+
+        if ($(window).width() > 1200){
+          $(".info-box").show();   
+        }else{
+        
+          $(".info-box").hide();
+        }
+
+
+        if ($(window).width() > 1000){
+          $(".tag").addClass("ml-0");  
+        }else{
+        
+          $(".tag").removeClass("ml-0");
+        }
+         
+
+      $(".btn-vietbai").click(function(){             
+        $(".modal").addClass("d-flex"); 
+        $("body").addClass("unscroll");
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+      });
+      $(".close").click(function(){
+        $(".modal").removeClass("d-flex");
+        $("body").removeClass("unscroll");
+        
+      });
+      $(".link-btn").click(function(){           
+        $(".link-input").toggleClass("d-none");        
+      });
+      
+
+      $(".search-query").hide();
+
+      $(".form-group .btn").click(function(){
+        $(".search-query").toggle(200);
+        
+      }); 
+
+      $(window).resize(function(){
+        if ($(window).width() > 750){
+          $(".viet").hide();   
+          $(".dropdown-menu").addClass("dropdown-menu-right");
+        }
+        else
+        {
+          $(".viet").show();
+          $(".dropdown-menu").removeClass("dropdown-menu-right"); 
+        }  
+
+        if ($(window).width() > 1200){
+          $(".info-box").show();   
+          $(".blue-bar").removeClass("col-9");
+        }
+        else
+        {
+          $(".info-box").hide();
+          $(".blue-bar").addClass("col-9");
+        }
+
+        if ($(window).width() < 986){         
+          $(".scrollmenu").css({"width":"1000px"});
+        }       
+        
+
+        if ($(window).width() > 1000){
+          $(".last-tag").addClass("col-9"); 
+          $(".tag").addClass("ml-0");
+
+         
+        }
+        else
+        {
+          $(".tag").removeClass("ml-0");
+          $(".last-tag").removeClass("col-9");
+          $(".blue-bar").removeClass("col-9");
+        }
+
+        if ($(window).width() > 800){
+          $(".third").addClass("col-3");   
+        }
+        else
+        {
+          $(".third").removeClass("col-3");
+        }
+        
+        if ($(window).width() > 800){
+          $(".third").addClass("col-3");   
+        }
+        else
+        {
+          $(".third").removeClass("col-3");
+        }
+      });
+
+      $(".showpopup").click(function(){
+        $(".pop1").removeClass("hidden");
+        $("body").addClass("unscroll");
+        $(".pop2").addClass("hidden");
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+      });
+      
+      $(".closepopup").click(function(){
+        $(".full-screen").addClass("hidden");
+        $("body").removeClass("unscroll");
+        $('iframe').attr('src', $('iframe').attr('src'));
+      });
+
+      $(".like").click(function(){
+        $(".like").toggleClass("like1");
+        if ($(".like-text").text() ==" Thích"){
+          $(".like-text").text(" Đã thích");
+
+        }
+        else{
+          $(".like-text").text(" Thích");
+        };
+      });
+
+      $(".like2").click(function(){
+        $(".like2").toggleClass("like1");
+        if ($(".like-text1").text() ==" Thích"){
+          $(".like-text1").text(" Đã thích");
+
+        }
+        else{
+          $(".like-text1").text(" Thích");
+        };
+      });
+
+      $(".chevron-right").click(function(){
+        $(".pop1").addClass("hidden");       
+        $(".pop2").removeClass("hidden");
+        $('.frame1').attr('src', $('.frame1').attr('src'));
+      });
+
+      $(".chevron-left").click(function(){             
+        $(".pop2").addClass("hidden");
+        $(".pop1").removeClass("hidden");
+        $('.frame2').attr('src', $('.frame2').attr('src'));
+      });
+     
+      $(".dang-bai").click(function(){      
+        if ( $(".tieudeviet").val() =="" ||  $(".noidungviet").val() =="" ){
+          alert("Vui lòng điền đầy đủ nội dung !!!");
+        }
+        else{
+          alert("Đã đăng bài !!!");
+          $(".viet-bai").addClass("hidden");
+          $(".tieudeviet").val("");
+          $(".noidungviet").val("");
+        };
+      });
+
+      $(".search-query").focus(function(){             
+        $(".search-query").val(""); 
+      });
+
+      if ($(window).width() > 1000){
+          $(".last-tag").addClass("col-9");   
+        }
+        else
+        {
+          $(".last-tag").removeClass("col-9");
+        }
+
+        if ($(window).width() > 800){
+          $(".third").addClass("col-3");   
+        }
+        else
+        {
+          $(".third").removeClass("col-3");
+        }  
+    });
+  </script>
+</head>
+<div id="fb-root"></div>
+<body>  
+    <nav class="container navbar navbar-expand-md navbar-inverse  navbar-light pb-0">
+        <!-- Brand -->
+        <div class="form-group pt-2">
+        <a class="navbar-brand" href="../templates/index-logged-admin.html"><img src="../static/img/Z-green-leaf.svg" width="45" height="45" alt="Logo"> ZTech</a>
+        <!-- search -->
+              <input type="text" class="search-query" placeholder="Type something...">
+              <button type="submit" class="btn btn-circle"><i class="fa fa-search"></i></button>
+        </div>
+        
+        
+    
+        <!-- toggle icon -->
+        <button class="navbar-toggler mb-3" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+       </button>
+       
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav mr-auto pb-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tin Hot</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Video</a>
+            </li>
+          </ul>
+            <li class="nav-item li-dangnhap pr-3 pb-2 btn-vietbai" style="color: white;">
+              <i class="fas fa-feather btn-circle" style="padding-top: 10px; background-color:#00beef;" data-toggle="tooltip" data-placement="top" title="Viết bài"></i>
+              <span class="viet" style="color: black;">Viết bài</span>
+            </li>
+            <li class="nav-item li-dangnhap pr-3 pb-2" >
+              <div class="btn-group">
+                <a class=" dropdown"
+                   id="dropdownMenuButton" data-toggle="dropdown">
+                   <i id="dropdownMenuButton" class="fas fa-bell btn-circle" style="padding-top: 10px; color: white; background-color: #00beef;"></i>
+                   <span class="viet" style="color: black;">Thông báo</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                 <a class="dropdown-item" href="../templates/nhanphanhoi.html" > 
+                  <span style="color: blue; font-weight: 400;">ZTech</span> <br>
+                  <span style="font-size: small;">Thư phản hồi từ đội hỗ trợ dành cho bạn</span>
+                </a>
+                <hr>
+                <a class="dropdown-item" href="#" >
+                    <span style="color: blue; font-weight: 400;">Nekowimade</span> <br>
+                    <span style="font-size: small;">Đã bình luận bài đăng của bạn</span>
+                </a>
+                <hr>
+                <a class="dropdown-item" href="#" >
+                    <span style="color: blue; font-weight: 400;">Tomblobla</span> <br>
+                    <span style="font-size: small;">Đã thích bài đăng của bạn</span>
+                </a>
+                </div>
+             </div>
+            </li>
+           
+            <li class="nav-item li-dangnhap pr-3 pb-2">
+              <img class="rounded-circle" width="33" height="33" src="../static/img/surface.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="Trang cá nhân">
+              <span class="viet">Trang cá nhân</span>
+            </li>
+            
+            <li class="nav-item li-dangnhap pb-2">
+              <div class="btn-group">
+                <a class=" dropdown"
+                   id="dropdownMenuButton" data-toggle="dropdown">
+                   <i id="dropdownMenuButton" class="fas fa-cog btn-circle" style="padding-top: 10px; "></i>
+                   <span class="viet">Cài đặt</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" href="../templates/profile.html"><i class="fas fa-user"></i> Trang cá nhân</a>
+                  <a class="dropdown-item" href="../templates/edit_profile.html"><i class="fas fa-info"></i> Thông tin cá nhân</a>
+                  <a class="dropdown-item" href="#"><i class="far fa-list-alt"></i> Bảng điều khiển</a>
+                  <a class="dropdown-item" href="../templates/quanlyuser.html"><i class="fas fa-user-tag"></i> Quản lý user</a>
+                  <a class="dropdown-item" href="../templates/post-manager.html"><i class="fas fa-paperclip"></i> Quản lý bài viết</a>
+                  <a class="dropdown-item" href="../templates/help-reciver-admin.html"><i class="fas fa-paperclip"></i> Yêu cầu hỗ trợ</a>
+                  <a class="dropdown-item" href="../templates/Login.html"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                </div>
+             </div>
+            </li>
+          </div>
+          
+        </nav>
+  <hr class="hr-shadow">
+  <br>
+  <br>
+  <section class="container">
+    <!-- foru -->
+  <!-- facts -->
+  <!--end facts -->
+  
+ <!-- nút viết bài -->
+ <div class="row ">
+    <div class="row col-9 ml-1 last-tag ">
+        <p class="point" style="font-size: medium;" >Camera ><span style="font-size: medium;font-weight: bolder;"> Điện Ảnh</span></p> 
+        <h1>Giới thiệu sách và phim "Suối nguồn" của tác giả Ayn Rand</h1>
+        <img class=" rounded-circle mr-2" width="45px" height="45px" src="../static/img/khoa.jpg"><a style="color: blue;" href="../templates/profile.html">Khoaminion  <i class="fas fa-check-circle"></i> <br> <span style="color: black;">1 ngày • Bình luận 5</span></a><div class="col-11"></div>
+    </div>
+    <div class="ml-4 info-box" style=" border: 1px solid rgb(202, 202, 202); border-radius: 5px; padding: 20px; ">
+      <img class="rounded-circle" src="../static/img/surface.jpg" width="40px" height="40px" alt="">
+      <span style="font-weight: 500;"  >Hi Boss<br> <br><span style="background-color: gainsboro; padding: 5px;" class="rounded" >Số giờ hoạt động:99999</span> <br>  <br><span style="background-color: gainsboro; padding: 5px;" class="rounded" > Số bài viết:000</span></span>
+    </div>
+ </div>
+  </div>
+  <br><br>
+     <!-- khung 1 -->
+    <div class="row ">
+        <div class="col-9 last-tag  " style="padding: 0px;">
+            <img class="col-12 pr-0 pl-1" src="../static/img/sach.jpg" style="padding-bottom: 3%; padding-left: 0px;" >
+    
+            <div class="col-12 pr-0 pl-1" >Trong đợt dịch giãn cách ở nhà này, mình đã dành thời gian đọc hết cuốn sách <a href="" style="font-style: italic;">Suối nguồn</a> của tác giả <a href="" style="font-style: italic;">Ayn Rand</a> dày hơn 1200 trang mà mình đã mua cách đây… 10 năm. Mình cũng tìm phim được chuyển thể từ truyện để xem luôn. Có lẽ nhiều anh em cũng đọc tiểu thuyết nổi tiếng này rồi, còn ai chưa đọc có thể xếp vào danh sách và dành thời gian cho nó nhé. Cuốn sách có nhiều triết lý sống theo mình nghĩ là đúng với mọi thời đại dù nó được chấp bút vào năm 1943.
+                <br><br>Ayn Rand đã bị 12 nhà xuất bản từ chối bản thảo trước khi được chấp nhận. Suối nguồn đã bán được hơn 6,5 triệu bản và được dịch ra hơn 20 ngôn ngữ trên khắp thế giới.
+                <br><br>Suối nguồn xoay quanh những tư tưởng chính: sự độc lập, sáng tạo, người sống thứ cấp, sự ích kỷ tốt đẹp và mục đích trọng tâm. Các nhân vật trong truyện đa phần là những người cực đoan, theo đuổi những niềm tin tự mình đặt ra và sống chết theo đuổi niềm tin ấy. Vì thế, những cuộc hội thoại giữa họ khá là đau não, nhiều khi giống một bản thuyết trình với đầy đủ luận điểm, luận cứ và minh chứng. Cuốn tiểu thuyết này không hề dễ đọc nếu bạn không phải người thích phân tích sâu các vấn đề và suy nghĩ về các triết lý.
+                <br><br>Suối nguồn - tên sách cũng chính là lý tưởng mà Ayn Rand tôn vinh và ca ngợi, lấy lĩnh vực kiến trúc làm nền tảng để kể chuyện về các nhân vật và tư tưởng của họ. Howard Roark, nhân vật chính, một kiến trúc sư luôn độc lập và sáng tạo trên con đường sự nghiệp của mình. Từ quan điểm về kiến trúc, kế hoạch về sự nghiệp cho tới sự lựa chọn bạn bè, anh luôn tự bản thân đánh giá và suy nghĩ. Anh đề cao sự sáng tạo tự thân, kịch liệt phản đối những thiết kế chắp ghép, dựa vào cấu trúc của những công trình đi trước - cách mà những kiến trúc sư cùng thời anh đang làm. Roark không bao giờ chấp nhận những can thiệp, sửa đổi vào thiết kế mà anh làm ra, kể cả khi anh lâm vào hoàn cảnh khó khăn và bị cả cộng đồng chỉ trích cho rằng anh trái khoáy, thích đi ngược lại đám đông. Chúng đi ngược lại tôn chỉ anh đặt ra cho công việc của mình. Đối với anh, nhưng người suy nghĩ, những nhà khoa học, nghệ sĩ và những nhà sáng chế luôn là những người cô độc chống lại phần đông loài người trong thời kì của họ. Trong bài diễn thuyết nhằm bảo vệ bản thân trước phiên tòa xét xử buộc tội anh ở cuối truyện, Roark đã đưa ra những dẫn chứng hùng hồn trong quá khứ về quan điểm này, rằng những thành tựu vĩ đại của con người đều đến từ sự khai phá con đường mới, những khao khát bị từ chối và khinh bỉ: chiếc động cơ đầu tiên bị coi là ngu ngốc; người ta từng coi máy bay là điều bất khả; gây mê là điều tội lỗi.
+                <br><br>Điều thúc đẩy Howard Roark không phải là của cải, sự giàu sang hay sự công nhận của xã hội mà là những thách thức trí tuệ trong việc giải quyết các vấn đề về kiến trúc và mong muốn kiến tạo ra cái đẹp. Suối nguồn coi sự ích kỷ của Roark ở đây là tốt đẹp. Nó không phải sự ích kỷ thô lậu, lấy người khác ra làm vật hi sinh cho những lợi ích của bản thân mình. Chủ nghĩa cá nhân ở đây đề cao những sáng tạo và ý tưởng tiên phong, biết bảo vệ tư tưởng độc lập trước sự cáo buộc và bác bỏ của đám đông. Trái ngược với Howard Roark, nhân vật Peter Keating được xây dựng là một người sống thứ cấp hèn hạ, đáng khinh bỉ. Anh ta không bao giờ có suy nghĩ độc lập, luôn chạy theo xu hướng và dựa vào người khác để kiếm lợi cho bản thân. Tiền tài, cơ đồ và sự nhìn vào của người khác là tiêu chí hàng đầu trong cuộc đời, trong khi yếu tố cốt lõi trong công việc của anh ta đáng nhẽ là kiến trúc. Keating sẵn sàng bỏ qua lòng tự trọng và chữ tín để đạt được những thứ bề mặt hào nhoáng. Đương nhiên, anh ta rất thành công, được nhiều người biết đến và ngưỡng mộ. Nhưng thẳm sâu bên trong, chính anh ta luôn lo sợ và ý thức được sự hèn hạ của bản thân. Anh ta gồng mình khoác lên chiếc áo rộng mà không dám gỡ bỏ. Được coi là kiến trúc sư ngôi sao, tiền tài và danh vọng sớm đạt được khi còn trẻ nhưng bên trong, anh ta cảm thấy trống rỗng và bất lực.
+                <br><br>Tiểu thuyết cũng xây dựng những tính cách nhân vật lạ lùng, đơn cử như Dominique Francon. Cô là người theo chủ nghĩa lý tưởng, tôn thờ sự vĩ đại của con người và sáng tạo của những thiên tài. Tuy nhiên, cô tin rằng những sự vĩ đại ấy sẽ bị đánh bại trong một thế giới được cai trị bởi những kẻ tầm thường. Vì thế, cô luôn tránh ràng buộc mình vào những giá trị hay những đối tượng mà sớm muộn cô phải chứng kiến sự lụi tàn. Thay vì bồi đắp để xây dựng những giá trị mình tôn kính, cô làm ngược lại, bằng cách tự mình phá hủy chúng để tránh khỏi nỗi đau khổ khi tận mắt nhìn những lý tưởng bị đạp đổ.
+                <br><br>Về bộ phim chuyển thể cùng tên, do chỉ gói gọn trong gần hai tiếng đồng hồ với nội dung đồ sộ của cuốn sách, rất nhiều chi tiết bị lược bỏ. Tiêu biểu nhất là những đoạn hội thoại dài giữa các nhân vật đã giản lược xuống thành những câu nói ngắn gọn. Chỉ xem phim không thì không thấy được những lý tưởng mà Ayn Rand đề cao trong cuốn sách. Có một điểm mình không thích nữa là khi đọc sách, hình dung về nhân vật Howard Roark của mình là một chàng trai trẻ thì trong phim, diễn viên Gary Cooper đã khá đứng tuổi và đậm người. Mình khi ôm sách tưởng tượng nhân vật này do anh chàng người Anh Eddie Redmayne thủ vai, với dáng người cao ráo, mảnh khảnh cùng mái tóc rối bù. Nói chung không nên xem phim trước khi đọc sách.
+                <br><br>Trailer phim <span style="font-style: italic;">Suối nguồn</span><br>
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item"  width="560" height="315"  src="https://www.youtube.com/embed/wC0WeTjvq4k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <br><br>Hi vọng với chút giới thiệu ngắn ngủi trên, anh em sẽ dành thời gian cho cuốn tiểu thuyết tuyệt vời này 😁<br><br>
+            </div>
+            <div class="d-flex justify-content-between pb-1 pl-2" > 
+              <div  style="color: cornflowerblue;"><i style="color: palevioletred;" class="fab fa-gratipay"></i> 5 <span style="color: black;">• 5 bình luận</span> </div> 
+              <div class="dropdown" data-toggle="dropdown" aria-haspopup="true" data-placement="top" title="Cài đặt" aria-expanded="false" >
+                <a style="font-weight: bolder;"><sup>...</sup></a>
+        
+                <div class="dropdown-menu dropdown-menu-right" style="text-align: left;" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#"><i class="fas fa-user"></i> báo xấu </a>
+                </div>
+              </div>
+            </div>
+          <div class="d-flex justify-content-between pb-1 pl-1">
+              <div>
+                  <button type="button" class="btn btn-light flex-1"><i class="far fa-heart"></i> Thích</button>  <button type="button" class="btn btn-light flex-1"><i class="far fa-comment-alt"></i> Bình Luận</button></div> 
+            <div>
+              <button type="button" class="btn btn-primary flex-3 info-box"> <img src="../static/img/Z-green-leaf.svg" width="25" height="25" alt="Logo"> <span style="color:white;"> Chia sẽ lên fact</span></button>
+              <button type="button" style="background-color: blue;" class="btn btn-primary flex-1 info-box"><i class="fas fa-share"></i>28</button>
+            </div>
+          </div>
+          
+
+            <div class="row container pr-0 ">
+              <div class="card col-3 third mb-3 p-0" style="width:100%; ">
+                <a href=""> <img class="card-img-top " src="../static/img/tho.jpg" alt="Card image" style="width:100%;"></a>
+                <div class="card-body p-2">
+                  <p class="card-text">blueJunet - 1 giờ</p>
+                  <a href="#">Xem anime Beastars (2019): Một phản chiếu về tâm lý con người qua thế giới động vật</a>
+                </div>
+              </div>
+              <br>
+              <div class="card col-3 third mb-3 p-0" style="width:100%; ">
+                <a href=""><img class="card-img-top " src="../static/img/tho.jpg" alt="Card image" style="width:100%;"></a>
+                <div class="card-body p-2">
+                  <p class="card-text">blueJunet - 2 giờ</p>
+                  <a href="#">Xem anime Beastars (2019): Một phản chiếu về tâm lý con người qua thế giới động vật</a>
+                </div>
+              </div>
+              <br>
+              <div class="card col-3 third mb-3 p-0" style="width:100%;">
+                <a href=""><img class="card-img-top " src="../static/img/car.jpg" alt="Card image" style="width:100%"></a>
+                <div class="card-body p-2">
+                  <p class="card-text">blueJunet - 2 giờ</p>
+                  <a href="#">Xem anime Beastars (2019): Một phản chiếu về tâm lý con người qua thế giới động vật</a>
+                </div>
+              </div>
+              <div class="card col-3 third mb-3 p-0" style="width:100%;">
+                <a href=""><img class="card-img-top " src="../static/img/car.jpg" alt="Card image" style="width:100%"></a>
+                <div class="card-body p-2">
+                  <p class="card-text">blueJunet - 2 giờ</p>
+                  <a href="#">[Tóm tắt phim] Công Chúa Mononoke - Princess Mononoke 1997</a>
+                </div>
+              </div>
+            </div>
+        </div>
+       
+     
+       
+      <div class="col-3 info-box">
+        <h1 style="font-size: 25px;font-weight: bolder;">Cộng đồng nổi bật</h1>
+        <div class="row">
+          <img class= "row col-6 rounded" style="padding-left: 10%;"height=150% width="100%" src="../static/img/banphim.jpg"> <a href="" class=" col-6">Phím cơ </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/skmd.jpg"> <a href="" class=" col-6">Sống Khỏe mùa dịch</a>
+          <img class= "row col-6 rounded" style="padding-left: 10%;padding-top: 3%;"height=150% width="100%" src="../static/img/glx.jpg"> <a href="" class=" col-6">SamsungGalaxy </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/macbok.jpg"> <a href="" class=" col-6">MacBook</a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;padding-bottom: 3%;"height=150% width="100%" src="../static/img/ip.jpg"> <a href="" class=" col-6">iPhone</a>
+          <img class= "row col-6 rounded" style="padding-left: 10%;"height=150% width="100%" src="../static/img/nghiengame.jpg"> <a href="" class=" col-6">Những thông tin cơ bản về Nintendo Switch </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/crenn.jpg"> <a href="" class=" col-6">Các lưu ý khi mua màn hình USB-C </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%;padding-top: 3%;"height=150% width="100%" src="../static/img/galaxyZ.jpg"> <a href="" class=" col-6">Cách xem Instagram full màn hình  </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/mh.jpg"> <a href="" class=" col-6">Những điều chú ý khi dùng máy cá nhân </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;padding-bottom: 3%;"height=150% width="100%" src="../static/img/laptopcty.jpg"> <a href="" class=" col-6">Những lưu ý khi dùng laptop, desktop </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/dtip.jpg"> <a href="" class=" col-6">iOS 15 cho phép tắt hoàn toàn Night Mode </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;padding-bottom: 3%;"height=150% width="100%" src="../static/img/lol.jpg"> <a href="" class=" col-6">Chơi League of Legends trên Mac M1 ok</a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; border-radius: 10%;"height=150% width="100%" src="../static/img/nghiengame.jpg"> <a href="" class=" col-6">Thông tin về Nintendo Switch </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;border-radius: 10%;"height=150% width="100%" src="../static/img/crenn.jpg"> <a href="" class=" col-6">Lưu ý mua màn hình</a>
+          <img class= "row col-6 rounded" style="padding-left: 10%;padding-top: 3%;border-radius: 10%;"height=150% width="100%" src="../static/img/galaxyZ.jpg"> <a href="" class=" col-6">Cách xem Instagram  </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;border-radius: 10%;"height=150% width="100%" src="../static/img/mh.jpg"> <a href="" class=" col-6">Dùng máy cá nhân </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;padding-bottom: 3%;border-radius: 10%;"height=150% width="100%" src="../static/img/laptopcty.jpg"> <a href="" class=" col-6">Dùng laptop, desktop </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;border-radius: 10%;padding-bottom: 3%;"height=150% width="100%" src="../static/img/dtip.jpg"> <a href="" class=" col-6">iOS 15  </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%;"height=150% width="100%" src="../static/img/nghiengame.jpg"> <a href="" class=" col-6">Những thông tin cơ bản về Nintendo Switch </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/crenn.jpg"> <a href="" class=" col-6">Các lưu ý khi mua màn hình USB-C </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%;padding-top: 3%;"height=150% width="100%" src="../static/img/galaxyZ.jpg"> <a href="" class=" col-6">Cách xem Instagram full màn hình  </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/mh.jpg"> <a href="" class=" col-6">Những điều chú ý khi dùng máy cá nhân </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;padding-bottom: 3%;"height=150% width="100%" src="../static/img/laptopcty.jpg"> <a href="" class=" col-6">Những lưu ý khi dùng laptop, desktop </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;"height=150% width="100%" src="../static/img/dtip.jpg"> <a href="" class=" col-6">iOS 15 cho phép tắt hoàn toàn Night Mode </a>
+          <img class= "row col-6 rounded" style="padding-left: 10%; padding-top: 3%;padding-bottom: 3%;"height=150% width="100%" src="../static/img/lol.jpg"> <a href="" class=" col-6">Chơi League of Legends trên Mac M1 ok</a>
+        
+          <div class= "row col-lg-3"></div>
+          
+          <button style="padding-left: 25px;padding-top: 3%;" type="button" class="col-9 btn btn-outline-primary">Xem thêm</button>
+          
+          <div class="col-12" style="padding-bottom: 5%;"></div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <label style="font-size: larger;font-weight: bolder;" for="">Bình Luận</label>
+
+      <div class="col-9 last-tag pl-0" >
+         <div class="d-flex pb-2">
+          <img class=" rounded-circle mr-1 " height="50px" width="50px" src="../static/img/khoa.jpg">
+          <div class="flex-grow-1" style="background-color: #e9ecef;">
+            <div class="card-body" >
+              <input class="form-control"  type="text" style="border: none;" placeholder="viết bình luận" readonly>
+              <div class="d-flex justify-content-end"  ><button type="button" class="btn btn-light"><i style="color: aqua;" class="fas fa-images"></i></button><button type="button" style="font-weight: bolder;" class="btn btn-light">Đăng</button></div>
+            </div>
+          </div>
+         </div>
+        </div>
+      <div class="col-9 last-tag pl-0">
+         <div class="d-flex ">
+          <img class="  rounded-circle mr-1" height="50px" width="50px" src="../static/img/khoa.jpg">
+          <div class="flex-grow-1 rounded" style="background-color: #e9ecef;">
+            <div class="card-body p-3">
+              <div class="d-flex justify-content-between">
+                <div style="font-size: smaller;" ><span style="color: #00beef;font-weight: bolder;">fifty</span>-26p</div>
+                 <div class="dropdown" data-toggle="dropdown" aria-haspopup="true" data-placement="top" title="Cài đặt" aria-expanded="false" >
+                  <a href="" style="font-weight: bolder;" ><sup>...</sup></a>
+                  <div class="dropdown-menu dropdown-menu-right" style="text-align: left;" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#"><i class="fas fa-user"></i> báo xấu </a>
+                  </div>
+                </div>
+              </div>
+                <div class="col-12 p-0">Ảo diệu đẹp quá 👍🏿</div>
+            </div>
+          </div>
+         </div>
+         <div style="padding-left: 50px;"><button type="button" style="font-weight: bolder;" class="btn btn-light ">Thích</button><button type="button" style="font-weight: bolder;" class="btn btn-light ">Trả lời</button></div>
+      </div>
+
+      <div class="col-9 last-tag pl-0" >
+        <div class="d-flex " style="padding-left: 50px;">
+         <img class="  rounded-circle mr-1" height="50px" width="50px" src="../static/img/ongiga2.jpg">
+         <div class="flex-grow-1 rounded" style="background-color: #e9ecef;">
+           <div class="card-body p-3">
+             <div class="d-flex justify-content-between">
+              <div style="font-size: smaller;" ><span style="color: #00beef;font-weight: bolder;">Haless</span>-50p</div>
+                <div class="dropdown" data-toggle="dropdown" aria-haspopup="true" data-placement="top" title="Cài đặt" aria-expanded="false" >
+                 <a href="" style="font-weight: bolder;" ><sup>...</sup></a>
+                 <div class="dropdown-menu dropdown-menu-right" style="text-align: left;" aria-labelledby="dropdownMenuButton">
+                 <a class="dropdown-item" href="#"><i class="fas fa-user"></i> báo xấu </a>
+                 </div>
+               </div>
+             </div>
+             <div class="col-12 p-0">Với một đất nước mà dân số chỉ nhỉnh hơn 1/2 dân số TPHCM thì chuyện phủ vaccin cho toàn dân chỉ là chuyện nhỏ.</div>
+           </div>
+         </div>
+        </div>
+        <div style="padding-left: 100px;"><button type="button" style="font-weight: bolder;" class="btn btn-light ">Thích</button><button type="button" style="font-weight: bolder;" class="btn btn-light ">Trả lời</button></div>
+     </div>
+      
+     <div class="col-9 last-tag pl-0">
+      <div class="d-flex ">
+       <img class="  rounded-circle mr-1" height="50px" width="50px" src="../static/img/ongia.jpg">
+       <div class="flex-grow-1 rounded" style="background-color: #e9ecef;">
+         <div class="card-body p-3">
+           <div class="d-flex justify-content-between">
+            <div style="font-size: smaller;" ><span style="color: #00beef;font-weight: bolder;">thomas</span>-56p</div>
+              <div class="dropdown" data-toggle="dropdown" aria-haspopup="true" data-placement="top" title="Cài đặt" aria-expanded="false" >
+               <a href="" style="font-weight: bolder;" ><sup>...</sup></a>
+               <div class="dropdown-menu dropdown-menu-right" style="text-align: left;" aria-labelledby="dropdownMenuButton">
+               <a class="dropdown-item" href="#"><i class="fas fa-user"></i> báo xấu </a>
+               </div>
+             </div>
+           </div>
+             <div class="col-12 p-0">Ảo diệu đẹp quá 👍🏿</div>
+         </div>
+       </div>
+      </div>
+      <div style="padding-left: 50px;"><button type="button" style="font-weight: bolder;" class="btn btn-light ">Thích</button><button type="button" style="font-weight: bolder;" class="btn btn-light ">Trả lời</button></div>
+   </div>
+
+   <div class="col-9 last-tag pl-0">
+    <div class="d-flex ">
+     <img class="  rounded-circle mr-1" height="50px" width="50px" src="../static/img/phimmaxxtri.jpg">
+     <div class="flex-grow-1 rounded " style="background-color: #e9ecef;">
+       <div class="card-body p-3 ">
+         <div class="d-flex justify-content-between">
+          <div style="font-size: smaller;" ><span style="color: #00beef;font-weight: bolder;">Junlee</span>-33p</div>
+            <div class="dropdown" data-toggle="dropdown" aria-haspopup="true" data-placement="top" title="Cài đặt" aria-expanded="false" >
+             <a href="" style="font-weight: bolder;" ><sup>...</sup></a>
+             <div class="dropdown-menu dropdown-menu-right" style="text-align: left;" aria-labelledby="dropdownMenuButton">
+             <a class="dropdown-item" href="#"><i class="fas fa-user"></i> báo xấu </a>
+             </div>
+           </div>
+         </div>
+         <div class="col-12 p-0">Với một đất nước mà dân số chỉ nhỉnh hơn 1/2 dân số TPHCM thì chuyện phủ vaccin cho toàn dân chỉ là chuyện nhỏ.</div>
+       </div>
+     </div>
+    </div>
+    <div style="padding-left: 50px;"><button type="button" style="font-weight: bolder;" class="btn btn-light ">Thích</button><button type="button" style="font-weight: bolder;" class="btn btn-light ">Trả lời</button></div>
+ </div>
+    <hr>
+    <br>
+    <!--khung 7-->
+    <div class="row mb-3 ">
+      <div class="col-9 last-tag">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+
+          <!-- Indicators -->
+          <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+          </ul>
+        
+          <!-- The slideshow -->
+          <div class="carousel-inner rounded">
+            <div class="carousel-item active">
+              <img src="../static/img/nghiengame.jpg" class="d-block w-100" >
+            </div>
+            <div class="carousel-item">
+              <img src="../static/img/car.jpg" class="d-block w-100" >
+            </div>
+            <div class="carousel-item">
+              <img src="../static/img/macc.jpg"  class="d-block w-100">
+            </div>
+          </div>
+        
+          <!-- Left and right controls -->
+          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        
+        </div>
+        </div>
+    </div>
+    
+    <!--Tag-->
+    <div class="row col-9 mb-3 last-tag rounded ml-0 tag" style="background-color: #222b45;color: white; padding: 0px; font-size: 15px;">
+      <div class="col-12 mt-2 mb-2">#Tag đang hot <br>Anh Em nhớ follow để nhận được thông báo mới nhé</div>
+      <div  class="card col-3 " style="width: 100%; background-color: #242424" >
+        <img style="border-radius: 3%;" src="../static/img/android.png" class="card-img-top mt-3" alt="...">
+        #Android
+      </div>
+      <div  class="card col-3" style="width: 100%; background-color: #242424" >
+        <img style="border-radius: 3%;" src="../static/img/corona.jpg" class="card-img-top mt-3" alt="...">
+        #Corona
+      </div>
+      <div  class="card col-3" style="width: 100%; background-color: #242424" >
+        <img style="border-radius: 3%;" src="../static/img/khuyenmai.jpg" class="card-img-top mt-3" alt="...">
+        #Khuyenmai
+      </div>
+      <div  class="card col-3" style="width: 100%; background-color: #242424" >
+        <img style="border-radius: 3%;" src="../static/img/car.jpg" class="card-img-top mt-3" alt="...">
+        #Car
+      </div>
+      <div  class="card col-3" style="width: 100%; background-color: #242424" >
+        <img style="border-radius: 3%;" src="../static/img/ongiga2.jpg" class="card-img-top mt-3" alt="...">
+        #TimCook
+      </div>
+      <div  class="card col-3" style="width: 100%; background-color: #242424" >
+        <img style="border-radius: 3%;" src="../static/img/banphim.jpg" class="card-img-top mt-3" alt="...">
+        #BanPhim
+      </div>
+      <div  class="card col-3" style="width: 100%; background-color: #242424" >
+        <img style="border-radius: 3%;" src="../static/img/surface.jpg" class="card-img-top mt-3" alt="...">
+        #CongNghe
+      </div>
+      <div  class="card col-3" style="width: 100%; background-color: #242424" >
+        <img style="border-radius: 3%;" src="../static/img/youtube.jpg" class="card-img-top mt-3" alt="...">
+        #Youtube
+      </div>
+  </div>
+
+    <div class="viet-bai full-screen hidden flex-container-center">
+      <div class="row form-inline " style="width: auto;" >
+        <div class="rounded" style="width: 500px; background-color: azure; padding: 20px;">
+          <img class="rounded-circle" src="../static/img/khoa.jpg" width="40px" height="40px" alt="">
+          <span style="font-weight: 500;"   > <span class="point">Khoaminion</span><span style="float:right" class="closepopup"><span class="point"><i class="fas fa-times"></i></span></span></span> <br>
+          <input type="text" class="mt-3 mb-3 tieudeviet" size="24" placeholder="Nhập tiêu đề !" style="font-size: xx-large; font-weight: 500;">
+          <textarea id="w3review" name="w3review" rows="20" class="noidungviet" cols="62" placeholder="nhập nội dung nè !" style="resize: none;"></textarea>
+          <hr>
+          <div style="text-align: center;" class="form-inline">
+            <div class="col-sm-4 point "><i class="fas fa-images"></i><span> Thêm ảnh: </span></div>
+            <input type="file" id="myfile" name="myfile" multiple>
+          </div>
+          
+          <hr>
+          
+          <button class="rounded dang-bai" style="margin-left: 190px; background-color: rgb(4, 229, 245); color: rgb(0, 0, 0);">Đăng</button>
+        </div>
+        </div>
+      </div>
+      </div>
+  </section>
+</body>
+
+  
+  <!-- Footer -->
+<footer class="text-center  text-lg-start bg-light text-muted">
+  <section class=" p-4 border-bottom " style="background-color: rgba(165, 162, 162, 0.05);">
+    <!-- Left -->
+    <div class="me-5 pl-30">
+      <a href="" class="pr-3">
+        TIN MỚI
+      </a>
+      <a href="" class="pr-3">
+        SỰ KIỆN
+      </a>
+      <a href="" class="pr-3">
+        VIDEO
+      </a>
+      <a href="" class="pr-3">
+        GIẢI TRÍ
+      </a>
+      <a href="" class="pr-3">
+        KHUYẾN MÃI
+      </a>
+    </div>
+  </section>
+
+
+  <!-- Section: Links  -->
+  <section class="mb-3">
+    <div class="container text-center text-sm-start mt-4">
+      <!-- Grid row -->
+      <div class="row mt-3 mb-3">
+        <!-- Grid column -->
+        <div class="col-sm-3 col-lg-3 col-xl-3 mx-auto mb-1">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            ZTECH
+          </h6>
+          <p><a class="text-reset" href="#!">Nội quy</a></p>
+          <p><a class="text-reset" href="#!">Thỏa thuận</a></p>
+          <p><a class="text-reset" href="#!">Góp ý</a></p>
+          <p><a class="text-reset" href="#!">Liên hệ quảng cáo</a></p>           
+          
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-sm-3 col-lg-3 col-xl-3 mx-auto mb-1">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Đối tác
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Vinamilk</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Thegioididong</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">FPT Shop</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">ConCung</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-sm-3 col-lg-3 col-xl-3 mx-auto mb-1">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Mua bán
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Điện thoại</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Máy ảnh</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Máy tính</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Xe cộ</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-sm-3 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-1">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Các kênh khác
+          </h6>
+          <p><a class="text-reset" href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i> Facebook</a></p>
+          <p><a class="text-reset" href="https://www.youtube.com/"><i class="fab fa-youtube"></i> Youtube</a></p>
+          <p><a class="text-reset" href="https://www.pinterest.com/"><i class="fab fa-pinterest"></i> Pinterest</a></p>
+          <p><a class="text-reset" href="https://www.instagram.com/"><i class="fab fa-instagram"></i></i> Instagram</a></p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+  <hr>
+  <!-- Copyright -->
+  <div class="text-center p-3 "  style=" font-size: small;">
+    <span class="pr-4"> © 2021 Team Ztech </span> <span class="pr-4"> Địa chỉ: 69 Hạ Long, Phường
+       4, TP.Vũng tàu </span><span class="pr-4"> Số điện thoại: 0283282719 </span> <span class="pr-4"> Chịu trách nhiệm nội dung: Hồ Trọng Vinh </span>
+  </div>
+</footer>
+<!-- Footer -->
+<div class="modal">
+  <div class="modal__overlay overflow-auto">
+    <div class="viet-bai p-0">
+      <!-- top -->
+      <div class="d-flex justify-content-between head" style="background-color: #f2f3f5; border-radius: 10px 10px 0 0 ;">
+        <div>
+          <span class="span-1">Viết bài đăng</span>
+          <div>
+            <span>Chuyển chế độ đăng:</span>
+            <div class="custom-control custom-switch d-inline">
+              <input type="checkbox" class="custom-control-input" id="customSwitch1" name="customSwitch1">
+              <label class="custom-control-label" for="customSwitch1"></label>
+            </div>
+          </div>
+        </div>
+        <div class="text-center m-2 close">
+          <i class="fas fa-times"></i>
+        </div>
+      </div>
+      <!--middle-->
+      <div class="p-4">
+        <div>
+          <img class="rounded-circle" src="../static/img/khoa.jpg" width="40px" height="40px" alt="">
+          <span style="font-weight: 500;"><span class="point"> Khoaminion</span>
+        </div>
+        <div class="mt-3">
+          <div class="d-block">
+            <input type="text" placeholder="Dán link vào đây nè" class="link-input w-100 mb-2 d-none" style="outline: none; border: none;">
+            <textarea spellcheck="false" style="height: 250px; border:none; border-bottom: 1px solid #a2a2a2;" class="w-100" placeholder="Viết nội dung của bạn vào đây."></textarea>
+            <button class="link-btn btn-circle" style="border: 1px solid #a2a2a2; outline: none;"><i class="fas fa-link"></i></button>
+          </div>
+        </div>
+        <div>
+          <img id="thumbnil" style="width:20%;" class="m-2"/>
+        <br>
+          <input type="file" accept="image/*"  onchange="showMyImage(this)" />
+        </div>
+      </div>
+      <div class="rounded" style="border: 10px solid #f3f3f3;">
+        <button class="font-weight-bold  btn btn-primary btn-block rounded"  type="button" >Đăng bài</button> 
+      </div>
+    </div> 
+  </div>
+</div>
+
+<script>
+  /*Hien thi anh*/
+  function showMyImage(fileInput) {
+        var files = fileInput.files;
+        for (var i = 0; i < files.length; i++) {           
+            var file = files[i];
+            var imageType = /image.*/;     
+            if (!file.type.match(imageType)) {
+                continue;
+            }           
+            var img=document.getElementById("thumbnil");            
+            img.file = file;    
+            var reader = new FileReader();
+            reader.onload = (function(aImg) { 
+                return function(e) { 
+                    aImg.src = e.target.result; 
+                }; 
+            })(img);
+            reader.readAsDataURL(file);
+        }    
+    }
+</script>
+</html>
