@@ -11,6 +11,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="shortcut icon" type="image/svg" href="../static/img/Z-green-leaf.svg"/>
   <title>Document</title>
   <script>
     $(document).ready(function(){
@@ -151,31 +152,6 @@
           $(".like-text1").text(" Thích");
         };
       });
-
-      $(".chevron-right").click(function(){
-        $(".pop1").addClass("hidden");       
-        $(".pop2").removeClass("hidden");
-        $('.frame1').attr('src', $('.frame1').attr('src'));
-      });
-
-      $(".chevron-left").click(function(){             
-        $(".pop2").addClass("hidden");
-        $(".pop1").removeClass("hidden");
-        $('.frame2').attr('src', $('.frame2').attr('src'));
-      });
-     
-      $(".dang-bai").click(function(){      
-        if ( $(".tieudeviet").val() =="" ||  $(".noidungviet").val() =="" ){
-          alert("Vui lòng điền đầy đủ nội dung !!!");
-        }
-        else{
-          alert("Đã đăng bài !!!");
-          $(".viet-bai").addClass("hidden");
-          $(".tieudeviet").val("");
-          $(".noidungviet").val("");
-        };
-      });
-
       $(".search-query").focus(function(){             
         $(".search-query").val(""); 
       });

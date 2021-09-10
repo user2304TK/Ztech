@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="../static/css/Login_Register.css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/svg" href="../static/img/Z-green-leaf.svg"/>
   <title>Document</title>
   <script>
     $(document).ready(function(){
@@ -50,11 +51,21 @@
         $("body").removeClass("unscroll");
         
       });
+      $("#link").hide();
       $(".link-btn").click(function(){           
-        $(".link-input").toggleClass("d-none");        
+        $("#link").toggle();
       });
-      
-
+      $("#customSwitch1").click(function(){         
+          $("#link").hide();
+          $(".link-btn").toggle();
+          $("#title").toggle();
+          if($(".span-1").text() == 'Viết bài đăng'){
+           $(".span-1").text('Viết Fact');
+          } 
+          else {
+           $(".span-1").text('Viết bài đăng');
+          }
+      });
       $(".search-query").hide();
 
       $(".form-group .btn").click(function(){
@@ -1197,8 +1208,13 @@
         </div>
         <div class="mt-3">
           <div class="d-block">
-            <input type="text" placeholder="Dán link vào đây nè" class="link-input w-100 mb-2 d-none" style="outline: none; border: none;">
-            <textarea spellcheck="false" style="height: 250px; border:none; border-bottom: 1px solid #a2a2a2;" class="w-100" placeholder="Viết nội dung của bạn vào đây."></textarea>
+            <div style="border-bottom:1px solid #a2a2a2;" id="link">
+              <input type="text" placeholder="Dán link vào đây nè" class="w-100 mb-2" style="outline: none; border: none;">
+            </div>  
+            <div style="border-bottom:1px solid #a2a2a2;"  id="title">
+              <input type="text" name="" placeholder="Tiêu đề" class="w-100 mb-2 pt-2" style="outline: none;border: none;">
+            </div>
+            <textarea spellcheck="false" style="height: 250px; border:none; border-bottom: 1px solid #a2a2a2;" class="w-100 pt-2" placeholder="Viết nội dung của bạn vào đây."></textarea>
             <button class="link-btn btn-circle" style="border: 1px solid #a2a2a2; outline: none;"><i class="fas fa-link"></i></button>
           </div>
         </div>
