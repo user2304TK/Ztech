@@ -69,14 +69,13 @@ var config = {
              backgroundColor: '#00beef',
              borderColor: '#00beef',
              borderWidth: 1
-         },
-         {
-             label: 'Khách',
-             data: data2,
-             backgroundColor: '#39f9b3',
-             borderColor: '#39f9b3',
-             borderWidth: 1
-         }]
+         }, {
+            label: 'Khách',
+            data: data2,
+            backgroundColor: '#39f9b3',
+            borderColor: '#39f9b3',
+            borderWidth: 1
+        }]
      },
      options: {
          scales: {
