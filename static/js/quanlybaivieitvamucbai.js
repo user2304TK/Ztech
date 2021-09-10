@@ -17,15 +17,9 @@
                   'Tháng 4', 'Tháng 5', 'Tháng 6',
                   'Tháng 7', 'Tháng 8', 'Tháng 9', 
                   'Tháng 10', 'Tháng 11', 'Tháng 12'],
-         datasets: [{
-             label: 'Người dùng',
-             data: data1,
-             backgroundColor: '#39f9b3',
-             borderColor: '#39f9b3',
-             borderWidth: 1
-         },
+         datasets: [
          {
-             label: 'Mod',
+             label: 'Người dùng',
              data: data2,
              backgroundColor: '#00beef',
              borderColor: '#00beef',
@@ -80,6 +74,10 @@ $(".btnDel").click(function(e) {
   html = '<tr><td>' + $("#tenMuc").val() + '</td><td>0</td><td class="text-right"><a class="bi bi-trash-fill px-2 admin-btn-round-clickdg"></a></td></tr>'
   $("#dsMuc").append(html);
   $("#filterMuc").append('<option>' + $("#tenMuc").val() + '</option>');
+  $("#dsMuc a").click(function(e) {
+    $(this).parent().parent().remove();
+    e.preventDefault();
+  });
 });
 
 $("#dsMuc a").click(function(e) {
