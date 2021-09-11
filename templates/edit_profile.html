@@ -9,18 +9,52 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../static/css/main.css">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" type="image/svg" href="../static/img/Z-green-leaf.svg"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-  <title>Document</title>
+  <link rel="shortcut icon" type="image/svg" href="../static/img/Z-green-leaf.svg"/>
+  <title>Chỉnh sửa thông tin</title>
   <script>
     $(document).ready(function(){
       if ($(window).width() > 750){
           $(".viet").hide();   
+          $(".dropdown-menu").addClass("dropdown-menu-right");
         }
-        else
-        {
+        else{
           $(".viet").show();
+          $(".dropdown-menu").removeClass("dropdown-menu-right"); 
         }
+
+        if ($(window).width() > 1200){
+          $(".info-box").show();   
+        }else{
+        
+          $(".info-box").hide();
+        }
+
+
+        if ($(window).width() > 1000){
+          $(".tag").addClass("ml-0");  
+        }else{
+        
+          $(".tag").removeClass("ml-0");
+        }
+         
+
+      $(".btn-vietbai").click(function(){             
+        $(".modal").addClass("d-flex"); 
+        $("body").addClass("unscroll");
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+      });
+      $(".close").click(function(){
+        $(".modal").removeClass("d-flex");
+        $("body").removeClass("unscroll");
+        
+      });
+      $(".link-btn").click(function(){           
+        $(".link-input").toggleClass("d-none");        
+      });
+      
 
       $(".search-query").hide();
 
@@ -32,17 +66,56 @@
       $(window).resize(function(){
         if ($(window).width() > 750){
           $(".viet").hide();   
+          $(".dropdown-menu").addClass("dropdown-menu-right");
         }
         else
         {
           $(".viet").show();
+          $(".dropdown-menu").removeClass("dropdown-menu-right"); 
         }  
+
         if ($(window).width() > 1200){
           $(".info-box").show();   
+          $(".blue-bar").removeClass("col-9");
         }
         else
         {
           $(".info-box").hide();
+          $(".blue-bar").addClass("col-9");
+        }
+
+        if ($(window).width() < 986){         
+          $(".scrollmenu").css({"width":"1000px"});
+        }       
+        
+
+        if ($(window).width() > 1000){
+          $(".last-tag").addClass("col-9"); 
+          $(".tag").addClass("ml-0");
+
+         
+        }
+        else
+        {
+          $(".tag").removeClass("ml-0");
+          $(".last-tag").removeClass("col-9");
+          $(".blue-bar").removeClass("col-9");
+        }
+
+        if ($(window).width() > 800){
+          $(".third").addClass("col-3");   
+        }
+        else
+        {
+          $(".third").removeClass("col-3");
+        }
+        
+        if ($(window).width() > 800){
+          $(".third").addClass("col-3");   
+        }
+        else
+        {
+          $(".third").removeClass("col-3");
         }
       });
 
@@ -80,49 +153,33 @@
           $(".like-text1").text(" Thích");
         };
       });
-
-      $(".fa-chevron-right").click(function(){
-        $(".pop1").addClass("hidden");       
-        $(".pop2").removeClass("hidden");
-        $('.frame1').attr('src', $('.frame1').attr('src'));
-      });
-
-      $(".fa-chevron-left").click(function(){             
-        $(".pop2").addClass("hidden");
-        $(".pop1").removeClass("hidden");
-        $('.frame2').attr('src', $('.frame2').attr('src'));
-      });
-
-      $(".ico-vietbai").click(function(){             
-        $(".viet-bai").removeClass("hidden"); 
-        $("body").addClass("unscroll");
-        $("html, body").animate({ scrollTop: 0 }, "slow");
-      });
-
-      $(".dang-bai").click(function(){      
-        if ( $(".tieudeviet").val() =="" ||  $(".noidungviet").val() =="" ){
-          alert("Vui lòng điền đầy đủ nội dung !!!");
-        }
-        else{
-          alert("Đã đăng bài !!!");
-          $(".viet-bai").addClass("hidden");
-          $(".tieudeviet").val("");
-          $(".noidungviet").val("");
-        };
-      });
-
       $(".search-query").focus(function(){             
         $(".search-query").val(""); 
       });
-    });
 
+      if ($(window).width() > 1000){
+          $(".last-tag").addClass("col-9");   
+        }
+        else
+        {
+          $(".last-tag").removeClass("col-9");
+        }
+
+        if ($(window).width() > 800){
+          $(".third").addClass("col-3");   
+        }
+        else
+        {
+          $(".third").removeClass("col-3");
+        }  
+    });
   </script>
 </head>
 <body>  
   <nav class="container navbar navbar-expand-md navbar-inverse  navbar-light pb-0">
     <!-- Brand -->
     <div class="form-group pt-2">
-    <a class="navbar-brand" href="#"><img src="../static/img/Z-green-leaf.svg" width="45" height="45" alt="Logo"> ZTech</a>
+    <a class="navbar-brand" href="../templates/index-logged-user.html"><img src="../static/img/Z-green-leaf.svg" width="45" height="45" alt="Logo"> ZTech</a>
     <!-- search -->
           <input type="text" class="search-query" placeholder="Type something...">
           <button type="submit" class="btn btn-circle"><i class="fa fa-search"></i></button>
@@ -145,51 +202,52 @@
         <a class="nav-link" href="#">Video</a>
       </li>
     </ul>
-      <li class="nav-item li-dangnhap pr-3 pb-2 ico-vietbai">
-        <i class="fas fa-feather btn-circle" style="padding-top: 10px; background-color: rgb(4, 229, 245);" data-toggle="tooltip" data-placement="top" title="Viết bài"></i>
-        <span class="viet">Viết bài</span>
-      </li>
-      <li class="nav-item li-dangnhap pr-3 pb-2">
-        <div class="dropdown" data-toggle="dropdown" aria-haspopup="true" data-placement="top" title="Cài đặt" aria-expanded="false" >
-          <i class="fas fa-bell btn-circle" style="padding-top: 10px; background-color: rgb(4, 229, 245);" data-toggle="tooltip" data-placement="top" title="Thông báo"></i>
-        <span class="viet">Thông báo</span>
-          <div class="dropdown-menu dropdown-menu-right" style="text-align: left;" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#" > 
-              <span style="color: blue; font-weight: 400;">KhuongPT</span> <br>
-              <span style="font-size: small;">Bài viết của bạn đã bị xóa bởi đăng tải nội dung không lành mạnh !!</span>
-            </a>
-            <hr>
-            <a class="dropdown-item" href="#" >
-                <span style="color: blue; font-weight: 400;">Nekowimade</span> <br>
-                <span style="font-size: small;">Đã bình luận bài đăng của bạn</span>
-            </a>
-            <hr>
-            <a class="dropdown-item" href="#" >
-                <span style="color: blue; font-weight: 400;">Tomblobla</span> <br>
-                <span style="font-size: small;">Đã thích bài đăng của bạn</span>
-            </a>
-          </div>
+    <li class="nav-item li-dangnhap pr-3 pb-2" style="color: white;">
+      <i class="fas fa-feather btn-circle" style="padding-top: 10px; background-color: #00beef;" data-toggle="tooltip" data-placement="top" title="Viết bài"></i>
+      <span class="viet" style="color: black;">Viết bài</span>
+    </li>
+    <li class="nav-item li-dangnhap pr-3 pb-2" style="color: white;">
+      <div class="dropdown" data-toggle="dropdown" aria-haspopup="true" data-placement="top" title="Cài đặt" aria-expanded="false" >
+        <i class="fas fa-bell btn-circle" style="padding-top: 10px; background-color: #00beef;" data-toggle="tooltip" data-placement="top" title="Thông báo"></i>
+      <span class="viet" style="color: black;">Thông báo</span>
+        <div class="dropdown-menu dropdown-menu-right" style="text-align: left;" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#" > 
+            <span style="color: blue; font-weight: 400;">KhuongPT</span> <br>
+            <span style="font-size: small;">Bài viết của bạn đã bị xóa bởi đăng tải nội dung không lành mạnh !!</span>
+          </a>
+          <hr>
+          <a class="dropdown-item" href="#" >
+              <span style="color: blue; font-weight: 400;">Nekowimade</span> <br>
+              <span style="font-size: small;">Đã bình luận bài đăng của bạn</span>
+          </a>
+          <hr>
+          <a class="dropdown-item" href="#" >
+              <span style="color: blue; font-weight: 400;">Tomblobla</span> <br>
+              <span style="font-size: small;">Đã thích bài đăng của bạn</span>
+          </a>
         </div>
-      </li>
-      <li class="nav-item li-dangnhap pr-3 pb-2">
-        <img class="rounded-circle" width="33" height="33" src="../static/img/khoa.jpg" alt="khoamod" data-toggle="tooltip" data-placement="top" title="Trang cá nhân">
-        <span class="viet">Trang cá nhân</span>
-      </li>
-      
-      <li class="nav-item li-dangnhap pb-2">       
-        <div class="dropdown" data-toggle="dropdown" aria-haspopup="true" data-placement="top" title="Cài đặt" aria-expanded="false" >
-          <i id="dropdownMenuButton" class="fas fa-cog btn-circle" style="padding-top: 10px; "></i>
-          <span class="viet">Cài đặt</span>
-          <div class="dropdown-menu dropdown-menu-right" style="text-align: left;" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Trang cá nhân</a>
-            <a class="dropdown-item" href="#"><i class="fas fa-info"></i> Thông tin cá nhân</a>
-            <a class="dropdown-item" href="#"><i class="fas fa-user-tag"></i> Quản lý user</a>
-            <a class="dropdown-item" href="#"><i class="fas fa-paperclip"></i> Quản lý bài viết</a>
-            <a class="dropdown-item" href="#"><i class="fas fa-lock"></i> Đổi mật khẩu</a>
-            <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
-          </div>
-        </div>
-      </li>
+      </div>
+    </li>
+    <li class="nav-item li-dangnhap pr-3 pb-2">
+      <img class="rounded-circle" width="33" height="33" src="../static/img/khoa.jpg" alt="khoamod" data-toggle="tooltip" data-placement="top" title="Trang cá nhân">
+      <span class="viet">Trang cá nhân</span>
+    </li>
+    <li class="nav-item li-dangnhap pb-2">
+      <div class="btn-group">
+        <a class=" dropdown"
+           id="dropdownMenuButton" data-toggle="dropdown">
+           <i id="dropdownMenuButton" class="fas fa-cog btn-circle" style="padding-top: 10px; "></i>
+           <span class="viet">Cài đặt</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+          <a class="dropdown-item" href="../templates/profile.html"><i class="fas fa-user"></i> Trang cá nhân</a>
+          <a class="dropdown-item" href="../templates/edit_profile.html"><i class="fas fa-info"></i> Thông tin cá nhân</a>
+          <a class="dropdown-item" href="../templates/post-manager.html"><i class="fas fa-paperclip"></i> Quản lý bài viết</a>
+          <a class="dropdown-item" href="../templates/viethotro.html"><i class="fas fa-paperclip"></i> Viết hỗ trợ</a>
+          <a class="dropdown-item" href="../templates/Login.html"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+      </div>
+     </div>
+    </li>
     </div>
   </nav>
   <hr class="hr-shadow"> 
@@ -273,7 +331,7 @@
               <div class="form-group">
                 <label class="col-md-3 control-label"></label>
                 <div class="col-md-8">
-                  <input type="button" class="btn btn-primary" value="Lưu chỉnh sửa">
+                  <input type="button" class="btn btn-primary" value="Lưu chỉnh sửa" onclick="alert('Lưu thành công.')">
                   <input type="reset" class="btn btn-default" value="Hủy">
                 </div>
               </div>
@@ -281,7 +339,6 @@
           </div>
       </div>
     </div>
-    <hr>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://npmcdn.com/flatpickr/dist/flatpickr.min.js"></script>
     <script src="https://npmcdn.com/flatpickr/dist/l10n/vn.js"></script>

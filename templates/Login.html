@@ -8,8 +8,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../static/css/Login_Register.css">
+    <link rel="shortcut icon" type="image/svg" href="../static/img/Z-green-leaf.svg"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/svg" href="../static/img/Z-green-leaf.svg"/>
     <title>Đăng nhập | ZTech</title>
 </head>
 <body style="background-color: #E5E5E5;">
@@ -29,19 +31,20 @@
             </div>
             <div>
                 <div>
-                    <input type="text" name="login" id="" class="input_area" placeholder="Tên tài khoản hoặc Email">
+                    <input type="text" name="user" id="user" class="input_area" placeholder="Tên tài khoản hoặc Email">
                 </div>
                 <div>                    
-                    <input type="text" name="password" id="" class="input_area" placeholder="Mật khẩu">
+                    <input type="password" name="password" id="passwd" class="input_area" placeholder="Mật khẩu">
                 </div>     
                 <div class="form-group form-check" style="margin: 0px 20px 15px 20px;">
                     <label class="form-check-label">
                       <input class="form-check-input" type="checkbox" name="remember"> Ghi nhớ đăng nhập
                     </label>
-                    <a onclick="document.getElementById('ForgotPW').style.display='block';" class="float-right text-dark btn btn-link"> Quên mật khẩu?</a>
+                    <a class="float-right text-dark btn btn-link forgot"> Quên mật khẩu?</a>
                 </div>
-                <div class="d-flex justify-content-center">
-                    <input type="submit" id="" class="" value="Đăng nhập">
+                <div class="d-flex justify-content-center" id="btn-dn">
+                    <a href="."><input type="submit" onclick="return validate()" value="Đăng nhập"></a>
+                    
                 </div> 
                 <div class="form-Divider">
                     <span>Hoặc</span>
@@ -60,7 +63,7 @@
                 </div>      
                 <div class="text-center pb-3 ">
                     <span>Chưa có tài khoản?</span>
-                    <a href=".">Đăng ký ngay</a>
+                    <a href="../templates/Register.html">Đăng ký ngay</a>
                 </div>                 
             </div>
         </form>
@@ -71,7 +74,7 @@
         <form action="" class="Login_form mt-5">
             <h2 class="textHeading mb-3">
                 <span style="font-size: 20px;">Quên mật khẩu</span>
-                <a onclick="document.getElementById('ForgotPW').style.display='none';" style="cursor: pointer;" class="text-secondary">
+                <a style="cursor: pointer;" class="text-secondary close-form">
                     <i class="far fa-times-circle"></i>
                 </a>
             </h2>
@@ -85,3 +88,40 @@
         </form>
     </div>
 </div>
+<script>
+    $(".forgot").click(function(){
+        $(".modal").addClass("d-flex");
+        $("body").addClass("overflow-hidden");
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+      });
+      
+      $(".close-form").click(function(){
+        $(".modal").removeClass("d-flex");
+        $("body").removeClass("overflow-hidden");
+        $('iframe').attr('src', $('iframe').attr('src'));
+      });
+</script>
+<script>
+    function validate(){
+        var a = document.getElementById("login_link");
+        var user = document.getElementById("user").value;
+        var user_pw = document.getElementById("passwd").value;
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        if(user == "" || user_pw ==""){
+            alert("Tài khoản hoặc mật khẩu không được để trống. Xin vui lòng nhập đủ!!");
+            return(false);
+        }
+        else if ((user =="admin" || user =="mod" || user =="user") && (user_pw =="admin" || user_pw =="mod" || user_pw =="user")){
+            alert('Đăng nhập thành công!');
+
+        }
+        else if (!filter.test(user))  {
+            alert('Tài khoản hoặc Email không hợp lệ. Vui lòng nhập lại!');
+            return(false);
+        }
+        else
+        {
+            alert('Đăng nhập thành công!'); 
+        }
+    }
+</script>

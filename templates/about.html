@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../static/css/main.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" type="image/svg" href="../static/img/Z-green-leaf.svg"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Ztech</title>
+  <script>
+    $(document).ready(function(){
+      if ($(window).width() > 750){
+          $(".viet").hide();   
+        }
+        else
+        {
+          $(".viet").show();
+        }
+
+        if ($(window).width() > 1200){
+          $(".info-box").show();   
+        }
+        else
+        {
+          $(".info-box").hide();
+        }  
+
+        if ($(window).width() > 1000){
+          $(".tag").addClass("ml-0");  
+        }else{
+        
+          $(".tag").removeClass("ml-0");
+        }
+         
+      
+
+      $(".search-query").hide();
+
+      $(".form-group .btn").click(function(){
+        $(".search-query").toggle(200);
+        
+      }); 
+
+      $(window).resize(function(){
+        if ($(window).width() > 750){
+          $(".viet").hide();   
+        }
+        else
+        {
+          $(".viet").show();
+        }  
+
+        if ($(window).width() > 1200){
+          $(".info-box").show();   
+          $(".blue-bar").removeClass("col-9");
+          $(".scrollmenu").removeClass("col-9");
+          
+        }
+        else
+        {
+          $(".info-box").hide();
+          $(".blue-bar").addClass("col-9");
+          $(".scrollmenu").addClass("col-9");
+        }
+
+        if ($(window).width() < 1000){         
+          $(".scrollmenu").removeClass("col-9");         
+        } 
+             
+        
+
+        if ($(window).width() > 1000){
+          $(".last-tag").addClass("col-9");   
+          $(".tag").addClass("ml-0");
+         
+        }
+        else
+        {
+          $(".last-tag").removeClass("col-9");
+          $(".blue-bar").removeClass("col-9");
+          $(".tag").removeClass("ml-0");
+        }
+
+        if ($(window).width() > 800){
+          $(".third").addClass("col-3");   
+        }
+        else
+        {
+          $(".third").removeClass("col-3");
+        }
+        
+        if ($(window).width() > 800){
+          $(".third").addClass("col-3");   
+        }
+        else
+        {
+          $(".third").removeClass("col-3");
+        }
+      });
+
+      $(".showpopup").click(function(){
+        $(".pop1").removeClass("hidden");
+        $("body").addClass("unscroll");
+        $(".pop2").addClass("hidden");
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+      });
+      
+      $(".closepopup").click(function(){
+        $(".full-screen").addClass("hidden");
+        $("body").removeClass("unscroll");
+        $('iframe').attr('src', $('iframe').attr('src'));
+      });
+
+      $(".like").click(function(){
+        $(".like").toggleClass("like1");
+        if ($(".like-text").text() ==" Thích"){
+          $(".like-text").text(" Đã thích");
+
+        }
+        else{
+          $(".like-text").text(" Thích");
+        };
+      });
+
+      $(".like2").click(function(){
+        $(".like2").toggleClass("like1");
+        if ($(".like-text1").text() ==" Thích"){
+          $(".like-text1").text(" Đã thích");
+
+        }
+        else{
+          $(".like-text1").text(" Thích");
+        };
+      });
+
+      $(".chevron-right").click(function(){
+        $(".pop1").addClass("hidden");       
+        $(".pop2").removeClass("hidden");
+        $('.frame1').attr('src', $('.frame1').attr('src'));
+      });
+
+      $(".chevron-left").click(function(){             
+        $(".pop2").addClass("hidden");
+        $(".pop1").removeClass("hidden");
+        $('.frame2').attr('src', $('.frame2').attr('src'));
+      });
+
+      $(".ico-vietbai").click(function(){             
+        $(".viet-bai").removeClass("hidden"); 
+        $("body").addClass("unscroll");
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+      });
+
+      $(".dang-bai").click(function(){      
+        if ( $(".tieudeviet").val() =="" ||  $(".noidungviet").val() =="" ){
+          alert("Vui lòng điền đầy đủ nội dung !!!");
+        }
+        else{
+          alert("Đã đăng bài !!!");
+          $(".viet-bai").addClass("hidden");
+          $(".tieudeviet").val("");
+          $(".noidungviet").val("");
+        };
+      });
+
+      $(".search-query").focus(function(){             
+        $(".search-query").val(""); 
+      });
+
+      if ($(window).width() > 1000){
+          $(".last-tag").addClass("col-9");   
+        }
+        else
+        {
+          $(".last-tag").removeClass("col-9");
+        }
+
+        if ($(window).width() > 800){
+          $(".third").addClass("col-3");   
+        }
+        else
+        {
+          $(".third").removeClass("col-3");
+        }  
+    });
+  </script>
+</head>
+<body>  
+  
+  <nav class="container navbar navbar-expand-md navbar-inverse  navbar-light pb-0">
+    <div class="form-group pt-2">
+      <a class="navbar-brand" href="../templates/index.html"><img src="../static/img/Z-green-leaf.svg" width="45" height="45" alt="Logo"> ZTech</a>
+      </div>
+
+    <!-- toggle icon -->
+    
+    <!-- Links -->
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav mr-auto pb-2">   
+    </ul>
+      <li class="nav-item li-dangnhap pb-2">
+        <a class="ml-auto text-dark "  href="../templates/Login.html">Đăng nhập</a>
+      </li>
+    </div>
+  </nav>
+  <hr class="hr-shadow" style="margin-bottom: 0px;" >
+  <!-- end of nav bar -->
+  <div style="text-align: center; background-image: url(../static/img/wallpaper1.jpg) ; background-repeat: no-repeat; background-size: cover; color: white;" >
+  <div class="container-sm p-3" style="text-align: center;">
+      <div style="font-size: 50px; padding-top: 80px; color: #00beef; font-family: 'Courier New', Courier, monospace; font-weight: 900;">About Us</div>
+      <p class="container-sm" style="width: 300px; color: rgb(73, 65, 65);" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus sint accusamus quos quo consequatur molestiae commodi vero porro repellendus quibusdam voluptas quam, pariatur eligendi suscipit explicabo perspiciatis, ullam officia esse!</p>
+      <DIV class="row " style="padding-top: 90px; padding-bottom: 50px;">
+          <div class="col-lg-4 pt-4 point">
+            <i class="fas fa-ad" style="font-size: 80px;"></i>
+              <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis ut doloribus eligendi similique earum ratione fuga officia ab et cum officiis, consequatur distinctio dicta, magni quidem minima sequi architecto voluptatum modi impedit ex. Ratione provident in officiis atque. Cum, corrupti? lo</div>
+          </div>
+          <div class="col-lg-4 pt-4 point">
+            <i class="fas fa-archway" style="font-size: 80px;"></i>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse ex id facilis doloribus nisi. Minima, sequi iste soluta quas, ullam ab dolor fuga explicabo officiis iure ex molestias, maxime reiciendis qui voluptas! Cum at, totam officia ipsum maiores repudiandae velit.</div>
+        </div>
+        <div class="col-lg-4 pt-4 point">
+          <i class="fas fa-anchor" style="font-size: 80px;"></i>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati magni libero optio ullam dolorem suscipit officiis corporis nihil ipsum fugiat? Ex repellat, doloremque quaerat, commodi quod itaque delectus, aliquam quasi debitis eaque totam id molestiae distinctio quas! Debitis, odit perferendis.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+
+<!-- Copyright -->
+<div class="text-center p-3 "  style=" font-size: small;">
+<span class="pr-4"> © 2021 Team Ztech </span> <span class="pr-4"> Địa chỉ: 69 Hạ Long, Phường
+   4, TP.Vũng tàu </span><span class="pr-4"> Số điện thoại: 0283282719 </span> <span class="pr-4"> Chịu trách nhiệm nội dung: Hồ Trọng Vinh </span>
+</div>
+</footer>
+<!-- Footer -->
+
+</html>

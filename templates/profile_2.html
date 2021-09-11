@@ -9,7 +9,6 @@
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../static/css/main.css">
   <link rel="stylesheet" href="../static/css/Login_Register.css">
-  <link rel="shortcut icon" type="image/svg" href="../static/img/Z-green-leaf.svg"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -162,7 +161,7 @@
   <nav class="container navbar navbar-expand-md navbar-inverse  navbar-light pb-0">
     <!-- Brand -->
     <div class="form-group pt-2">
-    <a class="navbar-brand" href="../templates/index-logged-admin.html"><img src="../static/img/Z-green-leaf.svg" width="45" height="45" alt="Logo"> ZTech</a>
+    <a class="navbar-brand" href="../templates/index logged.html"><img src="../static/img/Z-green-leaf.svg" width="45" height="45" alt="Logo"> ZTech</a>
     <!-- search -->
           <input type="text" class="search-query" placeholder="Type something...">
           <button type="submit" class="btn btn-circle"><i class="fa fa-search"></i></button>
@@ -212,7 +211,7 @@
       </div>
     </li>
     <li class="nav-item li-dangnhap pr-3 pb-2">
-      <img class="rounded-circle" width="33" height="33" src="../static/img/khoa.jpg" alt="khoamod" data-toggle="tooltip" data-placement="top" title="Trang cá nhân">
+      <img class="rounded-circle" width="33" height="33" src="../static/img/surface.jpg" alt="admin" data-toggle="tooltip" data-placement="top" title="Trang cá nhân">
       <span class="viet">Trang cá nhân</span>
     </li>
     <li class="nav-item li-dangnhap pb-2">
@@ -223,12 +222,13 @@
            <span class="viet">Cài đặt</span>
         </a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="../templates/profile.html"><i class="fas fa-user"></i> Trang cá nhân</a>
-          <a class="dropdown-item" href="../templates/edit_profile.html"><i class="fas fa-info"></i> Thông tin cá nhân</a>
-          <a class="dropdown-item" href="../templates/post-manager.html"><i class="fas fa-paperclip"></i> Quản lý bài viết</a>
-          <a class="dropdown-item" href="../templates/viethotro.html"><i class="fas fa-paperclip"></i> Viết hỗ trợ</a>
-          <a class="dropdown-item" href="../templates/Login.html"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
-      </div>
+         <a class="dropdown-item" href="../templates/profile.html"><i class="fas fa-user"></i> Trang cá nhân</a>
+            <a class="dropdown-item" href="../templates/edit_profile.html"><i class="fas fa-info"></i> Thông tin cá nhân</a>
+            <a class="dropdown-item" href="../templates/quanlyuser.html"><i class="fas fa-user-tag"></i> Quản lý user</a>
+            <a class="dropdown-item" href="../templates/post-manager.html"><i class="fas fa-paperclip"></i> Quản lý bài viết</a>
+            <a class="dropdown-item" href="../templates/userhelpsent.html"><i class="fas fa-paperclip"></i> Yêu cầu hỗ trợ</a>
+            <a class="dropdown-item" href="../templates/Login.html"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+        </div>
      </div>
     </li>
     </div>
@@ -349,19 +349,13 @@
                 <div class="col-lg-8" >
                   <input class="form-control" type="text" disabled>
                 </div>
-              </div>                                      
-              <div class="form-group " align="center">
-                <label class="col-md-3 control-label"></label>
-                <div class="col-md-8">
-                  <a href="../templates/edit_profile.html"><input type="button" class="btn btn-primary" value="Chỉnh sửa thông tin!"></a>
-                </div>
-              </div>
+              </div>                                     
             </form>
           </div>
         </div>
         <div class="page-home container" align="center" >
           <div style="max-width: 700px;" >
-            <button  class="btn-vietbai mt-2 font-weight-bold  btn btn-primary btn-block rounded"  type="button" >+VIẾT BÀI CHIA SẺ, ĐẶT CÂU HỎI, SHARE LINK</button> 
+            
             <div>
               <div style="margin-top:10px;">          
                   <div class="rounded" align="left" style=" background-color: #f0f2f5; padding: 15px;">
@@ -378,8 +372,8 @@
                     </div>
                     <hr> 
                     <div style="display: flex;" class="mb-3">
-                      <img class="rounded-circle m-2" src="../static/img/khoa.jpg" width="32px" height="32px" alt="">
-                      <div style="border: 1px solid rgb(202,202,202); border-radius: 10px; background-color: #FFF;" class="w-100 p-2">
+                      <img class="rounded-circle m-2" src="../static/img/surface.jpg" width="32px" height="32px" alt="">
+                      <div style="border: 1px solid rgb(202,202,202); border-radius: 10px; background-color: #FFF;" class="w-100 p-2 h-100">
                         <textarea class="auto_height border-0" oninput="auto_height(this)" placeholder="Viết bình luận của bạn vào đây" style="outline: none;"></textarea>
                       </div> 
                     </div>         
