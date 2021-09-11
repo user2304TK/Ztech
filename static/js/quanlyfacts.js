@@ -9,11 +9,6 @@
     data1.push(randomIntInRange(20, 50));
  }
 
- var data2 = [];
- for (let i = 0; i < 12; i++) {
-    data2.push(randomIntInRange(20, 50));
- }
-
  var ctx = $('#myChart');
  var myChart = new Chart(ctx, {
      type: 'bar',
@@ -23,15 +18,8 @@
                   'Tháng 7', 'Tháng 8', 'Tháng 9', 
                   'Tháng 10', 'Tháng 11', 'Tháng 12'],
          datasets: [{
-             label: 'Người dùng',
+             label: 'Facts',
              data: data1,
-             backgroundColor: '#39f9b3',
-             borderColor: '#39f9b3',
-             borderWidth: 1
-         },
-         {
-             label: 'Mod',
-             data: data2,
              backgroundColor: '#00beef',
              borderColor: '#00beef',
              borderWidth: 1
@@ -54,14 +42,8 @@
     for (let i = 0; i < 12; i++) {
        data1.push(randomIntInRange(20, 50));
     }
-   
-    var data2 = [];
-    for (let i = 0; i < 12; i++) {
-        data2.push(randomIntInRange(20, 50));
-    }
 
     myChart.data.datasets[0].data = data1;
-    myChart.data.datasets[1].data = data2;
     myChart.update();
   });
 

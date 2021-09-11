@@ -2,12 +2,12 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Ztechnews | Bảng điều khiển</title>
+  <title>Ztechnews | Quản lý bài viết và mục</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="../static/img/Z-green-leaf.png">
-  <link rel="stylesheet" href="../static/bootstrap-4.6.0-dist/css/bootstrap.css">
-  <link rel="stylesheet" href="../static/bootstrap-icons-1.4.0/bootstrap-icons.css">
-  <link rel="stylesheet" href="../static/css/admin.css">
+  <link rel="icon" href="../../static/img/Z-green-leaf.png">
+  <link rel="stylesheet" href="../../static/bootstrap-4.6.0-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../../static/bootstrap-icons-1.4.0/bootstrap-icons.css">
+  <link rel="stylesheet" href="../../static/css/admin.css">
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -17,7 +17,7 @@
     <div class="col-md-3 col-lg-2 px-0 position-fixed h-100 bg-white shadow-sm sidebar" id="sidebar">
       <a href="#">
         <div class="my-3 text-center">
-          <img src="../static/img/Z-green-leaf.png" class="logo-img">
+          <img src="../../static/img/Z-green-leaf.png" class="logo-img">
           <span class = "logo-name align-middle ml-1">Technews</span>
         </div>
       </a>
@@ -35,8 +35,12 @@
           <span class="ml-2">Quản lý facts</span>
         </a>
         <a href="#" class="list-group-item list-group-item-action border-0 align-items-center">
-          <span class="bi bi-pencil-square"></span>
+          <span class="bi bi-person-lines-fill"></span>
           <span class="ml-2">Quản lý thành viên</span>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action border-0 align-items-center">
+          <span class="bi bi-question-square-fill"></span>
+          <span class="ml-2">Xử lý hỗ trợ</span>
         </a>
       </div>
     </div>
@@ -52,7 +56,7 @@
         </button>
         <div class="dropdown ml-auto">
           <div class="btn py-0 d-flex align-items-center" id="logout-dropdown" data-toggle="dropdown" aria-expanded="false">
-            <img src="../static/img/avatar.jpg" alt="logo" class="avatar-img rounded-circle">
+            <img src="../../static/img/avatar.jpg" alt="logo" class="avatar-img rounded-circle">
             <span class="ml-1 text-white">Admin</span>
             <span class="bi bi-chevron-down ml-1 small text-white"></span>
           </div>
@@ -113,7 +117,7 @@
               <div class="d-flex justify-content-around row">
                 <div class="text-center p-2" data-toggle="modal" data-target="#detailUser">
                   <div class="card rounded-circle overflow-hidden avatar-img-lg">
-                    <img src="../static/img/avatar.jpg" class="rounded-circle">
+                    <img src="../../static/img/avatar.jpg" class="rounded-circle">
                     <div class="card-img-overlay d-flex flex-column p-0">
                       <div class="mt-auto admin-bgcl text-light">#1</div>
                     </div>
@@ -123,7 +127,7 @@
                 </div>
                 <div class="text-center p-2" data-toggle="modal" data-target="#detailUser">
                   <div class="card rounded-circle overflow-hidden avatar-img-lg">
-                    <img src="../static/img/avatar.jpg" class="rounded-circle">
+                    <img src="../../static/img/avatar.jpg" class="rounded-circle">
                     <div class="card-img-overlay d-flex flex-column p-0">
                       <div class="mt-auto admin-bgcl text-light">#2</div>
                     </div>
@@ -133,7 +137,7 @@
                 </div>
                 <div class="text-center p-2" data-toggle="modal" data-target="#detailUser">
                   <div class="card rounded-circle overflow-hidden avatar-img-lg">
-                    <img src="../static/img/avatar.jpg" class="rounded-circle">
+                    <img src="../../static/img/avatar.jpg" class="rounded-circle">
                     <div class="card-img-overlay d-flex flex-column p-0">
                       <div class="mt-auto admin-bgcl text-light">#3</div>
                     </div>
@@ -145,14 +149,14 @@
                   <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Thông tin người dùng</h5>
+                        <h5 class="modal-title font-weight-bold" id="exampleModalLongTitle">Thông tin người dùng</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                           <span aria-hidden="true">&times;</span>
                         </button>
                       </div>
                       <div class="w-100 d-flex justify-content-center my-3">
                       <div class="d-block">
-                        <img src="../static/img/avatar.jpg" class="rounded-circle avatar-img-lg">
+                        <img src="../../static/img/avatar.jpg" class="rounded-circle avatar-img-lg">
                         <div class="text-center font-weight-bolder">cheems</div>
                       </div>
                         
@@ -220,7 +224,7 @@
               <div class="row equal" id="dsBaiViet">
                 <div class="col-xl-4 btn">
                   <div class="card">
-                    <img class="card-img-top" src="../static/img/cheems-quality.jpg" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="../../static/img/cheems-quality.jpg" alt="Card image" style="width:100%">
                     <div class="card-body">
                       <span class="card-img-overlay d-flex justify-content-between">
                         <div class="bg-dark text-light px-1 rounded" style="height: fit-content">
@@ -245,7 +249,7 @@
                 </div>
                 <div class="col-xl-4 btn text-left">
                   <div class="card mb-3">
-                    <img class="card-img-top" src="../static/img/cheems-quality.jpg" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="../../static/img/cheems-quality.jpg" alt="Card image" style="width:100%">
                     <div class="card-body">
                       <span class="card-img-overlay d-flex justify-content-between">
                         <div class="bg-dark text-light px-1 rounded" style="height: fit-content">
@@ -270,7 +274,7 @@
                 </div>
                 <div class="col-xl-4 btn text-left">
                   <div class="card mb-3">
-                    <img class="card-img-top" src="../static/img/cheems-quality.jpg" alt="Card image" style="width:100%">
+                    <img class="card-img-top" src="../../static/img/cheems-quality.jpg" alt="Card image" style="width:100%">
                     <div class="card-body">
                       <span class="card-img-overlay d-flex justify-content-between">
                         <div class="bg-dark text-light px-1 rounded" style="height: fit-content">
@@ -365,12 +369,12 @@
   </div>
 </div>
 <!-- partial -->
-  <script src="../static/js/jquery-3.6.0.min.js"></script>
+  <script src="../../static/js/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="../static/popper/dist/umd/popper.min.js"></script>
-  <script src="../static/js/jquery.sparkline.min.js"></script>
-  <script src="../static/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
-  <script src="../static/js/admin.js"></script>
-  <script src="../static/js/quanlybaivieitvamucbai.js"></script>
+  <script src="../../static/popper/dist/umd/popper.min.js"></script>
+  <script src="../../static/js/jquery.sparkline.min.js"></script>
+  <script src="../../static/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+  <script src="../../static/js/admin.js"></script>
+  <script src="../../static/js/quanlybaivieitvamucbai.js"></script>
 </body>
 </html>
