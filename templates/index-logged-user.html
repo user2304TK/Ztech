@@ -216,7 +216,7 @@
   <nav class="container navbar navbar-expand-md navbar-inverse  navbar-light pb-0">
     <!-- Brand -->
     <div class="form-group pt-2">
-    <a class="navbar-brand" href="../templates/index-logged-user.html"><img src="../static/img/Z-green-leaf.svg" width="45" height="45" alt="Logo"> ZTech</a>
+    <a class="navbar-brand" href="/user"><img src="../static/img/Z-green-leaf.svg" width="45" height="45" alt="Logo"> ZTech</a>
     <!-- search -->
           <input type="text" class="search-query" placeholder="Type something...">
           <button type="submit" class="btn btn-circle"><i class="fa fa-search"></i></button>
@@ -280,15 +280,15 @@
              id="dropdownMenuButton" data-toggle="dropdown">
              <i id="dropdownMenuButton" class="fas fa-cog btn-circle" style="padding-top: 10px; "></i>
              <span class="viet">Cài đặt</span>
-          </a>
-          <div class="dropdown-menu dropdown-menu-right">
-           <a class="dropdown-item" href="../templates/profile.html"><i class="fas fa-user"></i> Trang cá nhân</a>
-              <a class="dropdown-item" href="../templates/edit_profile.html"><i class="fas fa-info"></i> Thông tin cá nhân</a>
-              <a class="dropdown-item" href="../templates/post-manager.html"><i class="fas fa-paperclip"></i> Quản lý bài viết</a>
-              <a class="dropdown-item" href="../templates/viethotro.html"><i class="fas fa-paperclip"></i> Viết hỗ trợ</a>
-              <a class="dropdown-item" href="../templates/Login.html"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
-          </div>
-       </div>
+          </a>         
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/user/trangcanhan"><i class="fas fa-user"></i> Trang cá nhân</a>
+              <a class="dropdown-item" href="/user/chinhsuathongtin"><i class="fas fa-info"></i> Thông tin cá nhân</a>
+              <a class="dropdown-item" href="/user/quanlybaiviet"><i class="fas fa-paperclip"></i> Quản lý bài viết</a>
+              <a class="dropdown-item" href="/user/danhsachhotro"><i class="fas fa-paperclip"></i> Hỗ trợ đã gửi</a>
+              <a class="dropdown-item" href="/user/viethotro"><i class="fas fa-paperclip"></i> Viết hỗ trợ</a>
+              <a class="dropdown-item" href="/dangnhap"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+            </div>     
       </li>
     </div>
     
@@ -367,7 +367,7 @@
  <div class="row container ml-1 ">
   <div class="row col-9 last-tag p-0 " >
     <div class="card col-md-8 p-0 mb-2" style="width: 100%;background-color:rgb(240, 240, 240);">
-      <a href="../templates/baiviet.html"><img class="card-img-top p-0   rounded" src="../static/img/sach.jpg" alt="Card image" style="width:100%"></a>
+      <a href="user/baiviet"><img class="card-img-top p-0   rounded" src="../static/img/sach.jpg" alt="Card image" style="width:100%"></a>
       <div class="card-body overflow-hidden">
         <a class="font-weight-bold" href="../templates/baiviet.html">Giới thiệu sách và phim "Suối nguồn" của tác giả Ayn Rand</a>
         <p class="card-text">Hassler - 35 phút</p>
@@ -1114,7 +1114,7 @@
       </h6>
       <p><a class="text-reset" href="#!">Nội quy</a></p>
       <p><a class="text-reset" href="#!">Thỏa thuận</a></p>
-      <p><a class="text-reset" href="#!">Góp ý</a></p>
+      <p><a class="text-reset" href="/about">About</a></p>
       <p><a class="text-reset" href="#!">Liên hệ quảng cáo</a></p>           
       
     </div>

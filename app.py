@@ -125,5 +125,17 @@ def trangcanhanadmin():
 
 
 
+@app.route('/admin/chinhsuathongtin')
+def chinhsuathongtinadmin():
+    return render_template('edit_profile2.html')
+
+
+
+@app.route('/admin/baiviet')
+def baivietadmin():
+    return render_template('baivietadmin.html')
+
+
+
 if __name__ == '__main__':
     app.run()
