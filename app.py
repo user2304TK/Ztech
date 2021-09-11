@@ -83,6 +83,12 @@ def about():
 
 
 
+@app.route('/admin')
+def indexadmin():
+    return render_template('index-logged-admin.html')
+
+
+
 @app.route('/admin/dashboard')
 def dashboard():
     return render_template('admin/dashboard.html')
@@ -110,6 +116,12 @@ def xulyhotro():
 @app.route('/admin/quanlythanhvien')
 def quanlythanhvien():
     return render_template('admin/quanlythanhvien.html')
+
+
+
+@app.route('/admin/trangcanhan')
+def trangcanhanadmin():
+    return render_template('profile_2.html')
 
 
 
