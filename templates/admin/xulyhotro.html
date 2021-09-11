@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Ztechnews | Xử lý hỗ trợ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../static/img/Z-green-leaf.png">
+  <link rel="stylesheet" href="../../static/bootstrap-4.6.0-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../../static/bootstrap-icons-1.4.0/bootstrap-icons.css">
+  <link rel="stylesheet" href="../../static/css/admin.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container-fluid" style="height:100vh;">
+  <div class="row">
+    <!-- sidebar -->
+    <div class="col-md-3 col-lg-2 px-0 position-fixed h-100 bg-white shadow-sm sidebar" id="sidebar">
+      <a href="#">
+        <div class="my-3 text-center">
+          <img src="../../static/img/Z-green-leaf.png" class="logo-img">
+          <span class = "logo-name align-middle ml-1">Technews</span>
+        </div>
+      </a>
+      <div class="list-group rounded-0">
+        <a href="admin/dashboard" class="list-group-item list-group-item-action border-0 align-items-center">
+          <span class="bi bi-bar-chart-fill"></span>
+          <span class="ml-2">Bảng điều khiển</span>
+        </a>
+        <a href="admin/quanlybaivietvamucbai" class="list-group-item list-group-item-action border-0 align-items-center">
+          <span class="bi bi-newspaper"></span>
+          <span class="ml-2">Quản lý bài viết và mục</span>
+        </a>
+        <a href="admin/quanlyfacts" class="list-group-item list-group-item-action border-0 align-items-center">
+          <span class="bi bi-pencil-square"></span>
+          <span class="ml-2">Quản lý facts</span>
+        </a>
+        <a href="admin/quanlythanhvien" class="list-group-item list-group-item-action border-0 align-items-center">
+            <span class="bi bi-person-lines-fill"></span>
+            <span class="ml-2">Quản lý thành viên</span>
+        </a>
+        <a href="admin/xulyhotro" class="list-group-item list-group-item-action border-0 align-items-center active-page">
+          <span class="bi bi-question-square-fill"></span>
+          <span class="ml-2">Xử lý hỗ trợ</span>
+        </a>
+      </div>
+    </div>
+    <!-- overlay to close sidebar on small screens -->
+    <div class="w-100 vh-100 position-fixed overlay d-none" id="sidebar-overlay"></div>
+    <!-- note: in the layout margin auto is the key as sidebar is fixed -->
+    <div class="col-md-9 col-lg-10 ml-md-auto px-0">
+      <!-- top nav -->
+      <nav class="w-100 d-flex px-4 py-2 mb-4 shadow-sm nav-bgcl">
+        <!-- close sidebar -->
+        <button class="btn py-0 d-lg-none" id="open-sidebar">
+          <span class="bi bi-list text-white h3"></span>
+        </button>
+        <div class="dropdown ml-auto">
+          <div class="btn py-0 d-flex align-items-center" id="logout-dropdown" data-toggle="dropdown" aria-expanded="false">
+            <img src="../../static/img/avatar.jpg" alt="logo" class="avatar-img rounded-circle">
+            <span class="ml-1 text-white">Admin</span>
+            <span class="bi bi-chevron-down ml-1 small text-white"></span>
+          </div>
+          <div class="dropdown-menu dropdown-menu-right border-0 shadow-sm" aria-labelledby="logout-dropdown">
+            <a class="dropdown-item text-right" href="#">Trang cá nhân</a>
+            <a class="dropdown-item text-right" href="#">Quản lý trang web</a>
+            <a class="dropdown-item text-right text-danger" href="#">Đăng xuất</a>
+          </div>
+        </div>
+      </nav>
+      <!-- main content -->
+      <main class="container-fluid">
+        <div class="jumbotron jumbotron-fluid rounded bg-white shadow-sm p-0">
+            <div class="container-fluid p-3" >
+                  <!-- danh sach -->
+                <div class="list-group">
+                    <div class="d-flex justify-content-between">
+                        <h4 class="font-weight-bold admin-color">Chưa xử lý</h4>
+                        <div> 
+                          <div class="pr-3 point xoa-ho-tro bi bi-trash btn p-0 " style="font-weight: 500; color: red;"> Xóa</div>
+                          <div class="point btn p-0">Chọn hết</div>
+                        </div>
+                    </div>
+                    <a class="list-group-item list-group-item-action flex-column align-items-start list1" data-toggle="modal" data-target="#chitietphieu">
+                      <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Người gửi: KietITK <small class="font-italic">2h ago</small></h5>
+                        <input class="check-xoa1 chk-xoa" type="checkbox">
+                      </div>
+                      <p class="mb-1">Lỗi thông tin</p>
+                      <small>alo, bạn coi lại cho mình sao cái thông tin nó...</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list2">
+                      <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Người gửi: KhuongPT <small class="font-italic">2h ago</small></h5>
+                        <input class="check-xoa2 chk-xoa" type="checkbox">
+                      </div>
+                      <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <small class="text-muted">Donec id elit non mi porta.</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list3">
+                      <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Người gửi: Tomblobla <small class="font-italic">2h ago</small></h5>
+                        <input class="check-xoa3 chk-xoa" type="checkbox">
+                      </div>
+                      <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <small class="text-muted">Donec id elit non mi porta.</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list4">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Người gửi: Jerry <small class="font-italic">2h ago</small></h5>
+                          <input class="check-xoa4 chk-xoa" type="checkbox">
+                        </div>
+                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                        <small>Donec id elit non mi porta.</small>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list5">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Người gửi: Nekowimade <small class="font-italic">2h ago</small></h5>
+                          <input class="check-xoa5 chk-xoa" type="checkbox">
+                        </div>
+                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                        <small class="text-muted">Donec id elit non mi porta.</small>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list6">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Người gửi: Puppy <small class="font-italic">2h ago</small></h5>
+                          <input class="check-xoa6 chk-xoa" type="checkbox">
+                        </div>
+                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                        <small class="text-muted">Donec id elit non mi porta.</small>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list7">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Người gửi: Bing Bang <small class="font-italic">2h ago</small></h5>
+                          <input class="check-xoa7 chk-xoa" type="checkbox">
+                        </div>
+                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                        <small>Donec id elit non mi porta.</small>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list8 pb-3">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Người gửi: airoicungkhatpro_vip_123 <small class="font-italic">2h ago</small></h5>
+                          <input class="check-xoa8 chk-xoa" type="checkbox">
+                        </div>
+                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                        <small class="text-muted">Donec id elit non mi porta.</small>
+                      </a>         
+                  </div>
+                  <ul class="pagination mb-0 mt-4 d-flex justify-content-center">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link active-tab" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                  </ul>
+                  <div class="modal fade" id="chitietphieu" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title font-weight-bold" id="exampleModalLongTitle">Thông tin phiếu</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <form>
+                            <div>
+                          
+                                <label class="form-control m-0" style="font-size: larger;font-weight: bolder;color: gray;height: auto; background-color: #fff" type=""  readonly><div style="text-align: center;">Hiển thị thông tin của user sai thông tin nó bị sai lệch ở phần bài viết v.v</div>
+
+                                <hr>
+                                <div class="d-flex justify-content-between" >
+                                  <span style="font-size: medium; color: gray;">Mã Phiếu: <span style="font-weight: bold;font-size: medium;">001</span></span> 
+                                  <span style="font-size: medium; color: gray;">Thời Gian: <span style="font-weight: bold;font-size: medium;">01/08/2021 9:32</span></span>
+                                </div>
+                                <hr>
+                    
+                                <span style="font-size: large; color: gray;">Hỏi:</span>
+                                <div style="font-size: medium; font-weight: lighter;">
+                                  Thông tin sai lệch là thông tin có nội dung sai hoặc không chính xác. Ví dụ về thông tin sai lệch bao gồm tin đồn sai lệch, lăng mạ và chơi khăm, trong khi các ví dụ về thông tin sai lệch có chủ ý hơn bao gồm nội dung độc hại như trò lừa bịp, tấn công giả mạo và tuyên truyền thông qua truyền thông. Tin tức chế giễu hoặc châm biếm cũng có thể trở thành thông tin sai lệch nếu nó được coi là nghiêm trọng bởi sự vô ý và lan truyền như thể đó là sự thật. Các thuật ngữ "thông tin sai lệch" và "thông tin sai trái" có liên quan đến thuật ngữ "Tin giả",u được một số học giả định nghĩa là thông tin bịa đặt bắt chước nội dung phương tiện truyền thông cùng dạng nhưng khác biệt trong quá trình tổ chức hoặc ý đồ phát tán.
+                                </div> 
+                                <span style="font-size: large; color: gray;">Hỗ Trợ:</span>
+                                  <textarea class="p-1 rounded" name="Phản hồi" style="width:100%; " id="" rows="5" placeholder="Nhập nội dung"></textarea>
+                                <p class="p-0 text-right"><button type="button" class="btn btn-danger" >Gửi</button></p>
+                                </div> 
+                                </label>
+                            
+                          </form>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title font-weight-bold" id="exampleModalLongTitle">Thông tin phiếu</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <form>
+                            <div>
+                          
+                                <label class="form-control m-0" style="font-size: larger;font-weight: bolder;color: gray;height: auto; background-color: #fff" type=""  readonly><div style="text-align: center;">Hiển thị thông tin của user sai thông tin nó bị sai lệch ở phần bài viết v.v</div>
+
+                                <hr>
+                                <div class="d-flex justify-content-between" >
+                                  <span style="font-size: medium; color: gray;">Mã Phiếu: <span style="font-weight: bold;font-size: medium;">001</span></span> 
+                                  <span style="font-size: medium; color: gray;">Thời Gian: <span style="font-weight: bold;font-size: medium;">01/08/2021 9:32</span></span>
+                                </div>
+                                <hr>
+                    
+                                <span style="font-size: large; color: gray;">Hỏi:</span>
+                                <div style="font-size: medium; font-weight: lighter;">
+                                  Thông tin sai lệch là thông tin có nội dung sai hoặc không chính xác. Ví dụ về thông tin sai lệch bao gồm tin đồn sai lệch, lăng mạ và chơi khăm, trong khi các ví dụ về thông tin sai lệch có chủ ý hơn bao gồm nội dung độc hại như trò lừa bịp, tấn công giả mạo và tuyên truyền thông qua truyền thông. Tin tức chế giễu hoặc châm biếm cũng có thể trở thành thông tin sai lệch nếu nó được coi là nghiêm trọng bởi sự vô ý và lan truyền như thể đó là sự thật. Các thuật ngữ "thông tin sai lệch" và "thông tin sai trái" có liên quan đến thuật ngữ "Tin giả",u được một số học giả định nghĩa là thông tin bịa đặt bắt chước nội dung phương tiện truyền thông cùng dạng nhưng khác biệt trong quá trình tổ chức hoặc ý đồ phát tán.
+                                </div> 
+                                <span style="font-size: large; color: gray;">Hỗ Trợ:</span>
+                                  <textarea class="p-1 rounded" name="Phản hồi" style="width:100%; " id="" rows="5" placeholder="Nhập nội dung"></textarea>
+                                <p class="p-0 text-right"><button type="button" class="btn btn-danger" >Gửi</button></p>
+                                </div> 
+                                </label>
+                            
+                          </form>
+                      </div>
+                    </div>
+                  </div>
+            </div> 
+        </div> 
+        <div class="jumbotron jumbotron-fluid rounded bg-white shadow-sm p-0">
+            <div class="container-fluid p-3" >
+                  <!-- danh sach -->
+                <div class="list-group">
+                    <div class="d-flex justify-content-between">
+                        <h4 class="font-weight-bold admin-color">Đã xử lý</h4>
+                        <div> 
+                          <div class="pr-3 point xoa-ho-tro bi bi-trash btn p-0 " style="font-weight: 500; color: red;"> Xóa</div>
+                          <div class="point btn p-0">Chọn hết</div>
+                        </div>
+                    </div>
+                    <a class="list-group-item list-group-item-action flex-column align-items-start list1">
+                      <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Người gửi: KietITK <small class="font-italic">2h ago</small></h5>
+                        <input class="check-xoa1 chk-xoa" type="checkbox">
+                      </div>
+                      <p class="mb-1">Lỗi thông tin</p>
+                      <small>alo, bạn coi lại cho mình sao cái thông tin nó...</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list2" data-toggle="modal" data-target="#phieuhth">
+                      <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Người gửi: KhuongPT <small class="font-italic">2h ago</small></h5>
+                        <input class="check-xoa2 chk-xoa" type="checkbox">
+                      </div>
+                      <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <small class="text-muted">Donec id elit non mi porta.</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list3">
+                      <div class="d-flex w-100 justify-content-between">
+                        <h5 class="mb-1">Người gửi: Tomblobla <small class="font-italic">2h ago</small></h5>
+                        <input class="check-xoa3 chk-xoa" type="checkbox">
+                      </div>
+                      <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                      <small class="text-muted">Donec id elit non mi porta.</small>
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list4">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Người gửi: Jerry <small class="font-italic">2h ago</small></h5>
+                          <input class="check-xoa4 chk-xoa" type="checkbox">
+                        </div>
+                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                        <small>Donec id elit non mi porta.</small>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list5">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Người gửi: Nekowimade <small class="font-italic">2h ago</small></h5>
+                          <input class="check-xoa5 chk-xoa" type="checkbox">
+                        </div>
+                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                        <small class="text-muted">Donec id elit non mi porta.</small>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list6">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Người gửi: Puppy <small class="font-italic">2h ago</small></h5>
+                          <input class="check-xoa6 chk-xoa" type="checkbox">
+                        </div>
+                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                        <small class="text-muted">Donec id elit non mi porta.</small>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list7">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Người gửi: Bing Bang <small class="font-italic">2h ago</small></h5>
+                          <input class="check-xoa7 chk-xoa" type="checkbox">
+                        </div>
+                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                        <small>Donec id elit non mi porta.</small>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list8 pb-3">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">Người gửi: airoicungkhatpro_vip_123 <small class="font-italic">2h ago</small></h5>
+                          <input class="check-xoa8 chk-xoa" type="checkbox">
+                        </div>
+                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                        <small class="text-muted">Donec id elit non mi porta.</small>
+                      </a>         
+                  </div>
+                  <ul class="pagination mb-0 mt-4 d-flex justify-content-center">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link active-tab" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                  </ul>
+                  <div class="modal fade" id="phieuhth" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title font-weight-bold" id="exampleModalLongTitle">Thông tin phiếu đã xử lý</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <form>
+                            <div>
+                          
+                                <label class="form-control m-0" style="font-size: larger;font-weight: bolder;color: gray;height: auto; background-color: #fff" type=""  readonly><div style="text-align: center;">Hiển thị thông tin của user sai thông tin nó bị sai lệch ở phần bài viết v.v</div>
+
+                                <hr>
+                                <div class="d-flex justify-content-between" >
+                                  <span style="font-size: medium; color: gray;">Mã Phiếu: <span style="font-weight: bold;font-size: medium;">001</span></span> 
+                                  <span style="font-size: medium; color: gray;">Thời Gian: <span style="font-weight: bold;font-size: medium;">01/08/2021 9:32</span></span>
+                                </div>
+                                  <p class="text-right" style="font-size: medium; color: gray;">Đã hoàn thành</p>
+                                <hr>
+                    
+                                <span style="font-size: large; color: gray;">Hỏi:</span>
+                                <div style="font-size: medium; font-weight: lighter;">
+                                  Thông tin sai lệch là thông tin có nội dung sai hoặc không chính xác. Ví dụ về thông tin sai lệch bao gồm tin đồn sai lệch, lăng mạ và chơi khăm, trong khi các ví dụ về thông tin sai lệch có chủ ý hơn bao gồm nội dung độc hại như trò lừa bịp, tấn công giả mạo và tuyên truyền thông qua truyền thông. Tin tức chế giễu hoặc châm biếm cũng có thể trở thành thông tin sai lệch nếu nó được coi là nghiêm trọng bởi sự vô ý và lan truyền như thể đó là sự thật. Các thuật ngữ "thông tin sai lệch" và "thông tin sai trái" có liên quan đến thuật ngữ "Tin giả",u được một số học giả định nghĩa là thông tin bịa đặt bắt chước nội dung phương tiện truyền thông cùng dạng nhưng khác biệt trong quá trình tổ chức hoặc ý đồ phát tán.
+                                </div> 
+                                <span style="font-size: large; color: gray;">Đánh giá:</span>
+                                <div style="font-size: medium; font-weight: lighter;">Chào bạn Khương,<br>
+                                Trước tiên đội ngũ Ztech rất tiếc về vấn đề mà bạn gặp phải. <br>
+                                Chúng tôi tiếp nhận thông tin về sai lệch thông tin cá nhân của người dùng.Trường hợp này bạn vui lòng vào lại trang cá nhân ==> cài đặt ==> xem thông tin cá nhân nhé.<br>
+                                Ztech hy vọng sẽ tiếp tục được đồng hành cùng bạn và chức bạn có những giây phút xem tin tức vui vẻ.<br>
+                                Nếu còn cần hỗ trợ thêm vấn đề nào khác, bạn có thể tham khảo thêm các bài hướng dẫn hoặc gửi yêu cầu hỗ trợ tại trang <a href="">hotro.ztech.vn</a>.<br>
+                                Cám ơn và thân chào.<br></div>
+                                <span style="font-size: large; color: gray;">Đánh giá: <span class="bi bi-star-fill"></span><span class="bi bi-star-fill"></span><span class="bi bi-star-fill"></span><span class="bi bi-star-fill"></span><span class="bi bi-star-fill"></span></span>
+                                <div style="font-size: medium; font-weight: lighter;">
+                                    Nice sừ</div>
+                                </div> 
+                                </label>
+                            
+                          </form>
+                      </div>
+                    </div>
+                  </div><div class="modal fade" id="phieuhth" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title font-weight-bold" id="exampleModalLongTitle">Thông tin phiếu</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <form>
+                            <div>
+                          
+                                <label class="form-control m-0" style="font-size: larger;font-weight: bolder;color: gray;height: auto; background-color: #fff" type=""  readonly><div style="text-align: center;">Hiển thị thông tin của user sai thông tin nó bị sai lệch ở phần bài viết v.v</div>
+
+                                <hr>
+                                <div class="d-flex justify-content-between" >
+                                  <span style="font-size: medium; color: gray;">Mã Phiếu: <span style="font-weight: bold;font-size: medium;">001</span></span> 
+                                  <span style="font-size: medium; color: gray;">Thời Gian: <span style="font-weight: bold;font-size: medium;">01/08/2021 9:32</span></span>
+                                </div>
+                                <hr>
+                    
+                                <span style="font-size: large; color: gray;">Hỏi:</span>
+                                <div style="font-size: medium; font-weight: lighter;">
+                                  Thông tin sai lệch là thông tin có nội dung sai hoặc không chính xác. Ví dụ về thông tin sai lệch bao gồm tin đồn sai lệch, lăng mạ và chơi khăm, trong khi các ví dụ về thông tin sai lệch có chủ ý hơn bao gồm nội dung độc hại như trò lừa bịp, tấn công giả mạo và tuyên truyền thông qua truyền thông. Tin tức chế giễu hoặc châm biếm cũng có thể trở thành thông tin sai lệch nếu nó được coi là nghiêm trọng bởi sự vô ý và lan truyền như thể đó là sự thật. Các thuật ngữ "thông tin sai lệch" và "thông tin sai trái" có liên quan đến thuật ngữ "Tin giả",u được một số học giả định nghĩa là thông tin bịa đặt bắt chước nội dung phương tiện truyền thông cùng dạng nhưng khác biệt trong quá trình tổ chức hoặc ý đồ phát tán.
+                                </div> 
+                                <span style="font-size: large; color: gray;">Hỗ Trợ:</span>
+                                  <textarea class="p-1 rounded" name="Phản hồi" style="width:100%; " id="" rows="5" placeholder="Nhập nội dung"></textarea>
+                                <p class="p-0 text-right"><button type="button" class="btn btn-danger" >Gửi</button></p>
+                                </div> 
+                                </label>
+                            
+                          </form>
+                      </div>
+                    </div>
+                  </div>
+            </div> 
+        </div> 
+      </main>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src="../../static/js/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../../static/popper/dist/umd/popper.min.js"></script>
+  <script src="../../static/js/jquery.sparkline.min.js"></script>
+  <script src="../../static/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+  <script src="../../static/js/admin.js"></script>
+</body>
+</html>

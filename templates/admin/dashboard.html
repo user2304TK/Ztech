@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Ztechnews | Bảng điều khiển</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../static/img/Z-green-leaf.png">
+  <link rel="stylesheet" href="../../static/bootstrap-4.6.0-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../../static/bootstrap-icons-1.4.0/bootstrap-icons.css">
+  <link rel="stylesheet" href="../../static/css/admin.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container-fluid">
+  <div class="row">
+    <!-- sidebar -->
+    <div class="col-md-3 col-lg-2 px-0 position-fixed h-100 bg-white shadow-sm sidebar" id="sidebar">
+      <a href="#">
+        <div class="my-3 text-center">
+          <img src="../../static/img/Z-green-leaf.png" class="logo-img">
+          <span class = "logo-name align-middle ml-1">Technews</span>
+        </div>
+      </a>
+      <div class="list-group rounded-0">
+        <a href="admin/dashboard" class="list-group-item list-group-item-action border-0 align-items-center active-page">
+          <span class="bi bi-bar-chart-fill"></span>
+          <span class="ml-2">Bảng điều khiển</span>
+        </a>
+        <a href="admin/quanlybaivietvamucbai" class="list-group-item list-group-item-action border-0 align-items-center">
+          <span class="bi bi-newspaper"></span>
+          <span class="ml-2">Quản lý bài viết và mục</span>
+        </a>
+        <a href="admin/quanlyfacts" class="list-group-item list-group-item-action border-0 align-items-center">
+          <span class="bi bi-pencil-square"></span>
+          <span class="ml-2">Quản lý facts</span>
+        </a>
+        <a href="admin/quanlythanhvien" class="list-group-item list-group-item-action border-0 align-items-center">
+          <span class="bi bi-person-lines-fill"></span>
+          <span class="ml-2">Quản lý thành viên</span>
+        </a>
+        <a href="admin/xulyhotro" class="list-group-item list-group-item-action border-0 align-items-center">
+          <span class="bi bi-question-square-fill"></span>
+          <span class="ml-2">Xử lý hỗ trợ</span>
+        </a>
+      </div>
+    </div>
+    <!-- overlay to close sidebar on small screens -->
+    <div class="w-100 vh-100 position-fixed overlay d-none" id="sidebar-overlay"></div>
+    <!-- note: in the layout margin auto is the key as sidebar is fixed -->
+    <div class="col-md-9 col-lg-10 ml-md-auto px-0">
+      <!-- top nav -->
+      <nav class="w-100 d-flex px-4 py-2 mb-4 shadow-sm nav-bgcl">
+        <!-- close sidebar -->
+        <button class="btn py-0 d-lg-none" id="open-sidebar">
+          <span class="bi bi-list text-white h3"></span>
+        </button>
+        <div class="dropdown ml-auto">
+          <div class="btn py-0 d-flex align-items-center" id="logout-dropdown" data-toggle="dropdown" aria-expanded="false">
+            <img src="../../static/img/avatar.jpg" alt="logo" class="avatar-img rounded-circle">
+            <span class="ml-1 text-white">Admin</span>
+            <span class="bi bi-chevron-down ml-1 small text-white"></span>
+          </div>
+          <div class="dropdown-menu dropdown-menu-right border-0 shadow-sm" aria-labelledby="logout-dropdown">
+            <a class="dropdown-item text-right" href="#">Trang cá nhân</a>
+            <a class="dropdown-item text-right" href="#">Quản lý trang web</a>
+            <a class="dropdown-item text-right text-danger" href="#">Đăng xuất</a>
+          </div>
+        </div>
+      </nav>
+      <!-- main content -->
+      <main class="container-fluid">
+        <section class="row">
+          <div class="col-lg-4">
+            <!-- card -->
+            <article class="p-3 rounded shadow-sm mb-3 bg-light">
+              <div class="align-items-center">
+                <h5 class="mb-4 font-weight-bold" style="color: #0033cf">Tổng bài đăng</h5>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div id="sparklinedash-topic">
+                  <span class="bar"></span>
+                </div>
+                <div>
+                  <span class=" font-weight-bold" style="font-size: 43px; color: #0033cf">6969</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="p-3 rounded shadow-sm mb-3 bg-light">
+              <div class="align-items-center">
+                <h5 class="mb-4 font-weight-bold" style="color: #00beef">Tổng facts đăng</h5>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div id="sparklinedash-fact">
+                  <span class="bar"></span>
+                </div>
+                <div>
+                  <span class=" font-weight-bold" style="font-size: 43px; color: #00beef">6969</span>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="p-3 rounded shadow-sm mb-3 bg-light">
+              <div class="align-items-center">
+                <h5 class="mb-4 font-weight-bold" style="color: #39f9b3">Tổng lượt truy cập</h5>
+              </div>
+              <div class="d-flex justify-content-between">
+                <div id="sparklinedash-visit">
+                  <span class="bar"></span>
+                </div>
+                <div>
+                  <span class=" font-weight-bold" style="font-size: 43px; color: #39f9b3">6969</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+        
+        <div class="jumbotron jumbotron-fluid rounded bg-white shadow-sm pt-3 pb-5">
+          <div class="container-fluid" >
+            <h4 class="text-center font-weight-bold" style="color: #00beef">Thống kê truy cập</h4>
+            <div class="d-flex justify-content-end pr-2">
+              <select class="form-select" id="year-chart">
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+                <option selected>2021</option>
+              </select>
+            </div>
+            <div style="height: 400px">
+            <canvas id="myChart"></canvas></div>
+          </div>
+        </div> 
+        
+        <section class="row">
+          <div class="col-lg-8">
+            <article class="p-4 rounded shadow-sm mb-3 bg-light">
+              <h4 class="text-center font-weight-bold pb-3" style="color: #00beef">Hoạt động</h4>
+              <table class="table table-hover mb-0">
+                <thead>
+                  <tr style="color: #00beef">
+                    <th class="align-middle">Thành viên</th>
+                    <th class="align-middle">Hoạt động</th>
+                    <th class="align-middle">Trạng thái</th>
+                    <th class="align-middle">Thời gian</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="align-middle">
+                      <div class="d-flex">
+                        <img class="rounded-circle" src="../../static/img/avatar.jpg" style="width: 20px">
+                        <span class="pl-1">Cheems</span>
+                      </div>
+                    </td>
+                    <td class="align-middle">Đăng bài viết mới</td>
+                    <td class="text-success align-middle">Thành công</td>
+                    <td class="align-middle">2 giây trước</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">
+                      <img class="rounded-circle" src="../../static/img/avatar.jpg" style="width: 20px">
+                      <span class="pl-1">Khoa</span>
+                    </td>
+                    <td class="align-middle">Xóa bài viết</td>
+                    <td class="text-danger align-middle">Thất bại</td>
+                    <td class="align-middle">3 giây trước</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">
+                      <img class="rounded-circle" src="../../static/img/avatar.jpg" style="width: 20px">
+                      <span class="pl-1">Kiệt</span>
+                    </td>
+                    <td class="align-middle">Trả lời phản hồi</td>
+                    <td class="text-success align-middle">Thành công</td>
+                    <td class="align-middle">4 giây trước</td>
+                  </tr>
+                </tbody>
+              </table>
+              <ul class="pagination mb-0 mt-4 d-flex justify-content-center">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link active-tab" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="p-4 rounded shadow-sm mb-3 bg-light">
+              <h4 class="text-center font-weight-bold pb-3" style="color: #00beef">#Hashtag phổ biến</h4>
+              <table class="table table-hover mb-0">
+                <thead>
+                  <tr style="color: #00beef">
+                    <th class="align-middle">#Hashtag</th>
+                    <th class="align-middle">Số bài viết</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="align-middle">
+                       #anticheems
+                    </td>
+                    <td class="align-middle">
+                      6969
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">
+                       #anticheems2
+                    </td>
+                    <td class="align-middle">
+                      696
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">
+                       #anticheems3
+                    </td>
+                    <td class="align-middle">
+                      69
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src="../../static/js/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../../static/popper/dist/umd/popper.min.js"></script>
+  <script src="../../static/js/jquery.sparkline.min.js"></script>
+  <script src="../../static/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+  <script src="../../static/js/admin.js"></script>
+  <script src="../../static/js/dashboard.js"></script>
+</body>
+</html>

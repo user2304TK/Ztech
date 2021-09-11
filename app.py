@@ -47,14 +47,33 @@ def trangcanhanuser():
 
 
 
-@app.route('/baiviet')
-def baiviet():
-    return render_template('baivietguest.html')
+@app.route('/user/chinhsuathongtin')
+def trangcanhanuser():
+    return render_template('edit_profile.html')
 
 
-@app.route('/user')
-def user():
-    return render_template('index-logged-user.html')
+
+@app.route('/user/danhsachhotro')
+def danhsachhotrouser():
+    return render_template('userhelpsent.html')
+
+
+
+@app.route('/user/viethotro')
+def viethotrouser():
+    return render_template('viethotro.html')
+
+
+
+@app.route('/user/phanhoidaxong')
+def phanhoidaxonguser():
+    return render_template('phanhoidaxonguser.html')
+
+
+
+@app.route('/user/quanlybaiviet')
+def quanlybaivietuser():
+    return render_template('post-manager.html')
 
 
 

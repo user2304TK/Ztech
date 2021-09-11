@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Ztechnews | Quản lý thành viên</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../static/img/Z-green-leaf.png">
+  <link rel="stylesheet" href="../../static/bootstrap-4.6.0-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../../static/bootstrap-icons-1.4.0/bootstrap-icons.css">
+  <link rel="stylesheet" href="../../static/css/admin.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container-fluid" style="height:100vh;">
+  <div class="row">
+    <!-- sidebar -->
+    <div class="col-md-3 col-lg-2 px-0 position-fixed h-100 bg-white shadow-sm sidebar" id="sidebar">
+      <a href="#">
+        <div class="my-3 text-center">
+          <img src="../../static/img/Z-green-leaf.png" class="logo-img">
+          <span class = "logo-name align-middle ml-1">Technews</span>
+        </div>
+      </a>
+      <div class="list-group rounded-0">
+        <a href="admin/dashboard" class="list-group-item list-group-item-action border-0 align-items-center">
+          <span class="bi bi-bar-chart-fill"></span>
+          <span class="ml-2">Bảng điều khiển</span>
+        </a>
+        <a href="admin/quanlybaivietvamucbai" class="list-group-item list-group-item-action border-0 align-items-center">
+          <span class="bi bi-newspaper"></span>
+          <span class="ml-2">Quản lý bài viết và mục</span>
+        </a>
+        <a href="admin/quanlyfacts" class="list-group-item list-group-item-action border-0 align-items-center">
+          <span class="bi bi-pencil-square"></span>
+          <span class="ml-2">Quản lý facts</span>
+        </a>
+        <a href="admin/quanlythanhvien" class="list-group-item list-group-item-action border-0 align-items-center active-page">
+            <span class="bi bi-person-lines-fill"></span>
+            <span class="ml-2">Quản lý thành viên</span>
+        </a>
+        <a href="admin/xulyhotro" class="list-group-item list-group-item-action border-0 align-items-center">
+          <span class="bi bi-question-square-fill"></span>
+          <span class="ml-2">Xử lý hỗ trợ</span>
+        </a>
+      </div>
+    </div>
+    <!-- overlay to close sidebar on small screens -->
+    <div class="w-100 vh-100 position-fixed overlay d-none" id="sidebar-overlay"></div>
+    <!-- note: in the layout margin auto is the key as sidebar is fixed -->
+    <div class="col-md-9 col-lg-10 ml-md-auto px-0">
+      <!-- top nav -->
+      <nav class="w-100 d-flex px-4 py-2 mb-4 shadow-sm nav-bgcl">
+        <!-- close sidebar -->
+        <button class="btn py-0 d-lg-none" id="open-sidebar">
+          <span class="bi bi-list text-white h3"></span>
+        </button>
+        <div class="dropdown ml-auto">
+          <div class="btn py-0 d-flex align-items-center" id="logout-dropdown" data-toggle="dropdown" aria-expanded="false">
+            <img src="../../static/img/avatar.jpg" alt="logo" class="avatar-img rounded-circle">
+            <span class="ml-1 text-white">Admin</span>
+            <span class="bi bi-chevron-down ml-1 small text-white"></span>
+          </div>
+          <div class="dropdown-menu dropdown-menu-right border-0 shadow-sm" aria-labelledby="logout-dropdown">
+            <a class="dropdown-item text-right" href="#">Trang cá nhân</a>
+            <a class="dropdown-item text-right" href="#">Quản lý trang web</a>
+            <a class="dropdown-item text-right text-danger" href="#">Đăng xuất</a>
+          </div>
+        </div>
+      </nav>
+      <!-- main content -->
+      <main class="container-fluid">
+        <section class="row equal">
+          <div class="col-xl-3 d-flex flex-column mb-3">
+            <article class="p-3 rounded shadow-sm mb-4 bg-light">
+              <div class="align-items-center">
+                <h5 class="mb-4 font-weight-bold admin-color">Số thành viên</h5>
+              </div>
+              <div class="d-block">
+                <div class="d-flex justify-content-between">
+                  <div>Tổng:</div>
+                  <div class="font-italic">6969</div>
+                </div>
+                <div class="d-flex justify-content-between text-success">
+                  <div>Online:</div>
+                  <div class="font-italic">696</div>
+                </div>
+                <div class="d-flex justify-content-between text-danger">
+                  <div>Offline:</div>
+                  <div class="font-italic">969</div>
+                </div>
+              </div>
+            </article>
+            <article class="p-3 rounded shadow-sm bg-light h-100">
+              <div class="align-items-center">
+                <h5 class="mb-4 font-weight-bold admin-color">Thống kê thành viên</h5>
+              </div>
+              
+              <div>
+                <table class="table table-hover">
+                  <thead>
+                    <tr>
+                      <th>Tài khoản</th>
+                      <th>Thời gian</th>
+                      <th>Trạng thái</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>cheems1</td>
+                      <td>12:06:09</td>
+                      <td class="text-success">Thành công</td>
+                    </tr>
+                    <tr>
+                      <td>cheems2</td>
+                      <td>12:06:19</td>
+                      <td class="text-danger">Thất bại</td>
+                    </tr>
+                    <tr>
+                      <td>cheems3</td>
+                      <td>12:06:29</td>
+                      <td class="text-success">Thành công</td>
+                    </tr>
+                    <tr>
+                      <td>cheems4</td>
+                      <td>12:06:39</td>
+                      <td class="text-danger">Thất bại</td>
+                    </tr>
+                    <tr>
+                      <td>cheems5</td>
+                      <td>12:06:49</td>
+                      <td class="text-success">Thành công</td>
+                    </tr>
+                    <tr>
+                      <td>cheems6</td>
+                      <td>12:06:49</td>
+                      <td class="text-danger">Thất bại</td>
+                    </tr>
+                    <tr>
+                      <td>cheems7</td>
+                      <td>12:06:09</td>
+                      <td class="text-success">Thành công</td>
+                    </tr>
+                    <tr>
+                      <td>cheems8</td>
+                      <td>12:06:09</td>
+                      <td class="text-danger">Thất bại</td>
+                    </tr>
+                    <tr>
+                      <td>cheems9</td>
+                      <td>12:06:09</td>
+                      <td class="text-success">Thành công</td>
+                    </tr>
+                    <tr>
+                      <td>cheems10</td>
+                      <td>12:06:09</td>
+                      <td class="text-danger">Thất bại</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </article>
+          </div>
+          <div class="col-xl-9 mb-3">
+            <article class="p-3 rounded shadow-sm bg-light h-100 d-flex flex-column">
+              <h4 class="text-center font-weight-bold" style="color: #00beef">Danh sách thành viên</h4>
+              <div class="flex-row text-right w-100 my-2">
+                <input class="form-control flex-grow-1 mr-1 mb-2" id="tenThV" type="text" placeholder="Nhập tên thành viên">
+                <div>
+                  <span class="pr-3 text-success bi bi-dot">Online</span>
+                  <span class="pr-3 text-danger bi bi-dot">Offline</span>
+                </div>
+              </div>
+              <table class="table table-hover m-0">
+                <thead>
+                  <tr>
+                    <th class="align-middle">Thành viên</th>
+                    <th class="align-middle">UID</th>
+                    <th class="align-middle">Ngày th.gia</th>
+                    <th class="align-middle">Bài viết</th>
+                  </tr>
+                </thead>
+                <tbody id="dsTV">
+                  <tr>
+                    <td class="align-middle">
+                      <div class="d-flex align-content-center btn p-0" data-toggle="modal" data-target="#detailUser">
+                        <img class="rounded-circle avatar-img" src="../../static/img/avatar.jpg">
+                        <span class="pl-1 my-auto text-success">abc</span>
+                      </div>
+                    </td>
+                    <td class="align-middle">
+                      19033832
+                    </td>
+                    <td class="align-middle">
+                      19/03/2021
+                    </td>
+                    <td class="align-middle">
+                      <div class="d-flex justify-content-between">
+                        <span class="my-auto btn p-0" data-toggle="modal" data-target="#dsBV">69</span>
+                        <a class="admin-btn-round-clickdg bi-person-x-fill px-1 py-0"></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">
+                      <div class="d-flex align-content-center btn p-0" data-toggle="modal" data-target="#detailUser">
+                        <img class="rounded-circle avatar-img" src="../../static/img/avatar.jpg">
+                        <span class="pl-1 my-auto text-danger">acb</span>
+                      </div>
+                    </td>
+                    <td class="align-middle">
+                      19033832
+                    </td>
+                    <td class="align-middle">
+                      19/03/2021
+                    </td>
+                    <td class="align-middle">
+                      <div class="d-flex justify-content-between">
+                        <span class="my-auto btn p-0" data-toggle="modal" data-target="#dsBV">69</span>
+                        <a class="admin-btn-round-clickdg bi-person-x-fill px-1 py-0"></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">
+                      <div class="d-flex align-content-center btn p-0" data-toggle="modal" data-target="#detailUser">
+                        <img class="rounded-circle avatar-img" src="../../static/img/avatar.jpg">
+                        <span class="pl-1 my-auto text-success">bca</span>
+                      </div>
+                    </td>
+                    <td class="align-middle">
+                      19033832
+                    </td>
+                    <td class="align-middle">
+                      19/03/2021
+                    </td>
+                    <td class="align-middle">
+                      <div class="d-flex justify-content-between">
+                        <span class="my-auto btn p-0" data-toggle="modal" data-target="#dsBV">69</span>
+                        <a class="admin-btn-round-clickdg bi-person-x-fill px-1 py-0"></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">
+                      <div class="d-flex align-content-center btn p-0" data-toggle="modal" data-target="#detailUser">
+                        <img class="rounded-circle avatar-img" src="../../static/img/avatar.jpg">
+                        <span class="pl-1 my-auto text-danger">cab</span>
+                      </div>
+                    </td>
+                    <td class="align-middle">
+                      19033832
+                    </td>
+                    <td class="align-middle">
+                      19/03/2021
+                    </td>
+                    <td class="align-middle">
+                      <div class="d-flex justify-content-between">
+                        <span class="my-auto btn p-0" data-toggle="modal" data-target="#dsBV">69</span>
+                        <a class="admin-btn-round-clickdg bi-person-x-fill px-1 py-0"></a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <ul class="pagination mb-0 mt-4 d-flex justify-content-center">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link active-tab" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+              <div class="modal fade" id="detailUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title font-weight-bold" id="exampleModalLongTitle">Thông tin người dùng</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="w-100 d-flex justify-content-center my-3">
+                      <div class="d-block">
+                        <img src="../../static/img/avatar.jpg" class="rounded-circle avatar-img-lg">
+                        <div class="text-center font-weight-bolder">abc</div>
+                      </div>
+                      
+                    </div>
+                    <div class="modal-body">
+                      <div class="d-flex justify-content-between">
+                        <div>Giới tính</div>
+                        <div id="userGen" class="font-italic">Nam</div>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div>Ngày tham gia</div>
+                        <div id="userJoinDate" class="font-italic">12/03/2021</div>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div>Số bài đăng</div>
+                        <div id="userTopic" class="font-italic">6969</div>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div>Số facts</div>
+                        <div id="userOnlineDate" class="font-italic">6969</div>
+                      </div>
+                      <div class="d-flex justify-content-between">
+                        <div>Số ngày online</div>
+                        <div id="userOnlineDate" class="font-italic">6969</div>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn admin-btn-round-click">Đến trang cá nhân</button>
+                      <button type="button" class="btn admin-btn-round-clickdg" data-dismiss="modal">Đóng</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal fade" id="dsBV" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title font-weight-bold" id="exampleModalLongTitle">Danh sách bài viết</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="m-3">
+                      <div class="form-inline justify-content-end mb-2">
+                          <div class="pr-3 point xoa-ho-tro bi bi-trash btn p-0 " style="font-weight: 500; color: red;"> Xóa</div>
+                          <div class="point btn p-0">Chọn hết</div>
+                      </div>
+                      <div class="list-group overflow-auto" style="max-height: 500px;">
+                        <a href="../templates/baiviet.html" class="list-group-item list-group-item-action flex-column align-items-start list1">
+                          <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1 font-weight-bold">Tiêu đề: Giới thiệu sách và phim "Suối nguồn" của tác giả Ayn Rand<small class="font-italic"> 2h ago</small></h5>
+                            <input class="check-xoa1 chk-xoa" type="checkbox">
+                          </div>        
+                          <small>Trong đợt dịch giãn cách ở nhà này, mình đã dành thời gian đọc hết cuốn sách Suối nguồn của tác giả Ayn Rand dày hơn 1200 trang mà mình đã mua cách đây…</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list2">
+                          <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1 font-weight-bold">Tiêu đề: Tính năng chả khác gì Nokia 3310, tại sao các "điện thoại tối giản" lại có thể bán giá đắt gấp 20 lần? <small class="font-italic">5h ago</small></h5>
+                            <input class="check-xoa2 chk-xoa" type="checkbox">
+                          </div>
+                          
+                          <small class="text-muted">Dù tạo ra một cuộc cách mạng nhờ những tính năng đột phá so với điện thoại di động truyền thống, smartphone cũng mang lại nhiều mặt trái...</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list3">
+                          <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1 font-weight-bold">Tiêu đề: Review game Hoa do nhà phát triển Việt thực hiện: mốc son mới cho ngành công nghiệp còn non trẻ ở quốc gia hình chữ S <small class="font-italic">2 days ago</small></h5>
+                            <input class="check-xoa3 chk-xoa" type="checkbox">
+                          </div>
+                          
+                          <small class="text-muted">Hoa là một sản phẩm game hiếm có do người Việt sản xuất, và game càng đáng trân quý hơn khi đã được hai nhà phát triển Skrollcat Studio...</small>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list4">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1 font-weight-bold">Tiêu đề: Đây là Thụy Sĩ và những con bò của họ thường được cho đi trực thăng <small class="font-italic">14h ago</small></h5>
+                              <input class="check-xoa4 chk-xoa" type="checkbox">
+                            </div>
+                            
+                            <small>Nếu nhìn thấy một con bò bay lơ lửng trên không, nhiều khả năng bạn sẽ nghĩ nó đang bị đĩa bay của người ngoài hành tinh bắt đi...</small>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list5">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1 font-weight-bold">Tiêu đề: 5 món phụ kiện học online để Wifi “tậm tịt”, đau lưng mỏi cổ hay hỏng micro không phải cái cớ để "cúp" <small class="font-italic">15m ago</small></h5>
+                              <input class="check-xoa5 chk-xoa" type="checkbox">
+                            </div>
+                            
+                            <small class="text-muted">Bạn nào không có laptop mà dùng PC thì đây là món cực kì cần thiết khi học hay họp nhóm online. Các loại webcam gắn ngoài thường...</small>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list6">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1 font-weight-bold">Tiêu đề: Câu chuyện kỳ ​​lạ về bộ não của Albert Einstein <small class="font-italic">1 week ago</small></h5>
+                              <input class="check-xoa6 chk-xoa" type="checkbox">
+                            </div>
+                            
+                            <small class="text-muted">Vì là thiên tài nổi tiếng thế giới, bộ não (theo cả nghĩa đen và nghĩa bóng) của Albert Einstein đã trở thành vật được nhiều người thèm muốn...</small>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list7">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1 font-weight-bold">Tiêu đề: Giải mã những giấc mơ lặp lại dưới góc nhìn tâm lý học <small class="font-italic">2h ago</small></h5>
+                              <input class="check-xoa7 chk-xoa" type="checkbox">
+                            </div>
+                            
+                            <small>Mơ thấy một giấc mơ đã từng có trước đó, hay còn gọi là giấc mơ lặp lại là một hiện tượng khá phổ biến.</small>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list8">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1 font-weight-bold">Tiêu đề: 5 nghi phạm có khả năng chính là Jack The Ripper (phần 2) <small class="font-italic">23h ago</small></h5>
+                              <input class="check-xoa8 chk-xoa" type="checkbox">
+                            </div>
+                            
+                            <small class="text-muted">James Maybrick là một thương gia buôn bông ở Liverpool, sinh năm 1838. Do nghề nghiệp của mình, ông thường xuyên đi lại giữa Anh và Mỹ...</small>
+                          </a>      
+                          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list6">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1 font-weight-bold">Tiêu đề: Câu chuyện kỳ ​​lạ về bộ não của Albert Einstein <small class="font-italic">1 week ago</small></h5>
+                              <input class="check-xoa6 chk-xoa" type="checkbox">
+                            </div>
+                            
+                            <small class="text-muted">Vì là thiên tài nổi tiếng thế giới, bộ não (theo cả nghĩa đen và nghĩa bóng) của Albert Einstein đã trở thành vật được nhiều người thèm muốn...</small>
+                          </a>
+                          <a href="#" class="list-group-item list-group-item-action flex-column align-items-start list7">
+                            <div class="d-flex w-100 justify-content-between">
+                              <h5 class="mb-1 font-weight-bold">Tiêu đề: Giải mã những giấc mơ lặp lại dưới góc nhìn tâm lý học <small class="font-italic">2h ago</small></h5>
+                              <input class="check-xoa7 chk-xoa" type="checkbox">
+                            </div>
+                            
+                            <small>Mơ thấy một giấc mơ đã từng có trước đó, hay còn gọi là giấc mơ lặp lại là một hiện tượng khá phổ biến.</small>
+                          </a>   
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn admin-btn-round-clickdg" data-dismiss="modal">Đóng</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src="../../static/js/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../../static/popper/dist/umd/popper.min.js"></script>
+  <script src="../../static/js/jquery.sparkline.min.js"></script>
+  <script src="../../static/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+  <script src="../../static/js/admin.js"></script>
+  <script src="../../static/js/quanlythanhvien.js"></script>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Ztechnews | Quản lý bài viết và mục</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../../static/img/Z-green-leaf.png">
+  <link rel="stylesheet" href="../../static/bootstrap-4.6.0-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="../../static/bootstrap-icons-1.4.0/bootstrap-icons.css">
+  <link rel="stylesheet" href="../../static/css/admin.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container-fluid">
+  <div class="row">
+    <!-- sidebar -->
+    <div class="col-md-3 col-lg-2 px-0 position-fixed h-100 bg-white shadow-sm sidebar" id="sidebar">
+      <a href="#">
+        <div class="my-3 text-center">
+          <img src="../../static/img/Z-green-leaf.png" class="logo-img">
+          <span class = "logo-name align-middle ml-1">Technews</span>
+        </div>
+      </a>
+      <div class="list-group rounded-0">
+        <a href="admin/dashboard" class="list-group-item list-group-item-action border-0 align-items-center">
+          <span class="bi bi-bar-chart-fill"></span>
+          <span class="ml-2">Bảng điều khiển</span>
+        </a>
+        <a href="admin/quanlybaivietvamucbai" class="list-group-item list-group-item-action border-0 align-items-center active-page">
+          <span class="bi bi-newspaper"></span>
+          <span class="ml-2">Quản lý bài viết và mục</span>
+        </a>
+        <a href="admin/quanlyfacts" class="list-group-item list-group-item-action border-0 align-items-center">
+          <span class="bi bi-pencil-square"></span>
+          <span class="ml-2">Quản lý facts</span>
+        </a>
+        <a href="admin/quanlythanhvien" class="list-group-item list-group-item-action border-0 align-items-center">
+          <span class="bi bi-person-lines-fill"></span>
+          <span class="ml-2">Quản lý thành viên</span>
+        </a>
+        <a href="admin/xulyhotro" class="list-group-item list-group-item-action border-0 align-items-center">
+          <span class="bi bi-question-square-fill"></span>
+          <span class="ml-2">Xử lý hỗ trợ</span>
+        </a>
+      </div>
+    </div>
+    <!-- overlay to close sidebar on small screens -->
+    <div class="w-100 vh-100 position-fixed overlay d-none" id="sidebar-overlay"></div>
+    <!-- note: in the layout margin auto is the key as sidebar is fixed -->
+    <div class="col-md-9 col-lg-10 ml-md-auto px-0">
+      <!-- top nav -->
+      <nav class="w-100 d-flex px-4 py-2 mb-4 shadow-sm nav-bgcl">
+        <!-- close sidebar -->
+        <button class="btn py-0 d-lg-none" id="open-sidebar">
+          <span class="bi bi-list text-white h3"></span>
+        </button>
+        <div class="dropdown ml-auto">
+          <div class="btn py-0 d-flex align-items-center" id="logout-dropdown" data-toggle="dropdown" aria-expanded="false">
+            <img src="../../static/img/avatar.jpg" alt="logo" class="avatar-img rounded-circle">
+            <span class="ml-1 text-white">Admin</span>
+            <span class="bi bi-chevron-down ml-1 small text-white"></span>
+          </div>
+          <div class="dropdown-menu dropdown-menu-right border-0 shadow-sm" aria-labelledby="logout-dropdown">
+            <a class="dropdown-item text-right" href="#">Trang cá nhân</a>
+            <a class="dropdown-item text-right" href="#">Quản lý trang web</a>
+            <a class="dropdown-item text-right text-danger" href="#">Đăng xuất</a>
+          </div>
+        </div>
+      </nav>
+      <!-- main content -->
+      <main class="container-fluid">
+        <section class="row">
+          <div class="col-lg-4">
+            <!-- card -->
+            <article class="p-3 rounded shadow-sm mb-3 bg-light">
+              <div class="align-items-center">
+                <h5 class="mb-4 font-weight-bold admin-color">Hashtag phổ biến</h5>
+              </div>
+              <div class="d-block row ml-1" style="line-height: 40px;">
+                <span class="admin-btn-round">#cheems</span>
+                <span class="admin-btn-round">#shiba</span>
+                <span class="admin-btn-round">#shiba</span>
+                <span class="admin-btn-round">#shibainu</span>
+                <span class="admin-btn-round">#rickroll</span>
+                <span class="admin-btn-round">#eicute</span>
+                <span class="admin-btn-round">#baalcute</span>
+                <span class="admin-btn-round">#yaecutetoo</span>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="p-3 rounded shadow-sm mb-3 bg-light">
+              <div class="align-items-center">
+                <h5 class="mb-4 font-weight-bold admin-color">Số bài đăng</h5>
+              </div>
+              <div class="d-block">
+                <div class="d-flex justify-content-between">
+                  <div>Số bài hôm nay:</div>
+                  <div class="font-italic">69</div>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div>Số bài hôm qua:</div>
+                  <div class="font-italic">96</div>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <div>Tổng số:</div>
+                  <div class="font-italic">6969</div>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="p-3 rounded shadow-sm mb-3 bg-light">
+              <div class="align-items-center">
+                <h5 class="mb-4 font-weight-bold admin-color">Thành viên nổi bật</h5>
+              </div>
+              <div class="d-flex justify-content-around row">
+                <div class="text-center p-2" data-toggle="modal" data-target="#detailUser">
+                  <div class="card rounded-circle overflow-hidden avatar-img-lg">
+                    <img src="../../static/img/avatar.jpg" class="rounded-circle">
+                    <div class="card-img-overlay d-flex flex-column p-0">
+                      <div class="mt-auto admin-bgcl text-light">#1</div>
+                    </div>
+                  </div>
+                  <div class="font-weight-bold">cat</div>
+                  <div class="font-weight-lighter font-italic">696 bài viết</div>
+                </div>
+                <div class="text-center p-2" data-toggle="modal" data-target="#detailUser">
+                  <div class="card rounded-circle overflow-hidden avatar-img-lg">
+                    <img src="../../static/img/avatar.jpg" class="rounded-circle">
+                    <div class="card-img-overlay d-flex flex-column p-0">
+                      <div class="mt-auto admin-bgcl text-light">#2</div>
+                    </div>
+                  </div>
+                  <div class="font-weight-bold">cat2</div>
+                  <div class="font-weight-lighter font-italic">96 bài viết</div>
+                </div>
+                <div class="text-center p-2" data-toggle="modal" data-target="#detailUser">
+                  <div class="card rounded-circle overflow-hidden avatar-img-lg">
+                    <img src="../../static/img/avatar.jpg" class="rounded-circle">
+                    <div class="card-img-overlay d-flex flex-column p-0">
+                      <div class="mt-auto admin-bgcl text-light">#3</div>
+                    </div>
+                  </div>
+                  <div class="font-weight-bold">cat3</div>
+                  <div class="font-weight-lighter font-italic">69 bài viết</div>
+                </div>
+                <div class="modal fade" id="detailUser" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title font-weight-bold" id="exampleModalLongTitle">Thông tin người dùng</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="w-100 d-flex justify-content-center my-3">
+                      <div class="d-block">
+                        <img src="../../static/img/avatar.jpg" class="rounded-circle avatar-img-lg">
+                        <div class="text-center font-weight-bolder">cheems</div>
+                      </div>
+                        
+                      </div>
+                      <div class="modal-body">
+                        <div class="d-flex justify-content-between">
+                          <div>Giới tính</div>
+                          <div id="userGen" class="font-italic">Nam</div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div>Ngày tham gia</div>
+                          <div id="userJoinDate" class="font-italic">12/03/2021</div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div>Số bài đăng</div>
+                          <div id="userTopic" class="font-italic">6969</div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                          <div>Số ngày online</div>
+                          <div id="userOnlineDate" class="font-italic">6969</div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn admin-btn-round-click">Đến trang người dùng</button>
+                        <button type="button" class="btn admin-btn-round-clickdg" data-dismiss="modal">Đóng</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+        
+        <div class="jumbotron jumbotron-fluid rounded bg-white shadow-sm pt-3 pb-5">
+          <div class="container-fluid" >
+            <h4 class="text-center font-weight-bold" style="color: #00beef">Thống kê bài đăng</h4>
+            <div class="d-flex justify-content-end pr-2">
+              <select class="form-select" id="year-chart">
+                <option>2018</option>
+                <option>2019</option>
+                <option>2020</option>
+                <option selected>2021</option>
+              </select>
+            </div>
+            <div style="height: 400px">
+              <canvas id="myChart"></canvas>
+            </div>
+          </div>
+        </div> 
+        
+        <section class="row equal">
+          <div class="col-xl-8 mb-3">
+            <article class="p-4 rounded shadow-sm bg-light">
+              <h4 class="text-center font-weight-bold pb-3" style="color: #00beef">Danh sách bài viết</h4>
+              <div class="mb-3 d-flex">
+                <input class="form-control flex-grow-1 w-100 mr-1" id="tenBaiViet" type="text" placeholder="Nhập tên bài viết">
+                <select class="p-1 px-2" id="filterMuc">
+                  <option selected="selected">All</option>
+                  <option>IOS</option>
+                  <option>Windows</option>
+                  <option>Android</option>
+                </select>
+              </div>
+              <div class="row equal" id="dsBaiViet">
+                <div class="col-xl-4 btn">
+                  <div class="card">
+                    <img class="card-img-top" src="../../static/img/cheems-quality.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                      <span class="card-img-overlay d-flex justify-content-between">
+                        <div class="bg-dark text-light px-1 rounded" style="height: fit-content">
+                          <span class="bi bi-eye-fill"> 369</span>
+                        </div>
+                        <div class="dropdown">
+                          <div class="btn p-0  text-light font-weight-bold"
+                           id="topic-dropdown" data-toggle="dropdown" aria-expanded="false">
+                            ...
+                          </div>
+                          <div class="dropdown-menu dropdown-menu-right border-0 shadow-sm" aria-labelledby="topic-dropdown">
+                            <a class="dropdown-item text-right" href="#">Xem nội dung bài viết</a>
+                            <a class="dropdown-item text-right text-danger btnDel" href="#">Xóa bài</a>
+                          </div>
+                        </div>
+                      </span>
+                      <h4 class="card-title font-weight-bold mb-0">Cách chơi cheems chất lượng nhất</h4>
+                      <p class="card-text font-italic"><small>@khuongcheems - 6p<a class="ml-2 font-weight-bold text-dark">Windows</a></small></p>
+                      <p class="p-line-5 mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia porro neque quas minima? Minus, aperiam molestias. Sed, dignissimos? Ab quasi inventore dicta vel maiores sit ex maxime amet, voluptates consequatur, qui rem eveniet perferendis facere adipisci quae obcaecati quidem atque explicabo. Optio, rerum, amet quidem illum aspernatur fuga sunt rem soluta blanditiis enim expedita natus?</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4 btn text-left">
+                  <div class="card mb-3">
+                    <img class="card-img-top" src="../../static/img/cheems-quality.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                      <span class="card-img-overlay d-flex justify-content-between">
+                        <div class="bg-dark text-light px-1 rounded" style="height: fit-content">
+                          <span class="bi bi-eye-fill"> 369</span>
+                        </div>
+                        <div class="dropdown">
+                          <div class="btn p-0  text-light font-weight-bold"
+                           id="topic-dropdown" data-toggle="dropdown" aria-expanded="false">
+                            ...
+                          </div>
+                          <div class="dropdown-menu dropdown-menu-right border-0 shadow-sm" aria-labelledby="topic-dropdown">
+                            <a class="dropdown-item text-right" href="#">Xem nội dung bài viết</a>
+                            <a class="dropdown-item text-right text-danger btnDel" href="#">Xóa bài</a>
+                          </div>
+                        </div>
+                      </span>
+                      <h4 class="card-title font-weight-bold mb-0">Inazuma 2.2 leaked by abcxyz</h4>
+                      <p class="card-text font-italic"><small>@khuongcheems - 6p<a class="ml-2 font-weight-bold text-dark">IOS</a></small></p>
+                      <p class="p-line-5 mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia porro neque quas minima? Minus, aperiam molestias. Sed, dignissimos? Ab quasi inventore dicta vel maiores sit ex maxime amet, voluptates consequatur, qui rem eveniet perferendis facere adipisci quae obcaecati quidem atque explicabo. Optio, rerum, amet quidem illum aspernatur fuga sunt rem soluta blanditiis enim expedita natus?</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-4 btn text-left">
+                  <div class="card mb-3">
+                    <img class="card-img-top" src="../../static/img/cheems-quality.jpg" alt="Card image" style="width:100%">
+                    <div class="card-body">
+                      <span class="card-img-overlay d-flex justify-content-between">
+                        <div class="bg-dark text-light px-1 rounded" style="height: fit-content">
+                          <span class="bi bi-eye-fill"> 369</span>
+                        </div>
+                        <div class="dropdown">
+                          <div class="btn p-0  text-light font-weight-bold"
+                           id="topic-dropdown" data-toggle="dropdown" aria-expanded="false">
+                            ...
+                          </div>
+                          <div class="dropdown-menu dropdown-menu-right border-0 shadow-sm" aria-labelledby="topic-dropdown">
+                            <a class="dropdown-item text-right" href="#">Xem nội dung bài viết</a>
+                            <a class="dropdown-item text-right text-danger btnDel" href="#">Xóa bài</a>
+                          </div>
+                        </div>
+                      </span>
+                      <h4 class="card-title font-weight-bold mb-0">Iphone 13 có mặt sau (chắc là vậy)</h4>
+                      <p class="card-text font-italic"><small>@khuongcheems - 6p<a class="ml-2 font-weight-bold text-dark">Android</a></small></p>
+                      <p class="p-line-5 mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia porro neque quas minima? Minus, aperiam molestias. Sed, dignissimos? Ab quasi inventore dicta vel maiores sit ex maxime amet, voluptates consequatur, qui rem eveniet perferendis facere adipisci quae obcaecati quidem atque explicabo. Optio, rerum, amet quidem illum aspernatur fuga sunt rem soluta blanditiis enim expedita natus?</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ul class="pagination mb-0 mt-4 d-flex justify-content-center">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link active-tab" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-xl-4 mb-3">
+            <article class="p-4 rounded shadow-sm bg-light h-100">
+              <h4 class="text-center font-weight-bold pb-3" style="color: #00beef">Các mục bài</h4>
+              <div class="w-100 d-flex mb-3">
+                <input class="form-control flex-grow-1 w-100 mr-1" id="tenMuc" type="text" placeholder="Nhập tên mục mới">
+                <button class="admin-btn-round-click p-1 px-2" id="themMuc">Thêm</button>
+              </div>
+              <table class="table table-hover mb-0">
+                <thead>
+                  <tr style="color: #00beef">
+                    <th>Tên mục</th>
+                    <th>Số bài viết</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="dsMuc">
+                  <tr>
+                    <td>
+                      IOS
+                    </td>
+                    <td>
+                      6969
+                    </td>
+                    <td class="text-right">
+                      <a class="bi bi-trash-fill px-2 admin-btn-round-clickdg"></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                       Android
+                    </td>
+                    <td>
+                      696
+                    </td>
+                    <td class="text-right">
+                      <a class="bi bi-trash-fill px-2 admin-btn-round-clickdg"></a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                       Windows
+                    </td>
+                    <td>
+                      69
+                    </td>
+                    <td class="text-right">
+                      <a class="bi bi-trash-fill px-2 admin-btn-round-clickdg"></a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="w-100">
+                <canvas id="chartMuc"></canvas>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src="../../static/js/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../../static/popper/dist/umd/popper.min.js"></script>
+  <script src="../../static/js/jquery.sparkline.min.js"></script>
+  <script src="../../static/bootstrap-4.6.0-dist/js/bootstrap.min.js"></script>
+  <script src="../../static/js/admin.js"></script>
+  <script src="../../static/js/quanlybaivieitvamucbai.js"></script>
+</body>
+</html>
