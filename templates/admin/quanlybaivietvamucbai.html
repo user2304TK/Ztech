@@ -15,7 +15,7 @@
   <div class="row">
     <!-- sidebar -->
     <div class="col-md-3 col-lg-2 px-0 position-fixed h-100 bg-white shadow-sm sidebar" id="sidebar">
-      <a href="#">
+      <a href="/admin">
         <div class="my-3 text-center">
           <img src="../../static/img/Z-green-leaf.png" class="logo-img">
           <span class = "logo-name align-middle ml-1">Technews</span>
@@ -61,8 +61,9 @@
             <span class="bi bi-chevron-down ml-1 small text-white"></span>
           </div>
           <div class="dropdown-menu dropdown-menu-right border-0 shadow-sm" aria-labelledby="logout-dropdown">
-            <a class="dropdown-item text-right" href="#">Trang cá nhân</a>
-            <a class="dropdown-item text-right" href="#">Quản lý trang web</a>
+            <a class="dropdown-item text-right" href="/admin">Trang chủ</a>
+            <a class="dropdown-item text-right" href="/admin/trangcanhan">Trang cá nhân</a>
+            <a class="dropdown-item text-right" href="/admin/dashboard">Quản lý trang web</a>
             <a class="dropdown-item text-right text-danger" href="#">Đăng xuất</a>
           </div>
         </div>
@@ -180,7 +181,7 @@
                         </div>
                       </div>
                       <div class="modal-footer">
-                        <button type="button" class="btn admin-btn-round-click">Đến trang người dùng</button>
+                        <a href="/user/trangcanhan"><button type="button" class="btn admin-btn-round-click">Đến trang người dùng</button></a>
                         <button type="button" class="btn admin-btn-round-clickdg" data-dismiss="modal">Đóng</button>
                       </div>
                     </div>
@@ -222,8 +223,8 @@
                 </select>
               </div>
               <div class="row equal" id="dsBaiViet">
-                <div class="col-xl-4 btn">
-                  <div class="card">
+                <div class="col-xl-4 btn text-left">
+                  <div class="card mb-3" href="/admin/baiviet">
                     <img class="card-img-top" src="../../static/img/cheems-quality.jpg" alt="Card image" style="width:100%">
                     <div class="card-body">
                       <span class="card-img-overlay d-flex justify-content-between">
@@ -236,7 +237,7 @@
                             ...
                           </div>
                           <div class="dropdown-menu dropdown-menu-right border-0 shadow-sm" aria-labelledby="topic-dropdown">
-                            <a class="dropdown-item text-right" href="#">Xem nội dung bài viết</a>
+                            <a class="dropdown-item text-right" href="/admin/baiviet">Xem nội dung bài viết</a>
                             <a class="dropdown-item text-right text-danger btnDel" href="#">Xóa bài</a>
                           </div>
                         </div>
