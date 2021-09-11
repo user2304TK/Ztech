@@ -12,7 +12,6 @@
   <link rel="shortcut icon" type="image/svg" href="../static/img/Z-green-leaf.svg"/>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="image/svg" href="../static/img/Z-green-leaf.svg"/>
   <title>Trang chủ | Ztech</title>
   <script>
     $(document).ready(function(){
@@ -231,69 +230,64 @@
    
     <!-- Links -->
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav mr-auto pb-2">
-      <li class="nav-item">
-        <a class="nav-link" href="#">Tin Hot</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Video</a>
-      </li>
-    </ul>
+      <ul class="navbar-nav mr-auto pb-2">
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tin Hot</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Video</a>
+        </li>
+      </ul>
       <li class="nav-item li-dangnhap pr-3 pb-2 btn-vietbai" style="color: white;">
-        <i class="fas fa-feather btn-circle" style="padding-top: 10px; background-color:#00beef;" data-toggle="tooltip" data-placement="top" title="Viết bài"></i>
+        <i class="fas fa-feather btn-circle" style="padding-top: 10px; background-color: #00beef;" data-toggle="tooltip" data-placement="top" title="Viết bài"></i>
         <span class="viet" style="color: black;">Viết bài</span>
       </li>
-      <li class="nav-item li-dangnhap pr-3 pb-2" >
-        <div class="btn-group">
-          <a class=" dropdown"
-             id="dropdownMenuButton" data-toggle="dropdown">
-             <i id="dropdownMenuButton" class="fas fa-bell btn-circle" style="padding-top: 10px; color: white; background-color: #00beef;"></i>
-             <span class="viet" style="color: black;">Thông báo</span>
-          </a>
-          <div class="dropdown-menu dropdown-menu-right">
-           <a class="dropdown-item" href="../templates/nhanphanhoi.html" > 
-            <span style="color: blue; font-weight: 400;">ZTech</span> <br>
-            <span style="font-size: small;">Thư phản hồi từ đội hỗ trợ dành cho bạn</span>
-          </a>
-          <hr>
-          <a class="dropdown-item" href="#" >
-              <span style="color: blue; font-weight: 400;">Nekowimade</span> <br>
-              <span style="font-size: small;">Đã bình luận bài đăng của bạn</span>
-          </a>
-          <hr>
-          <a class="dropdown-item" href="#" >
-              <span style="color: blue; font-weight: 400;">Tomblobla</span> <br>
-              <span style="font-size: small;">Đã thích bài đăng của bạn</span>
-          </a>
+      <li class="nav-item li-dangnhap pr-3 pb-2" style="color: white;">
+        <div class="dropdown" data-toggle="dropdown" aria-haspopup="true" data-placement="top" title="Cài đặt" aria-expanded="false" >
+          <i class="fas fa-bell btn-circle" style="padding-top: 10px; background-color: #00beef;" data-toggle="tooltip" data-placement="top" title="Thông báo"></i>
+        <span class="viet" style="color: black;">Thông báo</span>
+          <div class="dropdown-menu dropdown-menu-right" style="text-align: left;" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#" > 
+              <span style="color: blue; font-weight: 400;">KhuongPT</span> <br>
+              <span style="font-size: small;">Bài viết của bạn đã bị xóa bởi đăng tải nội dung không lành mạnh !!</span>
+            </a>
+            <hr>
+            <a class="dropdown-item" href="#" >
+                <span style="color: blue; font-weight: 400;">Nekowimade</span> <br>
+                <span style="font-size: small;">Đã bình luận bài đăng của bạn</span>
+            </a>
+            <hr>
+            <a class="dropdown-item" href="#" >
+                <span style="color: blue; font-weight: 400;">Tomblobla</span> <br>
+                <span style="font-size: small;">Đã thích bài đăng của bạn</span>
+            </a>
           </div>
-       </div>
+        </div>
       </li>
-     
       <li class="nav-item li-dangnhap pr-3 pb-2">
-        <img class="rounded-circle" width="33" height="33" src="../static/img/khoa.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="Trang cá nhân">
+        <img class="rounded-circle" width="33" height="33" src="../static/img/khoa.jpg" alt="khoamod" data-toggle="tooltip" data-placement="top" title="Trang cá nhân">
         <span class="viet">Trang cá nhân</span>
       </li>
-      
       <li class="nav-item li-dangnhap pb-2">
         <div class="btn-group">
           <a class=" dropdown"
              id="dropdownMenuButton" data-toggle="dropdown">
              <i id="dropdownMenuButton" class="fas fa-cog btn-circle" style="padding-top: 10px; "></i>
              <span class="viet">Cài đặt</span>
-          </a>         
-            <div class="dropdown-menu">
-              <a class="dropdown-item" href="/user/trangcanhan"><i class="fas fa-user"></i> Trang cá nhân</a>
-              <a class="dropdown-item" href="/user/chinhsuathongtin"><i class="fas fa-info"></i> Thông tin cá nhân</a>
-              <a class="dropdown-item" href="/user/quanlybaiviet"><i class="fas fa-paperclip"></i> Quản lý bài viết</a>
-              <a class="dropdown-item" href="/user/danhsachhotro"><i class="fas fa-paperclip"></i> Hỗ trợ đã gửi</a>
-              <a class="dropdown-item" href="/user/viethotro"><i class="fas fa-paperclip"></i> Viết hỗ trợ</a>
-              <a class="dropdown-item" href="/dangnhap"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
-            </div>     
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="/user/trangcanhan"><i class="fas fa-user"></i> Trang cá nhân</a>
+            <a class="dropdown-item" href="/user/chinhsuathongtin"><i class="fas fa-info"></i> Thông tin cá nhân</a>
+            <a class="dropdown-item" href="/user/quanlybaiviet"><i class="fas fa-paperclip"></i> Quản lý bài viết</a>
+            <a class="dropdown-item" href="/user/danhsachhotro"><i class="fas fa-paperclip"></i> Hỗ trợ đã gửi</a>
+            <a class="dropdown-item" href="/user/viethotro"><i class="fas fa-paperclip"></i> Viết hỗ trợ</a>
+            <a class="dropdown-item" href="/dangnhap"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+          </div>
+       </div>
       </li>
-    </div>
-    
-  </nav>
-  <hr class="hr-shadow">
+      </div>
+    </nav>
+    <hr class="hr-shadow"> 
   <section class="container">
     <!-- foru -->
     <div class="container home-foru form-inline pb-3">
@@ -1221,7 +1215,7 @@
           <input type="text" name="" placeholder="Tiêu đề" class="w-100 mb-2 pt-2" style="outline: none;border: none;">
         </div>
         <textarea spellcheck="false" style="height: 250px; border:none; border-bottom: 1px solid #a2a2a2;" class="w-100 pt-2" placeholder="Viết nội dung của bạn vào đây."></textarea>
-        <button class="link-btn btn-circle" style="border: 1px solid #a2a2a2; outline: none;"><i class="fas fa-link"></i></button>
+        <button class="link-btn btn-circle " style="border: 1px solid #a2a2a2; outline: none;"><i class="fas fa-link"></i></button>
       </div>
     </div>
     <div>
