@@ -255,7 +255,7 @@
   <nav class="container navbar navbar-expand-md navbar-inverse  navbar-light pb-0">
     <!-- Brand -->
     <div class="form-group pt-2">
-    <a class="navbar-brand" href="../templates/index-logged-user.html"><img src="../static/img/Z-green-leaf.svg" width="45" height="45" alt="Logo"> ZTech</a>
+    <a class="navbar-brand" href="/user"><img src="../static/img/Z-green-leaf.svg" width="45" height="45" alt="Logo"> ZTech</a>
     <!-- search -->
           <input type="text" class="search-query" placeholder="Type something...">
           <button type="submit" class="btn btn-circle"><i class="fa fa-search"></i></button>
@@ -309,7 +309,7 @@
     </li>
    
     <li class="nav-item li-dangnhap pr-3 pb-2">
-      <img class="rounded-circle" width="33" height="33" src="../static/img/ongiga2.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="Trang cá nhân">
+      <img class="rounded-circle" width="33" height="33" src="../static/img/khoa.jpg" alt="user" data-toggle="tooltip" data-placement="top" title="Trang cá nhân">
       <span class="viet">Trang cá nhân</span>
     </li>
     
@@ -321,10 +321,12 @@
            <span class="viet">Cài đặt</span>
         </a>
         <div class="dropdown-menu">
-         <a class="dropdown-item" href="../templates/profile.html"><i class="fas fa-user"></i> Trang cá nhân</a>
-            <a class="dropdown-item" href="../templates/edit_profile.html"><i class="fas fa-info"></i> Thông tin cá nhân</a>
-            <a class="dropdown-item" href="../templates/viethotro.html"><i class="fas fa-paperclip"></i> Viết hỗ trợ</a>
-            <a class="dropdown-item" href="../templates/Login.html"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+          <a class="dropdown-item" href="/user/trangcanhan"><i class="fas fa-user"></i> Trang cá nhân</a>
+          <a class="dropdown-item" href="/user/chinhsuathongtin"><i class="fas fa-info"></i> Thông tin cá nhân</a>
+          <a class="dropdown-item" href="/user/quanlybaiviet"><i class="fas fa-paperclip"></i> Quản lý bài viết</a>
+          <a class="dropdown-item" href="/user/danhsachhotro"><i class="fas fa-paperclip"></i> Hỗ trợ đã gửi</a>
+          <a class="dropdown-item" href="/user/viethotro"><i class="fas fa-paperclip"></i> Viết hỗ trợ</a>
+          <a class="dropdown-item" href="/dangnhap"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
         </div>
      </div>
     </li>
@@ -396,7 +398,7 @@
           </h6>
           <p><a class="text-reset" href="#!">Nội quy</a></p>
           <p><a class="text-reset" href="#!">Thỏa thuận</a></p>
-          <p><a class="text-reset" href="#!">Góp ý</a></p>
+          <p><a class="text-reset" href="/about">About</a></p>
           <p><a class="text-reset" href="#!">Liên hệ quảng cáo</a></p>           
           
         </div>

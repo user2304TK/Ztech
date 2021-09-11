@@ -111,6 +111,23 @@ def xulyhotro():
 def quanlythanhvien():
     return render_template('admin/quanlythanhvien.html')
 
+@app.route('/admin')
+def indexadmin():
+    return render_template('index-logged-admin.html')
+
+@app.route('/admin/trangcanhan')
+def trangcanhanadmin():
+    return render_template('profile_2.html')
+
+@app.route('/admin/chinhsuathongtin')
+def chinhsuathongtinadmin():
+    return render_template('edit_profile2.html')
+
+@app.route('/admin/baiviet')
+def baivietadmin():
+    return render_template('baivietadmin.html')
+
+
 
 
 if __name__ == '__main__':
