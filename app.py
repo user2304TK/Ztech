@@ -48,7 +48,7 @@ def trangcanhanuser():
 
 
 @app.route('/user/chinhsuathongtin')
-def trangcanhanuser():
+def chinhsuathongtinuser():
     return render_template('edit_profile.html')
 
 
@@ -104,12 +104,6 @@ def quanlyfacts():
 @app.route('/admin/xulyhotro')
 def xulyhotro():
     return render_template('admin/xulyhotro.html')
-
-
-
-@app.route('/admin/quanlythanhvien')
-def quanlythanhvien():
-    return render_template('admin/quanlythanhvien.html')
 
 
 
